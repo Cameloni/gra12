@@ -5,6 +5,7 @@ public class Main {
 
     public static void main(String[] args) {
         int[] juzjest = new int[20];
+        System.out.println("dasads");
         int nr = -1;
         for (int iiii = 0; iiii < juzjest.length; iiii++){
             juzjest[iiii] = -1;
