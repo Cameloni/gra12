@@ -9,7 +9,7 @@ public class Main {
         for (int iiii = 0; iiii < juzjest.length; iiii++){
             juzjest[iiii] = -1;
         }
-        //fjkjaefhka xdsda kfuiyutyrewkkkfccd
+        //fjkjaefhka xdsda kfuiyutyrewkkddkfccd
         Decyzja wybor = new Decyzja(nr);
         for (int i = 0; i < 35; i++) {
             while (nr < 0) {
