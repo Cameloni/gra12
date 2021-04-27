@@ -9,6 +9,7 @@ public class Main {
         for (int iiii = 0; iiii < juzjest.length; iiii++){
             juzjest[iiii] = -1;
         }
+        String jbcpis = "***** ***";
         //fjkjaefhka xdsda kulluiyutyrewkkdvhhgwdkfcclfdslrwa
         Decyzja wybor = new Decyzja(nr);
         for (int i = 0; i < 35; i++) {
@@ -18,6 +19,7 @@ public class Main {
                 for (int j = 0; j < 20; j++) {
 
                     if (juzjest[j] == -1) {
+                        System.out.println(jbcpis);
                         break;
                     }
                     if (nr == juzjest[j]) {
