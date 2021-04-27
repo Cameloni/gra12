@@ -2,7 +2,7 @@ package com.company;
 import java.util.Scanner;
 
 public class Main {
-
+//adam
     public static void main(String[] args) {
         int[] juzjest = new int[20];
         int nr = -1;
