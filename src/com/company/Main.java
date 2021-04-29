@@ -8,7 +8,6 @@ public class Main {
         JFrame gra = new JFrame();
         Panel p = new Panel();
         gra.add(p);
-
         gra.setTitle("trzeba wymyślić nazwę");
         gra.setBounds(200,200,640 + 14, 480 + 14 + 24);
         /*
