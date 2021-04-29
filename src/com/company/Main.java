@@ -1,16 +1,27 @@
 package com.company;
 import java.util.Scanner;
+import javax.swing.*;
 
 public class Main {
-//adam
+
     public static void main(String[] args) {
+        JFrame gra = new JFrame();
+        Panel p = new Panel();
+        gra.add(p);
+
+        gra.setTitle("trzeba wymyślić nazwę");
+        gra.setBounds(200,200,640 + 14, 480 + 14 + 24);
+        /*
+        gra.setSize(250,250);
+        gra.setLocationRelativeTo(null);
+        */
+        gra.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        gra.setVisible(true);
         int[] juzjest = new int[20];
         int nr = -1;
         for (int iiii = 0; iiii < juzjest.length; iiii++){
             juzjest[iiii] = -1;
         }
-        int xxxxxxxx = 3023;
-        //fjkjaefhka xdsda kulluiyutyrewkkdvhhgwdkfcclfdslrwa
         Decyzja wybor = new Decyzja(nr);
         for (int i = 0; i < 35; i++) {
             while (nr < 0) {
@@ -25,7 +36,6 @@ public class Main {
                         nr = -1;
                         break;
                     }
-                    System.out.println(xxxxxxxx);
                 }
             }
 
