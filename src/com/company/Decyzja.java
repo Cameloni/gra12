@@ -102,6 +102,7 @@ public class Decyzja {
     public void zapisz(int tura, int nr, int fin, int licz, int obr, int jedz) throws IOException {
         FileWriter za = new FileWriter("src/com/company/Pliki/Zapis_gry_1");
         PrintWriter out = new PrintWriter(za);
+        //coś tu źle zrobiłem
         out.println(tura);
         out.println(nr);
         out.println(fin);

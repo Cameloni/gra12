@@ -10,12 +10,12 @@ public class Main {
         JFrame gra = new JFrame();
         Panel p = new Panel();
         gra.add(p);
-        gra.setTitle("trzeba wymyślić nazwę");
+        gra.setTitle("Deus consilium");
         gra.setBounds(0,0,640 + 14, 480 + 14 + 24);
 
         //gra.setSize(250,250);
         gra.setLocationRelativeTo(null);
-
+        gra.setIconImage(new ImageIcon("src/com/company/PNG/background/45.png").getImage());
         gra.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gra.setVisible(true);
         int[] juzjest = new int[20];
@@ -49,8 +49,6 @@ public class Main {
                 juzjest[i - 20] = nr;
             }
             nr = -1;
-
-
         }
     }
 }
