@@ -37,7 +37,6 @@ public class Main {
                     }
                 }
             }
-
             wybor.statystyki();
             wybor.setNr(nr);
             wybor.zbior();
