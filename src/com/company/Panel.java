@@ -8,7 +8,7 @@ public class Panel extends JPanel {
     public Panel(){
 
     }
-
+//widzisz to?
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
