@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class Decyzja {
     Scanner sc = new Scanner(System.in);
+    int tura;
     int nr;
     int finanse;
     int liczebnosc;
@@ -76,6 +77,9 @@ public class Decyzja {
         return p;
     }
     public void lub(){
+        if(dec == 3){
+            //zapisz(3/*tymczasowo, bo nie ma jeszcze stworzonej*/, 46, );
+        }
         while (dec != 1 && dec != 2) {
             String dec1 = sc.next();
             sc.nextLine();
@@ -95,14 +99,21 @@ public class Decyzja {
         System.out.println("Obrona:        " + pasek(obrona, 100));
         System.out.println("Ilość zapasów: " + pasek(jedzenie, 100));
     }
-    public void zapisz() throws IOException {
-        // jak będzie z grafiką to trzeba bedzie trzeba wtedy podpiąć wybór miejsca
-        FileWriter fw = new FileWriter("ksiazki.txt");
-        PrintWriter out = new PrintWriter(fw);
+    public void zapisz(int tura, int[] nr, int fin, int licz, int obr, int jedz) throws IOException {
+        FileWriter za = new FileWriter("src/com/company/Pliki/Zapis_gry_1");
+        PrintWriter out = new PrintWriter(za);
+        out.println(tura);
+        out.println(nr);
+        out.println(fin);
+        out.println(licz);
+        out.println(obr);
+        out.println(jedz);
+        out.close();
     }
     public void zbior() {
 
         this.dec = 0;
+
         switch (nr) {
             case 0:
                 System.out.println("Coś0:");
