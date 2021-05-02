@@ -1,10 +1,11 @@
 package com.company;
+import java.io.IOException;
 import java.util.Scanner;
 import javax.swing.*;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         JFrame gra = new JFrame();
         Panel p = new Panel();
@@ -48,6 +49,7 @@ public class Main {
                 juzjest[i - 20] = nr;
             }
             nr = -1;
+
 
         }
     }

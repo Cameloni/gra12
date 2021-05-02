@@ -76,19 +76,18 @@ public class Decyzja {
 
         return p;
     }
-    public void lub(){
-        if(dec == 3){
-            //zapisz(3/*tymczasowo, bo nie ma jeszcze stworzonej*/, 46, );
-        }
+    public void lub() throws IOException {
         while (dec != 1 && dec != 2) {
             String dec1 = sc.next();
             sc.nextLine();
-            if (!dec1.equals("1") && !dec1.equals("2")) {
+            if (!dec1.equals("1") && !dec1.equals("2") && !dec1.equals("3")) {
                 System.out.println("wybierz \"1\" lub \"2\"");
                 continue;
             }
             dec = Integer.valueOf(dec1);
-
+            if(dec == 3){
+                zapisz(8, 4, getFinanse(), getLiczebnosc(), getObrona(), getJedzenie());
+            }
         }
 
     }
@@ -99,7 +98,7 @@ public class Decyzja {
         System.out.println("Obrona:        " + pasek(obrona, 100));
         System.out.println("Ilość zapasów: " + pasek(jedzenie, 100));
     }
-    public void zapisz(int tura, int[] nr, int fin, int licz, int obr, int jedz) throws IOException {
+    public void zapisz(int tura, int nr, int fin, int licz, int obr, int jedz) throws IOException {
         FileWriter za = new FileWriter("src/com/company/Pliki/Zapis_gry_1");
         PrintWriter out = new PrintWriter(za);
         out.println(tura);
@@ -110,7 +109,7 @@ public class Decyzja {
         out.println(jedz);
         out.close();
     }
-    public void zbior() {
+    public void zbior() throws IOException {
 
         this.dec = 0;
 
@@ -425,5 +424,6 @@ public class Decyzja {
                 }
                 break;
         }
+
     }
 }
