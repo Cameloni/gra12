@@ -87,6 +87,7 @@ public class Decyzja {
             dec = Integer.valueOf(dec1);
             if(dec == 3){
                 zapisz(8, 4, getFinanse(), getLiczebnosc(), getObrona(), getJedzenie());
+
             }
         }
 
