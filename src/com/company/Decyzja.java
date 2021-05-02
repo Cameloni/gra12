@@ -1,5 +1,8 @@
 package com.company;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Decyzja {
@@ -92,7 +95,11 @@ public class Decyzja {
         System.out.println("Obrona:        " + pasek(obrona, 100));
         System.out.println("Ilość zapasów: " + pasek(jedzenie, 100));
     }
-
+    public void zapisz() throws IOException {
+        // jak będzie z grafiką to trzeba bedzie trzeba wtedy podpiąć wybór miejsca
+        FileWriter fw = new FileWriter("ksiazki.txt");
+        PrintWriter out = new PrintWriter(fw);
+    }
     public void zbior() {
 
         this.dec = 0;

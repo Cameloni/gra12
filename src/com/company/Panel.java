@@ -4,7 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Panel extends JPanel {
-    public Panel(){}
+
+    public Panel(){
+
+    }
 
     @Override
     public void paintComponent(Graphics g) {
