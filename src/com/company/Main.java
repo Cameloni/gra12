@@ -1,25 +1,38 @@
 package com.company;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 import javax.swing.*;
 
 public class Main {
-
+    public static void Zapis(int tura, int[] juz, int fin, int licz, int obr, int jedz) throws IOException {
+        FileWriter za = new FileWriter("src/com/company/Pliki/Zapis_gry_1");
+        PrintWriter out = new PrintWriter(za);
+        //coś tu źle zrobiłem
+        out.println(tura);
+        for(int i = 0; i < 20; i++){
+            out.println(juz[i]);
+        }
+        out.println(fin);
+        out.println(licz);
+        out.println(obr);
+        out.println(jedz);
+        out.close();
+    }
     public static void Odczyt(Decyzja W) throws FileNotFoundException {
         File plik = new File("src/com/company/Pliki/Zapis_gry_1");
         Scanner in = new Scanner(plik);
-        while (in.hasNext()) {
-            W.setFinanse(in.nextInt());
-            in.nextLine();
-            W.setLiczebnosc(in.nextInt());
-            in.nextLine();
-            W.setObrona(in.nextInt());
-            in.nextLine();
-            W.setJedzenie(in.nextInt());
-            in.nextLine();
-        }
+        W.setTura(in.nextInt());
+        in.nextLine();
+        for(int i = 0; i < 20; i++)
+            //nie da się zrobić odczytu juzjest, trzeba dodac juzjest do Decyzji, zrobie to jutro
+        W.setFinanse(in.nextInt());
+        in.nextLine();
+        W.setLiczebnosc(in.nextInt());
+        in.nextLine();
+        W.setObrona(in.nextInt());
+        in.nextLine();
+        W.setJedzenie(in.nextInt());
+        in.nextLine();
     }
     public static void wyjscie(JFrame J){ // jeśli dodamy jakiś przycisk "wyjście z gry" to dzięki tej metodzie bedzie mozna zatrzymywać program zamiast użycia krzyżyka na okienku z grą
         J.setVisible(false);
@@ -39,7 +52,8 @@ public class Main {
 
         gra.setVisible(true);
 
-        int[] juzjest = new int[20];
+        int[] juzjest = new int[20]; // lepiej będzie jak juzjest bedzie przypisane do decyzji, ale narazie moze tak zostać
+        // wtedy też będzie można przerzucić "Zapis" i "Odczyt" do Decyzji.
         int nr = -1;
         for (int iiii = 0; iiii < juzjest.length; iiii++){
             juzjest[iiii] = -1;
@@ -63,14 +77,15 @@ public class Main {
             wybor.statystyki();
             wybor.setNr(nr);
             wybor.zbior();
-
             if (juzjest[19] == -1) {
                 juzjest[i] = nr;
             } else {
                 juzjest[i - 20] = nr;
             }
             nr = -1;
-            //wyjscie(gra);
+            // wyjscie(gra);
+            //Odczyt(wybor);
+            Zapis(wybor.getTura(), juzjest, wybor.getFinanse(), wybor.getLiczebnosc(), wybor.getObrona(), wybor.getJedzenie());
         }
     }
 }

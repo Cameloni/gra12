@@ -7,6 +7,15 @@ import java.util.Scanner;
 
 public class Decyzja {
     Scanner sc = new Scanner(System.in);
+
+    public int getTura() {
+        return tura;
+    }
+
+    public void setTura(int tura) {
+        this.tura = tura;
+    }
+
     int tura;
     int nr;
     int finanse;
@@ -14,19 +23,6 @@ public class Decyzja {
     int obrona;
     int jedzenie;
     int dec;
-
-    public void Zapis(int tura, int nr, int fin, int licz, int obr, int jedz) throws IOException {
-        FileWriter za = new FileWriter("src/com/company/Pliki/Zapis_gry_1");
-        PrintWriter out = new PrintWriter(za);
-        //coś tu źle zrobiłem
-        out.println(tura);
-        out.println(nr);
-        out.println(fin);
-        out.println(licz);
-        out.println(obr);
-        out.println(jedz);
-        out.close();
-    }
 
     public void setFinanse(int finanse) {/*POŹNIEJ NAJPRAWDOPODOBNIEJ TRZEBA BĘDZIE ZMODYFIKOWAĆ TE SETTERY.
         if (this.finanse > 0){
@@ -82,7 +78,7 @@ public class Decyzja {
         liczebnosc = 100;
         obrona = 100;
         jedzenie = 100;
-
+        tura = 1;
     }
 
     public String pasek(int n, int max) {
@@ -101,15 +97,15 @@ public class Decyzja {
         while (dec != 1 && dec != 2) {
             String dec1 = sc.next();
             sc.nextLine();
-            if (!dec1.equals("1") && !dec1.equals("2") && !dec1.equals("3")) {
+            if (!dec1.equals("1") && !dec1.equals("2") /*&& !dec1.equals("3")*/) {
                 System.out.println("wybierz \"1\" lub \"2\"");
                 continue;
             }
             dec = Integer.valueOf(dec1);
-            if(dec == 3){
+            /*if(dec == 3){
                 Zapis(8, 4, getFinanse(), getLiczebnosc(), getObrona(), getJedzenie());
 
-            }
+            }*/
         }
 
     }
@@ -436,6 +432,6 @@ public class Decyzja {
                 }
                 break;
         }
-
+        setTura(getTura() + 1);
     }
 }
