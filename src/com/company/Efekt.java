@@ -1,5 +1,5 @@
 package com.company;
-
+// coś mi się zepsuło z commit
 public class Efekt { //to będą te efekty chroniące przed śmiercią
     int finanse;
     int liczebnosc;
