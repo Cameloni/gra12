@@ -1,6 +1,6 @@
 package com.company;
 
-public class Efekt {
+public class Efekt { //to będą te efekty chroniące przed śmiercią
     int finanse;
     int liczebnosc;
     int obrona;
