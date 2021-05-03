@@ -15,10 +15,31 @@ public class Decyzja {
     int jedzenie;
     int dec;
 
-    public void setFinanse(int finanse) {
-        this.finanse = finanse;
+    public void Zapis(int tura, int nr, int fin, int licz, int obr, int jedz) throws IOException {
+        FileWriter za = new FileWriter("src/com/company/Pliki/Zapis_gry_1");
+        PrintWriter out = new PrintWriter(za);
+        //coś tu źle zrobiłem
+        out.println(tura);
+        out.println(nr);
+        out.println(fin);
+        out.println(licz);
+        out.println(obr);
+        out.println(jedz);
+        out.close();
     }
 
+    public void setFinanse(int finanse) {/*POŹNIEJ NAJPRAWDOPODOBNIEJ TRZEBA BĘDZIE ZMODYFIKOWAĆ TE SETTERY.
+        if (this.finanse > 0){
+            this.finanse += finanse;
+            if(this.finanse <= 0){
+                this.finanse = 0;
+            }
+            if(this.finanse > 100){
+            this.finanse = 100;
+            }
+        }*/
+        this.finanse = finanse;
+    }
     public void setLiczebnosc(int liczebnosc) {
         this.liczebnosc = liczebnosc;
     }
@@ -86,7 +107,7 @@ public class Decyzja {
             }
             dec = Integer.valueOf(dec1);
             if(dec == 3){
-                zapisz(8, 4, getFinanse(), getLiczebnosc(), getObrona(), getJedzenie());
+                Zapis(8, 4, getFinanse(), getLiczebnosc(), getObrona(), getJedzenie());
 
             }
         }
@@ -99,18 +120,7 @@ public class Decyzja {
         System.out.println("Obrona:        " + pasek(obrona, 100));
         System.out.println("Ilość zapasów: " + pasek(jedzenie, 100));
     }
-    public void zapisz(int tura, int nr, int fin, int licz, int obr, int jedz) throws IOException {
-        FileWriter za = new FileWriter("src/com/company/Pliki/Zapis_gry_1");
-        PrintWriter out = new PrintWriter(za);
-        //coś tu źle zrobiłem
-        out.println(tura);
-        out.println(nr);
-        out.println(fin);
-        out.println(licz);
-        out.println(obr);
-        out.println(jedz);
-        out.close();
-    }
+
     public void zbior() throws IOException {
 
         this.dec = 0;

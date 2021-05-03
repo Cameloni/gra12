@@ -1,9 +1,26 @@
 package com.company;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 import javax.swing.*;
 
 public class Main {
+
+    public static void Odczyt(Decyzja W) throws FileNotFoundException {
+        File plik = new File("src/com/company/Pliki/Zapis_gry_1");
+        Scanner in = new Scanner(plik);
+        while (in.hasNext()) {
+            W.setFinanse(in.nextInt());
+            in.nextLine();
+            W.setLiczebnosc(in.nextInt());
+            in.nextLine();
+            W.setObrona(in.nextInt());
+            in.nextLine();
+            W.setJedzenie(in.nextInt());
+            in.nextLine();
+        }
+    }
 
     public static void main(String[] args) throws IOException {
 
