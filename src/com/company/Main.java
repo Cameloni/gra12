@@ -21,7 +21,10 @@ public class Main {
             in.nextLine();
         }
     }
-
+    public static void wyjscie(JFrame J){ // jeśli dodamy jakiś przycisk "wyjście z gry" to dzięki tej metodzie bedzie mozna zatrzymywać program zamiast użycia krzyżyka na okienku z grą
+        J.setVisible(false);
+        System.exit(0);
+    }
     public static void main(String[] args) throws IOException {
 
         JFrame gra = new JFrame();
@@ -29,12 +32,13 @@ public class Main {
         gra.add(p);
         gra.setTitle("Deus consilium");
         gra.setBounds(0,0,640 + 14, 480 + 14 + 24);
-
         //gra.setSize(250,250);
         gra.setLocationRelativeTo(null);
         gra.setIconImage(new ImageIcon("src/com/company/PNG/background/45.png").getImage());
         gra.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         gra.setVisible(true);
+
         int[] juzjest = new int[20];
         int nr = -1;
         for (int iiii = 0; iiii < juzjest.length; iiii++){
@@ -66,6 +70,7 @@ public class Main {
                 juzjest[i - 20] = nr;
             }
             nr = -1;
+            //wyjscie(gra);
         }
     }
 }
