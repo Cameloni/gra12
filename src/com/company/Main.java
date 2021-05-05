@@ -34,7 +34,7 @@ public class Main {
         W.setJedzenie(in.nextInt());
         in.nextLine();
     }
-    public static void wyjscie(JFrame J){ // jeśli dodamy jakiś przycisk "wyjście z gry" to dzięki tej metodzie bedzie mozna zatrzymywać program zamiast użycia krzyżyka na okienku z grą
+    public static void wyjscie(JFrame J){
         J.setVisible(false);
         System.exit(0);
     }
@@ -44,7 +44,7 @@ public class Main {
         Panel p = new Panel();
         gra.add(p);
         gra.setTitle("Deus consilium");
-        gra.setBounds(0,0,640 + 14, 480 + 14 + 24);
+        gra.setBounds(0,0,1200 + 14, 780 + 14 + 24);
         //gra.setSize(250,250);
         gra.setLocationRelativeTo(null);
         gra.setIconImage(new ImageIcon("src/com/company/PNG/background/45.png").getImage());
