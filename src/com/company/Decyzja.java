@@ -16,6 +16,15 @@ public class Decyzja {
         this.tura = tura;
     }
 
+    public int getJuzjest(int j) {
+        return juzjest[j];
+    }
+
+    public void setJuzjest(int juzjest, int i) {
+        this.juzjest[i] = juzjest;
+    }
+
+    int[] juzjest;
     int tura;
     int nr;
     int finanse;
@@ -23,6 +32,10 @@ public class Decyzja {
     int obrona;
     int jedzenie;
     int dec;
+
+    public int[] getJuz() {
+        return juzjest;
+    }
 
     public void setFinanse(int finanse) {/*POŹNIEJ NAJPRAWDOPODOBNIEJ TRZEBA BĘDZIE ZMODYFIKOWAĆ TE SETTERY.
         if (this.finanse > 0){
@@ -79,6 +92,7 @@ public class Decyzja {
         obrona = 100;
         jedzenie = 100;
         tura = 1;
+        juzjest = new int[20];
     }
 
     public String pasek(int n, int max) {

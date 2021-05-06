@@ -52,23 +52,23 @@ public class Main {
         gra.setResizable(false);
         gra.setVisible(true);
 
-        int[] juzjest = new int[20]; // lepiej będzie jak juzjest bedzie przypisane do decyzji, ale narazie moze tak zostać
+        //int[] juzjest = new int[20]; // lepiej będzie jak juzjest bedzie przypisane do decyzji, ale narazie moze tak zostać
         // wtedy też będzie można przerzucić "Zapis" i "Odczyt" do Decyzji.
         int nr = -1;
-        for (int iiii = 0; iiii < juzjest.length; iiii++){
-            juzjest[iiii] = -1;
-        }
         Decyzja wybor = new Decyzja(nr);
+        for (int iiii = 0; iiii < wybor.juzjest.length; iiii++){
+            wybor.setJuzjest(-1, iiii);
+        }
         for (int i = 0; i < 35; i++) {
             while (nr < 0) {
                 nr = (int) (Math.random() * 30);
 
                 for (int j = 0; j < 20; j++) {
 
-                    if (juzjest[j] == -1) {
+                    if (wybor.getJuzjest(j) == -1) {
                         break;
                     }
-                    if (nr == juzjest[j]) {
+                    if (nr == wybor.getJuzjest(j)) {
                         nr = -1;
                         break;
                     }
@@ -77,15 +77,15 @@ public class Main {
             wybor.statystyki();
             wybor.setNr(nr);
             wybor.zbior();
-            if (juzjest[19] == -1) {
-                juzjest[i] = nr;
+            if (wybor.getJuzjest(19) == -1) {
+                wybor.setJuzjest(nr, i);
             } else {
-                juzjest[i - 20] = nr;
+                wybor.setJuzjest(nr, i - 20);
             }
             nr = -1;
             // wyjscie(gra);
             //Odczyt(wybor);
-            Zapis(wybor.getTura(), juzjest, wybor.getFinanse(), wybor.getLiczebnosc(), wybor.getObrona(), wybor.getJedzenie());
+            Zapis(wybor.getTura(), wybor.getJuz(), wybor.getFinanse(), wybor.getLiczebnosc(), wybor.getObrona(), wybor.getJedzenie());
         }
     }
 }
