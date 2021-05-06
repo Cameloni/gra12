@@ -49,7 +49,7 @@ public class Main {
         gra.setLocationRelativeTo(null);
         gra.setIconImage(new ImageIcon("src/com/company/PNG/background/45.png").getImage());
         gra.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+        gra.setResizable(false);
         gra.setVisible(true);
 
         int[] juzjest = new int[20]; // lepiej będzie jak juzjest bedzie przypisane do decyzji, ale narazie moze tak zostać
