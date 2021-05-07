@@ -25,7 +25,7 @@ public class Main {
         in.nextLine();
         for(int i = 0; i < 20; i++)
             //nie da się zrobić odczytu juzjest, trzeba dodac juzjest do Decyzji, zrobie to jutro
-        W.setFinanse(in.nextInt());
+            W.setFinanse(in.nextInt());
         in.nextLine();
         W.setLiczebnosc(in.nextInt());
         in.nextLine();
