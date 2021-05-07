@@ -48,23 +48,23 @@ public class Main {
         gra.setResizable(false);
         gra.setVisible(true);
 
-        //int[] juzjest = new int[20]; // lepiej będzie jak juzjest bedzie przypisane do decyzji, ale narazie moze tak zostać
-        // wtedy też będzie można przerzucić "Zapis" i "Odczyt" do Decyzji.
         int nr = -1;
         Decyzja wybor = new Decyzja(nr);
         for (int iiii = 0; iiii < wybor.juzjest.length; iiii++){
             wybor.setJuzjest(-1, iiii);
         }
-        for (int i = 0; i < 35; i++) {
+        for (int i = 0; i < 100000; i++) {
             while (nr < 0) {
                 nr = (int) (Math.random() * 30);
 
                 for (int j = 0; j < 20; j++) {
-
                     if (wybor.getJuzjest(j) == -1) {
+                        //tutaj chodziło że jeżeli to będzie równe -1 to nie ma już porównywać bo dalsze numery też
+                        //będą równe -1, czyli nie są jeszcze wypełnione.
                         break;
                     }
                     if (nr == wybor.getJuzjest(j)) {
+                        //tutaj natomiast sprawdzam czy pojawił się już dany numer.
                         nr = -1;
                         break;
                     }
