@@ -76,7 +76,7 @@ public class Main {
             if (wybor.getJuzjest(19) == -1) {
                 wybor.setJuzjest(nr, i);
             } else {
-                wybor.setJuzjest(nr, i - 20);
+                wybor.setJuzjest(nr, i % 20);
             }
             nr = -1;
             // wyjscie(gra);
