@@ -23,9 +23,11 @@ public class Main {
         Scanner in = new Scanner(plik);
         W.setTura(in.nextInt());
         in.nextLine();
-        for(int i = 0; i < 20; i++)
-            //nie da się zrobić odczytu juzjest, trzeba dodac juzjest do Decyzji, zrobie to jutro
-            W.setFinanse(in.nextInt());
+        for(int i = 0; i < 20; i++){
+            W.setJuzjest(in.nextInt(), i);
+            in.nextLine();
+        }
+        W.setFinanse(in.nextInt());
         in.nextLine();
         W.setLiczebnosc(in.nextInt());
         in.nextLine();
