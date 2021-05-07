@@ -7,7 +7,6 @@ public class Main {
     public static void Zapis(int tura, int[] juz, int fin, int licz, int obr, int jedz) throws IOException {
         FileWriter za = new FileWriter("src/com/company/Pliki/Zapis_gry_1");
         PrintWriter out = new PrintWriter(za);
-        //coś tu źle zrobiłem
         out.println(tura);
         for(int i = 0; i < 20; i++){
             out.println(juz[i]);
@@ -25,16 +24,11 @@ public class Main {
         in.nextLine();
         for(int i = 0; i < 20; i++){
             W.setJuzjest(in.nextInt(), i);
-            in.nextLine();
         }
         W.setFinanse(in.nextInt());
-        in.nextLine();
         W.setLiczebnosc(in.nextInt());
-        in.nextLine();
         W.setObrona(in.nextInt());
-        in.nextLine();
         W.setJedzenie(in.nextInt());
-        in.nextLine();
     }
     public static void wyjscie(JFrame J){
         J.setVisible(false);
