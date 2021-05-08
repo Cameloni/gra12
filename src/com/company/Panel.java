@@ -19,7 +19,7 @@ public class Panel extends JPanel {
         g.setColor(Color.gray);
         g.drawImage(tron.getImage(),0, 0, 1200, 780, null );
         g.drawImage(sluga.getImage(), 50, 430, 350, 300, null);
-        g.drawImage(sluga2.getImage(),1100, 400, -300, 300, null);
+        g.drawImage(sluga2.getImage(),1100, 400, -280, 300, null);
         //System.out.println(g.getClipBounds().width + " "+g.getClipBounds().height);
         /*for(int i = 0; i < 64; i++){
             g.drawLine(i*20,0,i*20,479);
