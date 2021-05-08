@@ -7,7 +7,6 @@ public class Main {
     public static void Zapis(int tura, int[] juz, int fin, int licz, int obr, int jedz) throws IOException {
         FileWriter za = new FileWriter("src/com/company/Pliki/Zapis_gry_1");
         PrintWriter out = new PrintWriter(za);
-        //coś tu źle zrobiłem
         out.println(tura);
         for(int i = 0; i < 20; i++){
             out.println(juz[i]);
@@ -23,16 +22,13 @@ public class Main {
         Scanner in = new Scanner(plik);
         W.setTura(in.nextInt());
         in.nextLine();
-        for(int i = 0; i < 20; i++)
-            //nie da się zrobić odczytu juzjest, trzeba dodac juzjest do Decyzji, zrobie to jutro
-            W.setFinanse(in.nextInt());
-        in.nextLine();
+        for(int i = 0; i < 20; i++){
+            W.setJuzjest(in.nextInt(), i);
+        }
+        W.setFinanse(in.nextInt());
         W.setLiczebnosc(in.nextInt());
-        in.nextLine();
         W.setObrona(in.nextInt());
-        in.nextLine();
         W.setJedzenie(in.nextInt());
-        in.nextLine();
     }
     public static void wyjscie(JFrame J){
         J.setVisible(false);
@@ -52,23 +48,23 @@ public class Main {
         gra.setResizable(false);
         gra.setVisible(true);
 
-        //int[] juzjest = new int[20]; // lepiej będzie jak juzjest bedzie przypisane do decyzji, ale narazie moze tak zostać
-        // wtedy też będzie można przerzucić "Zapis" i "Odczyt" do Decyzji.
         int nr = -1;
         Decyzja wybor = new Decyzja(nr);
         for (int iiii = 0; iiii < wybor.juzjest.length; iiii++){
             wybor.setJuzjest(-1, iiii);
         }
-        for (int i = 0; i < 35; i++) {
+        for (int i = 0; i < 100000; i++) {
             while (nr < 0) {
                 nr = (int) (Math.random() * 30);
 
                 for (int j = 0; j < 20; j++) {
-
                     if (wybor.getJuzjest(j) == -1) {
+                        //tutaj chodziło że jeżeli to będzie równe -1 to nie ma już porównywać bo dalsze numery też
+                        //będą równe -1, czyli nie są jeszcze wypełnione.
                         break;
                     }
                     if (nr == wybor.getJuzjest(j)) {
+                        //tutaj natomiast sprawdzam czy pojawił się już dany numer.
                         nr = -1;
                         break;
                     }
@@ -80,7 +76,7 @@ public class Main {
             if (wybor.getJuzjest(19) == -1) {
                 wybor.setJuzjest(nr, i);
             } else {
-                wybor.setJuzjest(nr, i - 20);
+                wybor.setJuzjest(nr, i % 20);
             }
             nr = -1;
             // wyjscie(gra);
