@@ -12,8 +12,8 @@ public class Panel extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-
-        ImageIcon tron =  new ImageIcon("src/com/company/pixelpictures/2021-05-08_17h50_51.png");
+        /*src/com/company/pixelpictures/2021-05-08_17h50_51.png*/
+        ImageIcon tron =  new ImageIcon("src/com/company/pixelpictures/CezarRzymu.png");
         ImageIcon sluga = new ImageIcon("src/com/company/pixelpictures/pixil-frame-0 (3).png");
         ImageIcon sluga2 = new ImageIcon("src/com/company/pixelpictures/sługa2.png");
         g.setColor(Color.gray);
