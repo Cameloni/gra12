@@ -13,11 +13,13 @@ public class Panel extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        ImageIcon tron =  new ImageIcon("src/com/company/pixelpictures/Cezar49.png");
+        ImageIcon tron =  new ImageIcon("src/com/company/pixelpictures/2021-05-08_17h50_51.png");
         ImageIcon sluga = new ImageIcon("src/com/company/pixelpictures/pixil-frame-0 (3).png");
+        ImageIcon sluga2 = new ImageIcon("src/com/company/pictures/sługa2.png");
         g.setColor(Color.gray);
         g.drawImage(tron.getImage(),0, 0, 1200, 780, null );
-        g.drawImage(sluga.getImage(), 60, 450, 350, 300, null);
+        g.drawImage(sluga.getImage(), 50, 430, 350, 300, null);
+        g.drawImage(sluga2.getImage(),1100, 400, -300, 300, null);
         //System.out.println(g.getClipBounds().width + " "+g.getClipBounds().height);
         /*for(int i = 0; i < 64; i++){
             g.drawLine(i*20,0,i*20,479);
