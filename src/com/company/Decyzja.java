@@ -196,7 +196,7 @@ public class Decyzja {
                     case 2:
                         setLegiony(getLegiony()+20);
                         setFinanse(getFinanse()-20);
-                        if((int)(Math.random()*11) >= 5) {
+                        if((int)(Math.random()*10) >= 4) {
                             setKontynuacja(50);
                         }
                         break;
