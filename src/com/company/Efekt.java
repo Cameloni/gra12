@@ -19,8 +19,8 @@ public class Efekt { //to będą te efekty chroniące przed śmiercią
     }
     public void uzyj(Decyzja W){
         W.setFinanse(W.getFinanse() + finanse);
-        W.setLiczebnosc(W.getLiczebnosc() + liczebnosc);
-        W.setObrona(W.getObrona() + obrona);
-        W.setJedzenie(W.getJedzenie() + jedzenie);
+        W.setObywatele(W.getObywatele() + liczebnosc);
+        W.setLegiony(W.getLegiony() + obrona);
+        W.setReligia(W.getReligia() + jedzenie);
     }
 }

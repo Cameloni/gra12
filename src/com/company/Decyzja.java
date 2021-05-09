@@ -1,8 +1,6 @@
 package com.company;
 
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Decyzja {
@@ -28,9 +26,9 @@ public class Decyzja {
     int tura;
     int nr;
     int finanse;
-    int liczebnosc;
-    int obrona;
-    int jedzenie;
+    int obywatele;
+    int legiony;
+    int religia;
     int dec;
 
     public int[] getJuz() {
@@ -49,32 +47,32 @@ public class Decyzja {
         }*/
         this.finanse = finanse;
     }
-    public void setLiczebnosc(int liczebnosc) {
-        this.liczebnosc = liczebnosc;
+    public void setObywatele(int obywatele) {
+        this.obywatele = obywatele;
     }
 
-    public void setObrona(int obrona) {
-        this.obrona = obrona;
+    public void setLegiony(int legiony) {
+        this.legiony = legiony;
     }
 
-    public void setJedzenie(int jedzenie) {
-        this.jedzenie = jedzenie;
+    public void setReligia(int religia) {
+        this.religia = religia;
     }
 
     public int getFinanse() {
         return finanse;
     }
 
-    public int getLiczebnosc() {
-        return liczebnosc;
+    public int getObywatele() {
+        return obywatele;
     }
 
-    public int getObrona() {
-        return obrona;
+    public int getLegiony() {
+        return legiony;
     }
 
-    public int getJedzenie() {
-        return jedzenie;
+    public int getReligia() {
+        return religia;
     }
 
     public void setNr(int nr) {
@@ -88,9 +86,9 @@ public class Decyzja {
     public Decyzja(int nr) {
         this.nr = nr;
         finanse = 100;
-        liczebnosc = 100;
-        obrona = 100;
-        jedzenie = 100;
+        obywatele = 100;
+        legiony = 100;
+        religia = 100;
         tura = 1;
         juzjest = new int[20];
     }
@@ -126,9 +124,9 @@ public class Decyzja {
 
     public void statystyki() {
         System.out.println("Finanse:       " + pasek(finanse, 100));
-        System.out.println("Liczebnosc:    " + pasek(liczebnosc, 100));
-        System.out.println("Obrona:        " + pasek(obrona, 100));
-        System.out.println("Ilość zapasów: " + pasek(jedzenie, 100));
+        System.out.println("Liczebnosc:    " + pasek(obywatele, 100));
+        System.out.println("Obrona:        " + pasek(legiony, 100));
+        System.out.println("Ilość zapasów: " + pasek(religia, 100));
     }
 
     public void zbior() throws IOException {
@@ -144,7 +142,7 @@ public class Decyzja {
                 lub();
                 switch (dec) {
                     case 1:
-                        setObrona(getObrona()-20);
+                        setLegiony(getLegiony()-20);
                         break;
                     case 2:
 

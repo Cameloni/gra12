@@ -26,9 +26,9 @@ public class Main {
             W.setJuzjest(in.nextInt(), i);
         }
         W.setFinanse(in.nextInt());
-        W.setLiczebnosc(in.nextInt());
-        W.setObrona(in.nextInt());
-        W.setJedzenie(in.nextInt());
+        W.setObywatele(in.nextInt());
+        W.setLegiony(in.nextInt());
+        W.setReligia(in.nextInt());
     }
     public static void wyjscie(JFrame J){
         J.setVisible(false);
@@ -81,7 +81,7 @@ public class Main {
             nr = -1;
             // wyjscie(gra);
             //Odczyt(wybor);
-            Zapis(wybor.getTura(), wybor.getJuz(), wybor.getFinanse(), wybor.getLiczebnosc(), wybor.getObrona(), wybor.getJedzenie());
+            Zapis(wybor.getTura(), wybor.getJuz(), wybor.getFinanse(), wybor.getObywatele(), wybor.getLegiony(), wybor.getReligia());
         }
     }
 }
