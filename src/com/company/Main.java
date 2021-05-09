@@ -74,12 +74,12 @@ public class Main {
             wybor.statystyki();
             wybor.setNr(nr);
             wybor.zbior();
-            if (wybor.getJuzjest(19) == -1) {
-                wybor.setJuzjest(nr, i);
-            } else {
-                wybor.setJuzjest(nr, i % 20);
-            }
+            wybor.setJuzjest(nr, i % 20);
             nr = -1;
+            if(wybor.getKontynuacja() != 0){
+                nr = wybor.getKontynuacja();
+                wybor.setKontynuacja(0);
+            }
             // wyjscie(gra);
             //Odczyt(wybor);
             Zapis(wybor.getTura(), wybor.getJuz(), wybor.getFinanse(), wybor.getObywatele(), wybor.getLegiony(), wybor.getReligia());

@@ -30,6 +30,15 @@ public class Decyzja {
     int legiony;
     int religia;
     int dec;
+    int kontynuacja;
+
+    public int getKontynuacja() {
+        return kontynuacja;
+    }
+
+    public void setKontynuacja(int kontynuacja) {
+        this.kontynuacja = kontynuacja;
+    }
 
     public int[] getJuz() {
         return juzjest;
@@ -90,6 +99,7 @@ public class Decyzja {
         legiony = 50;
         religia = 50;
         tura = 1;
+        kontynuacja = 0;
         juzjest = new int[20];
     }
 
@@ -186,30 +196,8 @@ public class Decyzja {
                     case 2:
                         setLegiony(getLegiony()+20);
                         setFinanse(getFinanse()-20);
-                        if((Math.random()) >= 0.5){
-                            int q =0;
-                            while(q == 0){
-                                q = (int) (Math.random()) * 4;
-                            }
-                            if(q == 1){
-                                System.out.println("Pytanie bonus. Na wieści o podwyżce zareagowały również jeden inny legion. One także chcą podwyższenia płac.");
-
-                            }
-                            else {
-                                System.out.println("Pytanie bonus. Na wieści o podwyżce zareagowały również " + q + " inne legiony. One także chcą podwyższenia płac.");
-                            }
-                            System.out.println("1. Nie ma mowy.");
-                            System.out.println("2.Wynegocjuj niewielką podwyżkę.");
-                            lub();
-                            switch (dec){
-                                case 1:
-                                    setLegiony(getLegiony()-q*5);
-                                    break;
-                                case 2:
-                                    setFinanse(getFinanse()- q*5);
-                                    setLegiony(getLegiony() + q*5);
-                                    break;
-                            }
+                        if((int)(Math.random()*11) >= 5) {
+                            setKontynuacja(50);
                         }
                         break;
                 }
@@ -491,6 +479,32 @@ public class Decyzja {
 
                 }
                 break;
+                //casy kontynułujące dany wątek
+            case 50:
+                int q =0;
+                while(q == 0){
+                    q = (int) (Math.random() *4);
+                }
+                if(q == 1){
+                    System.out.println("Pytanie bonus. Na wieści o podwyżce zareagował również jeden inny legion. Jego żołnierze także chcą podwyższenia płac.");
+
+                }
+                else {
+                    System.out.println("Pytanie bonus. Na wieści o podwyżce zareagowały również " + q + " inne legiony. One także chcą podwyższenia płac.");
+                }
+                System.out.println("1. Nie ma mowy.");
+                System.out.println("2.Wynegocjuj niewielką podwyżkę.");
+                lub();
+                switch (dec){
+                    case 1:
+                        setLegiony(getLegiony()-q*5);
+                        break;
+                    case 2:
+                        setFinanse(getFinanse()- q*5);
+                        setLegiony(getLegiony() + q*5);
+                        break;
+                }
+
         }
         setTura(getTura() + 1);
     }
