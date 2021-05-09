@@ -70,6 +70,7 @@ public class Main {
                     }
                 }
             }
+            System.out.println("--|" +wybor.getTura()+ " tura |--");
             wybor.statystyki();
             wybor.setNr(nr);
             wybor.zbior();

@@ -166,6 +166,7 @@ public class Decyzja {
                     case 2:
                         setReligia(getReligia()+20);
                         setObywatele(getObywatele()-20);
+                        break;
                 }
                 break;
             case 2:
@@ -210,6 +211,7 @@ public class Decyzja {
                                     break;
                             }
                         }
+                        break;
                 }
                 break;
             case 3:
