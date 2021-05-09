@@ -187,10 +187,16 @@ public class Decyzja {
                         setFinanse(getFinanse()-20);
                         if((Math.random()) >= 0.5){
                             int q =0;
-                            while(q == 0 || q == 1){
+                            while(q == 0){
                                 q = (int) (Math.random()) * 4;
                             }
-                            System.out.println("Pytanie bonus. Na wieści o podwyżce zareagowały również " + q + " inne legiony. One także chcą podwyższenia płac.");
+                            if(q == 1){
+                                System.out.println("Pytanie bonus. Na wieści o podwyżce zareagowały również jeden inny legion. One także chcą podwyższenia płac.");
+
+                            }
+                            else {
+                                System.out.println("Pytanie bonus. Na wieści o podwyżce zareagowały również " + q + " inne legiony. One także chcą podwyższenia płac.");
+                            }
                             System.out.println("1. Nie ma mowy.");
                             System.out.println("2.Wynegocjuj niewielką podwyżkę.");
                             lub();
