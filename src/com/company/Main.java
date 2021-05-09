@@ -53,7 +53,7 @@ public class Main {
         for (int iiii = 0; iiii < wybor.juzjest.length; iiii++){
             wybor.setJuzjest(-1, iiii);
         }
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 50; i++) {
             while (nr < 0) {
                 nr = (int) (Math.random() * 30);
 

@@ -85,10 +85,10 @@ public class Decyzja {
 
     public Decyzja(int nr) {
         this.nr = nr;
-        finanse = 60;
-        obywatele = 60;
-        legiony = 60;
-        religia = 60;
+        finanse = 50;
+        obywatele = 50;
+        legiony = 50;
+        religia = 50;
         tura = 1;
         juzjest = new int[20];
     }
@@ -153,7 +153,7 @@ public class Decyzja {
                 }
                 break;
             case 1:
-                System.out.println("Pytanie 1. Kapłani uważają, że złe aktualne złe warunki pogodowe są znakiem gniewu Bogów. Wymagają złożenia przez twoich poddanych dużych ofiar zwierzęcych.");
+                System.out.println("Pytanie 1. Kapłani uważają, że złe warunki pogodowe są znakiem gniewu Bogów. Wymagają złożenia przez twoich poddanych dużych ofiar zwierzęcych.");
                 System.out.println("1. Chyba oszaleli!");
                 System.out.println("2. Niech lud wykona ich rozkazy.");
                 //dwie opcje do wyboru
@@ -169,13 +169,41 @@ public class Decyzja {
                 }
                 break;
             case 2:
-                System.out.println("Coś2");
+                int legion = 0;
+                while(legion == 0){
+                    legion = (int) (Math.random() * 31);
+                }
+                System.out.println("Pytanie 2. Żołnierze " + (int) (Math.random() * 30) + "-ego legionu rządają zwiększenia ich żołdu. Grożą buntem.");
+                System.out.println("1. Ukarz ich decymacją.");
+                System.out.println("2. Zwiększ ich płace.");
                 lub();
                 switch (dec) {
                     case 1:
+                        setLegiony(getLegiony()-30);
+                        setFinanse(getFinanse()+20);
                         break;
                     case 2:
-
+                        setLegiony(getLegiony()+20);
+                        setFinanse(getFinanse()-20);
+                        if((Math.random()) >= 0.5){
+                            int q =0;
+                            while(q == 0 || q == 1){
+                                q = (int) (Math.random()) * 4;
+                            }
+                            System.out.println("Pytanie bonus. Na wieści o podwyżce zareagowały również " + q + " inne legiony. One także chcą podwyższenia płac.");
+                            System.out.println("1. Nie ma mowy.");
+                            System.out.println("2.Wynegocjuj niewielką podwyżkę.");
+                            lub();
+                            switch (dec){
+                                case 1:
+                                    setLegiony(getLegiony()-q*5);
+                                    break;
+                                case 2:
+                                    setFinanse(getFinanse()- q*5);
+                                    setLegiony(getLegiony() + q*5);
+                                    break;
+                            }
+                        }
                 }
                 break;
             case 3:
