@@ -130,7 +130,7 @@ public class Decyzja {
     }
 
     public void zbior() throws IOException {
-
+//
         this.dec = 0;
 
         switch (nr) {
