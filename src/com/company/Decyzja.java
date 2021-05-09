@@ -85,10 +85,10 @@ public class Decyzja {
 
     public Decyzja(int nr) {
         this.nr = nr;
-        finanse = 100;
-        obywatele = 100;
-        legiony = 100;
-        religia = 100;
+        finanse = 60;
+        obywatele = 60;
+        legiony = 60;
+        religia = 60;
         tura = 1;
         juzjest = new int[20];
     }
@@ -124,9 +124,9 @@ public class Decyzja {
 
     public void statystyki() {
         System.out.println("Finanse:       " + pasek(finanse, 100));
-        System.out.println("Liczebnosc:    " + pasek(obywatele, 100));
-        System.out.println("Obrona:        " + pasek(legiony, 100));
-        System.out.println("Ilość zapasów: " + pasek(religia, 100));
+        System.out.println("Obywatele:     " + pasek(obywatele, 100));
+        System.out.println("Siła wojska:   " + pasek(legiony, 100));
+        System.out.println("Religia:       " + pasek(religia, 100));
     }
 
     public void zbior() throws IOException {
@@ -143,21 +143,29 @@ public class Decyzja {
                 switch (dec) {
                     case 1:
                         setLegiony(getLegiony()-20);
+                        setObywatele(getObywatele()-10);
+                        setFinanse(getFinanse()+10);
                         break;
                     case 2:
-
+                        setLegiony(getLegiony()+20);
+                        setFinanse(getFinanse()-20);
                         break;
                 }
                 break;
             case 1:
-                System.out.println("Coś1:");
+                System.out.println("Pytanie 1. Kapłani uważają, że złe aktualne złe warunki pogodowe są znakiem gniewu Bogów. Wymagają złożenia przez twoich poddanych dużych ofiar zwierzęcych.");
+                System.out.println("1. Chyba oszaleli!");
+                System.out.println("2. Niech lud wykona ich rozkazy.");
                 //dwie opcje do wyboru
                 lub();
                 switch (dec) {
                     case 1:
+                        setReligia(getReligia()-30);
+                        setObywatele(getObywatele()+20);
                         break;
                     case 2:
-
+                        setReligia(getReligia()+20);
+                        setObywatele(getObywatele()-20);
                 }
                 break;
             case 2:
