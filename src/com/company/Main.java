@@ -85,9 +85,9 @@ public class Main {
 
 
         titleNamePanel = new JPanel();
-        titleNamePanel.setBounds(600, 300, 600, 200);
-        titleNamePanel.setBackground(Color.black);
-        titleNameLabel = new JLabel("asfghjgfv");
+        titleNamePanel.setBounds(600, 300, 600, 100);
+        titleNamePanel.setBackground(Color.green);
+        titleNameLabel = new JLabel("veni vidi vici");
         titleNameLabel.setForeground(Color.blue);
         titleNameLabel.setFont(PIXroma);
        // gra.getContentPane().add(titleNameLabel);
