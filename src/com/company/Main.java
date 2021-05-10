@@ -9,13 +9,16 @@ import java.io.IOException;
 import javax.swing.JLabel;
 import javax.swing.JFrame;
 import java.io.*;
+import java.awt.Container;
 import java.util.Scanner;
 import javax.swing.*;
 
 public class Main {
-    JLabel titleJlabel;
+    JLabel titleNameLabel;
     Font PIXroma;
+    JPanel titleNamePanel;
     Container con;
+    JFrame gra;
 
     public static void Zapis(int tura, int[] juz, int fin, int licz, int obr, int jedz) throws IOException {
         FileWriter za = new FileWriter("src/com/company/Pliki/Zapis_gry_1");
@@ -62,24 +65,38 @@ public class Main {
         catch(IOException | FontFormatException e){
 
         }
-        JFrame gra = new JFrame();
+        gra = new JFrame();
+        titleNamePanel = new JPanel();
         Panel p = new Panel();
-        titleJlabel = new JLabel("Parostatkiem w piekny rejs");
-       // titleJlabel.setBounds(300, 300, 600, 200);
-        titleJlabel.setBackground(Color.black);
-        titleJlabel.setForeground(Color.blue);
-        titleJlabel.setFont(PIXroma);
-        p.add(titleJlabel);
-        gra.add(p);
+       // titleNameLabel = new JLabel();
+
+
+      //  con.add(titleNamePanel);
+
         gra.setTitle("Deus consilium");
-        gra.setBounds(0,0,1200 + 14, 780 + 14 + 24);
-        //gra.setSize(250,250);
+       // gra.setBounds(0,0,1200 + 14, 780 + 14 + 24);
+        gra.setSize(1214,818);
         gra.setLocationRelativeTo(null);
         gra.setIconImage(new ImageIcon("src/com/company/PNG/background/45.png").getImage());
         gra.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gra.setResizable(false);
         gra.setVisible(true);
+        con = gra.getContentPane();
 
+
+        titleNamePanel = new JPanel();
+        titleNamePanel.setBounds(600, 300, 600, 200);
+        titleNamePanel.setBackground(Color.black);
+        titleNameLabel = new JLabel("asfghjgfv");
+        titleNameLabel.setForeground(Color.blue);
+        titleNameLabel.setFont(PIXroma);
+       // gra.getContentPane().add(titleNameLabel);
+        titleNamePanel.add(titleNameLabel);
+        con.add(titleNamePanel);
+     //   titleNamePanel.add(titleNameLabel);
+     //  con.add(p);
+        gra.add(p);
+     //   con.add(titleNamePanel);
 
 
         int nr = -1;
