@@ -108,7 +108,7 @@ public class Main {
         pergaminpanel.setOpaque(false);
      //   pergaminLabel = new JLabel();
      //   pergaminLabel.setForeground(Color.blue);
-        wypisznapergaminie("tutaj będą wyświetlać się pytania/decyzje do podjęcia");
+        wypisznapergaminie("tutaj będą wyświetlać się pytania/decyzje do podjęcia ");
       //  pergaminLabel.setFont(romanfont);
       //  pergaminpanel.add(pergaminLabel);
         con.add(pergaminpanel);
