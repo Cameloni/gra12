@@ -1,9 +1,22 @@
 package com.company;
+import java.awt.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.FontFormatException;
+import java.awt.GraphicsEnvironment;
+import java.io.File;
+import java.io.IOException;
+import javax.swing.JLabel;
+import javax.swing.JFrame;
 import java.io.*;
 import java.util.Scanner;
 import javax.swing.*;
 
 public class Main {
+    JLabel titleJlabel;
+    Font PIXroma;
+    Container con;
+
     public static void Zapis(int tura, int[] juz, int fin, int licz, int obr, int jedz) throws IOException {
         FileWriter za = new FileWriter("src/com/company/Pliki/Zapis_gry_1");
         PrintWriter out = new PrintWriter(za);
@@ -17,6 +30,7 @@ public class Main {
         out.println(jedz);
         out.close();
     }
+
     public static void Odczyt(Decyzja W) throws FileNotFoundException {
         File plik = new File("src/com/company/Pliki/Zapis_gry_1");
         Scanner in = new Scanner(plik);
@@ -36,8 +50,26 @@ public class Main {
     }
     public static void main(String[] args) throws IOException {
 
+        new Main();
+    }
+
+    public Main() throws java.io.IOException{
+        try {
+            PIXroma = Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/inne/PIXroma_8.ttf")).deriveFont(30f);
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/inne/PIXroma_8.ttf")));
+        }
+        catch(IOException | FontFormatException e){
+
+        }
         JFrame gra = new JFrame();
         Panel p = new Panel();
+        titleJlabel = new JLabel("Parostatkiem w piekny rejs");
+       // titleJlabel.setBounds(300, 300, 600, 200);
+        titleJlabel.setBackground(Color.black);
+        titleJlabel.setForeground(Color.blue);
+        titleJlabel.setFont(PIXroma);
+        p.add(titleJlabel);
         gra.add(p);
         gra.setTitle("Deus consilium");
         gra.setBounds(0,0,1200 + 14, 780 + 14 + 24);
@@ -47,6 +79,8 @@ public class Main {
         gra.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gra.setResizable(false);
         gra.setVisible(true);
+
+
 
         int nr = -1;
         Decyzja wybor = new Decyzja(nr);
