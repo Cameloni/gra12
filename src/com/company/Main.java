@@ -20,6 +20,11 @@ public class Main {
     Container con;
     JFrame gra;
     Font defaultfont = new Font("Times New Roman", Font.PLAIN, 30);
+    public void wypisznapergaminie(String s){
+        titleNamePanel.setVisible(false);
+        titleNameLabel = new JLabel(s);
+        titleNamePanel.setVisible(true);
+    }
 
     public static void Zapis(int tura, int[] juz, int fin, int licz, int obr, int jedz) throws IOException {
         FileWriter za = new FileWriter("src/com/company/Pliki/Zapis_gry_1");
@@ -59,7 +64,7 @@ public class Main {
 
     public Main() throws java.io.IOException{
         try {
-            romanfont = Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")).deriveFont(30f);
+            romanfont = Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")).deriveFont(80f);
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
             ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")));
         }
@@ -90,14 +95,13 @@ public class Main {
         titleNamePanel.setBackground(new Color(0, 0, 0, 0));
         titleNameLabel = new JLabel("veni vidi vici");
         titleNameLabel.setForeground(Color.blue);
+        wypisznapergaminie("bum");
         titleNameLabel.setFont(romanfont);
-       // gra.getContentPane().add(titleNameLabel);
         titleNamePanel.add(titleNameLabel);
         con.add(titleNamePanel);
-     //   titleNamePanel.add(titleNameLabel);
-     //  con.add(p);
         gra.add(p);
-     //   con.add(titleNamePanel);
+
+
 
 
         int nr = -1;
