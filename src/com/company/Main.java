@@ -74,8 +74,6 @@ public class Main {
         gra = new JFrame();
         pergaminpanel = new JPanel();
         Panel p = new Panel();
-       // titleNameLabel = new JLabel();
-
 
       //  con.add(titleNamePanel);
 
@@ -102,13 +100,12 @@ public class Main {
         gra.add(p);
 
 
-
-
         int nr = -1;
         Decyzja wybor = new Decyzja(nr);
         for (int iiii = 0; iiii < wybor.juzjest.length; iiii++){
             wybor.setJuzjest(-1, iiii);
         }
+
         for (int i = 0; i < 50; i++) {
             while (nr < 0) {
                 nr = (int) (Math.random() * 30);
