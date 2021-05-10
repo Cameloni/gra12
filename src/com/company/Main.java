@@ -108,7 +108,7 @@ public class Main {
         pergaminpanel.setOpaque(false);
      //   pergaminLabel = new JLabel();
      //   pergaminLabel.setForeground(Color.blue);
-        wypisznapergaminie("tutaj będą wyświetlać się pytania/decyzje do podjęcia ");
+        wypisznapergaminie("Tutaj będą wyświetlać się pytania/decyzje do podjęcia ");
       //  pergaminLabel.setFont(romanfont);
       //  pergaminpanel.add(pergaminLabel);
         con.add(pergaminpanel);
@@ -118,7 +118,7 @@ public class Main {
         textArea.setBounds(300, 550, 600, 200);
         textArea.setBackground(new Color(0, 0, 0, 1));
         textArea.setOpaque(false);
-        textArea.setForeground(Color.red);
+        textArea.setForeground(Color.blue);
         textArea.setFont(romanfont);
         textArea.setLineWrap(true);
         textArea.setWrapStyleWord(true);
