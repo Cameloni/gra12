@@ -85,7 +85,7 @@ public class Main {
 
 
         titleNamePanel = new JPanel();
-        titleNamePanel.setBounds(600, 300, 600, 100);
+        titleNamePanel.setBounds(300, 550, 600, 100);
         titleNamePanel.setBackground(new Color(0, 0, 0, 0));
         titleNameLabel = new JLabel("veni vidi vici");
         titleNameLabel.setForeground(Color.blue);
