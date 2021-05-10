@@ -23,6 +23,7 @@ public class Main {
     public void wypisznapergaminie(String s){
         titleNamePanel.setVisible(false);
         titleNameLabel = new JLabel(s);
+        titleNameLabel.setForeground(Color.blue);
         titleNamePanel.setVisible(true);
     }
 
@@ -93,7 +94,7 @@ public class Main {
         titleNamePanel = new JPanel();
         titleNamePanel.setBounds(300, 550, 600, 100);
         titleNamePanel.setBackground(new Color(0, 0, 0, 0));
-        titleNameLabel = new JLabel("veni vidi vici");
+        titleNameLabel = new JLabel();
         titleNameLabel.setForeground(Color.blue);
         wypisznapergaminie("ave cezar");
         titleNameLabel.setFont(romanfont);
