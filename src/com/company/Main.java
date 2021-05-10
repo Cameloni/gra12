@@ -10,20 +10,34 @@ import javax.swing.JFrame;
 import java.io.*;
 import java.awt.Container;
 import java.util.Scanner;
+import javax.swing.JTextArea;
+import javax.swing.Timer;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class Main {
     JLabel pergaminLabel;
     Font romanfont;
     JPanel pergaminpanel;
+    JTextArea textArea;
     Container con;
     JFrame gra;
+
+    String text;
+    int i =0;
+
+
+
     Font defaultfont = new Font("Times New Roman", Font.PLAIN, 30);
     public void wypisznapergaminie(String s){
-        pergaminpanel.setVisible(false);
-        pergaminLabel = new JLabel(s);
-        pergaminLabel.setForeground(Color.blue);
-        pergaminpanel.setVisible(true);
+       // pergaminpanel.setVisible(false);
+      //  pergaminLabel = new JLabel(s);
+       // pergaminLabel.setForeground(Color.blue);
+       // pergaminpanel.setVisible(true);
+        text = s;
+        timer.start();
+
     }
 
     public static void Zapis(int tura, int[] juz, int fin, int licz, int obr, int jedz) throws IOException {
@@ -64,7 +78,7 @@ public class Main {
 
     public Main() throws java.io.IOException{
         try {
-            romanfont = Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")).deriveFont(80f);
+            romanfont = Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")).deriveFont(40f);
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
             ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")));
         }
@@ -89,15 +103,30 @@ public class Main {
 
 
         pergaminpanel = new JPanel();
-        pergaminpanel.setBounds(300, 550, 600, 100);
-        pergaminpanel.setBackground(new Color(0, 0, 0, 0));
-        pergaminLabel = new JLabel();
-        pergaminLabel.setForeground(Color.blue);
-        wypisznapergaminie("ave cezar");
-        pergaminLabel.setFont(romanfont);
-        pergaminpanel.add(pergaminLabel);
+        pergaminpanel.setBounds(300, 550, 600, 200);
+        pergaminpanel.setBackground(new Color(0, 0, 0, 1));
+        pergaminpanel.setOpaque(false);
+     //   pergaminLabel = new JLabel();
+     //   pergaminLabel.setForeground(Color.blue);
+        wypisznapergaminie("tutaj będą wyświetlać się pytania/decyzje do podjęcia");
+      //  pergaminLabel.setFont(romanfont);
+      //  pergaminpanel.add(pergaminLabel);
         con.add(pergaminpanel);
         gra.add(p);
+
+        textArea = new JTextArea();
+        textArea.setBounds(300, 550, 600, 200);
+        textArea.setBackground(new Color(0, 0, 0, 1));
+        textArea.setOpaque(false);
+        textArea.setForeground(Color.red);
+        textArea.setFont(romanfont);
+        textArea.setLineWrap(true);
+        textArea.setWrapStyleWord(true);
+       // textArea.setVisible(true);
+        pergaminpanel.add(textArea);
+
+      //  text = "parostatkiem w piękny rejs";
+
 
 
         int nr = -1;
@@ -136,6 +165,28 @@ public class Main {
             // wyjscie(gra);
             //Odczyt(wybor);
             Zapis(wybor.getTura(), wybor.getJuz(), wybor.getFinanse(), wybor.getObywatele(), wybor.getLegiony(), wybor.getReligia());
+
         }
     }
+    Timer timer = new Timer(80, new ActionListener(){
+        @Override
+        public void actionPerformed(ActionEvent e){
+
+            char character[] = text.toCharArray();
+            int arrayNumber = character.length;
+
+            String addedcharacter = "";
+            String blank = "";
+        //    System.out.println(i);
+            addedcharacter = blank + character[i];
+            textArea.append(addedcharacter);
+
+            i++;
+
+            if(i == arrayNumber){
+                i = 0;
+                timer.stop();
+            }
+        }
+    });
 }
