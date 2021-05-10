@@ -125,6 +125,7 @@ public class Main {
        // textArea.setVisible(true);
         pergaminpanel.add(textArea);
 
+
       //  text = "parostatkiem w piękny rejs";
 
 
@@ -168,7 +169,7 @@ public class Main {
 
         }
     }
-    Timer timer = new Timer(80, new ActionListener(){
+    Timer timer = new Timer(50, new ActionListener(){
         @Override
         public void actionPerformed(ActionEvent e){
 
@@ -186,6 +187,13 @@ public class Main {
             if(i == arrayNumber){
                 i = 0;
                 timer.stop();
+                try {
+                    Thread.sleep(1500);
+                }
+                catch(InterruptedException ie){
+
+                }
+                textArea.setText(null);
             }
         }
     });
