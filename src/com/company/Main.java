@@ -188,7 +188,7 @@ public class Main {
                 i = 0;
                 timer.stop();
                 try {
-                    Thread.sleep(1500);
+                    Thread.sleep(1000);
                 }
                 catch(InterruptedException ie){
 
