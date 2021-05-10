@@ -95,7 +95,7 @@ public class Main {
         titleNamePanel.setBackground(new Color(0, 0, 0, 0));
         titleNameLabel = new JLabel("veni vidi vici");
         titleNameLabel.setForeground(Color.blue);
-        wypisznapergaminie("bum");
+        wypisznapergaminie("ave cezar");
         titleNameLabel.setFont(romanfont);
         titleNamePanel.add(titleNameLabel);
         con.add(titleNamePanel);
