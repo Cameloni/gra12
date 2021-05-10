@@ -1,5 +1,4 @@
 package com.company;
-import java.awt.*;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.FontFormatException;
@@ -14,17 +13,17 @@ import java.util.Scanner;
 import javax.swing.*;
 
 public class Main {
-    JLabel titleNameLabel;
+    JLabel pergaminLabel;
     Font romanfont;
-    JPanel titleNamePanel;
+    JPanel pergaminpanel;
     Container con;
     JFrame gra;
     Font defaultfont = new Font("Times New Roman", Font.PLAIN, 30);
     public void wypisznapergaminie(String s){
-        titleNamePanel.setVisible(false);
-        titleNameLabel = new JLabel(s);
-        titleNameLabel.setForeground(Color.blue);
-        titleNamePanel.setVisible(true);
+        pergaminpanel.setVisible(false);
+        pergaminLabel = new JLabel(s);
+        pergaminLabel.setForeground(Color.blue);
+        pergaminpanel.setVisible(true);
     }
 
     public static void Zapis(int tura, int[] juz, int fin, int licz, int obr, int jedz) throws IOException {
@@ -73,7 +72,7 @@ public class Main {
 
         }
         gra = new JFrame();
-        titleNamePanel = new JPanel();
+        pergaminpanel = new JPanel();
         Panel p = new Panel();
        // titleNameLabel = new JLabel();
 
@@ -91,15 +90,15 @@ public class Main {
         con = gra.getContentPane();
 
 
-        titleNamePanel = new JPanel();
-        titleNamePanel.setBounds(300, 550, 600, 100);
-        titleNamePanel.setBackground(new Color(0, 0, 0, 0));
-        titleNameLabel = new JLabel();
-        titleNameLabel.setForeground(Color.blue);
+        pergaminpanel = new JPanel();
+        pergaminpanel.setBounds(300, 550, 600, 100);
+        pergaminpanel.setBackground(new Color(0, 0, 0, 0));
+        pergaminLabel = new JLabel();
+        pergaminLabel.setForeground(Color.blue);
         wypisznapergaminie("ave cezar");
-        titleNameLabel.setFont(romanfont);
-        titleNamePanel.add(titleNameLabel);
-        con.add(titleNamePanel);
+        pergaminLabel.setFont(romanfont);
+        pergaminpanel.add(pergaminLabel);
+        con.add(pergaminpanel);
         gra.add(p);
 
 
