@@ -34,7 +34,7 @@ public class Main {
     Font defaultfont = new Font("Times New Roman", Font.PLAIN, 30);
     public void wypisznapergaminie(String s){
         text = s;
-        timer.get().start();
+        timer.start();
     }
 
     public static void Zapis(int tura, int[] juz, int fin, int licz, int obr, int jedz) throws IOException {
@@ -99,7 +99,7 @@ public class Main {
 
 
         pergaminpanel = new JPanel();
-        pergaminpanel.setBounds(300, 550, 600, 200);
+        pergaminpanel.setBounds(300, 500, 600, 200);
         pergaminpanel.setBackground(new Color(0, 0, 0, 1));
         pergaminpanel.setOpaque(false);
         wypisznapergaminie("Tutaj będą wyświetlać się pytania/decyzje do podjęcia ");
@@ -107,10 +107,10 @@ public class Main {
         gra.add(p);
 
         textArea = new JTextArea();
-        textArea.setBounds(300, 550, 600, 200);
+        textArea.setBounds(300, 500, 600, 200);
         textArea.setBackground(new Color(0, 0, 0, 1));
         textArea.setOpaque(false);
-        textArea.setForeground(Color.blue);
+        textArea.setForeground(Color.red);
         textArea.setFont(romanfont);
         textArea.setLineWrap(true);
         textArea.setEditable(false);
@@ -158,7 +158,7 @@ public class Main {
         }
     }
 
-    final ThreadLocal<Timer> timer = ThreadLocal.withInitial(() -> new Timer(50, new ActionListener() {
+    Timer timer = new Timer(50, new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
 
@@ -173,14 +173,14 @@ public class Main {
 
             if (i == arrayNumber) {
                 i = 0;
-                timer.get().stop();
+                timer.stop();
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(3000);
                 } catch (InterruptedException ie) {
 
                 }
                 textArea.setText("");
             }
         }
-    }));
+    });
 }
