@@ -15,6 +15,7 @@ import javax.swing.Timer;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
+import java.awt.event.*;
 
 public class Main {
     JLabel pergaminLabel;
@@ -121,6 +122,7 @@ public class Main {
         textArea.setForeground(Color.blue);
         textArea.setFont(romanfont);
         textArea.setLineWrap(true);
+        textArea.setEditable(false);
         textArea.setWrapStyleWord(true);
        // textArea.setVisible(true);
         pergaminpanel.add(textArea);
