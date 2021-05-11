@@ -2,13 +2,20 @@ package com.company;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+
 
 public class Panel extends JPanel {
 
     public Panel(){
 
     }
-//widzisz to?
+
+
+
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -58,6 +65,5 @@ public class Panel extends JPanel {
         }*/
 
     }
-// strzałka X
 
 }

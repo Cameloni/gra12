@@ -15,15 +15,16 @@ import javax.swing.Timer;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
-import java.awt.event.*;
 
 public class Main {
-    JLabel pergaminLabel;
+
+
     Font romanfont;
     JPanel pergaminpanel;
     JTextArea textArea;
     Container con;
     JFrame gra;
+
 
     String text;
     int i =0;
@@ -32,13 +33,8 @@ public class Main {
 
     Font defaultfont = new Font("Times New Roman", Font.PLAIN, 30);
     public void wypisznapergaminie(String s){
-       // pergaminpanel.setVisible(false);
-      //  pergaminLabel = new JLabel(s);
-       // pergaminLabel.setForeground(Color.blue);
-       // pergaminpanel.setVisible(true);
         text = s;
-        timer.start();
-
+        timer.get().start();
     }
 
     public static void Zapis(int tura, int[] juz, int fin, int licz, int obr, int jedz) throws IOException {
@@ -90,7 +86,6 @@ public class Main {
         pergaminpanel = new JPanel();
         Panel p = new Panel();
 
-      //  con.add(titleNamePanel);
 
         gra.setTitle("Deus consilium");
        // gra.setBounds(0,0,1200 + 14, 780 + 14 + 24);
@@ -107,11 +102,7 @@ public class Main {
         pergaminpanel.setBounds(300, 550, 600, 200);
         pergaminpanel.setBackground(new Color(0, 0, 0, 1));
         pergaminpanel.setOpaque(false);
-     //   pergaminLabel = new JLabel();
-     //   pergaminLabel.setForeground(Color.blue);
         wypisznapergaminie("Tutaj będą wyświetlać się pytania/decyzje do podjęcia ");
-      //  pergaminLabel.setFont(romanfont);
-      //  pergaminpanel.add(pergaminLabel);
         con.add(pergaminpanel);
         gra.add(p);
 
@@ -124,12 +115,7 @@ public class Main {
         textArea.setLineWrap(true);
         textArea.setEditable(false);
         textArea.setWrapStyleWord(true);
-       // textArea.setVisible(true);
         pergaminpanel.add(textArea);
-
-
-      //  text = "parostatkiem w piękny rejs";
-
 
 
         int nr = -1;
@@ -171,32 +157,30 @@ public class Main {
 
         }
     }
-    Timer timer = new Timer(50, new ActionListener(){
-        @Override
-        public void actionPerformed(ActionEvent e){
 
-            char character[] = text.toCharArray();
+    final ThreadLocal<Timer> timer = ThreadLocal.withInitial(() -> new Timer(50, new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+            char[] character = text.toCharArray();
             int arrayNumber = character.length;
 
             String addedcharacter = "";
             String blank = "";
-        //    System.out.println(i);
             addedcharacter = blank + character[i];
             textArea.append(addedcharacter);
-
             i++;
 
-            if(i == arrayNumber){
+            if (i == arrayNumber) {
                 i = 0;
-                timer.stop();
+                timer.get().stop();
                 try {
                     Thread.sleep(1000);
-                }
-                catch(InterruptedException ie){
+                } catch (InterruptedException ie) {
 
                 }
-                textArea.setText(null);
+                textArea.setText("");
             }
         }
-    });
+    }));
 }
