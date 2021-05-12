@@ -27,7 +27,7 @@ public class Main {
 
 
     String text;
-    int i =0;
+    int i = 0;
 
 
 
@@ -106,7 +106,7 @@ public class Main {
         con.add(pergaminpanel);
         gra.add(p);
 
-        textArea = new JTextArea();
+        textArea = new JTextArea("");
         textArea.setBounds(300, 500, 600, 200);
         textArea.setBackground(new Color(0, 0, 0, 1));
         textArea.setOpaque(false);
