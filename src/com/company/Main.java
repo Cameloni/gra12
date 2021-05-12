@@ -115,6 +115,7 @@ public class Main {
         textArea.setLineWrap(true);
         textArea.setEditable(false);
         textArea.setWrapStyleWord(true);
+        textArea.setText("");
         pergaminpanel.add(textArea);
 
 
