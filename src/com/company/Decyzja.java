@@ -146,6 +146,7 @@ public class Decyzja {
         switch (nr) {
             case 0:
                 System.out.println("pytanie 0. Legioniści wracają do miasta z wygranej wojny. Czy zorganizować z tej okazji ucztę?");
+
                 //dwie opcje do wyboru
                 System.out.println("1. Nie stać nas na to.");
                 System.out.println("2. To dobry pomysł.");
