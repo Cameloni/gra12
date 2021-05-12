@@ -20,7 +20,8 @@ public class Panel extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         /*src/com/company/pixelpictures/2021-05-08_17h50_51.png*/
-        ImageIcon tron =  new ImageIcon("src/com/company/pixelpictures/CezarWiedźmin.png");
+        ImageIcon tron =  new ImageIcon("src/com/company/pixelpictures/output-onlinepngtools (10).png");
+        ImageIcon cezar = new ImageIcon("src/com/company/pixelpictures/cezarv2.basic.png");
         ImageIcon sluga = new ImageIcon("src/com/company/pixelpictures/sługa.png");
         ImageIcon sluga2 = new ImageIcon("src/com/company/pixelpictures/sługa2.png");
         ImageIcon tlo = new ImageIcon("src/com/company/pixelpictures/tło.png");
@@ -31,6 +32,7 @@ public class Panel extends JPanel {
         g.drawImage(sluga.getImage(), 30, 270, 350, 300, null);
         g.drawImage(sluga2.getImage(),1240, 250, -280, 300, null);
         g.drawImage(pergamin.getImage(), -230, 800, 1675, -300, null);
+        g.drawImage(cezar.getImage(),500, 400, 300, 200, null);
         //g.drawImage(tlo2.getImage(), 0, 0, 1200, 780, null);
         //g.drawImage(tlo.getImage(), 0, 0, 1200, 780, null);
         //System.out.println(g.getClipBounds().width + " "+g.getClipBounds().height);
