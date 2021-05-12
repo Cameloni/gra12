@@ -2,13 +2,20 @@ package com.company;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+
 
 public class Panel extends JPanel {
 
     public Panel(){
 
     }
-//widzisz to?
+
+
+
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -18,10 +25,12 @@ public class Panel extends JPanel {
         ImageIcon sluga2 = new ImageIcon("src/com/company/pixelpictures/sługa2.png");
         ImageIcon tlo = new ImageIcon("src/com/company/pixelpictures/tło.png");
         ImageIcon tlo2 = new ImageIcon("src/com/company/pixelpictures/tło2.png");
+        ImageIcon pergamin = new ImageIcon("src/com/company/pixelpictures/scroll6.png");
         g.setColor(Color.gray);
         g.drawImage(tron.getImage(),0, 0, 1200, 780, null );
         g.drawImage(sluga.getImage(), 50, 420, 350, 300, null);
         g.drawImage(sluga2.getImage(),1100, 400, -280, 300, null);
+        g.drawImage(pergamin.getImage(), -230, 400, 1675, 400, null);
         //g.drawImage(tlo2.getImage(), 0, 0, 1200, 780, null);
         //g.drawImage(tlo.getImage(), 0, 0, 1200, 780, null);
         //System.out.println(g.getClipBounds().width + " "+g.getClipBounds().height);
@@ -58,6 +67,5 @@ public class Panel extends JPanel {
         }*/
 
     }
-// strzałka X
 
 }

@@ -17,12 +17,14 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class Main {
-    JLabel pergaminLabel;
+
+
     Font romanfont;
     JPanel pergaminpanel;
     JTextArea textArea;
     Container con;
     JFrame gra;
+
 
     String text;
     int i =0;
@@ -31,13 +33,8 @@ public class Main {
 
     Font defaultfont = new Font("Times New Roman", Font.PLAIN, 30);
     public void wypisznapergaminie(String s){
-       // pergaminpanel.setVisible(false);
-      //  pergaminLabel = new JLabel(s);
-       // pergaminLabel.setForeground(Color.blue);
-       // pergaminpanel.setVisible(true);
         text = s;
         timer.start();
-
     }
 
     public static void Zapis(int tura, int[] juz, int fin, int licz, int obr, int jedz) throws IOException {
@@ -89,7 +86,6 @@ public class Main {
         pergaminpanel = new JPanel();
         Panel p = new Panel();
 
-      //  con.add(titleNamePanel);
 
         gra.setTitle("Deus consilium");
        // gra.setBounds(0,0,1200 + 14, 780 + 14 + 24);
@@ -103,31 +99,23 @@ public class Main {
 
 
         pergaminpanel = new JPanel();
-        pergaminpanel.setBounds(300, 550, 600, 200);
+        pergaminpanel.setBounds(300, 500, 600, 200);
         pergaminpanel.setBackground(new Color(0, 0, 0, 1));
         pergaminpanel.setOpaque(false);
-     //   pergaminLabel = new JLabel();
-     //   pergaminLabel.setForeground(Color.blue);
         wypisznapergaminie("Tutaj będą wyświetlać się pytania/decyzje do podjęcia ");
-      //  pergaminLabel.setFont(romanfont);
-      //  pergaminpanel.add(pergaminLabel);
         con.add(pergaminpanel);
         gra.add(p);
 
         textArea = new JTextArea();
-        textArea.setBounds(300, 550, 600, 200);
+        textArea.setBounds(300, 500, 600, 200);
         textArea.setBackground(new Color(0, 0, 0, 1));
         textArea.setOpaque(false);
-        textArea.setForeground(Color.blue);
+        textArea.setForeground(Color.red);
         textArea.setFont(romanfont);
         textArea.setLineWrap(true);
+        textArea.setEditable(false);
         textArea.setWrapStyleWord(true);
-       // textArea.setVisible(true);
         pergaminpanel.add(textArea);
-
-
-      //  text = "parostatkiem w piękny rejs";
-
 
 
         int nr = -1;
@@ -169,31 +157,29 @@ public class Main {
 
         }
     }
-    Timer timer = new Timer(50, new ActionListener(){
-        @Override
-        public void actionPerformed(ActionEvent e){
 
-            char character[] = text.toCharArray();
+    Timer timer = new Timer(50, new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+            char[] character = text.toCharArray();
             int arrayNumber = character.length;
 
             String addedcharacter = "";
             String blank = "";
-        //    System.out.println(i);
             addedcharacter = blank + character[i];
             textArea.append(addedcharacter);
-
             i++;
 
-            if(i == arrayNumber){
+            if (i == arrayNumber) {
                 i = 0;
                 timer.stop();
                 try {
-                    Thread.sleep(1000);
-                }
-                catch(InterruptedException ie){
+                    Thread.sleep(3000);
+                } catch (InterruptedException ie) {
 
                 }
-                textArea.setText(null);
+                textArea.setText("");
             }
         }
     });
