@@ -34,6 +34,7 @@ public class Main {
     Font defaultfont = new Font("Times New Roman", Font.PLAIN, 30);
     public void wypisznapergaminie(String s){
         text = s;
+      //  textArea.setText("");
         timer.start();
     }
 
