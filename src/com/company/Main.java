@@ -34,8 +34,10 @@ public class Main {
     Font defaultfont = new Font("Times New Roman", Font.PLAIN, 30);
     public void wypisznapergaminie(String s){
         text = s;
-      //  textArea.setText("");
         timer.start();
+    }
+    public void wypisznapergaminie2(String s){
+        textArea.append(s);
     }
 
     public static void Zapis(int tura, int[] juz, int fin, int licz, int obr, int jedz) throws IOException {
@@ -108,6 +110,7 @@ public class Main {
         gra.add(p);
 
         textArea = new JTextArea("");
+        textArea.setText("");
         textArea.setBounds(300, 500, 600, 200);
         textArea.setBackground(new Color(0, 0, 0, 1));
         textArea.setOpaque(false);
@@ -170,7 +173,7 @@ public class Main {
             String addedcharacter = "";
             String blank = "";
             addedcharacter = blank + character[i];
-            textArea.append(addedcharacter);
+            wypisznapergaminie2(addedcharacter);
             i++;
 
             if (i == arrayNumber) {
