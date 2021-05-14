@@ -26,13 +26,13 @@ public class Panel extends JPanel {
         ImageIcon sluga2 = new ImageIcon("src/com/company/pixelpictures/sługa2.png");
         ImageIcon tlo = new ImageIcon("src/com/company/pixelpictures/tło.png");
         ImageIcon tlo2 = new ImageIcon("src/com/company/pixelpictures/tło2.png");
-        ImageIcon pergamin = new ImageIcon("src/com/company/pixelpictures/scroll6.png");
+        ImageIcon pergamin = new ImageIcon("src/com/company/pictures/per3.png");
         g.setColor(Color.gray);
         g.drawImage(tron.getImage(),0, 0, 1200, 780, null );
         g.drawImage(cezar.getImage(),500,200,200,300,null);
         g.drawImage(sluga.getImage(), 30, 270, 350, 300, null);
         g.drawImage(sluga2.getImage(),1240, 250, -280, 300, null);
-        g.drawImage(pergamin.getImage(), -230, 800, 1675, -300, null);
+        g.drawImage(pergamin.getImage(), 50, 500, 1100, 300, null);
         //g.drawImage(tlo2.getImage(), 0, 0, 1200, 780, null);
         //g.drawImage(tlo.getImage(), 0, 0, 1200, 780, null);
         //System.out.println(g.getClipBounds().width + " "+g.getClipBounds().height);
