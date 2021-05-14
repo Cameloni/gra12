@@ -105,12 +105,10 @@ public class Main {
         pergaminpanel.setBounds(300, 500, 600, 200);
         pergaminpanel.setBackground(new Color(0, 0, 0, 1));
         pergaminpanel.setOpaque(false);
-        wypisznapergaminie("Tutaj będą wyświetlać się pytania/decyzje do podjęcia ");
         con.add(pergaminpanel);
         gra.add(p);
 
         textArea = new JTextArea("");
-        textArea.setText("");
         textArea.setBounds(300, 500, 600, 200);
         textArea.setBackground(new Color(0, 0, 0, 1));
         textArea.setOpaque(false);
@@ -121,6 +119,8 @@ public class Main {
         textArea.setWrapStyleWord(true);
         textArea.setText("");
         pergaminpanel.add(textArea);
+        textArea.setVisible(true);
+        wypisznapergaminie("Tutaj będą wyświetlać się pytania/decyzje do podjęcia ");
 
 
         int nr = -1;
