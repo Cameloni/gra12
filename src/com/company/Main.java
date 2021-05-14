@@ -121,7 +121,7 @@ public class Main {
         textArea.setText("");
         pergaminpanel.add(textArea);
         textArea.setVisible(true);
-        wypisznapergaminie("Tutaj będą wyświetlać się pytania/decyzje do podjęcia ");
+        wypisznapergaminie("2b or not 2b.");
 
 
         int nr = -1;
