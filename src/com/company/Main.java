@@ -18,12 +18,13 @@ import javax.swing.*;
 
 public class Main {
 
-
+    JFrame gra;
+    Container con;
     Font romanfont;
     JPanel pergaminpanel;
     JTextArea textArea;
-    Container con;
-    JFrame gra;
+
+
 
 
     String text;
