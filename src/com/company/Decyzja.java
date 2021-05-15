@@ -92,7 +92,7 @@ public class Decyzja {
         return nr;
     }
 
-    public Decyzja(int nr) {
+    public Decyzja(int nr) throws IOException {
         this.nr = nr;
         finanse = 50;
         obywatele = 50;
@@ -101,6 +101,7 @@ public class Decyzja {
         tura = 1;
         kontynuacja = 0;
         juzjest = new int[20];
+
     }
 
     public String pasek(int n, int max) {
@@ -131,6 +132,9 @@ public class Decyzja {
         }
 
     }
+    int q1=0, q2=0, q3=0, q4=0, q5=0, q6=0, q7=0, q8=0, q9=0, q10=0, q11=0, q12=0, q13=0, q14=0, q15=0, q16=0, q17=0, q18=0, q19=0, q20=0, q21=0,q22=0, q23=0, q24=0, q25=0,
+            q26=0, q27=0,
+            q28=0, q29=0, q30=0, q31=0, q32=0, q33=0, q34=0, q35=0, q36=0, q37=0, q38=0, q39=0, q40=0, q41=0, q42=0, q43=0, q44=0, q45=0, q46=0, q47=0, q48=0;
 
     public void statystyki() {
         System.out.println("Finanse:       " + pasek(finanse, 100));
@@ -138,14 +142,16 @@ public class Decyzja {
         System.out.println("Siła wojska:   " + pasek(legiony, 100));
         System.out.println("Religia:       " + pasek(religia, 100));
     }
-
+    //Main st = new Main();
     public void zbior() throws IOException {
 //
+
         this.dec = 0;
+       int los;
 
         switch (nr) {
             case 0:
-                System.out.println("pytanie 0. Legioniści wracają do miasta z wygranej wojny. Czy zorganizować z tej okazji ucztę?");
+                System.out.println("Legioniści wracają do miasta z wygranej wojny. Czy zorganizować z tej okazji ucztę?");
 
                 //dwie opcje do wyboru
                 System.out.println("1. Nie stać nas na to.");
@@ -164,7 +170,7 @@ public class Decyzja {
                 }
                 break;
             case 1:
-                System.out.println("Pytanie 1. Kapłani uważają, że złe warunki pogodowe są znakiem gniewu Bogów. Wymagają złożenia przez twoich poddanych dużych ofiar zwierzęcych.");
+                System.out.println("Kapłani uważają, że złe warunki pogodowe są znakiem gniewu Bogów. Wymagają złożenia przez twoich poddanych dużych ofiar zwierzęcych.");
                 System.out.println("1. Chyba oszaleli!");
                 System.out.println("2. Niech lud wykona ich rozkazy.");
                 //dwie opcje do wyboru
@@ -185,7 +191,7 @@ public class Decyzja {
                 while(legion == 0){
                     legion = (int) (Math.random() * 31);
                 }
-                System.out.println("Pytanie 2. Żołnierze " + (int) (Math.random() * 30) + "-ego legionu rządają zwiększenia ich żołdu. Grożą buntem.");
+                System.out.println("Żołnierze " + (int) (Math.random() * 30) + "-ego legionu rządają zwiększenia ich żołdu. Grożą buntem.");
                 System.out.println("1. Ukarz ich decymacją.");
                 System.out.println("2. Zwiększ ich płace.");
                 lub();
@@ -327,27 +333,60 @@ public class Decyzja {
                 }
                 break;
             case 15:
-                System.out.println("Coś15");
-                lub();
-                switch (dec) {
-                    case 1:
-                        break;
-                    case 2:
+                if(q15==0) {
+                    System.out.println("Naczelny architekt radzi budowę nowego akweduktu.");
+                    System.out.println("1. Niech będzie");
+                    System.out.println("2. Mamy już ich wystarczająco");
+                    lub();
+                    switch (dec) {
+                        case 1:
+                            break;
+                        case 2:
+                    }
+                    break;
+                }
+                else if(q15==1){
+                    System.out.println();
+                    System.out.println();
+                    System.out.println();
+                    lub();
+                    switch (dec){
+                        case 1:
+                            break;
+                        case 2:
+                            break;
+                    }
 
                 }
-                break;
             case 16:
-                System.out.println("Coś16");
-                lub();
-                switch (dec) {
-                    case 1:
-                        break;
-                    case 2:
-
+                if(q16==0) {
+                    System.out.println("Senat wpadł na kosztowny pomysł modernizacji floty rzymskiej, co pozwoliłoby na próbę podboju północnoafrykańskiej fenickiej koloni - Kartaginy");
+                    System.out.println("1. Nasza flota ma się dobrze");
+                    System.out.println("2. To korzystna inwestycja");
+                    lub();
+                    switch (dec) {
+                        case 1:
+                            break;
+                        case 2:
+                    }
+                }
+                else if(q16==1){
+                    System.out.println("Flota została ulepszona. Jesteśmy gotowi, by wyruszyć na podbój Kartaginy.");
+                    System.out.println("1. Do boju!");
+                    System.out.println("2. Dajmy odpocząć żołnierzom");
+                    lub();
+                    switch (dec){
+                        case 1:
+                            break;
+                        case 2:
+                            break;
+                    }
                 }
                 break;
             case 17:
-                System.out.println("Coś17");
+                System.out.println("Jeden z gladiatorów strajkuje. Żąda ostrzejszego miecza i nowych sandałów. Lud zdaje się go popierać.");
+                System.out.println("Nie zawracajcie mi tym głowy");
+                System.out.println("Dajcie mu wszystko czego chce.");
                 //dwie opcje do wyboru
                 lub();
                 switch (dec) {
@@ -358,7 +397,9 @@ public class Decyzja {
                 }
                 break;
             case 18:
-                System.out.println("Coś18");
+                System.out.println("Część lwów z Koloseum przeszła na wegetarianizm. Aby zmieniły zdanie, senat sugeruje zakupienie dla nich najprzedniejszego mięsa");
+                System.out.println("To dobry pomysł");
+                System.out.println("Nie, złóżcie lwy w ofierze Marsowi");
                 lub();
                 switch (dec) {
                     case 1:
@@ -368,7 +409,9 @@ public class Decyzja {
                 }
                 break;
             case 19:
-                System.out.println("Coś19");
+                System.out.println("Jeden z kapłanów prosi o pozwolenie na odprawienie czegoś, co nazywa 'rytuałem tysiąca słońc'. Zapewnia, że przyniesie to dobrobyt całemu cesarstwu.");
+                System.out.println("Co za bzdury...");
+                System.out.println("Jeśli tak uważa...");
                 lub();
                 switch (dec) {
                     case 1:
@@ -378,7 +421,7 @@ public class Decyzja {
                 }
                 break;
             case 20:
-                System.out.println("Coś20");
+                System.out.println("");
                 lub();
                 switch (dec) {
                     case 1:
@@ -480,7 +523,7 @@ public class Decyzja {
 
                 }
                 break;
-                //casy kontynułujące dany wątek
+                //casy kontynuujące dany wątek
             case 50:
                 int q =0;
                 while(q == 0){
