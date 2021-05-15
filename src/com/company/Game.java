@@ -33,7 +33,7 @@ public class Game {
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         Watek watek = new Watek(this);
-        watek.run();
+        watek.start();
     }
 
 }

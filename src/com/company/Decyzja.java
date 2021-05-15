@@ -21,7 +21,10 @@ public class Decyzja {
     public void setJuzjest(int juzjest, int i) {
         this.juzjest[i] = juzjest;
     }
-
+    public void setQuest(int quest, int i) {
+        this.quest[i] = quest;
+    }
+    int []quest;
     int[] juzjest;
     int tura;
     int nr;
@@ -38,6 +41,9 @@ public class Decyzja {
 
     public void setKontynuacja(int kontynuacja) {
         this.kontynuacja = kontynuacja;
+    }
+    public int[] getQuest() {
+        return quest;
     }
 
     public int[] getJuz() {
@@ -101,6 +107,7 @@ public class Decyzja {
         tura = 1;
         kontynuacja = 0;
         juzjest = new int[20];
+        quest = new int[50];
 
     }
 
@@ -132,10 +139,10 @@ public class Decyzja {
         }
 
     }
-    int q1=0, q2=0, q3=0, q4=0, q5=0, q6=0, q7=0, q8=0, q9=0, q10=0, q11=0, q12=0, q13=0, q14=0, q15=0, q16=0, q17=0, q18=0, q19=0, q20=0, q21=0,q22=0, q23=0, q24=0, q25=0,
+    /*int q1=0, q2=0, q3=0, q4=0, q5=0, q6=0, q7=0, q8=0, q9=0, q10=0, q11=0, q12=0, q13=0, q14=0, q15=0, q16=0, q17=0, q18=0, q19=0, q20=0, q21=0,q22=0, q23=0, q24=0, q25=0,
             q26=0, q27=0,
             q28=0, q29=0, q30=0, q31=0, q32=0, q33=0, q34=0, q35=0, q36=0, q37=0, q38=0, q39=0, q40=0, q41=0, q42=0, q43=0, q44=0, q45=0, q46=0, q47=0, q48=0;
-
+*/
     public void statystyki() {
         System.out.println("Finanse:       " + pasek(finanse, 100));
         System.out.println("Obywatele:     " + pasek(obywatele, 100));
@@ -333,7 +340,7 @@ public class Decyzja {
                 }
                 break;
             case 15:
-                if(q15==0) {
+                if(quest[15] == 0) {
                     System.out.println("Naczelny architekt radzi budowę nowego akweduktu.");
                     System.out.println("1. Niech będzie");
                     System.out.println("2. Mamy już ich wystarczająco");
@@ -345,7 +352,7 @@ public class Decyzja {
                     }
                     break;
                 }
-                else if(q15==1){
+                else if(quest[15]==1){
                     System.out.println();
                     System.out.println();
                     System.out.println();
@@ -359,18 +366,20 @@ public class Decyzja {
 
                 }
             case 16:
-                if(q16==0) {
+                if(quest[16] == 0) {
                     System.out.println("Senat wpadł na kosztowny pomysł modernizacji floty rzymskiej, co pozwoliłoby na próbę podboju północnoafrykańskiej fenickiej koloni - Kartaginy");
                     System.out.println("1. Nasza flota ma się dobrze");
                     System.out.println("2. To korzystna inwestycja");
                     lub();
                     switch (dec) {
                         case 1:
+
                             break;
                         case 2:
+                            setQuest(1,16);
                     }
                 }
-                else if(q16==1){
+                else if(quest[16] == 1){
                     System.out.println("Flota została ulepszona. Jesteśmy gotowi, by wyruszyć na podbój Kartaginy.");
                     System.out.println("1. Do boju!");
                     System.out.println("2. Dajmy odpocząć żołnierzom");
@@ -523,9 +532,9 @@ public class Decyzja {
 
                 }
                 break;
-                //casy kontynuujące dany wątek
+                //casy kontynuujące dany wątek od razu po poprzednim
             case 50:
-                int q =0;
+                int q = 0;
                 while(q == 0){
                     q = (int) (Math.random() *4);
                 }

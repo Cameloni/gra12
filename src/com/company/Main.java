@@ -40,7 +40,7 @@ public class Main {
         textArea.append(s);
     }
 */
-    public static void Zapis(int tura, int[] juz, int fin, int licz, int obr, int jedz) throws IOException {
+    public static void Zapis(int tura, int[] juz, int fin, int oby, int leg, int rel, int[] que) throws IOException {
         FileWriter za = new FileWriter("src/com/company/Pliki/Zapis_gry_1");
         PrintWriter out = new PrintWriter(za);
         out.println(tura);
@@ -48,9 +48,12 @@ public class Main {
             out.println(juz[i]);
         }
         out.println(fin);
-        out.println(licz);
-        out.println(obr);
-        out.println(jedz);
+        out.println(oby);
+        out.println(leg);
+        out.println(rel);
+        for(int i = 0; i < 50; i++){
+            out.println(que[i]);
+        }
         out.close();
     }
 
@@ -108,8 +111,7 @@ public class Main {
             }
             // wyjscie(gra);
             //Odczyt(wybor);
-            Zapis(wybor.getTura(), wybor.getJuz(), wybor.getFinanse(), wybor.getObywatele(), wybor.getLegiony(), wybor.getReligia());
-
+            Zapis(wybor.getTura(), wybor.getJuz(), wybor.getFinanse(), wybor.getObywatele(), wybor.getLegiony(), wybor.getReligia(), wybor.getQuest());
         }
     }
         //new Main();
