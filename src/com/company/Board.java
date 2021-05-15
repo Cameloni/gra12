@@ -61,7 +61,7 @@ public class Board extends JPanel implements MouseListener {
     @Override
     public void mouseClicked(MouseEvent e) {
         System.out.println("--------------------------");
-        System.out.println("X: " + getX() + "  Y: " + getY());
+        System.out.println("X: " + e.getX() + "  Y: " + e.getY());
         if(e.getY()>78+100 && e.getY()< 78+100+98){
         }
         repaint();
