@@ -18,13 +18,12 @@ import javax.swing.*;
 
 public class Main {
 
-    JFrame gra;
-    Container con;
+/*
     Font romanfont;
     JPanel pergaminpanel;
     JTextArea textArea;
-
-
+    Container con;
+    JFrame gra;
 
 
     String text;
@@ -40,8 +39,8 @@ public class Main {
     public void wypisznapergaminie2(String s){
         textArea.append(s);
     }
-
-    public static void Zapis(int tura, int[] juz, int fin, int licz, int obr, int jedz) throws IOException {
+*/
+    public static void Zapis(int tura, int[] juz, int fin, int oby, int leg, int rel, int[] que) throws IOException {
         FileWriter za = new FileWriter("src/com/company/Pliki/Zapis_gry_1");
         PrintWriter out = new PrintWriter(za);
         out.println(tura);
@@ -49,9 +48,12 @@ public class Main {
             out.println(juz[i]);
         }
         out.println(fin);
-        out.println(licz);
-        out.println(obr);
-        out.println(jedz);
+        out.println(oby);
+        out.println(leg);
+        out.println(rel);
+        for(int i = 0; i < 50; i++){
+            out.println(que[i]);
+        }
         out.close();
     }
 
@@ -73,57 +75,7 @@ public class Main {
         System.exit(0);
     }
     public static void main(String[] args) throws IOException {
-
-        new Main();
-    }
-
-    public Main() throws java.io.IOException{
-        try {
-            romanfont = Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")).deriveFont(40f);
-            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")));
-        }
-        catch(IOException | FontFormatException e){
-
-        }
-        gra = new JFrame();
-        pergaminpanel = new JPanel();
-        Panel p = new Panel();
-
-
-        gra.setTitle("Deus consilium");
-       // gra.setBounds(0,0,1200 + 14, 780 + 14 + 24);
-        gra.setSize(1214,818);
-        gra.setLocationRelativeTo(null);
-        gra.setIconImage(new ImageIcon("src/com/company/PNG/background/45.png").getImage());
-        gra.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        gra.setResizable(false);
-        gra.setVisible(true);
-        con = gra.getContentPane();
-
-
-        pergaminpanel = new JPanel();
-        pergaminpanel.setBounds(300, 500, 600, 200);
-        pergaminpanel.setBackground(new Color(0, 0, 0, 1));
-        pergaminpanel.setOpaque(false);
-        con.add(pergaminpanel);
-        gra.add(p);
-
-        textArea = new JTextArea("");
-        textArea.setBounds(300, 500, 600, 200);
-        textArea.setBackground(new Color(0, 0, 0, 1));
-        textArea.setOpaque(false);
-        textArea.setForeground(Color.red);
-        textArea.setFont(romanfont);
-        textArea.setLineWrap(true);
-        textArea.setEditable(false);
-        textArea.setWrapStyleWord(true);
-        textArea.setText("");
-        pergaminpanel.add(textArea);
-        textArea.setVisible(true);
-        wypisznapergaminie("2b or not 2b.");
-
-
+        new Game();
         int nr = -1;
         Decyzja wybor = new Decyzja(nr);
         for (int iiii = 0; iiii < wybor.juzjest.length; iiii++){
@@ -159,34 +111,8 @@ public class Main {
             }
             // wyjscie(gra);
             //Odczyt(wybor);
-            Zapis(wybor.getTura(), wybor.getJuz(), wybor.getFinanse(), wybor.getObywatele(), wybor.getLegiony(), wybor.getReligia());
-
+            Zapis(wybor.getTura(), wybor.getJuz(), wybor.getFinanse(), wybor.getObywatele(), wybor.getLegiony(), wybor.getReligia(), wybor.getQuest());
         }
     }
-
-    Timer timer = new Timer(50, new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-
-            char[] character = text.toCharArray();
-            int arrayNumber = character.length;
-
-            String addedcharacter = "";
-            String blank = "";
-            addedcharacter = blank + character[i];
-            wypisznapergaminie2(addedcharacter);
-            i++;
-
-            if (i == arrayNumber) {
-                i = 0;
-                timer.stop();
-                try {
-                    Thread.sleep(3000);
-                } catch (InterruptedException ie) {
-
-                }
-                textArea.setText("");
-            }
-        }
-    });
+        //new Main();
 }
