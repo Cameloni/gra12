@@ -10,7 +10,8 @@ import java.io.IOException;
 public class Board extends JPanel implements MouseListener {
 
     public Game game;
-    public JLabel tekst = new JLabel();
+    //public JLabel tekst = new JLabel();
+    public JTextArea jTextArea = new JTextArea();
     //public JLabel[] counts = new JLabel[4];
     ImageIcon[] icons = new ImageIcon[10];
 
@@ -31,17 +32,27 @@ public class Board extends JPanel implements MouseListener {
         icons[4] = new ImageIcon("src/com/company/pictures/per3.png");
         //add(coins);
         this.game = game;
-        tekst.setBounds(300, 500, 600, 200);
-
-        Font romanfont = Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")).deriveFont(35f);
+        Font romanfont = Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")).deriveFont(40f);
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")));
+        JTextArea jTextArea;
+        jTextArea = new JTextArea("");
+        jTextArea.setBounds(300, 500, 600, 200);
+        jTextArea.setBackground(new Color(0, 0, 0, 1));
+        jTextArea.setOpaque(false);
+        jTextArea.setForeground(Color.red);
+        jTextArea.setFont(romanfont);
+        jTextArea.setLineWrap(true);
+        jTextArea.setEditable(false);
+        jTextArea.setWrapStyleWord(true);
+        //jTextArea.setText("ccaaaa");
+        jTextArea.setVisible(true);
+        //tekst.setBounds(300, 500, 600, 200);
+        jTextArea.setFont(romanfont);
 
-        tekst.setFont(romanfont);
-
-        tekst.setText("Tu można ładnie pisać");
-        tekst.setForeground(Color.RED);
-        add(tekst);
+        jTextArea.setText("");
+        jTextArea.setForeground(Color.RED);
+        add(jTextArea);
 
         setSize(1200, 780);
         /*for(int i =0 ; i< 4; i++) {

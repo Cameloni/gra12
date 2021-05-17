@@ -62,14 +62,14 @@ public class Watek extends Thread {
                 JPanel a = (JPanel)game.window.getContentPane().getComponent(0);
                 //board.tekst.setText("Tu można ładnie pisać");
                 //String x = board.getToolTipText();
-                char[] character = "Coś napisane. ez".toCharArray();
+                char[] character = "Coś napisane. ezsssssssssssssss dlsfk;ds sjff kkkkkkkkkkkkkkkk aaskdkkfkfl \nlkdflksjfdlajdfs".toCharArray();
 
                 if(i <character.length) {
-
+                    //JTextArea jTextArea = new JTextArea();
                     //String blank = blank + character[i];
                     addedcharacter = addedcharacter + character[i];
-
-                    ((JLabel) a.getComponent(0)).setText(addedcharacter);
+                    //jTextArea.setText(addedcharacter);
+                    ((JTextArea) a.getComponent(0)).setText(addedcharacter);
 
                     //wypisznapergaminie2(addedcharacter);
 
