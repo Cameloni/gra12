@@ -74,7 +74,7 @@ public class Main {
         J.setVisible(false);
         System.exit(0);
     }
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, FontFormatException {
         new Game();
 
 

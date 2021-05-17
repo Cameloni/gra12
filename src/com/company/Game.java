@@ -14,7 +14,7 @@ public class Game {
     //int[] lines = new int[4];
     //double[] price = new double[4];
 
-    public Game() throws IOException {
+    public Game() throws IOException, FontFormatException {
         //coins = 1;
         window = new JFrame("Deus consilium");
         window.setIconImage(new ImageIcon("src/com/company/PNG/background/45.png").getImage());
@@ -35,7 +35,11 @@ public class Game {
         this.menu = true;
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Watek watek = new Watek(this);
+        //Tekst tekst = new Tekst();
+        //tekst.wypisznapergaminie("AAAAAAAA");
         watek.start();
+
+
     }
 
 }

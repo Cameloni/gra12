@@ -1,4 +1,4 @@
-package com.company;
+/*package com.company;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.FontFormatException;
@@ -34,7 +34,7 @@ public class Tekst extends JPanel{
     Font defaultfont = new Font("Times New Roman", Font.PLAIN, 30);
     public void wypisznapergaminie(String s){
         text = s;
-        //timer.start();
+
     }
     public void wypisznapergaminie2(String s){
         textArea.append(s);
@@ -52,15 +52,15 @@ public class Tekst extends JPanel{
         Panel p = new Panel();
 
 
-        con = window.getContentPane();
+        //con = window.getContentPane();
 
 
         pergaminpanel = new JPanel();
         pergaminpanel.setBounds(300, 500, 600, 200);
         pergaminpanel.setBackground(new Color(0, 0, 0, 1));
         pergaminpanel.setOpaque(false);
-        con.add(pergaminpanel);
-        window.add(p);
+        //window.add(pergaminpanel);
+        //window.add(p);
 
 
         textArea = new JTextArea("");
@@ -79,9 +79,9 @@ public class Tekst extends JPanel{
 
         //Watek watek1c= new Watek(game);
         if(game.wizualizacja==true) {
-            Timer timer = new Timer(50, new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
+            //Timer timer = new Timer(50, new ActionListener() {
+              //  @Override
+                public void actionPerformed() {
 
                     char[] character = text.toCharArray();
                     int arrayNumber = character.length;
@@ -103,7 +103,8 @@ public class Tekst extends JPanel{
                         textArea.setText("");
                     }
                 }
-            });
+      //      });
         }
-    }
+    //}
 }
+*/

@@ -55,7 +55,7 @@ public class Watek extends Thread{
             for(int i =0; i< 4; i++) {
                 //tmp = String.valueOf(game.lines[i]) + " (" + (int)game.price[i] + ")";
                 //((Board)game.window.getContentPane().getComponent(0)).counts[i].setText(tmp);
-            }if(game.wizualizacja==true && sec % 20 == 0)
+            }if(game.wizualizacja==true)
                 {
                     ///char[] tmp = game.tekst.toCharArray();
 

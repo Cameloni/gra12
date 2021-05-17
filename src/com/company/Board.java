@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.File;
+import java.io.IOException;
 
 public class Board extends JPanel implements MouseListener {
 
@@ -13,13 +15,19 @@ public class Board extends JPanel implements MouseListener {
     ImageIcon[] icons = new ImageIcon[10];
     //Color[] cols = {Color.green, Color.yellow, Color.orange, Color.red};
 
-    public Board(Game game){
+    public Board(Game game) throws IOException, FontFormatException {
         this.setLayout(null);
         add(tekst);
-        this.tekst.setBounds(10,10,500, 30);
-        this.tekst.setFont(new Font("Arial", Font.PLAIN, 30));
-        this.tekst.setText("");
-        this.tekst.setForeground(Color.lightGray);
+        this.tekst.setBounds(300, 500, 600, 200);
+
+            Font romanfont = Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")).deriveFont(35f);
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")));
+
+        this.tekst.setFont(romanfont);
+
+        this.tekst.setText("Tu można ładnie pisać");
+        this.tekst.setForeground(Color.RED);
         /*icons[0] = new ImageIcon("src/com/company/pixelpictures/SalaTronowa.png");
         icons[1] = new ImageIcon("src/com/company/pixelpictures/CezarSam.png");
         icons[2] = new ImageIcon("src/com/company/pixelpictures/pergamin4.png");
