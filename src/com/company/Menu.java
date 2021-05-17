@@ -11,6 +11,7 @@ public class Menu extends JPanel implements MouseListener {
     ImageIcon wczytaj;
     ImageIcon nazwa;
     Game game;
+    boolean wczytaj_najechany = false;
     public Menu(Game game){
         this.game = game;
         ImageIcon tlo = new ImageIcon("src/com/company/pixelpictures/tło2.png");
@@ -30,19 +31,29 @@ public class Menu extends JPanel implements MouseListener {
             //g.drawRect(40, 80, 640 - 80, 480 - 160);
 
             g.drawImage(tlo.getImage(), 0, 0,1200,780, null);
-            g.drawImage(wczytaj.getImage(),450,300,250,250,null);
             g.drawImage(nazwa.getImage(),600,100,400,300,null);
+            if(wczytaj_najechany==false){
+                g.drawImage(wczytaj.getImage(),250,350,600,450, 0, 0, 1416 ,325, null);
+            }
+            else{
+                g.drawImage(wczytaj.getImage(),250,350,600,450, 0, 330, 1416 ,670, null);
+                g.drawImage(wczytaj.getImage(),550,350,600,450, 0, 0, 1416 ,325, null);
+            }
+
+
+
+
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        if(e.getX()>450 && e.getY()<550)
-            if(e.getY()>300 && e.getX()<700){
-                game.menu = false;
-                game.wizualizacja = true;
-                repaint();
-        //        System.out.println("bum");
-            }
+        if(e.getX()>=250 && e.getX()<=600 && e.getY()>=350 && e.getY()<=450){
+            game.menu = false;
+            game.wizualizacja = true;
+            repaint();
+            //        System.out.println("bum");
+        }
+
     }
 
     @Override
@@ -62,7 +73,12 @@ public class Menu extends JPanel implements MouseListener {
 
     @Override
     public void mouseExited(MouseEvent e) {
+        if(e.getX()>=250 && e.getX()<=600 && e.getY()>=350 && e.getY()<=450){
+            wczytaj_najechany = false;
+            repaint();
+        }
 
     }
+
 }
 

@@ -40,6 +40,7 @@ public class Main {
         textArea.append(s);
     }
 */
+
     public static void Zapis(int tura, int[] juz, int fin, int oby, int leg, int rel, int[] que) throws IOException {
         FileWriter za = new FileWriter("src/com/company/Pliki/Zapis_gry_1");
         PrintWriter out = new PrintWriter(za);
@@ -76,6 +77,7 @@ public class Main {
     }
     public static void main(String[] args) throws IOException, FontFormatException {
         new Game();
+
 
 
 
