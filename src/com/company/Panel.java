@@ -1,4 +1,4 @@
-package com.company;
+/*package com.company;
 
 import javax.swing.*;
 import java.awt.*;
@@ -20,7 +20,7 @@ public class Panel extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);//
         /*src/com/company/pixelpictures/2021-05-08_17h50_51.png*/
-        ImageIcon tron =  new ImageIcon("src/com/company/pixelpictures/SalaTronowa.png");
+ /*       ImageIcon tron =  new ImageIcon("src/com/company/pixelpictures/SalaTronowa.png");
         ImageIcon cezar = new ImageIcon("src/com/company/pixelpictures/CezarSam.png");
         ImageIcon sluga = new ImageIcon("src/com/company/pixelpictures/sługa.png");
         ImageIcon sluga2 = new ImageIcon("src/com/company/pixelpictures/sługa2.png");
@@ -69,6 +69,6 @@ public class Panel extends JPanel {
             }
         }*/
 
-    }
+ /*   }
 
-}
+}*/

@@ -6,18 +6,20 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class Board extends JPanel implements MouseListener {
+
     public Game game;
-    //public JLabel coins = new JLabel();
+    public JLabel tekst = new JLabel();
     //public JLabel[] counts = new JLabel[4];
     ImageIcon[] icons = new ImageIcon[10];
     //Color[] cols = {Color.green, Color.yellow, Color.orange, Color.red};
 
     public Board(Game game){
         this.setLayout(null);
-        /*this.coins.setBounds(10,10,500, 30);
-        this.coins.setFont(new Font("Arial", Font.PLAIN, 30));
-        this.coins.setText("0");
-        this.coins.setForeground(Color.lightGray);*/
+        add(tekst);
+        this.tekst.setBounds(10,10,500, 30);
+        this.tekst.setFont(new Font("Arial", Font.PLAIN, 30));
+        this.tekst.setText("");
+        this.tekst.setForeground(Color.lightGray);
         /*icons[0] = new ImageIcon("src/com/company/pixelpictures/SalaTronowa.png");
         icons[1] = new ImageIcon("src/com/company/pixelpictures/CezarSam.png");
         icons[2] = new ImageIcon("src/com/company/pixelpictures/pergamin4.png");
@@ -51,19 +53,19 @@ public class Board extends JPanel implements MouseListener {
         g.drawImage(icons[3].getImage(),50,300, 200,200, null);*/
         //g.drawImage(icons[0].getImage(),0,0, 1200,780, null);
         g.drawImage(icons[0].getImage(),0, 0, 1200, 780, null );
-        g.drawImage(icons[1].getImage(),500,200,200,300,null);
+        g.drawImage(icons[1].getImage(),490,230,200,320,null);
         g.drawImage(icons[2].getImage(), 30, 270, 350, 300, null);
         g.drawImage(icons[3].getImage(),1240, 250, -280, 300, null);
-        g.drawImage(icons[4].getImage(), 50, 500, 1100, 300, null);
+        g.drawImage(icons[4].getImage(), 100, 470, 1000, 300, null);
         //g.drawImage(icons[5].getImage(), 0, 0, 1200, 780, null);
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        System.out.println("--------------------------");
-        System.out.println("X: " + e.getX() + "  Y: " + e.getY());
+        /*System.out.println("--------------------------");
+        System.out.println("X: .. " + e.getX() + "  Y:.." + e.getY());
         if(e.getY()>78+100 && e.getY()< 78+100+98){
-        }
+        }*/
         repaint();
     }
 

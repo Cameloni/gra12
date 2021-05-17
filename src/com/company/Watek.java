@@ -1,13 +1,38 @@
 package com.company;
-
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.FontFormatException;
+import java.awt.GraphicsEnvironment;
+import java.io.File;
+import java.io.IOException;
+import javax.swing.JLabel;
+import javax.swing.JFrame;
+import java.io.*;
+import java.awt.Container;
+import java.util.Scanner;
+import javax.swing.JTextArea;
+import javax.swing.Timer;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+import java.awt.*;
 import javax.swing.*;
 
 public class Watek extends Thread{
     public Game game;
+    public Board board;
+    Font romanfont;
+    JPanel pergaminpanel;
+    JTextArea textArea;
+    Container con;
+    String text;
+    int i = 0;
+    Font defaultfont = new Font("Times New Roman", Font.PLAIN, 30);
+
     public Watek(Game game){
         this.game = game;
-    }
 
+    }
     public void windows(){
         if(game.menu==false && game.window.getContentPane().getComponent(1).isVisible() == true)
             game.window.getContentPane().getComponent(1).setVisible(false);
@@ -21,27 +46,32 @@ public class Watek extends Thread{
     }
 
     public void run(){
-
             int sec = 0;
 
             while (true) {
             windows();
             sec++;
-            if(game.wizualizacja==true && sec % 20 == 0)
-            {
-                /*game.coins += game.lines[0];
-                game.coins += game.lines[1] * 3;
-                game.coins += game.lines[2] * 10;
-                game.coins += game.lines[3] * 50;*/
-                JPanel a = (JPanel)game.window.getContentPane().getComponent(0);
-                //((JLabel)a.getComponent(0)).setText(String.valueOf(game.coins));
-                sec = 0;
-            }
-              //  String tmp;
-            /*for(int i =0; i< 4; i++) {
-                tmp = String.valueOf(game.lines[i]) + " (" + (int)game.price[i] + ")";
-                ((Board)game.window.getContentPane().getComponent(0)).counts[i].setText(tmp);
-            }*/
+
+            for(int i =0; i< 4; i++) {
+                //tmp = String.valueOf(game.lines[i]) + " (" + (int)game.price[i] + ")";
+                //((Board)game.window.getContentPane().getComponent(0)).counts[i].setText(tmp);
+            }if(game.wizualizacja==true && sec % 20 == 0)
+                {
+                    ///char[] tmp = game.tekst.toCharArray();
+
+                    /*game.coins += game.lines[0];
+                    game.coins += game.lines[1] * 3;
+                    game.coins += game.lines[2] * 10;
+                    game.coins += game.lines[3] * 50;*/
+                    //JPanel a = (JPanel)game.window.getContentPane().getComponent(0);
+                    //((JLabel)a.getComponent(0)).setText(String.valueOf(game.coins));
+                    /*JPanel a = (JPanel)game.window.getContentPane().getComponent(0);
+                    ((JLabel)a.getComponent(0)).setText(String.valueOf(tmp[i]));
+                    sec = 0;
+                    i++;
+                    a.repaint();*/
+
+                }
             try {
                 Thread.sleep(50);
             } catch (InterruptedException e) {
