@@ -35,8 +35,7 @@ public class Game {
         this.menu = true;
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Watek watek = new Watek(this);
-        //Tekst tekst = new Tekst();
-        //tekst.wypisznapergaminie("AAAAAAAA");
+
         watek.start();
 
 

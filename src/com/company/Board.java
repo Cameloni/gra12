@@ -13,21 +13,12 @@ public class Board extends JPanel implements MouseListener {
     public JLabel tekst = new JLabel();
     //public JLabel[] counts = new JLabel[4];
     ImageIcon[] icons = new ImageIcon[10];
+
     //Color[] cols = {Color.green, Color.yellow, Color.orange, Color.red};
 
     public Board(Game game) throws IOException, FontFormatException {
         this.setLayout(null);
-        add(tekst);
-        this.tekst.setBounds(300, 500, 600, 200);
 
-            Font romanfont = Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")).deriveFont(35f);
-            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")));
-
-        this.tekst.setFont(romanfont);
-
-        this.tekst.setText("Tu można ładnie pisać");
-        this.tekst.setForeground(Color.RED);
         /*icons[0] = new ImageIcon("src/com/company/pixelpictures/SalaTronowa.png");
         icons[1] = new ImageIcon("src/com/company/pixelpictures/CezarSam.png");
         icons[2] = new ImageIcon("src/com/company/pixelpictures/pergamin4.png");
@@ -40,6 +31,17 @@ public class Board extends JPanel implements MouseListener {
         icons[4] = new ImageIcon("src/com/company/pictures/per3.png");
         //add(coins);
         this.game = game;
+        tekst.setBounds(300, 500, 600, 200);
+
+        Font romanfont = Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")).deriveFont(35f);
+        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")));
+
+        tekst.setFont(romanfont);
+
+        tekst.setText("Tu można ładnie pisać");
+        tekst.setForeground(Color.RED);
+        add(tekst);
 
         setSize(1200, 780);
         /*for(int i =0 ; i< 4; i++) {
@@ -53,8 +55,8 @@ public class Board extends JPanel implements MouseListener {
     @Override
     public void paintComponent(Graphics g){
         super.paintComponent(g);
-        System.out.println(getWidth());
-        System.out.println(getHeight());
+        //System.out.println(getWidth());
+        //System.out.println(getHeight());
         /*g.drawImage(icons[0].getImage(),0,0, 1200,780, null);
         g.drawImage(icons[1].getImage(),300,200, 200,200, null);
         g.drawImage(icons[2].getImage(),50,500, 1100,300, null);
