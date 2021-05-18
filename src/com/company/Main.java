@@ -78,10 +78,6 @@ public class Main {
     public static void main(String[] args) throws IOException, FontFormatException, InterruptedException {
         new Game();
 
-
-
-
-
         int nr = -1;
         Decyzja wybor = new Decyzja(nr);
         for (int iiii = 0; iiii < wybor.juzjest.length; iiii++){

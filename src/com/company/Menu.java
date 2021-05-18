@@ -7,7 +7,6 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class Menu extends JPanel implements MouseListener {
-
     ImageIcon tlo;
     ImageIcon wczytaj;
     ImageIcon nazwa;
@@ -15,11 +14,14 @@ public class Menu extends JPanel implements MouseListener {
     boolean wczytaj_najechany = false;
     boolean flipper1 = false, flipper2 = false;
     public void mousetrack(){
-        int x, y;
+        int x;
+        int y;
         while(true){
-            x = MouseInfo.getPointerInfo().getLocation().x;
-            y = MouseInfo.getPointerInfo().getLocation().y;
-            if(x>825 && x<1100 && y> 490 && y<560){
+            x = game.window.getMousePosition().x;
+            y = game.window.getMousePosition().y;
+            //MouseInfo.getPointerInfo().getLocation().y to pozycja osi y od początku ekranu dlatego lepiej jest robić od początku okna
+            //y = MouseInfo.getPointerInfo().getLocation().y;
+            if(x>425 && x<765 && y> 350 && y<450){
                 wczytaj_najechany = true;
                 if(flipper1==false){
                     flipper1 = true;
@@ -79,7 +81,7 @@ public class Menu extends JPanel implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        if(e.getX()>=500 && e.getX()<=700 && e.getY()>=350 && e.getY()<=450){
+        if(e.getX()>=430 && e.getX()<=760 && e.getY()>=355 && e.getY()<=445){
             game.menu = false;
             game.wizualizacja = true;
             repaint();
