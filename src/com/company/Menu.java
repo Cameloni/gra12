@@ -1,5 +1,6 @@
 package com.company;
 
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -12,7 +13,39 @@ public class Menu extends JPanel implements MouseListener {
     ImageIcon nazwa;
     Game game;
     boolean wczytaj_najechany = false;
+    boolean flipper1 = false, flipper2 = false;
+    public void mousetrack(){
+        int x, y;
+        while(true){
+            x = MouseInfo.getPointerInfo().getLocation().x;
+            y = MouseInfo.getPointerInfo().getLocation().y;
+            if(x>875 && x<1050 && y> 490 && y<560){
+                wczytaj_najechany = true;
+                if(flipper1==false){
+                    flipper1 = true;
+                    flipper2 = true;
+                }
+                else{
+                    flipper2 = false;
+                }
+            }
+            else{
+                wczytaj_najechany = false;
+                if(flipper1==true){
+                    flipper1 = false;
+                    flipper2 = true;
+                }
+                else{
+                    flipper2 = false;
+                }
+            }
+            if(flipper2==true){
+                repaint();
+            }
+        }
+    }
     public Menu(Game game){
+
         this.game = game;
         ImageIcon tlo = new ImageIcon("src/com/company/pixelpictures/tło2.png");
         ImageIcon wczytaj = new ImageIcon("src/com/company/buttons/roman_button (2).png");
@@ -32,10 +65,10 @@ public class Menu extends JPanel implements MouseListener {
             g.drawImage(tlo.getImage(), 0, 0,1200,780, null);
             g.drawImage(nazwa.getImage(),350,20,500,300,null);
             if(wczytaj_najechany==false){
-                g.drawImage(wczytaj.getImage(),500,350,700,450, 0, 0, 1416 ,329, null);
+                g.drawImage(wczytaj.getImage(),500,347,740,442, 0, 0, 1416 ,329, null);
             }
             else{
-                g.drawImage(wczytaj.getImage(),500,350,700,450, 0, 330, 1416 ,672, null);
+                g.drawImage(wczytaj.getImage(),500,350,740,450, 0, 336, 1416 ,672, null);
                 //g.drawImage(wczytaj.getImage(),500,350,600,450, 0, 0, 1416 ,325, null);
             }
 
@@ -67,18 +100,13 @@ public class Menu extends JPanel implements MouseListener {
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        if(e.getX()>=250 && e.getX()<=700 && e.getY()>=350 && e.getY()<=450){
-            wczytaj_najechany = true;
-            repaint();
-        }
+
+
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-        if(e.getX()>=250 && e.getX()<=700 && e.getY()>=350 && e.getY()<=450){
-            wczytaj_najechany = false;
-            repaint();
-        }
+
 
     }
 

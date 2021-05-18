@@ -9,12 +9,13 @@ public class Game {
     public boolean wizualizacja;
     public boolean wy;
     public JFrame window;
+   // Menu menu = new Menu();
     //public String tekst;
     //public int coins;
     //int[] lines = new int[4];
     //double[] price = new double[4];
 
-    public Game() throws IOException, FontFormatException {
+    public Game() throws IOException, FontFormatException, InterruptedException {
         //coins = 1;
         window = new JFrame("Deus consilium");
         window.setIconImage(new ImageIcon("src/com/company/PNG/background/45.png").getImage());
@@ -33,10 +34,12 @@ public class Game {
         window.setLocationRelativeTo(null);
         window.setVisible(true);
         this.menu = true;
+       // Menu.repaint();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Watek watek = new Watek(this, menu);
 
         watek.start();
+        menu.mousetrack();
 
 
     }
