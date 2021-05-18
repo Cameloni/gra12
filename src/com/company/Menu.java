@@ -17,7 +17,7 @@ public class Menu extends JPanel implements MouseListener {
         ImageIcon tlo = new ImageIcon("src/com/company/pixelpictures/tło2.png");
         ImageIcon wczytaj = new ImageIcon("src/com/company/buttons/roman_button (2).png");
         //napis jest szpetny
-        ImageIcon DC = new ImageIcon("src/com/company/pixelpictures/DC.png");
+        ImageIcon DC = new ImageIcon("src/com/company/pixelpictures/tytuł.dc.png");
         this.wczytaj = wczytaj;
         this.tlo = tlo;
         nazwa = DC;
@@ -31,13 +31,13 @@ public class Menu extends JPanel implements MouseListener {
             //g.drawRect(40, 80, 640 - 80, 480 - 160);
 
             g.drawImage(tlo.getImage(), 0, 0,1200,780, null);
-            g.drawImage(nazwa.getImage(),600,100,400,300,null);
+            g.drawImage(nazwa.getImage(),350,70,500,300,null);
             if(wczytaj_najechany==false){
-                g.drawImage(wczytaj.getImage(),250,350,600,450, 0, 0, 1416 ,325, null);
+                g.drawImage(wczytaj.getImage(),500,350,700,450, 0, 0, 1416 ,329, null);
             }
             else{
-                g.drawImage(wczytaj.getImage(),250,350,600,450, 0, 330, 1416 ,670, null);
-                g.drawImage(wczytaj.getImage(),550,350,600,450, 0, 0, 1416 ,325, null);
+                g.drawImage(wczytaj.getImage(),500,350,700,450, 0, 330, 1416 ,672, null);
+                //g.drawImage(wczytaj.getImage(),500,350,600,450, 0, 0, 1416 ,325, null);
             }
 
 
@@ -47,7 +47,7 @@ public class Menu extends JPanel implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        if(e.getX()>=250 && e.getX()<=600 && e.getY()>=350 && e.getY()<=450){
+        if(e.getX()>=500 && e.getX()<=700 && e.getY()>=350 && e.getY()<=450){
             game.menu = false;
             game.wizualizacja = true;
             repaint();
@@ -68,12 +68,15 @@ public class Menu extends JPanel implements MouseListener {
 
     @Override
     public void mouseEntered(MouseEvent e) {
-
+        if(e.getX()>=250 && e.getX()<=700 && e.getY()>=350 && e.getY()<=450){
+            wczytaj_najechany = true;
+            repaint();
+        }
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-        if(e.getX()>=250 && e.getX()<=600 && e.getY()>=350 && e.getY()<=450){
+        if(e.getX()>=250 && e.getX()<=700 && e.getY()>=350 && e.getY()<=450){
             wczytaj_najechany = false;
             repaint();
         }

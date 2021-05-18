@@ -20,6 +20,7 @@ import javax.swing.*;
 
 public class Watek extends Thread {
     public Game game;
+    public Menu m;
     public Board board;
     String addedcharacter = "";
     Font romanfont;
@@ -28,10 +29,11 @@ public class Watek extends Thread {
     Container con;
     String text;
     int i = 0;
-    Font defaultfont = new Font("Times New Roman", Font.PLAIN, 30);
+    //Font defaultfont = new Font("Times New Roman", Font.PLAIN, 30);
 
-    public Watek(Game game) throws IOException, FontFormatException {
+    public Watek(Game game, Menu menu) throws IOException, FontFormatException {
         this.game = game;
+        this.m = menu;
         //board.add(board.tekst);
 
     }
@@ -63,7 +65,11 @@ public class Watek extends Thread {
                 //board.tekst.setText("Tu można ładnie pisać");
                 //String x = board.getToolTipText();
                 char[] character = "Coś napisane. ezsssssssssssssss dlsfk;ds sjff kkkkkkkkkkkkkkkk aaskdkkfkfl \nlkdflksjfdlajdfs".toCharArray();
+                /*if(game.menu == true){
+                    //m.repaint();
+                    a.getComponent(1).repaint();
 
+                }*/
                 if(i <character.length) {
                     //JTextArea jTextArea = new JTextArea();
                     //String blank = blank + character[i];
@@ -94,7 +100,7 @@ public class Watek extends Thread {
                 }
 
                 try {
-                    Thread.sleep(50);
+                    Thread.sleep(40);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

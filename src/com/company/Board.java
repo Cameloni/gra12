@@ -36,7 +36,7 @@ public class Board extends JPanel implements MouseListener {
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")));
         JTextArea jTextArea;
-        jTextArea = new JTextArea();
+        jTextArea = new JTextArea("");
         jTextArea.setBounds(300, 520, 600, 200);
         jTextArea.setBackground(new Color(0, 0, 0, 1));
         jTextArea.setOpaque(false);

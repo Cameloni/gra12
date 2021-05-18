@@ -34,7 +34,7 @@ public class Game {
         window.setVisible(true);
         this.menu = true;
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        Watek watek = new Watek(this);
+        Watek watek = new Watek(this, menu);
 
         watek.start();
 
