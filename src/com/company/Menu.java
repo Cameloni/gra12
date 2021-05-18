@@ -16,7 +16,6 @@ public class Menu extends JPanel implements MouseListener {
         this.game = game;
         ImageIcon tlo = new ImageIcon("src/com/company/pixelpictures/tło2.png");
         ImageIcon wczytaj = new ImageIcon("src/com/company/buttons/roman_button (2).png");
-        //napis jest szpetny
         ImageIcon DC = new ImageIcon("src/com/company/pixelpictures/tytuł.dc.png");
         this.wczytaj = wczytaj;
         this.tlo = tlo;
@@ -31,7 +30,7 @@ public class Menu extends JPanel implements MouseListener {
             //g.drawRect(40, 80, 640 - 80, 480 - 160);
 
             g.drawImage(tlo.getImage(), 0, 0,1200,780, null);
-            g.drawImage(nazwa.getImage(),350,70,500,300,null);
+            g.drawImage(nazwa.getImage(),350,20,500,300,null);
             if(wczytaj_najechany==false){
                 g.drawImage(wczytaj.getImage(),500,350,700,450, 0, 0, 1416 ,329, null);
             }
