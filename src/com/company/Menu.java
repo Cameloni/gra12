@@ -19,7 +19,7 @@ public class Menu extends JPanel implements MouseListener {
         while(true){
             x = MouseInfo.getPointerInfo().getLocation().x;
             y = MouseInfo.getPointerInfo().getLocation().y;
-            if(x>875 && x<1050 && y> 490 && y<560){
+            if(x>825 && x<1100 && y> 490 && y<560){
                 wczytaj_najechany = true;
                 if(flipper1==false){
                     flipper1 = true;
@@ -65,10 +65,10 @@ public class Menu extends JPanel implements MouseListener {
             g.drawImage(tlo.getImage(), 0, 0,1200,780, null);
             g.drawImage(nazwa.getImage(),350,20,500,300,null);
             if(wczytaj_najechany==false){
-                g.drawImage(wczytaj.getImage(),500,347,740,442, 0, 0, 1416 ,329, null);
+                g.drawImage(wczytaj.getImage(),425,347,765,442, 0, 0, 1416 ,329, null);
             }
             else{
-                g.drawImage(wczytaj.getImage(),500,350,740,450, 0, 336, 1416 ,672, null);
+                g.drawImage(wczytaj.getImage(),425,350,765,450, 0, 336, 1416 ,672, null);
                 //g.drawImage(wczytaj.getImage(),500,350,600,450, 0, 0, 1416 ,325, null);
             }
 
