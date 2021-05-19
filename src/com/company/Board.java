@@ -50,7 +50,7 @@ public class Board extends JPanel implements MouseListener {
         jTextArea.setFont(romanfont);
         //jTextArea.setForeground(Color.getHSBColor(500,850,200));
 
-        //MOŻNA WYBRAĆ WŁASNY KOLOR.
+        //MOŻNA WYBRAĆ WŁASNY KOLOR..
         jTextArea.setForeground(new Color(110,100,20));
 
         //jTextArea.setForeground(Color.BLACK);
