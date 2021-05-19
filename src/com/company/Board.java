@@ -30,6 +30,7 @@ public class Board extends JPanel implements MouseListener {
         icons[3] = new ImageIcon("src/com/company/pixelpictures/sługa2.png");
         //icons[4] = new ImageIcon("src/com/company/pixelpictures/tło.png");
         icons[4] = new ImageIcon("src/com/company/pictures/per3.png");
+        icons[5] = new ImageIcon("src/com/company/buttons/ustawienia_button.png");
         //add(coins);
         this.game = game;
         Font romanfont = Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")).deriveFont(40f);
@@ -78,6 +79,7 @@ public class Board extends JPanel implements MouseListener {
         g.drawImage(icons[2].getImage(), 30, 270, 350, 300, null);
         g.drawImage(icons[3].getImage(),1240, 250, -280, 300, null);
         g.drawImage(icons[4].getImage(), 100, 470, 1000, 300, null);
+        g.drawImage(icons[5].getImage(),1120,25,50,50, null);
         //g.drawImage(icons[5].getImage(), 0, 0, 1200, 780, null);
     }
 
