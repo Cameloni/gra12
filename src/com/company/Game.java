@@ -39,9 +39,6 @@ public class Game {
         Watek watek = new Watek(this, menu);
 
         watek.start();
-        try {
-            if(this.menu == true){ menu.mousetrack(); }
-        } catch (NullPointerException e) { }
 
     }
 

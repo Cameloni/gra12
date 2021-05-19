@@ -29,6 +29,7 @@ public class Watek extends Thread {
     Container con;
     String text;
     int i = 0;
+    private Menu menu;
     //Font defaultfont = new Font("Times New Roman", Font.PLAIN, 30);
 
     public Watek(Game game, Menu menu) throws IOException, FontFormatException {
@@ -51,13 +52,16 @@ public class Watek extends Thread {
     }
 
     public void run() {
-        int sec = 0;
 
         while (true) {
             windows();
-            sec++;
 
+            if(game.menu == true){
+                try {
+                    m.mousetrack();
+                } catch (NullPointerException e) { }
 
+            }
                 //tmp = String.valueOf(game.lines[i]) + " (" + (int)game.price[i] + ")";
                 //((Board)game.window.getContentPane().getComponent(0)).counts[i].setText(tmp);
             if(game.wizualizacja == true){
