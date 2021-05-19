@@ -34,6 +34,7 @@ public class Decyzja {
     int religia;
     int dec;
     int kontynuacja;
+    public String kwestia;
 
     public int getKontynuacja() {
         return kontynuacja;
@@ -152,14 +153,14 @@ public class Decyzja {
     //Main st = new Main();
     public void zbior() throws IOException {
 //
-
+        kwestia = "Coś";
         this.dec = 0;
-       int los;
+        int los;
 
         switch (nr) {
             case 0:
                 System.out.println("Legioniści wracają do miasta z wygranej wojny. Czy zorganizować z tej okazji ucztę?");
-
+                kwestia = "Legioniści wracają do miasta z wygranej wojny. Czy zorganizować z tej okazji ucztę?";
                 //dwie opcje do wyboru
                 System.out.println("1. Nie stać nas na to.");
                 System.out.println("2. To dobry pomysł.");
@@ -178,6 +179,7 @@ public class Decyzja {
                 break;
             case 1:
                 System.out.println("Kapłani uważają, że złe warunki pogodowe są znakiem gniewu Bogów. Wymagają złożenia przez twoich poddanych dużych ofiar zwierzęcych.");
+                kwestia = "Kapłani uważają, że złe warunki pogodowe są znakiem gniewu Bogów. Wymagają złożenia przez twoich poddanych dużych ofiar zwierzęcych.";
                 System.out.println("1. Chyba oszaleli!");
                 System.out.println("2. Niech lud wykona ich rozkazy.");
                 //dwie opcje do wyboru
@@ -199,6 +201,7 @@ public class Decyzja {
                     legion = (int) (Math.random() * 31);
                 }
                 System.out.println("Żołnierze " + (int) (Math.random() * 30) + "-ego legionu rządają zwiększenia ich żołdu. Grożą buntem.");
+                kwestia = "Żołnierze \" + (int) (Math.random() * 30) + \"-ego legionu rządają zwiększenia ich żołdu. Grożą buntem.";
                 System.out.println("1. Ukarz ich decymacją.");
                 System.out.println("2. Zwiększ ich płace.");
                 lub();

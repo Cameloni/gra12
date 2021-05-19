@@ -22,6 +22,8 @@ public class Watek extends Thread {
     public Game game;
     public Menu m;
     public Board board;
+    public Decyzja decyzja;
+    public char[] character;
     String addedcharacter = "";
     Font romanfont;
     JPanel pergaminpanel;
@@ -29,7 +31,6 @@ public class Watek extends Thread {
     Container con;
     String text;
     int i = 0;
-    private Menu menu;
     //Font defaultfont = new Font("Times New Roman", Font.PLAIN, 30);
 
     public Watek(Game game, Menu menu) throws IOException, FontFormatException {
@@ -68,7 +69,7 @@ public class Watek extends Thread {
                 JPanel a = (JPanel)game.window.getContentPane().getComponent(0);
                 //board.tekst.setText("Tu można ładnie pisać");
                 //String x = board.getToolTipText();
-                char[] character = "Coś napisane. ezsssssssssssssss dlsfk;ds sjff kkkkkkkkkkkkkkkk aaskdkkfkfl \nlkdflksjfdlajdfs".toCharArray();
+                this.character = "Kapłani uważają, że złe warunki pogodowe są znakiem gniewu Bogów. Wymagają złożenia przez twoich poddanych dużych ofiar zwierzęcych.".toCharArray();
                 /*if(game.menu == true){
                     //m.repaint();
                     a.getComponent(1).repaint();
