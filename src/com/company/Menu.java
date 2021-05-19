@@ -28,7 +28,7 @@ public class Menu extends JPanel implements MouseListener {
             //while (true) {
                 x = game.window.getMousePosition().x;
                 y = game.window.getMousePosition().y;
-                if (x > 425 && x < 765 && y > 450 && y < 550) {
+                if (x > 425 && x < 745 && y > 470 && y < 530) {
                     wczytaj_najechany = true;
                     /*if (flipper1 == false) {
                         flipper1 = true;
@@ -45,7 +45,7 @@ public class Menu extends JPanel implements MouseListener {
                         flipper2 = false;
                     }*/
                 }
-        if (x > 425 && x < 765 && y > 350 && y < 450) {
+        if (x > 425 && x < 765 && y > 370 && y < 430) {
             nowa_gra_najechany = true;
                     /*if (flipper1 == false) {
                         flipper1 = true;
@@ -63,7 +63,7 @@ public class Menu extends JPanel implements MouseListener {
                     }*/
         }
 
-        if (x > 425 && x < 765 && y > 550 && y < 650) {
+        if (x > 425 && x < 765 && y > 590 && y < 670) {
             wyjscie_najechany = true;
                     /*if (flipper1 == false) {
                         flipper1 = true;
@@ -114,19 +114,19 @@ public class Menu extends JPanel implements MouseListener {
             g.drawImage(nowa_gra.getImage(),425,347,765,442, 0, 0, 1416 ,329, null);
         }
         else{
-            g.drawImage(nowa_gra.getImage(),425,350,765,450, 0, 336, 1416 ,672, null);
+            g.drawImage(nowa_gra.getImage(),427,345,765,442, 0, 336, 1416 ,672, null);
         }
         if(wczytaj_najechany==false){
-            g.drawImage(wczytaj.getImage(),425,447,765,542, 0, 0, 1416 ,329, null);
+            g.drawImage(wczytaj.getImage(),425,457,765,552, 0, 0, 1416 ,327, null);
         }
         else{
-            g.drawImage(wczytaj.getImage(),425,450,765,550, 0, 336, 1416 ,672, null);
+            g.drawImage(wczytaj.getImage(),425,460,765,560, 0, 330, 1416 ,672, null);
         }
         if(wyjscie_najechany==false){
-            g.drawImage(wyjscie.getImage(),425,550,765,650, 0, 336, 1416 ,672, null);
+            g.drawImage(wyjscie.getImage(),425,570,765,670, 0, 330, 1416 ,672, null);
         }
         else{
-            g.drawImage(wyjscie.getImage(),425,547,765,642, 0, 0, 1416 ,329, null);
+            g.drawImage(wyjscie.getImage(),425,567,765,662, 0, 0, 1416 ,325, null);
         }
 
 
