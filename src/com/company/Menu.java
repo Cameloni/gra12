@@ -1,51 +1,53 @@
 package com.company;
 
 
+import com.sun.jdi.IntegerValue;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.ArrayList;
 
 public class Menu extends JPanel implements MouseListener {
     ImageIcon tlo;
     ImageIcon wczytaj;
     ImageIcon nazwa;
     Game game;
+    ArrayList<Point> punkty = new ArrayList<Point>();
     boolean wczytaj_najechany = false;
     boolean flipper1 = false, flipper2 = false;
     public void mousetrack(){
-        int x;
-        int y;
-        while(true){
-            x = game.window.getMousePosition().x;
-            y = game.window.getMousePosition().y;
-            //MouseInfo.getPointerInfo().getLocation().y to pozycja osi y od początku ekranu dlatego lepiej jest robić od początku okna
-            //y = MouseInfo.getPointerInfo().getLocation().y;
-            if(x>425 && x<765 && y> 350 && y<450){
-                wczytaj_najechany = true;
-                if(flipper1==false){
-                    flipper1 = true;
-                    flipper2 = true;
+        //if(game.menu == true) {
+            int x = 0;
+            int y = 0;
+            while (true) {
+                x = game.window.getMousePosition().x;
+                y = game.window.getMousePosition().y;
+                if (x > 425 && x < 765 && y > 350 && y < 450) {
+                    wczytaj_najechany = true;
+                    if (flipper1 == false) {
+                        flipper1 = true;
+                        flipper2 = true;
+                    } else {
+                        flipper2 = false;
+                    }
+                } else {
+                    wczytaj_najechany = false;
+                    if (flipper1 == true) {
+                        flipper1 = false;
+                        flipper2 = true;
+                    } else {
+                        flipper2 = false;
+                    }
                 }
-                else{
-                    flipper2 = false;
+                if (flipper2 == true) {
+                    repaint();
                 }
             }
-            else{
-                wczytaj_najechany = false;
-                if(flipper1==true){
-                    flipper1 = false;
-                    flipper2 = true;
-                }
-                else{
-                    flipper2 = false;
-                }
-            }
-            if(flipper2==true){
-                repaint();
-            }
-        }
     }
+
+
     public Menu(Game game){
 
         this.game = game;

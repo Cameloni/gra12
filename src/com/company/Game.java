@@ -7,7 +7,6 @@ import java.io.IOException;
 public class Game {
     public boolean menu;
     public boolean wizualizacja;
-    public boolean wy;
     public JFrame window;
    // Menu menu = new Menu();
     //public String tekst;
@@ -33,14 +32,16 @@ public class Game {
         window.setResizable(false);
         window.setLocationRelativeTo(null);
         window.setVisible(true);
+
         this.menu = true;
        // Menu.repaint();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Watek watek = new Watek(this, menu);
 
         watek.start();
-        menu.mousetrack();
-
+        try {
+            if(this.menu == true){ menu.mousetrack(); }
+        } catch (NullPointerException e) { }
 
     }
 
