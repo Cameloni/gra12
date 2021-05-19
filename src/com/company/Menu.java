@@ -15,11 +15,13 @@ public class Menu extends JPanel implements MouseListener {
     ImageIcon wczytaj;
     ImageIcon wyjscie;
     ImageIcon nazwa;
+    ImageIcon nazwa2;
     Game game;
     //ArrayList<Point> punkty = new ArrayList<Point>();
     boolean wczytaj_najechany = false;
     boolean nowa_gra_najechany = false;
     boolean wyjscie_najechany = false;
+    boolean dc = false;
 
     boolean flipper1 = false, flipper2 = false;
     public void mousetrack(){
@@ -81,9 +83,27 @@ public class Menu extends JPanel implements MouseListener {
                         flipper2 = false;
                     }*/
         }
+
         /*if (flipper2 == true) {
                     repaint();
                 }*/
+        if ((x > 420 && x < 765 && y > 45 + 14 && y < 285)||(x > 390 && x < 800 && y > 200+14 && y < 285 + 14)) {
+            dc = true;
+                    /*if (flipper1 == false) {
+                        flipper1 = true;
+                        flipper2 = true;
+                    } else {
+                        flipper2 = false;
+                    }*/
+        } else {
+            dc = false;
+                    /*if (flipper1 == true) {
+                        flipper1 = false;
+                        flipper2 = true;
+                    } else {
+                        flipper2 = false;
+                    }*/
+        }
         repaint();
     }
     //}
@@ -97,11 +117,13 @@ public class Menu extends JPanel implements MouseListener {
         ImageIcon wczytaj = new ImageIcon("src/com/company/buttons/roman_button (2).png");
         ImageIcon wyjscie = new ImageIcon("src/com/company/buttons/roman_button (3).png");
         ImageIcon DC = new ImageIcon("src/com/company/pixelpictures/tytuł.dc.png");
+        ImageIcon DC2 = new ImageIcon("src/com/company/pixelpictures/pixil-frame-0 (20).png");
         this.nowa_gra = nowa_gra;
         this.wczytaj = wczytaj;
         this.wyjscie = wyjscie;
         this.tlo = tlo;
         nazwa = DC;
+        nazwa2 = DC2;
         setSize(1200, 780);
         addMouseListener(this);
     }
@@ -110,7 +132,12 @@ public class Menu extends JPanel implements MouseListener {
         super.paintComponent(g);
         //g.drawRect(40, 80, 640 - 80, 480 - 160);
         g.drawImage(tlo.getImage(), 0, 0,1200,780, null);
-        g.drawImage(nazwa.getImage(),350,20,500,300,null);
+        if(dc == false) {
+            g.drawImage(nazwa.getImage(), 350, 20, 500, 300, null);
+        }
+        else{
+            g.drawImage(nazwa2.getImage(), 350, 20, 500, 300, null);
+        }
         if(nowa_gra_najechany==false){
             g.drawImage(nowa_gra.getImage(),425,347,765,442, 0, 0, 1416 ,329, null);
         }
