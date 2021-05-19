@@ -38,7 +38,7 @@ public class Board extends JPanel implements MouseListener {
         ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")));
         JTextArea jTextArea;
         jTextArea = new JTextArea("");
-        jTextArea.setBounds(250, 520, 650, 200);
+        jTextArea.setBounds(270, 520, 630, 200);
         jTextArea.setBackground(new Color(0, 0, 0, 1));
         jTextArea.setOpaque(false);
         //jTextArea.setForeground(Color.red);
@@ -51,7 +51,7 @@ public class Board extends JPanel implements MouseListener {
         //jTextArea.setForeground(Color.getHSBColor(500,850,200));
 
         //MOŻNA WYBRAĆ WŁASNY KOLOR..
-        jTextArea.setForeground(new Color(110,100,20));
+        jTextArea.setForeground(new Color(135,120,1));
 
         //jTextArea.setForeground(Color.BLACK);
         jTextArea.setVisible(true);
