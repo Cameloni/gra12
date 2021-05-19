@@ -28,24 +28,7 @@ public class Menu extends JPanel implements MouseListener {
             //while (true) {
                 x = game.window.getMousePosition().x;
                 y = game.window.getMousePosition().y;
-                if (x > 425 && x < 745 && y > 470 && y < 530) {
-                    wczytaj_najechany = true;
-                    /*if (flipper1 == false) {
-                        flipper1 = true;
-                        flipper2 = true;
-                    } else {
-                        flipper2 = false;
-                    }*/
-                } else {
-                    wczytaj_najechany = false;
-                    /*if (flipper1 == true) {
-                        flipper1 = false;
-                        flipper2 = true;
-                    } else {
-                        flipper2 = false;
-                    }*/
-                }
-        if (x > 425 && x < 765 && y > 370 && y < 430) {
+        if (x > 440 && x < 755 && y > 375 && y < 450) {
             nowa_gra_najechany = true;
                     /*if (flipper1 == false) {
                         flipper1 = true;
@@ -62,8 +45,26 @@ public class Menu extends JPanel implements MouseListener {
                         flipper2 = false;
                     }*/
         }
+                if (x > 440 && x < 755 && y > 490 && y < 560) {
+                    wczytaj_najechany = true;
+                    /*if (flipper1 == false) {
+                        flipper1 = true;
+                        flipper2 = true;
+                    } else {
+                        flipper2 = false;
+                    }*/
+                } else {
+                    wczytaj_najechany = false;
+                    /*if (flipper1 == true) {
+                        flipper1 = false;
+                        flipper2 = true;
+                    } else {
+                        flipper2 = false;
+                    }*/
+                }
 
-        if (x > 425 && x < 765 && y > 590 && y < 670) {
+
+        if (x > 440 && x < 755 && y > 585 && y < 670) {
             wyjscie_najechany = true;
                     /*if (flipper1 == false) {
                         flipper1 = true;
@@ -134,11 +135,15 @@ public class Menu extends JPanel implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        if(e.getX()>=430 && e.getX()<=760 && e.getY()>=455 && e.getY()<=545){
+        System.out.println("x " + e.getX() + "  y " + e.getY());
+        if (e.getX() > 435 && e.getX() < 745 && e.getY() > 460 && e.getY() < 530) {
             game.menu = false;
             game.wizualizacja = true;
             repaint();
-            //        System.out.println("bum");
+            System.out.println("---------------Wczytaj--------------");;
+        }
+        if (e.getX() > 438 && e.getX() < 744 && e.getY() > 570 && e.getY() < 640) {
+            System.exit(0);
         }
 
     }
