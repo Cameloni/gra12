@@ -68,41 +68,15 @@ public class Menu extends JPanel implements MouseListener {
 
         if (x > 440 && x < 755 && y > 585 && y < 670) {
             wyjscie_najechany = true;
-                    /*if (flipper1 == false) {
-                        flipper1 = true;
-                        flipper2 = true;
-                    } else {
-                        flipper2 = false;
-                    }*/
-        } else {
-            wyjscie_najechany = false;
-                    /*if (flipper1 == true) {
-                        flipper1 = false;
-                        flipper2 = true;
-                    } else {
-                        flipper2 = false;
-                    }*/
         }
-
-        /*if (flipper2 == true) {
-                    repaint();
-                }*/
+        else {
+            wyjscie_najechany = false;
+        }
         if ((x > 420 && x < 765 && y > 45 + 14 && y < 285)||(x > 390 && x < 800 && y > 200+14 && y < 285 + 14)) {
             dc = true;
-                    /*if (flipper1 == false) {
-                        flipper1 = true;
-                        flipper2 = true;
-                    } else {
-                        flipper2 = false;
-                    }*/
-        } else {
+        }
+        else {
             dc = false;
-                    /*if (flipper1 == true) {
-                        flipper1 = false;
-                        flipper2 = true;
-                    } else {
-                        flipper2 = false;
-                    }*/
         }
         repaint();
     }
