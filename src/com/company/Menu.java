@@ -30,25 +30,61 @@ public class Menu extends JPanel implements MouseListener {
                 y = game.window.getMousePosition().y;
                 if (x > 425 && x < 765 && y > 450 && y < 550) {
                     wczytaj_najechany = true;
-                    if (flipper1 == false) {
+                    /*if (flipper1 == false) {
                         flipper1 = true;
                         flipper2 = true;
                     } else {
                         flipper2 = false;
-                    }
+                    }*/
                 } else {
                     wczytaj_najechany = false;
-                    if (flipper1 == true) {
+                    /*if (flipper1 == true) {
                         flipper1 = false;
                         flipper2 = true;
                     } else {
                         flipper2 = false;
-                    }
+                    }*/
                 }
-                if (flipper2 == true) {
+        if (x > 425 && x < 765 && y > 350 && y < 450) {
+            nowa_gra_najechany = true;
+                    /*if (flipper1 == false) {
+                        flipper1 = true;
+                        flipper2 = true;
+                    } else {
+                        flipper2 = false;
+                    }*/
+        } else {
+            nowa_gra_najechany = false;
+                    /*if (flipper1 == true) {
+                        flipper1 = false;
+                        flipper2 = true;
+                    } else {
+                        flipper2 = false;
+                    }*/
+        }
+
+        if (x > 425 && x < 765 && y > 550 && y < 650) {
+            wyjscie_najechany = true;
+                    /*if (flipper1 == false) {
+                        flipper1 = true;
+                        flipper2 = true;
+                    } else {
+                        flipper2 = false;
+                    }*/
+        } else {
+            wyjscie_najechany = false;
+                    /*if (flipper1 == true) {
+                        flipper1 = false;
+                        flipper2 = true;
+                    } else {
+                        flipper2 = false;
+                    }*/
+        }
+        /*if (flipper2 == true) {
                     repaint();
-                }
-            }
+                }*/
+        repaint();
+    }
     //}
 
 
@@ -87,10 +123,10 @@ public class Menu extends JPanel implements MouseListener {
             g.drawImage(wczytaj.getImage(),425,450,765,550, 0, 336, 1416 ,672, null);
         }
         if(wyjscie_najechany==false){
-            g.drawImage(wyjscie.getImage(),425,547,765,642, 0, 0, 1416 ,329, null);
+            g.drawImage(wyjscie.getImage(),425,550,765,650, 0, 336, 1416 ,672, null);
         }
         else{
-            g.drawImage(wyjscie.getImage(),425,550,765,650, 0, 336, 1416 ,672, null);
+            g.drawImage(wyjscie.getImage(),425,547,765,642, 0, 0, 1416 ,329, null);
         }
 
 
