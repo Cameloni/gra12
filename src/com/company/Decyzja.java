@@ -110,6 +110,7 @@ public class Decyzja {
         legiony = 50;
         religia = 50;
         tura = 1;
+        kwestia = " ";
         kontynuacja = 0;
         juzjest = new int[20];
         quest = new int[50];
@@ -154,13 +155,22 @@ public class Decyzja {
         System.out.println("Siła wojska:   " + pasek(legiony, 100));
         System.out.println("Religia:       " + pasek(religia, 100));
     }
+
+    public String getKwestia() {
+        return kwestia;
+    }
+
+    public void setKwestia(String kwestia) {
+        this.kwestia = kwestia;
+    }
+
     //Main st = new Main();
     public void zbior() throws IOException {
 //
         kwestia = "Coś";
         this.dec = 0;
         int los;
-        nr = 0;
+
 
         switch (nr) {
             case 0:
@@ -184,7 +194,7 @@ public class Decyzja {
                 break;
             case 1:
                 System.out.println("Kapłani uważają, że złe warunki pogodowe są znakiem gniewu Bogów. Wymagają złożenia przez twoich poddanych dużych ofiar zwierzęcych.");
-                kwestia = "Kapłani uważają, że złe warunki pogodowe są znakiem gniewu Bogów. Wymagają złożenia przez twoich poddanych dużych ofiar zwierzęcych.";
+                setKwestia("Kapłani uważają, że złe warunki pogodowe są znakiem gniewu Bogów. Wymagają złożenia przez twoich poddanych dużych ofiar zwierzęcych.");
                 System.out.println("1. Chyba oszaleli!");
                 System.out.println("2. Niech lud wykona ich rozkazy.");
                 //dwie opcje do wyboru
@@ -206,7 +216,7 @@ public class Decyzja {
                     legion = (int) (Math.random() * 31);
                 }
                 System.out.println("Żołnierze " + (int) (Math.random() * 30) + "-ego legionu rządają zwiększenia ich żołdu. Grożą buntem.");
-                kwestia = "Żołnierze \" + (int) (Math.random() * 30) + \"-ego legionu rządają zwiększenia ich żołdu. Grożą buntem.";
+                setKwestia("Żołnierze \" + (int) (Math.random() * 30) + \"-ego legionu rządają zwiększenia ich żołdu. Grożą buntem.");
                 System.out.println("1. Ukarz ich decymacją.");
                 System.out.println("2. Zwiększ ich płace.");
                 lub();
@@ -226,6 +236,7 @@ public class Decyzja {
                 break;
             case 3:
                 System.out.println("Coś3");
+                setKwestia("cos");
                 lub();
                 switch (dec) {
                     case 1:
@@ -236,6 +247,7 @@ public class Decyzja {
                 break;
             case 4:
                 System.out.println("Coś4");
+                setKwestia("cos");
                 lub();
                 switch (dec) {
                     case 1:
@@ -247,6 +259,7 @@ public class Decyzja {
             // itd.
             case 5:
                 System.out.println("Coś5");
+                setKwestia("cos");
                 //dwie opcje do wyboru
                 lub();
                 switch (dec) {
@@ -258,6 +271,7 @@ public class Decyzja {
                 break;
             case 6:
                 System.out.println("Coś6");
+                setKwestia("cos");
                 lub();
                 switch (dec) {
                     case 1:
@@ -268,6 +282,7 @@ public class Decyzja {
                 break;
             case 7:
                 System.out.println("Coś7");
+                setKwestia("cos");
                 lub();
                 switch (dec) {
                     case 1:
@@ -278,6 +293,7 @@ public class Decyzja {
                 break;
             case 8:
                 System.out.println("Coś8");
+                setKwestia("cos");
                 lub();
                 switch (dec) {
                     case 1:
@@ -288,6 +304,7 @@ public class Decyzja {
                 break;
             case 9:
                 System.out.println("Coś9");
+                setKwestia("cos");
                 //dwie opcje do wyboru
                 lub();
                 switch (dec) {
@@ -299,6 +316,7 @@ public class Decyzja {
                 break;
             case 10:
                 System.out.println("Coś10");
+                setKwestia("cos");
                 lub();
                 switch (dec) {
                     case 1:
@@ -309,6 +327,7 @@ public class Decyzja {
                 break;
             case 11:
                 System.out.println("Coś11");
+                setKwestia("cos");
                 lub();
                 switch (dec) {
                     case 1:
@@ -319,6 +338,7 @@ public class Decyzja {
                 break;
             case 12:
                 System.out.println("Coś12");
+                setKwestia("cos");
                 lub();
                 switch (dec) {
                     case 1:
@@ -328,6 +348,7 @@ public class Decyzja {
                 break;
             case 13:
                 System.out.println("Coś13");
+                setKwestia("cos");
                 //dwie opcje do wyboru
                 lub();
                 switch (dec) {
@@ -339,6 +360,7 @@ public class Decyzja {
                 break;
             case 14:
                 System.out.println("Coś14");
+                setKwestia("cos");
                 lub();
                 switch (dec) {
                     case 1:
@@ -350,6 +372,7 @@ public class Decyzja {
             case 15:
                 if(quest[15] == 0) {
                     System.out.println("Naczelny architekt radzi budowę nowego akweduktu.");
+                    setKwestia("Naczelny architekt radzi budowę nowego akweduktu.");
                     System.out.println("1. Niech będzie");
                     System.out.println("2. Mamy już ich wystarczająco");
                     lub();
@@ -376,6 +399,7 @@ public class Decyzja {
             case 16:
                 if(quest[16] == 0) {
                     System.out.println("Senat wpadł na kosztowny pomysł modernizacji floty rzymskiej, co pozwoliłoby na próbę podboju północnoafrykańskiej fenickiej koloni - Kartaginy");
+                    setKwestia("cos 1");
                     System.out.println("1. Nasza flota ma się dobrze");
                     System.out.println("2. To korzystna inwestycja");
                     lub();
@@ -415,6 +439,7 @@ public class Decyzja {
                 break;
             case 18:
                 System.out.println("Część lwów z Koloseum przeszła na wegetarianizm. Aby zmieniły zdanie, senat sugeruje zakupienie dla nich najprzedniejszego mięsa");
+                setKwestia("cos 1");
                 System.out.println("To dobry pomysł");
                 System.out.println("Nie, złóżcie lwy w ofierze Marsowi");
                 lub();
@@ -427,6 +452,7 @@ public class Decyzja {
                 break;
             case 19:
                 System.out.println("Jeden z kapłanów prosi o pozwolenie na odprawienie czegoś, co nazywa 'rytuałem tysiąca słońc'. Zapewnia, że przyniesie to dobrobyt całemu cesarstwu.");
+                setKwestia("cos 1");
                 System.out.println("Co za bzdury...");
                 System.out.println("Jeśli tak uważa...");
                 lub();
