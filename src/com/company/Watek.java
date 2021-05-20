@@ -52,7 +52,7 @@ public class Watek extends Thread {
             game.window.getContentPane().getComponent(0).setVisible(true);
     }
 
-    public void run() {
+    public void run(String s) {
 
         while (true) {
             windows();
@@ -69,7 +69,7 @@ public class Watek extends Thread {
                 JPanel a = (JPanel)game.window.getContentPane().getComponent(0);
                 //board.tekst.setText("Tu można ładnie pisać");
                 //String x = board.getToolTipText();
-                this.character = "Kapłani uważają, że złe warunki pogodowe są znakiem gniewu Bogów. Wymagają złożenia przez twoich poddanych dużych ofiar zwierzęcych.".toCharArray();
+                this.character = s.toCharArray();
                 /*if(game.menu == true){
                     //m.repaint();
                     a.getComponent(1).repaint();

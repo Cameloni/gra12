@@ -44,19 +44,20 @@ public class Game {
         W.setObywatele(in.nextInt());
         W.setLegiony(in.nextInt());
         W.setReligia(in.nextInt());
-    }
+    }Menu menu2 = new Menu(this);
+    Watek watek = new Watek(this, menu2);
     public Game() throws IOException, FontFormatException, InterruptedException {
         //coins = 1;
         window = new JFrame("Deus consilium");
         window.setIconImage(new ImageIcon("src/com/company/PNG/background/45.png").getImage());
         Board wizualizacja = new Board(this);
-        Menu menu = new Menu(this);
+
         int nr = -1;
         Decyzja wybor = new Decyzja(nr);
         //this.tekst = "ctccoś";
-        menu.setPreferredSize(new Dimension(1200, 780));
+        menu2.setPreferredSize(new Dimension(1200, 780));
         window.add(wizualizacja);
-        window.add(menu);
+        window.add(menu2);
         window.getContentPane().getComponent(0).setVisible(false);
         window.getContentPane().getComponent(1).setVisible(true);
         //window.getContentPane().getComponent(2).setVisible(false);
@@ -71,10 +72,14 @@ public class Game {
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
-        Watek watek = new Watek(this, menu);
-
         watek.start();
+       // this.m("dsddss");
+        watek.run("fdff");
+
 
     }
+
+
+
 
 }

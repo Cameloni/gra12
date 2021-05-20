@@ -1,5 +1,6 @@
 package com.company;
 
+import java.awt.*;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -33,8 +34,11 @@ public class Decyzja {
     int legiony;
     int religia;
     int dec;
+    //Watek watek;
     int kontynuacja;
+   // Game game = new Game();
     public String kwestia;
+   // Watek watek = new Watek(game.game, );
 
     public int getKontynuacja() {
         return kontynuacja;
@@ -99,7 +103,7 @@ public class Decyzja {
         return nr;
     }
 
-    public Decyzja(int nr) throws IOException {
+    public Decyzja(int nr) throws IOException, InterruptedException, FontFormatException {
         this.nr = nr;
         finanse = 50;
         obywatele = 50;
@@ -156,6 +160,7 @@ public class Decyzja {
         kwestia = "Coś";
         this.dec = 0;
         int los;
+        nr = 0;
 
         switch (nr) {
             case 0:
