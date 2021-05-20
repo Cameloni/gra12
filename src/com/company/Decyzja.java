@@ -170,6 +170,7 @@ public class Decyzja {
         kwestia = "Coś";
         this.dec = 0;
         int los;
+        nr=0;
 
 
         switch (nr) {
@@ -215,7 +216,7 @@ public class Decyzja {
                 while(legion == 0){
                     legion = (int) (Math.random() * 31);
                 }
-                System.out.println("Żołnierze " + (int) (Math.random() * 30) + "-ego legionu rządają zwiększenia ich żołdu. Grożą buntem.");
+                System.out.println("Żołnierze piątego legionu rządają zwiększenia ich żołdu. Grożą buntem.");
                 setKwestia("Żołnierze \" + (int) (Math.random() * 30) + \"-ego legionu rządają zwiększenia ich żołdu. Grożą buntem.");
                 System.out.println("1. Ukarz ich decymacją.");
                 System.out.println("2. Zwiększ ich płace.");

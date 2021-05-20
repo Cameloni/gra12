@@ -85,7 +85,7 @@ public class Board extends JPanel implements MouseListener {
         g.drawImage(icons[1].getImage(),490,230,200,320,null);
         g.drawImage(icons[2].getImage(), 30, 270, 350, 300, null);
         g.drawImage(icons[3].getImage(),1200, 250, -280, 300, null);
-        g.drawImage(icons[4].getImage(), 100, 470, 1000, 300, null);
+        g.drawImage(icons[4].getImage(), -10, 470, 1230, 300, null);
         g.drawImage(icons[5].getImage(),1120,25,50,50, null);
         //g.drawImage(icons[5].getImage(), 0, 0, 1200, 780, null);
     }
