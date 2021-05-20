@@ -100,7 +100,7 @@ public class Watek extends Thread {
 
                         //wypisznapergaminie2(addedcharacter);
 
-                        i++;
+                        i++;//
                     }
                     else {
                         addedcharacter = "";
