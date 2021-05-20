@@ -75,46 +75,14 @@ public class Main {
         J.setVisible(false);
         System.exit(0);
     }
+
     public static void main(String[] args) throws IOException, FontFormatException, InterruptedException {
+
         new Game();
 
-        int nr = -1;
-        Decyzja wybor = new Decyzja(nr);
-        for (int iiii = 0; iiii < wybor.juzjest.length; iiii++){
-            wybor.setJuzjest(-1, iiii);
-        }
 
-        for (int i = 0; i < 50; i++) {
-            while (nr < 0) {
-                nr = (int) (Math.random() * 30);
 
-                for (int j = 0; j < 20; j++) {
-                    if (wybor.getJuzjest(j) == -1) {
-                        //tutaj chodziło że jeżeli to będzie równe -1 to nie ma już porównywać bo dalsze numery też
-                        //będą równe -1, czyli nie są jeszcze wypełnione.
-                        break;
-                    }
-                    if (nr == wybor.getJuzjest(j)) {
-                        //tutaj natomiast sprawdzam czy pojawił się już dany numer.
-                        nr = -1;
-                        break;
-                    }
-                }
-            }
-            System.out.println("--|" +wybor.getTura()+ " tura |--");
-            wybor.statystyki();
-            wybor.setNr(nr);
-            wybor.zbior();
-            wybor.setJuzjest(nr, i % 20);
-            nr = -1;
-            if(wybor.getKontynuacja() != 0){
-                nr = wybor.getKontynuacja();
-                wybor.setKontynuacja(0);
-            }
-            // wyjscie(gra);
-            //Odczyt(wybor);
-            Zapis(wybor.getTura(), wybor.getJuz(), wybor.getFinanse(), wybor.getObywatele(), wybor.getLegiony(), wybor.getReligia(), wybor.getQuest());
-        }
+
     }
         //new Main();
 }
