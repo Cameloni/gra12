@@ -25,7 +25,7 @@ public class Decyzja {
     public void setQuest(int quest, int i) {
         this.quest[i] = quest;
     }
-    int []quest;
+    int[] quest;
     int[] juzjest;
     int tura;
     int nr;
@@ -170,13 +170,13 @@ public class Decyzja {
         kwestia = "Coś";
         this.dec = 0;
         int los;
-        nr = 2;
+        nr=16;
 
 
         switch (nr) {
             case 0:
-                System.out.println("Legioniści wracają do miasta z wygranej wojny. Czy zorganizować z tej okazji ucztę?");
-                kwestia = "Legioniści wracają do miasta z wygranej wojny. Czy zorganizować z tej okazji ucztę?";
+                System.out.println("Legioniści wracają do miasta z wygranej bitwy. Czy zorganizować z tej okazji ucztę?");
+                setKwestia("Legioniści wracają do miasta z wygranej wojny. Czy zorganizować z tej okazji ucztę?");
                 //dwie opcje do wyboru
                 System.out.println("1. Nie stać nas na to.");
                 System.out.println("2. To dobry pomysł.");
@@ -400,7 +400,7 @@ public class Decyzja {
             case 16:
                 if(quest[16] == 0) {
                     System.out.println("Senat wpadł na kosztowny pomysł modernizacji floty rzymskiej, co pozwoliłoby na próbę podboju północnoafrykańskiej fenickiej koloni - Kartaginy");
-                    setKwestia("cos 1");
+                    setKwestia("Senat wpadł na kosztowny pomysł modernizacji floty rzymskiej, co pozwoliłoby na próbę podboju fenickiej koloni - Kartaginy");
                     System.out.println("1. Nasza flota ma się dobrze");
                     System.out.println("2. To korzystna inwestycja");
                     lub();
