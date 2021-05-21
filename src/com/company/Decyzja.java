@@ -596,4 +596,43 @@ public class Decyzja {
         }
         setTura(getTura() + 1);
     }
+    public void przebieg() throws IOException {
+        int nr = -1;
+        for (int iiii = 0; iiii < juzjest.length; iiii++){
+            setJuzjest(-1, iiii);
+        }
+
+        for (int i = 0; i < 50; i++) {
+            while (nr < 0) {
+                nr = (int) (Math.random() * 30);
+
+                for (int j = 0; j < 20; j++) {
+                    if (getJuzjest(j) == -1) {
+                        //tutaj chodziło że jeżeli to będzie równe -1 to nie ma już porównywać bo dalsze numery też
+                        //będą równe -1, czyli nie są jeszcze wypełnione.
+                        break;
+                    }
+                    if (nr == getJuzjest(j)) {
+                        //tutaj natomiast sprawdzam czy pojawił się już dany numer.
+                        nr = -1;
+                        break;
+                    }
+                }
+            }
+            System.out.println("--|" + getTura()+ " tura |--");
+            statystyki();
+            setNr(nr);
+            zbior();
+            setJuzjest(nr, i % 20);
+            nr = -1;
+            if(getKontynuacja() != 0){
+                nr = getKontynuacja();
+                setKontynuacja(0);
+            }
+
+            // wyjscie(gra);
+            //Odczyt(wybor);
+            //Zapis(wybor.getTura(), wybor.getJuz(), wybor.getFinanse(), wybor.getObywatele(), wybor.getLegiony(), wybor.getReligia(), wybor.getQuest());
+        }
+    }
 }

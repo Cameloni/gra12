@@ -4,13 +4,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.*;
 import java.util.Scanner;
+import java.io.File;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 
 public class Game {
     public boolean menu;
     public boolean wizualizacja;
     public JFrame window;
-
-
+    File muzyka = new File("src/com/company/audio/gra_java_soundtrack(wav).wav");
    // Menu menu = new Menu();
     //public String tekst;
     //public int coins;
@@ -52,6 +54,7 @@ public class Game {
         //coins = 1;
         window = new JFrame("Deus consilium");
         window.setIconImage(new ImageIcon("src/com/company/PNG/background/45.png").getImage());
+
         Board wizualizacja = new Board(this);
 
 
@@ -71,50 +74,21 @@ public class Game {
 
 
         this.menu = true;
+        //this.wizualizacja == false;
        // Menu.repaint();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Decyzja wybor = new Decyzja(-1);
-        Watek watek = new Watek(this, menu2, wybor);
+        Watek watek = new Watek(this, menu2, wybor, true, false,false);
+        Watek watek_dec = new Watek(this, menu2, wybor, false, true,false);
+        Watek watek_muzyka = new Watek(this, menu2, wybor, false, false, true);
         watek.start();
+        watek_muzyka.start();
+        watek_dec.start();
+
+        //wybor.przebieg();
        // this.m("dsddss");
 
-        int nr = -1;
-        for (int iiii = 0; iiii < wybor.juzjest.length; iiii++){
-            wybor.setJuzjest(-1, iiii);
-        }
 
-        for (int i = 0; i < 50; i++) {
-            while (nr < 0) {
-                nr = (int) (Math.random() * 30);
-
-                for (int j = 0; j < 20; j++) {
-                    if (wybor.getJuzjest(j) == -1) {
-                        //tutaj chodziło że jeżeli to będzie równe -1 to nie ma już porównywać bo dalsze numery też
-                        //będą równe -1, czyli nie są jeszcze wypełnione.
-                        break;
-                    }
-                    if (nr == wybor.getJuzjest(j)) {
-                        //tutaj natomiast sprawdzam czy pojawił się już dany numer.
-                        nr = -1;
-                        break;
-                    }
-                }
-            }
-            System.out.println("--|" + wybor.getTura()+ " tura |--");
-            wybor.statystyki();
-            wybor.setNr(nr);
-            wybor.zbior();
-            wybor.setJuzjest(nr, i % 20);
-            nr = -1;
-            if(wybor.getKontynuacja() != 0){
-                nr = wybor.getKontynuacja();
-                wybor.setKontynuacja(0);
-            }
-
-            // wyjscie(gra);
-            //Odczyt(wybor);
-            Zapis(wybor.getTura(), wybor.getJuz(), wybor.getFinanse(), wybor.getObywatele(), wybor.getLegiony(), wybor.getReligia(), wybor.getQuest());
-        }
 
         }
 
