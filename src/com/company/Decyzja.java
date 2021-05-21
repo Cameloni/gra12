@@ -170,7 +170,6 @@ public class Decyzja {
         kwestia = "Coś";
         this.dec = 0;
         int los;
-        nr=16;
 
 
         switch (nr) {
