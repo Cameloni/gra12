@@ -172,6 +172,7 @@ public class Decyzja {
         int los;
 
 
+
         switch (nr) {
             case 0:
                 System.out.println("Legioniści wracają do miasta z wygranej bitwy. Czy zorganizować z tej okazji ucztę?");

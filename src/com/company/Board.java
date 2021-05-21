@@ -14,6 +14,7 @@ public class Board extends JPanel implements MouseListener {
     public JTextArea jTextArea = new JTextArea();
     //public JLabel[] counts = new JLabel[4];
     ImageIcon[] icons = new ImageIcon[10];
+    int cezar_blink = 0;
 
     //Color[] cols = {Color.green, Color.yellow, Color.orange, Color.red};
 
@@ -25,7 +26,7 @@ public class Board extends JPanel implements MouseListener {
         icons[2] = new ImageIcon("src/com/company/pixelpictures/pergamin4.png");
         icons[3] = new ImageIcon("src/com/company/pixelpictures/sługa.png");*/
         icons[0] =  new ImageIcon("src/com/company/pixelpictures/SalaTronowa.png");
-        icons[1] = new ImageIcon("src/com/company/pixelpictures/CezarSam.png");
+        icons[1] = new ImageIcon("src/com/company/pixelpictures/Cezarsam7.png");
         icons[2] = new ImageIcon("src/com/company/pixelpictures/sługa.png");
         icons[3] = new ImageIcon("src/com/company/pixelpictures/sługa2.png");
         //icons[4] = new ImageIcon("src/com/company/pixelpictures/tło.png");
@@ -82,7 +83,16 @@ public class Board extends JPanel implements MouseListener {
         g.drawImage(icons[3].getImage(),50,300, 200,200, null);*/
         //g.drawImage(icons[0].getImage(),0,0, 1200,780, null);
         g.drawImage(icons[0].getImage(),0, 0, 1200, 780, null );
-        g.drawImage(icons[1].getImage(),490,230,200,320,null);
+        if(cezar_blink==0){
+            g.drawImage(icons[1].getImage(),465,200,685,510, 0, 0, 700, 1075, null);
+        }
+        else if(cezar_blink==1){
+            g.drawImage(icons[1].getImage(),465,200,685,510, 700, 0, 1400, 1075, null);
+        }
+        else if(cezar_blink==2){
+            g.drawImage(icons[1].getImage(),480,200,700,510, 1400, 0, 2100, 1075, null);
+        }
+
         g.drawImage(icons[2].getImage(), 30, 270, 350, 300, null);
         g.drawImage(icons[3].getImage(),1200, 250, -280, 300, null);
         g.drawImage(icons[4].getImage(), -10, 470, 1230, 300, null);

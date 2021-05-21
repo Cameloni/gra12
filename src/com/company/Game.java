@@ -11,7 +11,6 @@ public class Game {
     public JFrame window;
 
 
-
    // Menu menu = new Menu();
     //public String tekst;
     //public int coins;
@@ -70,6 +69,7 @@ public class Game {
         window.setLocationRelativeTo(null);
         window.setVisible(true);
 
+
         this.menu = true;
        // Menu.repaint();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -115,6 +115,7 @@ public class Game {
             //Odczyt(wybor);
             Zapis(wybor.getTura(), wybor.getJuz(), wybor.getFinanse(), wybor.getObywatele(), wybor.getLegiony(), wybor.getReligia(), wybor.getQuest());
         }
+
         }
 
     }
