@@ -65,18 +65,86 @@ public class Decyzja {
             this.finanse = 100;
             }
         }*/
-        this.finanse = finanse;
+        if(finanse>0) {
+            while (finanse > 0) {
+                this.finanse += 1;
+                finanse -= 1;
+                try {
+                    Thread.sleep(500);
+                }catch(InterruptedException e){};
+            }
+        }
+        else{
+            while(finanse<0){
+                this.finanse -= 1;
+                finanse += 1;
+                try {
+                    Thread.sleep(500);
+                }catch(InterruptedException e){};
+            }
+        }
     }
     public void setObywatele(int obywatele) {
-        this.obywatele = obywatele;
+        if(obywatele>0) {
+            while (obywatele > 0) {
+                this.obywatele += 5;
+                obywatele -= 5;
+                try {
+                    Thread.sleep(500);
+                }catch(InterruptedException e){};
+            }
+        }
+        else{
+            while(obywatele<0){
+                this.obywatele -= 5;
+                obywatele += 5;
+                try {
+                    Thread.sleep(500);
+                }catch(InterruptedException e){};
+            }
+        }
     }
 
     public void setLegiony(int legiony) {
-        this.legiony = legiony;
+        if(legiony>0) {
+            while (legiony > 0) {
+                this.legiony += 5;
+                legiony -= 5;
+                try {
+                    Thread.sleep(500);
+                }catch(InterruptedException e){};
+            }
+        }
+        else{
+            while(legiony<0){
+                this.legiony -= 5;
+                legiony += 5;
+                try {
+                    Thread.sleep(500);
+                }catch(InterruptedException e){};
+            }
+        }
     }
 
     public void setReligia(int religia) {
-        this.religia = religia;
+        if(religia>0) {
+            while (religia > 0) {
+                this.religia += 5;
+                religia -= 5;
+                try {
+                    Thread.sleep(500);
+                }catch(InterruptedException e){};
+            }
+        }
+        else{
+            while(religia<0){
+                this.religia -= 5;
+                religia += 5;
+                try {
+                    Thread.sleep(500);
+                }catch(InterruptedException e){};
+            }
+        }
     }
 
     public int getFinanse() {
@@ -170,6 +238,7 @@ public class Decyzja {
         kwestia = "Coś";
         this.dec = 0;
         int los;
+        //nr=0;
 
 
 
@@ -180,16 +249,17 @@ public class Decyzja {
                 //dwie opcje do wyboru
                 System.out.println("1. Nie stać nas na to.");
                 System.out.println("2. To dobry pomysł.");
+               // setFinanse(10);
                 lub();
                 switch (dec) {
                     case 1:
-                        setLegiony(getLegiony()-20);
-                        setObywatele(getObywatele()-10);
-                        setFinanse(getFinanse()+10);
+                        setLegiony(-20);
+                        setObywatele(-10);
+                        setFinanse(10);
                         break;
                     case 2:
-                        setLegiony(getLegiony()+20);
-                        setFinanse(getFinanse()-20);
+                        setLegiony(20);
+                        setFinanse(-20);
                         break;
                 }
                 break;
@@ -202,12 +272,12 @@ public class Decyzja {
                 lub();
                 switch (dec) {
                     case 1:
-                        setReligia(getReligia()-30);
-                        setObywatele(getObywatele()+20);
+                        setReligia(-30);
+                        setObywatele(20);
                         break;
                     case 2:
-                        setReligia(getReligia()+20);
-                        setObywatele(getObywatele()-20);
+                        setReligia(20);
+                        setObywatele(-20);
                         break;
                 }
                 break;
@@ -223,12 +293,12 @@ public class Decyzja {
                 lub();
                 switch (dec) {
                     case 1:
-                        setLegiony(getLegiony()-30);
-                        setFinanse(getFinanse()+20);
+                        setLegiony(-30);
+                        setFinanse(20);
                         break;
                     case 2:
-                        setLegiony(getLegiony()+20);
-                        setFinanse(getFinanse()-20);
+                        setLegiony(20);
+                        setFinanse(-20);
                         if((int)(Math.random()*10) >= 3) {
                             setKontynuacja(50);
                         }
