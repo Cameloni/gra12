@@ -165,15 +165,15 @@ public class Watek extends Thread {
                 board.cezar_blink++;
                 board.repaint();
             }
-            if (sec1 % (130 + mr) == 2) {
+            if (sec1 % (130 + mr) == 4) {
                 board.cezar_blink++;
                 board.repaint();
             }
-            if (sec1 % (130 + mr) == 6) {
+            if (sec1 % (130 + mr) == 10) {
                 board.cezar_blink = 1;
                 board.repaint();
             }
-            if (sec1 % (130 +mr) == 8) {
+            if (sec1 % (130 +mr) == 14) {
                 board.cezar_blink = 0;
                 board.repaint();
                 mr = 150 - (int)(Math.random()*30);
