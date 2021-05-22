@@ -468,8 +468,8 @@ public class Decyzja {
                 }
             case 16:
                 if(quest[16] == 0) {
-                    System.out.println("Senat wpadł na kosztowny pomysł modernizacji floty rzymskiej, co pozwoliłoby na próbę podboju północnoafrykańskiej fenickiej koloni - Kartaginy");
-                    setKwestia("Senat wpadł na kosztowny pomysł modernizacji floty rzymskiej, co pozwoliłoby na próbę podboju Północnej Afryki");
+                    System.out.println("Senat wpadł na pomysł modernizacji floty rzymskiej, co pozwoliłoby na próbę podboju północnoafrykańskiej fenickiej koloni - Kartaginy");
+                    setKwestia("Senat wpadł na pomysł modernizacji floty rzymskiej, co pozwoliłoby na próbę podboju Północnej Afryki");
                     System.out.println("1. Nasza flota ma się dobrze");
                     System.out.println("2. To korzystna inwestycja");
                     lub();
@@ -541,9 +541,9 @@ public class Decyzja {
                 break;
             case 20:
                 System.out.println("");
-                setKwestia("");
-                System.out.println("");
-                System.out.println("");
+                setKwestia("Dziś rano z więzienia uciekł niebezpieczny przestępca. Jego egzekucja miała odbyć się godzinę temu. Ludzie domagają się wyjaśnień.");
+                System.out.println("To ja ponoszę odpowiedzialność");
+                System.out.println("Obwińcie straż");
                 lub();
                 switch (dec) {
                     case 1:
@@ -553,7 +553,10 @@ public class Decyzja {
                 }
                 break;
             case 21:
-                System.out.println("Coś21");
+                System.out.println("Senat zaleca odnowienie dróg prowadzących do miasta.");
+                setKwestia("Senat zaleca odnowienie dróg prowadzących do miasta");
+                System.out.println("");
+                System.out.println("");
                 lub();
                 switch (dec) {
                     case 1:
@@ -563,7 +566,10 @@ public class Decyzja {
                 }
                 break;
             case 22:
-                System.out.println("Coś22");
+                System.out.println("");
+                setKwestia("W tym roku uprawy rolne były wyjątkowo obfite.");
+                System.out.println("Bogowie nad nami czuwają");
+                System.out.println("To zasługa pracowitości rolników.");
                 lub();
                 switch (dec) {
                     case 1:
@@ -574,6 +580,9 @@ public class Decyzja {
                 break;
             case 23:
                 System.out.println("Coś23");
+                setKwestia("Specjaliści donoszą, że główny szyb w jednej z kopalni miedzi może w każdej chwili ulec zawaleniu.");
+                System.out.println("");
+                System.out.println("");
                 //dwie opcje do wyboru
                 lub();
                 switch (dec) {
@@ -584,7 +593,7 @@ public class Decyzja {
                 }
                 break;
             case 24:
-                System.out.println("Coś24");
+                System.out.println("Zarządcy kamieniołomów żądają dostawy niewolników. Możni obywatele również.");
                 lub();
                 switch (dec) {
                     case 1:
@@ -594,7 +603,10 @@ public class Decyzja {
                 }
                 break;
             case 25:
-                System.out.println("Coś25");
+                System.out.println("Na jednej z farm, wykryto u krów dziwny rodzaj wysypki.");
+                setKwestia("Na jednej z farm, wykryto u krów dziwny rodzaj wysypki.");
+                System.out.println("");
+                System.out.println("");
                 lub();
                 switch (dec) {
                     case 1:
@@ -605,6 +617,9 @@ public class Decyzja {
                 break;
             case 26:
                 System.out.println("Coś26");
+                setKwestia("Kończą nam się zapasy liści laurowych.");
+                System.out.println("");
+                System.out.println("");
                 lub();
                 switch (dec) {
                     case 1:
@@ -615,6 +630,9 @@ public class Decyzja {
                 break;
             case 27:
                 System.out.println("Coś27");
+                setKwestia("Senat wpadł na pomysł zorganizowania specjalnych szkoleń taktyki bitewnej dla centurionów.");
+                System.out.println("");
+                System.out.println("");
                 //dwie opcje do wyboru
                 lub();
                 switch (dec) {
@@ -626,7 +644,9 @@ public class Decyzja {
                 break;
             case 28:
                 System.out.println("Coś28");
-
+                setKwestia("Dziś w nocy któs włamał się do pałacowej stajni i uśmiercił wszystkie konie.");
+                System.out.println("");
+                System.out.println("");
                 lub();
                 switch (dec) {
                     case 1:
@@ -636,7 +656,7 @@ public class Decyzja {
                 }
                 break;
             case 29:
-                System.out.println("Coś29");
+                System.out.println("Zbliżają się Saturnalia - święto Saturna. Czy zorganizować jego obchody?");
                 lub();
                 switch (dec) {
                     case 1:
@@ -645,8 +665,611 @@ public class Decyzja {
 
                 }
                 break;
-                //casy kontynuujące dany wątek od razu po poprzednim
+            case 30:
+                System.out.println("Coś27");
+                setKwestia("Senat wpadł na pomysł zorganizowania specjalnych szkoleń taktyki bitewnej dla centurionów.");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 31:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 32:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 33:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 34:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 35:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 36:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 37:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 38:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 39:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 40:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 41:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 42:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 43:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 44:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 45:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 46:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 47:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 48:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 49:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
             case 50:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 51:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 52:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 53:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 54:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 55:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 56:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 57:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 58:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 59:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 60:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 61:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 62:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 63:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 64:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 65:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 66:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 67:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 68:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 69:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 70:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 71:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+            case 72:
+                System.out.println("Coś27");
+                setKwestia("");
+                System.out.println("");
+                System.out.println("");
+                //dwie opcje do wyboru
+                lub();
+                switch (dec) {
+                    case 1:
+                        break;
+                    case 2:
+
+                }
+                break;
+
+                //casy kontynuujące dany wątek od razu po poprzednim
+      /*      case 50:
                 int q = 0;
                 while(q == 0){
                     q = (int) (Math.random() *4);
@@ -669,7 +1292,7 @@ public class Decyzja {
                         setFinanse(getFinanse()- q*5);
                         setLegiony(getLegiony() + q*5);
                         break;
-                }
+                } */
 
         }
         setTura(getTura() + 1);
