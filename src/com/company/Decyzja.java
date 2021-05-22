@@ -244,7 +244,6 @@ public class Decyzja {
 
         switch (nr) {
             case 0:
-                System.out.println("Legioniści wracają do miasta z wygranej bitwy. Czy zorganizować z tej okazji ucztę?");
                 setKwestia("Legioniści wracają do miasta z wygranej wojny. Czy zorganizować z tej okazji ucztę?");
                 //dwie opcje do wyboru
                 System.out.println("1. Nie stać nas na to.");
@@ -470,7 +469,7 @@ public class Decyzja {
             case 16:
                 if(quest[16] == 0) {
                     System.out.println("Senat wpadł na kosztowny pomysł modernizacji floty rzymskiej, co pozwoliłoby na próbę podboju północnoafrykańskiej fenickiej koloni - Kartaginy");
-                    setKwestia("Senat wpadł na kosztowny pomysł modernizacji floty rzymskiej, co pozwoliłoby na próbę podboju fenickiej koloni - Kartaginy");
+                    setKwestia("Senat wpadł na kosztowny pomysł modernizacji floty rzymskiej, co pozwoliłoby na próbę podboju Północnej Afryki");
                     System.out.println("1. Nasza flota ma się dobrze");
                     System.out.println("2. To korzystna inwestycja");
                     lub();
@@ -483,7 +482,7 @@ public class Decyzja {
                     }
                 }
                 else if(quest[16] == 1){
-                    System.out.println("Flota została ulepszona. Jesteśmy gotowi, by wyruszyć na podbój Kartaginy.");
+                    System.out.println("Flota została ulepszona. Jesteśmy gotowi, by wyruszyć na podbój Północnej Afryki.");
                     System.out.println("1. Do boju!");
                     System.out.println("2. Dajmy odpocząć żołnierzom");
                     lub();
@@ -496,21 +495,27 @@ public class Decyzja {
                 }
                 break;
             case 17:
-                System.out.println("Jeden z gladiatorów strajkuje. Żąda ostrzejszego miecza i nowych sandałów. Lud zdaje się go popierać.");
-                System.out.println("Nie zawracajcie mi tym głowy");
-                System.out.println("Dajcie mu wszystko czego chce.");
-                //dwie opcje do wyboru
-                lub();
-                switch (dec) {
-                    case 1:
-                        break;
-                    case 2:
+                if(quest[17]==0) {
+                    System.out.println("Jeden z gladiatorów strajkuje. Żąda ostrzejszego miecza i nowych sandałów. Lud zdaje się go popierać.");
+                    setKwestia("Jeden z gladiatorów strajkuje. Żąda ostrzejszego miecza i nowych sandałów.");
+                    System.out.println("Nie zawracajcie mi tym głowy");
+                    System.out.println("Dajcie mu wszystko czego chce.");
+                    //dwie opcje do wyboru
+                    lub();
+                    switch (dec) {
+                        case 1:
+                            break;
+                        case 2:
+
+                    }
+                    break;
+                }
+                else if(quest[17]==1){
 
                 }
-                break;
             case 18:
-                System.out.println("Część lwów z Koloseum przeszła na wegetarianizm. Aby zmieniły zdanie, senat sugeruje zakupienie dla nich najprzedniejszego mięsa");
-                setKwestia("cos 1");
+                System.out.println("Część lwów z Koloseum przeszła na wegetarianizm. Aby zmieniły zdanie, powinniśmy zakupić dla nich najprzedniejszego mięsa");
+                setKwestia("Część lwów z Koloseum przeszła na wegetarianizm. Aby zmieniły zdanie, powinniśmy zakupić dla nich najprzedniejszego mięsa.");
                 System.out.println("To dobry pomysł");
                 System.out.println("Nie, złóżcie lwy w ofierze Marsowi");
                 lub();
@@ -523,7 +528,7 @@ public class Decyzja {
                 break;
             case 19:
                 System.out.println("Jeden z kapłanów prosi o pozwolenie na odprawienie czegoś, co nazywa 'rytuałem tysiąca słońc'. Zapewnia, że przyniesie to dobrobyt całemu cesarstwu.");
-                setKwestia("cos 1");
+                setKwestia("Jeden z kapłanów prosi o pozwolenie na odprawienie czegoś, co nazywa 'rytuałem tysiąca słońc'. Zapewnia, że przyniesie to dobrobyt całemu cesarstwu.");
                 System.out.println("Co za bzdury...");
                 System.out.println("Jeśli tak uważa...");
                 lub();
@@ -535,6 +540,9 @@ public class Decyzja {
                 }
                 break;
             case 20:
+                System.out.println("");
+                setKwestia("");
+                System.out.println("");
                 System.out.println("");
                 lub();
                 switch (dec) {
