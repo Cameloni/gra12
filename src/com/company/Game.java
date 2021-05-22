@@ -1,14 +1,11 @@
 package com.company;
 
-import javax.sound.sampled.FloatControl;
-import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
 import java.util.Scanner;
 import java.io.File;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
 
 public class Game {
     public boolean menu;
@@ -55,7 +52,7 @@ public class Game {
     }
     Menu menu2 = new Menu(this);
 
-    public Game() throws IOException, FontFormatException, InterruptedException, LineUnavailableException {
+    public Game() throws IOException, FontFormatException, InterruptedException, LineUnavailableException, UnsupportedAudioFileException {
         //coins = 1;
         window = new JFrame("Deus consilium");
         window.setIconImage(new ImageIcon("src/com/company/PNG/background/45.png").getImage());

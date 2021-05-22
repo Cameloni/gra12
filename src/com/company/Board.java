@@ -43,7 +43,7 @@ public class Board extends JPanel implements MouseListener {
         ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")));
         JTextArea jTextArea;
         jTextArea = new JTextArea("");
-        jTextArea.setBounds(250, 520, 700, 300);
+        jTextArea.setBounds(200, 520, 800, 300);
         jTextArea.setBackground(new Color(0, 0, 0, 1));
         jTextArea.setOpaque(false);
         //jTextArea.setForeground(Color.red);
@@ -57,7 +57,8 @@ public class Board extends JPanel implements MouseListener {
 
         //MOŻNA WYBRAĆ WŁASNY KOLOR..
         jTextArea.setForeground(new Color(177, 154, 8));
-
+        setSize(1200, 780);
+        add(jTextArea);
         //jTextArea.setForeground(Color.BLACK);
         jTextArea.setVisible(true);
         //tekst.setBounds(300, 500, 600, 200);
@@ -65,9 +66,9 @@ public class Board extends JPanel implements MouseListener {
 
         //jTextArea.setText("");
 
-        add(jTextArea);
 
-        setSize(1200, 780);
+
+
         /*for(int i =0 ; i< 4; i++) {
             counts[i] = new JLabel();
             counts[i].setBounds(100, 88 + 100 * i, 636, 98);
@@ -91,20 +92,21 @@ public class Board extends JPanel implements MouseListener {
             g.drawImage(icons[1].getImage(),465,200,685,510, 0, 0, 700, 1075, null);
         }
         else if(cezar_blink==1){
-            g.drawImage(icons[1].getImage(),465,200,685,510, 700, 0, 1400, 1075, null);
+            g.drawImage(icons[1].getImage(),465-3,200,685+5,510, 675, 0, 1400, 1075, null);
         }
         else if(cezar_blink==2){
-            g.drawImage(icons[1].getImage(),480,200,700,510, 1400, 0, 2100, 1075, null);
+            g.drawImage(icons[1].getImage(),480-16,200-1,700+4,510-2, 1340, 0, 2100, 1075, null);
         }
 
         g.drawImage(icons[2].getImage(), 30, 270, 350, 300, null);
         g.drawImage(icons[3].getImage(),1200, 250, -280, 300, null);
         g.drawImage(icons[4].getImage(), -10, 470, 1230, 300, null);
+        g.drawImage(icons[5].getImage(), 1120, 20, 50, 50, null);
         g.drawImage(icons[6].getImage(),-20,-20,160,160, 0, 0, 125, 120,  null);
         g.drawImage(icons[7].getImage(),185,30,330,160, 0, 0, 200, 180, null);
         g.drawImage(icons[8].getImage(),360,-20,530,160, 0, 0, 240, 255, null);
         g.drawImage(icons[9].getImage(),610,15,745,160, 0, 0, 200, 210, null);
-        //g.drawImage(icons[5].getImage(), 0, 0, 1200, 780, null);
+
     }
 
     @Override
