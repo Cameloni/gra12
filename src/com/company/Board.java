@@ -14,7 +14,7 @@ public class Board extends JPanel implements MouseListener {
     public JTextArea jTextArea = new JTextArea();
     //public JLabel[] counts = new JLabel[4];
     ImageIcon[] icons = new ImageIcon[10];
-    int cezar_blink = 0;
+    public int cezar_blink = 0;
 
     //Color[] cols = {Color.green, Color.yellow, Color.orange, Color.red};
 
@@ -43,7 +43,7 @@ public class Board extends JPanel implements MouseListener {
         ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")));
         JTextArea jTextArea;
         jTextArea = new JTextArea("");
-        jTextArea.setBounds(270, 520, 630, 200);
+        jTextArea.setBounds(250, 520, 700, 300);
         jTextArea.setBackground(new Color(0, 0, 0, 1));
         jTextArea.setOpaque(false);
         //jTextArea.setForeground(Color.red);

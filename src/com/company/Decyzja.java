@@ -70,7 +70,7 @@ public class Decyzja {
                 this.finanse += 1;
                 finanse -= 1;
                 try {
-                    Thread.sleep(500);
+                    Thread.sleep(100);
                 }catch(InterruptedException e){};
             }
         }
@@ -132,7 +132,7 @@ public class Decyzja {
                 this.religia += 5;
                 religia -= 5;
                 try {
-                    Thread.sleep(500);
+                    Thread.sleep(100);
                 }catch(InterruptedException e){};
             }
         }
@@ -171,8 +171,9 @@ public class Decyzja {
         return nr;
     }
 
-    public Decyzja(int nr) throws IOException, InterruptedException, FontFormatException {
+    public Decyzja(int nr, Board board) throws IOException, InterruptedException, FontFormatException {
         this.nr = nr;
+
         finanse = 50;
         obywatele = 50;
         legiony = 50;
@@ -299,7 +300,7 @@ public class Decyzja {
                         setLegiony(20);
                         setFinanse(-20);
                         if((int)(Math.random()*10) >= 3) {
-                            setKontynuacja(50);
+                            setKontynuacja(100);
                         }
                         break;
                 }
@@ -469,7 +470,7 @@ public class Decyzja {
             case 16:
                 if(quest[16] == 0) {
                     System.out.println("Senat wpadł na pomysł modernizacji floty rzymskiej, co pozwoliłoby na próbę podboju północnoafrykańskiej fenickiej koloni - Kartaginy");
-                    setKwestia("Senat wpadł na pomysł modernizacji floty rzymskiej, co pozwoliłoby na próbę podboju Północnej Afryki");
+                    setKwestia("Senat wpadł na pomysł modernizacji floty rzymskiej, co pozwoliłoby na próbę podboju Północnej Afryki.");
                     System.out.println("1. Nasza flota ma się dobrze");
                     System.out.println("2. To korzystna inwestycja");
                     lub();
@@ -483,6 +484,7 @@ public class Decyzja {
                 }
                 else if(quest[16] == 1){
                     System.out.println("Flota została ulepszona. Jesteśmy gotowi, by wyruszyć na podbój Północnej Afryki.");
+                    setKwestia("Flota została ulepszona. Jesteśmy gotowi, by wyruszyć na podbój Północnej Afryki.");
                     System.out.println("1. Do boju!");
                     System.out.println("2. Dajmy odpocząć żołnierzom");
                     lub();
@@ -568,7 +570,7 @@ public class Decyzja {
             case 22:
                 System.out.println("");
                 setKwestia("W tym roku uprawy rolne były wyjątkowo obfite.");
-                System.out.println("Bogowie nad nami czuwają");
+                System.out.println("Bogowie nad nami czuwają.");
                 System.out.println("To zasługa pracowitości rolników.");
                 lub();
                 switch (dec) {
@@ -1269,7 +1271,7 @@ public class Decyzja {
                 break;
 
                 //casy kontynuujące dany wątek od razu po poprzednim
-      /*      case 50:
+            case 100:
                 int q = 0;
                 while(q == 0){
                     q = (int) (Math.random() *4);
@@ -1292,7 +1294,7 @@ public class Decyzja {
                         setFinanse(getFinanse()- q*5);
                         setLegiony(getLegiony() + q*5);
                         break;
-                } */
+                }
 
         }
         setTura(getTura() + 1);

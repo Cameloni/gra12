@@ -1,5 +1,7 @@
 package com.company;
 
+import javax.sound.sampled.FloatControl;
+import javax.sound.sampled.LineUnavailableException;
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
@@ -12,6 +14,9 @@ public class Game {
     public boolean menu;
     public boolean wizualizacja;
     public JFrame window;
+
+    public FloatControl fc;
+
     File muzyka = new File("src/com/company/audio/gra_java_soundtrack(wav).wav");
    // Menu menu = new Menu();
     //public String tekst;
@@ -50,7 +55,7 @@ public class Game {
     }
     Menu menu2 = new Menu(this);
 
-    public Game() throws IOException, FontFormatException, InterruptedException {
+    public Game() throws IOException, FontFormatException, InterruptedException, LineUnavailableException {
         //coins = 1;
         window = new JFrame("Deus consilium");
         window.setIconImage(new ImageIcon("src/com/company/PNG/background/45.png").getImage());
@@ -77,10 +82,11 @@ public class Game {
         //this.wizualizacja == false;
        // Menu.repaint();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        Decyzja wybor = new Decyzja(-1);
-        Watek watek = new Watek(this, menu2, wybor, true, false,false);
-        Watek watek_dec = new Watek(this, menu2, wybor, false, true,false);
-        Watek watek_muzyka = new Watek(this, menu2, wybor, false, false, true);
+        Decyzja wybor = new Decyzja(-1, wizualizacja);
+
+        Watek watek = new Watek(this, menu2, wybor, true, false,false, wizualizacja);
+        Watek watek_dec = new Watek(this, menu2, wybor, false, true,false, wizualizacja);
+        Watek watek_muzyka = new Watek(this, menu2, wybor, false, false, true, wizualizacja);
         watek.start();
         watek_muzyka.start();
         watek_dec.start();
