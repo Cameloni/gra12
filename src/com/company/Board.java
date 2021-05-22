@@ -32,6 +32,10 @@ public class Board extends JPanel implements MouseListener {
         //icons[4] = new ImageIcon("src/com/company/pixelpictures/tło.png");
         icons[4] = new ImageIcon("src/com/company/pixelpictures/pergamin4.png");
         icons[5] = new ImageIcon("src/com/company/buttons/ustawienia_button.png");
+        icons[6] = new ImageIcon("src/com/company/statystyki/coins_stats.png");
+        icons[7] = new ImageIcon("src/com/company/statystyki/army_stats.png");
+        icons[8] = new ImageIcon("src/com/company/statystyki/authority_stats.png");
+        icons[9] = new ImageIcon("src/com/company/statystyki/religion_stats.png");
         //add(coins);
         this.game = game;
         Font romanfont = Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")).deriveFont(40f);
@@ -96,7 +100,10 @@ public class Board extends JPanel implements MouseListener {
         g.drawImage(icons[2].getImage(), 30, 270, 350, 300, null);
         g.drawImage(icons[3].getImage(),1200, 250, -280, 300, null);
         g.drawImage(icons[4].getImage(), -10, 470, 1230, 300, null);
-        g.drawImage(icons[5].getImage(),1120,25,50,50, null);
+        g.drawImage(icons[6].getImage(),-20,-20,160,160, 0, 0, 125, 120,  null);
+        g.drawImage(icons[7].getImage(),185,30,330,160, 0, 0, 200, 180, null);
+        g.drawImage(icons[8].getImage(),360,-20,530,160, 0, 0, 240, 255, null);
+        g.drawImage(icons[9].getImage(),610,15,745,160, 0, 0, 200, 210, null);
         //g.drawImage(icons[5].getImage(), 0, 0, 1200, 780, null);
     }
 

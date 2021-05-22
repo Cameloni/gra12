@@ -127,7 +127,7 @@ public class Watek extends Thread {
                 ex.printStackTrace();
             }
             try {
-                Thread.sleep(40);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
