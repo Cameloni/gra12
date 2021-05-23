@@ -56,6 +56,7 @@ public class Board extends JPanel implements MouseListener {
         this.jTextArea.setFont(romanfont);
         this.jTextArea.setLineWrap(true);
         this.jTextArea.setEditable(false);
+        this.jTextArea.setHighlighter(null);
         this.jTextArea.setWrapStyleWord(true);
         //jTextArea.setText("ccaaaa");
 
@@ -130,8 +131,8 @@ public class Board extends JPanel implements MouseListener {
         }
 
         g.drawImage(icons[10].getImage(),225,25,750,150,null);
-        g.drawImage(icons[2].getImage(), 30, 270, 350, 300, null);
-        g.drawImage(icons[3].getImage(),1200, 250, -280, 300, null);
+       // g.drawImage(icons[2].getImage(), 30, 270, 350, 300, null);
+       // g.drawImage(icons[3].getImage(),1200, 250, -280, 300, null);
         g.drawImage(icons[4].getImage(), 10, 440, 1220, 300, null);
         g.drawImage(icons[5].getImage(), 1120, 20, 50, 50, null);
 
