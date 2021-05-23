@@ -38,7 +38,26 @@ public class Decyzja {
     int kontynuacja;
    // Game game = new Game();
     public String kwestia;
-   // Watek watek = new Watek(game.game, );
+    public String kwe1;
+
+    public String getKwe2() {
+        return kwe2;
+    }
+
+    public void setKwe2(String kwe2) {
+        this.kwe2 = kwe2;
+    }
+
+    public String kwe2;
+
+    public String getKwe1() {
+        return kwe1;
+    }
+
+    public void setKwe1(String kwe1) {
+        this.kwe1 = kwe1;
+    }
+    // Watek watek = new Watek(game.game, );
 
     public int getKontynuacja() {
         return kontynuacja;
@@ -179,7 +198,9 @@ public class Decyzja {
         legiony = 50;
         religia = 50;
         tura = 1;
-        kwestia = " ";
+        kwestia = "";
+        kwe1 = "";
+        kwe2 = "";
         kontynuacja = 0;
         juzjest = new int[20];
         quest = new int[50];
@@ -240,13 +261,13 @@ public class Decyzja {
         this.dec = 0;
         int los;
         //nr=0;
-        //nr = 19;
+        nr = 19;
 
 
         switch (nr) {
 
             case 0:
-                setKwestia(" Legioniści wracają do miasta z wygranej wojny. Czy zorganizować z tej okazji ucztę?");
+                setKwestia("Legioniści wracają do miasta z wygranej wojny. Czy zorganizować z tej okazji ucztę?");
                 //dwie opcje do wyboru
                 System.out.println("1. Nie stać nas na to.");
                 System.out.println("2. To dobry pomysł.");
@@ -266,7 +287,7 @@ public class Decyzja {
                 break;
             case 1:
                 System.out.println("Kapłani uważają, że złe warunki pogodowe są znakiem gniewu Bogów. Wymagają złożenia przez twoich poddanych dużych ofiar zwierzęcych.");
-                setKwestia(" Kapłani uważają, że złe warunki pogodowe są znakiem gniewu Bogów. Wymagają złożenia przez twoich poddanych dużych ofiar zwierzęcych.");
+                setKwestia("Kapłani uważają, że złe warunki pogodowe są znakiem gniewu Bogów. Wymagają złożenia przez twoich poddanych dużych ofiar zwierzęcych.");
                 System.out.println("1. Chyba oszaleli!");
                 System.out.println("2. Niech lud wykona ich rozkazy.");
                 //dwie opcje do wyboru
@@ -288,7 +309,7 @@ public class Decyzja {
                     legion = (int) (Math.random() * 31);
                 }
                 System.out.println("Żołnierze piątego legionu rządają zwiększenia ich żołdu. Grożą buntem.");
-                setKwestia(" Żołnierze " + (int) (Math.random() * 30) + "-ego legionu rządają zwiększenia ich żołdu. Grożą buntem.");
+                setKwestia("Żołnierze " + (int) (Math.random() * 30) + "-ego legionu rządają zwiększenia ich żołdu. Grożą buntem.");
                 System.out.println("1. Ukarz ich decymacją.");
                 System.out.println("2. Zwiększ ich płace.");
                 lub();
@@ -444,7 +465,7 @@ public class Decyzja {
             case 15:
                 if(quest[15] == 0) {
                     System.out.println("Naczelny architekt radzi budowę nowego akweduktu.");
-                    setKwestia(" Naczelny architekt radzi budowę nowego akweduktu.");
+                    setKwestia("Naczelny architekt radzi budowę nowego akweduktu.");
                     System.out.println("1. Niech będzie");
                     System.out.println("2. Mamy już ich wystarczająco");
                     lub();
@@ -471,7 +492,7 @@ public class Decyzja {
             case 16:
                 if(quest[16] == 0) {
                     System.out.println("Senat wpadł na pomysł modernizacji floty rzymskiej, co pozwoliłoby na próbę podboju północnoafrykańskiej fenickiej koloni - Kartaginy");
-                    setKwestia(" Senat wpadł na pomysł modernizacji floty rzymskiej, co pozwoliłoby na próbę podboju Północnej Afryki.");
+                    setKwestia("Senat wpadł na pomysł modernizacji floty rzymskiej, co pozwoliłoby na próbę podboju Północnej Afryki.");
                     System.out.println("1. Nasza flota ma się dobrze");
                     System.out.println("2. To korzystna inwestycja");
                     lub();
@@ -485,7 +506,7 @@ public class Decyzja {
                 }
                 else if(quest[16] == 1){
                     System.out.println("Flota została ulepszona. Jesteśmy gotowi, by wyruszyć na podbój Północnej Afryki.");
-                    setKwestia(" Flota została ulepszona. Jesteśmy gotowi, by wyruszyć na podbój Północnej Afryki.");
+                    setKwestia("Flota została ulepszona. Jesteśmy gotowi, by wyruszyć na podbój Północnej Afryki.");
                     System.out.println("1. Do boju!");
                     System.out.println("2. Dajmy odpocząć żołnierzom");
                     lub();
@@ -500,7 +521,7 @@ public class Decyzja {
             case 17:
                 if(quest[17]==0) {
                     System.out.println("Jeden z gladiatorów strajkuje. Żąda ostrzejszego miecza i nowych sandałów. Lud zdaje się go popierać.");
-                    setKwestia(" Jeden z gladiatorów strajkuje. Żąda ostrzejszego miecza i nowych sandałów.");
+                    setKwestia("Jeden z gladiatorów strajkuje. Żąda ostrzejszego miecza i nowych sandałów.");
                     System.out.println("Nie zawracajcie mi tym głowy");
                     System.out.println("Dajcie mu wszystko czego chce.");
                     //dwie opcje do wyboru
@@ -518,7 +539,7 @@ public class Decyzja {
                 }
             case 18:
                 System.out.println("Część lwów z Koloseum przeszła na wegetarianizm. Aby zmieniły zdanie, powinniśmy zakupić dla nich najprzedniejszego mięsa");
-                setKwestia(" Część lwów z Koloseum przeszła na wegetarianizm. Aby zmieniły zdanie, powinniśmy zakupić dla nich najprzedniejszego mięsa.");
+                setKwestia("Część lwów z Koloseum przeszła na wegetarianizm. Aby zmieniły zdanie, powinniśmy zakupić dla nich najprzedniejszego mięsa.");
                 System.out.println("To dobry pomysł");
                 System.out.println("Nie, złóżcie lwy w ofierze Marsowi");
                 lub();
@@ -531,9 +552,11 @@ public class Decyzja {
                 break;
             case 19:
                 System.out.println(" Jeden z kapłanów prosi o pozwolenie na odprawienie czegoś, co nazywa 'rytuałem tysiąca słońc'. Zapewnia, że przyniesie to dobrobyt całemu cesarstwu.");
-                setKwestia(" Jeden z kapłanów prosi o pozwolenie na odprawienie czegoś, co nazywa \"rytuałem tysiąca słońc\". Zapewnia, że przyniesie to dobrobyt całemu cesarstwu.");
+                setKwestia("Jeden z kapłanów prosi o pozwolenie na odprawienie czegoś, co nazywa \"rytuałem tysiąca słońc\". Zapewnia, że przyniesie to dobrobyt całemu cesarstwu.");
                 System.out.println("Co za bzdury...");
+                setKwe1("Co za bzdury...");
                 System.out.println("Jeśli tak uważa...");
+                setKwe2("Jeśli tak uważa...");
                 lub();
                 switch (dec) {
                     case 1:
@@ -544,7 +567,7 @@ public class Decyzja {
                 break;
             case 20:
                 System.out.println("");
-                setKwestia(" Dziś rano z więzienia uciekł niebezpieczny przestępca. Jego egzekucja miała odbyć się godzinę temu. Ludzie domagają się wyjaśnień.");
+                setKwestia("Dziś rano z więzienia uciekł niebezpieczny przestępca. Jego egzekucja miała odbyć się godzinę temu. Ludzie domagają się wyjaśnień.");
                 System.out.println("To ja ponoszę odpowiedzialność");
                 System.out.println("Obwińcie straż");
                 lub();
@@ -557,7 +580,7 @@ public class Decyzja {
                 break;
             case 21:
                 System.out.println("Senat zaleca odnowienie dróg prowadzących do miasta.");
-                setKwestia(" Senat zaleca odnowienie dróg prowadzących do miasta");
+                setKwestia("Senat zaleca odnowienie dróg prowadzących do miasta");
                 System.out.println("");
                 System.out.println("");
                 lub();
@@ -570,7 +593,7 @@ public class Decyzja {
                 break;
             case 22:
                 System.out.println("");
-                setKwestia(" W tym roku uprawy rolne były wyjątkowo obfite.");
+                setKwestia("W tym roku uprawy rolne były wyjątkowo obfite.");
                 System.out.println("Bogowie nad nami czuwają.");
                 System.out.println("To zasługa pracowitości rolników.");
                 lub();
@@ -583,7 +606,7 @@ public class Decyzja {
                 break;
             case 23:
                 System.out.println("Coś23");
-                setKwestia(" Specjaliści donoszą, że główny szyb w jednej z kopalni miedzi może w każdej chwili ulec zawaleniu.");
+                setKwestia("Specjaliści donoszą, że główny szyb w jednej z kopalni miedzi może w każdej chwili ulec zawaleniu.");
                 System.out.println("");
                 System.out.println("");
                 //dwie opcje do wyboru
@@ -597,7 +620,7 @@ public class Decyzja {
                 break;
             case 24:
                 System.out.println("Zarządcy kamieniołomów żądają dostawy niewolników. Możni obywatele również.");
-                setKwestia(" Zarządcy kamieniołomów żądają dostawy niewolników. Możni obywatele również.");
+                setKwestia("Zarządcy kamieniołomów żądają dostawy niewolników. Możni obywatele również.");
                 lub();
                 switch (dec) {
                     case 1:
@@ -608,7 +631,7 @@ public class Decyzja {
                 break;
             case 25:
                 System.out.println("Na jednej z farm, wykryto u krów dziwny rodzaj wysypki.");
-                setKwestia(" Na jednej z farm, wykryto u krów dziwny rodzaj wysypki.");
+                setKwestia("Na jednej z farm, wykryto u krów dziwny rodzaj wysypki.");
                 System.out.println("");
                 System.out.println("");
                 lub();
@@ -621,7 +644,7 @@ public class Decyzja {
                 break;
             case 26:
                 System.out.println("Coś26");
-                setKwestia(" Kończą nam się zapasy liści laurowych.");
+                setKwestia("Kończą nam się zapasy liści laurowych.");
                 System.out.println("");
                 System.out.println("");
                 lub();
@@ -634,7 +657,7 @@ public class Decyzja {
                 break;
             case 27:
                 System.out.println("Coś27");
-                setKwestia(" Senat wpadł na pomysł zorganizowania specjalnych szkoleń taktyki bitewnej dla centurionów.");
+                setKwestia("Senat wpadł na pomysł zorganizowania specjalnych szkoleń taktyki bitewnej dla centurionów.");
                 System.out.println("");
                 System.out.println("");
                 //dwie opcje do wyboru
@@ -648,7 +671,7 @@ public class Decyzja {
                 break;
             case 28:
                 System.out.println("Coś28");
-                setKwestia(" Dziś w nocy któs włamał się do pałacowej stajni i uśmiercił wszystkie konie.");
+                setKwestia("Dziś w nocy któs włamał się do pałacowej stajni i uśmiercił wszystkie konie.");
                 System.out.println("");
                 System.out.println("");
                 lub();
@@ -661,7 +684,7 @@ public class Decyzja {
                 break;
             case 29:
                 System.out.println(" Zbliżają się Saturnalia - święto Saturna. Czy zorganizować jego obchody?");
-                setKwestia(" Zbliżają się Saturnalia - święto Saturna. Czy zorganizować jego obchody?");
+                setKwestia("Zbliżają się Saturnalia - święto Saturna. Czy zorganizować jego obchody?");
                 lub();
                 switch (dec) {
                     case 1:
@@ -1281,10 +1304,11 @@ public class Decyzja {
                 }
                 if(q == 1){
                     System.out.println("Pytanie bonus. Na wieści o podwyżce zareagował również jeden inny legion. Jego żołnierze także chcą podwyższenia płac.");
-
+                    setKwestia("Na wieści o podwyżce zareagował również jeden inny legion. Jego żołnierze także chcą podwyższenia płac.");
                 }
                 else {
                     System.out.println("Pytanie bonus. Na wieści o podwyżce zareagowały również " + q + " inne legiony. One także chcą podwyższenia płac.");
+                    setKwestia("Na wieści o podwyżce zareagowały również " + q + " inne legiony. One także chcą podwyższenia płac.");
                 }
                 System.out.println("1. Nie ma mowy.");
                 System.out.println("2.Wynegocjuj niewielką podwyżkę.");

@@ -12,6 +12,7 @@ public class Board extends JPanel implements MouseListener {
     public Game game;
     //public JLabel tekst = new JLabel();
     public JTextArea jTextArea = new JTextArea();
+    public JTextArea[] JJ = new JTextArea[2];
     //public JLabel[] counts = new JLabel[4];
     ImageIcon[] icons = new ImageIcon[15];
     ImageIcon[] staty = new ImageIcon[4];
@@ -33,6 +34,8 @@ public class Board extends JPanel implements MouseListener {
         //icons[4] = new ImageIcon("src/com/company/pixelpictures/tło.png");
         icons[4] = new ImageIcon("src/com/company/pixelpictures/pergamin4.png");
         icons[5] = new ImageIcon("src/com/company/buttons/ustawienia_button.png");
+        icons[6] = new ImageIcon("src/com/company/pixelpictures/tymczasowy guzik1.png");
+        icons[7] = new ImageIcon("src/com/company/pixelpictures/tymczasowy guzik1.png");
         icons[10] = new ImageIcon("src/com/company/pixelpictures/ramka.png");
         staty[0] = new ImageIcon("src/com/company/statystyki/coins_stats.png");
         staty[1] = new ImageIcon("src/com/company/statystyki/army_stats.png");
@@ -43,29 +46,53 @@ public class Board extends JPanel implements MouseListener {
         Font romanfont = Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")).deriveFont(40f);
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")));
-        JTextArea jTextArea;
-        jTextArea = new JTextArea("");
-        jTextArea.setBounds(200, 520, 800, 300);
-        jTextArea.setBackground(new Color(0, 0, 0, 1));
-        jTextArea.setOpaque(false);
+        //JTextArea jTextArea;
+        this.jTextArea = new JTextArea("");
+        this.jTextArea.setBounds(200, 500, 800, 300);
+        this.jTextArea.setBackground(new Color(0, 0, 0, 1));
+        this.jTextArea.setOpaque(false);
         //jTextArea.setForeground(Color.red);
-        jTextArea.setFont(romanfont);
-        jTextArea.setLineWrap(true);
-        jTextArea.setEditable(false);
-        jTextArea.setWrapStyleWord(true);
+        this.jTextArea.setFont(romanfont);
+        this.jTextArea.setLineWrap(true);
+        this.jTextArea.setEditable(false);
+        this.jTextArea.setWrapStyleWord(true);
         //jTextArea.setText("ccaaaa");
-        jTextArea.setFont(romanfont);
+        this.jTextArea.setFont(romanfont);
         //jTextArea.setForeground(Color.getHSBColor(500,850,200));
 
         //MOŻNA WYBRAĆ WŁASNY KOLOR..
-        jTextArea.setForeground(new Color(177, 154, 8));
+        this.jTextArea.setForeground(new Color(111, 97, 9));
         setSize(1200, 780);
-        add(jTextArea);
+        add(this.jTextArea);
         //jTextArea.setForeground(Color.BLACK);
-        jTextArea.setVisible(true);
+        //this.jTextArea.setVisible(true);
         //tekst.setBounds(300, 500, 600, 200);
+        for(int i =0 ; i< 2; i++) {
+            JJ[i] = new JTextArea();
+            this.JJ[i] = new JTextArea("");
+            if(i == 0){
+                this.JJ[i].setBounds(230, 680, 500, 200);
+            }
+            else {
+                this.JJ[i].setBounds(720, 680, 500, 200);
+            }
+            this.JJ[i].setBackground(new Color(0, 0, 0, 1));
+            this.JJ[i].setOpaque(false);
+            //jTextArea.setForeground(Color.red);
+            this.JJ[i].setFont(romanfont);
+            this.JJ[i].setLineWrap(true);
+            this.JJ[i].setEditable(false);
+            this.JJ[i].setWrapStyleWord(true);
+            //jTextArea.setText("ccaaaa");
+            this.JJ[i].setFont(romanfont);
+            //jTextArea.setForeground(Color.getHSBColor(500,850,200));
 
-
+            //MOŻNA WYBRAĆ WŁASNY KOLOR..
+            this.JJ[i].setForeground(new Color(116, 14, 53));
+            add(this.JJ[i]);
+            //jTextArea.setForeground(Color.BLACK);
+            //this.JJ[i].setVisible(true);
+        }
         //jTextArea.setText("");
 
 
@@ -99,6 +126,7 @@ public class Board extends JPanel implements MouseListener {
         else if(cezar_blink==2){
             g.drawImage(icons[1].getImage(),480-16,200-1,700+4,510-2, 1340, 0, 2100, 1075, null);
         }
+
         g.drawImage(icons[10].getImage(),225,25,750,150,null);
         g.drawImage(icons[2].getImage(), 30, 270, 350, 300, null);
         g.drawImage(icons[3].getImage(),1200, 250, -280, 300, null);
@@ -107,9 +135,10 @@ public class Board extends JPanel implements MouseListener {
 
         g.drawImage(staty[0].getImage(),-20+200,-20,160+200,160, 0, 0, 125, 120,  null);
         g.drawImage(staty[1].getImage(),185+230,30,330+230,160, 0, 0, 200, 180, null);
-        g.drawImage(staty[2].getImage(),360+230,-20,530+230,160, 0, 0, 240, 255, null);
+        g.drawImage(staty[2].getImage(),360+230,-25,530+230,160, 0, 0, 240, 255, null);
         g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-
+        g.drawImage(icons[6].getImage(),100, 630, 500, 150, null);
+        g.drawImage(icons[7].getImage(),600, 630, 500, 150, null);
 
     }
 
