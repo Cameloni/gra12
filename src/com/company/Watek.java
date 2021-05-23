@@ -234,10 +234,42 @@ public class Watek extends Thread {
 
 
                 if (game.menu == true) {
+                    /*game.naj.close();
                     try {
-                        m.mousetrack();
+                        try {
+                            if(m.flipper1 == true) {
+                                game.naj.open(AudioSystem.getAudioInputStream(game.najechanie_audio));
+                                game.naj.start();
+
+
+                            }
+                        } catch (IOException e) {
+                            //e.printStackTrace();
+                        } catch (UnsupportedAudioFileException e) {
+                            // e.printStackTrace();
+                        } catch (LineUnavailableException e) {
+                            //e.printStackTrace();
+                        } catch (IllegalStateException e){
+
+                        }
+                    } catch (NullPointerException e) {
+                    }*/
+                    try {
+                        try {
+                            m.mousetrack();
+                        } catch (IOException e) {
+                            //e.printStackTrace();
+                        } catch (UnsupportedAudioFileException e) {
+                           // e.printStackTrace();
+                        } catch (LineUnavailableException e) {
+                            //e.printStackTrace();
+                        } catch (IllegalStateException e){
+
+                        }
                     } catch (NullPointerException e) {
                     }
+
+
 
                 }
             }

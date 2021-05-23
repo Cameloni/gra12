@@ -3,10 +3,14 @@ package com.company;
 
 import com.sun.jdi.IntegerValue;
 
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Menu extends JPanel implements MouseListener {
@@ -23,8 +27,9 @@ public class Menu extends JPanel implements MouseListener {
     boolean wyjscie_najechany = false;
     boolean dc = false;
 
-    boolean flipper1 = false, flipper2 = false;
-    public void mousetrack(){
+    public boolean flipper1 = false;
+    boolean flipper2 = false, flipper3 = false;
+    public void mousetrack() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
         //if(game.menu == true) {
             int x, y;
             //while (true) {
@@ -32,14 +37,14 @@ public class Menu extends JPanel implements MouseListener {
                 y = game.window.getMousePosition().y;
         if (x > 440 && x < 755 && y > 375 && y < 450) {
             nowa_gra_najechany = true;
-                    /*if (flipper1 == false) {
+                    if (flipper1 == false) {
                         flipper1 = true;
-                        flipper2 = true;
                     } else {
-                        flipper2 = false;
-                    }*/
+                        //flipper1 = false;
+                    }
         } else {
             nowa_gra_najechany = false;
+            flipper1 = false;
                     /*if (flipper1 == true) {
                         flipper1 = false;
                         flipper2 = true;
@@ -49,14 +54,17 @@ public class Menu extends JPanel implements MouseListener {
         }
                 if (x > 440 && x < 755 && y > 490 && y < 560) {
                     wczytaj_najechany = true;
-                    /*if (flipper1 == false) {
+                    if (flipper1 == false) {
                         flipper1 = true;
-                        flipper2 = true;
+
+                        //flipper2 = true;
                     } else {
-                        flipper2 = false;
-                    }*/
+
+                        //flipper1 = false;
+                    }
                 } else {
                     wczytaj_najechany = false;
+                    flipper1 = false;
                     /*if (flipper1 == true) {
                         flipper1 = false;
                         flipper2 = true;
@@ -68,9 +76,16 @@ public class Menu extends JPanel implements MouseListener {
 
         if (x > 440 && x < 755 && y > 585 && y < 670) {
             wyjscie_najechany = true;
+            if (flipper1 == false) {
+                flipper1 = true;
+                //flipper2 = true;
+            } else {
+                //flipper1 = false;
+            }
         }
         else {
             wyjscie_najechany = false;
+            flipper1 = false;
         }
         if ((x > 420 && x < 765 && y > 45 + 14 && y < 285)||(x > 390 && x < 800 && y > 200+14 && y < 285 + 14)) {
             dc = true;
@@ -79,6 +94,8 @@ public class Menu extends JPanel implements MouseListener {
             dc = false;
         }
         repaint();
+
+
     }
     //}
 
@@ -123,6 +140,8 @@ public class Menu extends JPanel implements MouseListener {
         }
         else{
             g.drawImage(wczytaj.getImage(),425,460,765,560, 0, 330, 1416 ,672, null);
+
+
         }
         if(wyjscie_najechany==false){
             g.drawImage(wyjscie.getImage(),425,570,765,670, 0, 330, 1416 ,672, null);
