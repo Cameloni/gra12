@@ -26,6 +26,7 @@ public class Menu extends JPanel implements MouseListener {
     boolean nowa_gra_najechany = false;
     boolean wyjscie_najechany = false;
     boolean dc = false;
+    boolean wczytaj_flipper = false;
 
     public boolean flipper1 = false;
     boolean flipper2 = false, flipper3 = false;
@@ -54,23 +55,13 @@ public class Menu extends JPanel implements MouseListener {
         }
                 if (x > 440 && x < 755 && y > 490 && y < 560) {
                     wczytaj_najechany = true;
-                    if (flipper1 == false) {
-                        flipper1 = true;
-
-                        //flipper2 = true;
-                    } else {
-
-                        //flipper1 = false;
+                    if (!wczytaj_flipper) {
+                        wczytaj_flipper = true;
+                        //tutaj trzeba wstawić komendę grającą kamyczkowy dźwięk
                     }
                 } else {
                     wczytaj_najechany = false;
-                    flipper1 = false;
-                    /*if (flipper1 == true) {
-                        flipper1 = false;
-                        flipper2 = true;
-                    } else {
-                        flipper2 = false;
-                    }*/
+                    wczytaj_flipper = false;
                 }
 
 
