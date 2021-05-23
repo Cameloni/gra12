@@ -38,7 +38,26 @@ public class Decyzja {
     int kontynuacja;
    // Game game = new Game();
     public String kwestia;
-   // Watek watek = new Watek(game.game, );
+    public String kwe1;
+
+    public String getKwe2() {
+        return kwe2;
+    }
+
+    public void setKwe2(String kwe2) {
+        this.kwe2 = kwe2;
+    }
+
+    public String kwe2;
+
+    public String getKwe1() {
+        return kwe1;
+    }
+
+    public void setKwe1(String kwe1) {
+        this.kwe1 = kwe1;
+    }
+    // Watek watek = new Watek(game.game, );
 
     public int getKontynuacja() {
         return kontynuacja;
@@ -179,7 +198,9 @@ public class Decyzja {
         legiony = 50;
         religia = 50;
         tura = 1;
-        kwestia = " ";
+        kwestia = "";
+        kwe1 = "";
+        kwe2 = "";
         kontynuacja = 0;
         juzjest = new int[20];
         quest = new int[50];
@@ -236,14 +257,15 @@ public class Decyzja {
     //Main st = new Main();
     public void zbior() throws IOException {
 //
-        kwestia = "Coś";
+        //kwestia = "Coś";
         this.dec = 0;
         int los;
         //nr=0;
-
+        //nr = 19;
 
 
         switch (nr) {
+
             case 0:
                 setKwestia("Legioniści wracają do miasta z wygranej wojny. Czy zorganizować z tej okazji ucztę?");
                 //dwie opcje do wyboru
@@ -529,10 +551,12 @@ public class Decyzja {
                 }
                 break;
             case 19:
-                System.out.println("Jeden z kapłanów prosi o pozwolenie na odprawienie czegoś, co nazywa 'rytuałem tysiąca słońc'. Zapewnia, że przyniesie to dobrobyt całemu cesarstwu.");
-                setKwestia("Jeden z kapłanów prosi o pozwolenie na odprawienie czegoś, co nazywa 'rytuałem tysiąca słońc'. Zapewnia, że przyniesie to dobrobyt całemu cesarstwu.");
+                System.out.println(" Jeden z kapłanów prosi o pozwolenie na odprawienie czegoś, co nazywa 'rytuałem tysiąca słońc'. Zapewnia, że przyniesie to dobrobyt całemu cesarstwu.");
+                setKwestia("Jeden z kapłanów prosi o pozwolenie na odprawienie czegoś, co nazywa \"rytuałem tysiąca słońc\". Zapewnia, że przyniesie to dobrobyt całemu cesarstwu.");
                 System.out.println("Co za bzdury...");
+                setKwe1("Co za bzdury...");
                 System.out.println("Jeśli tak uważa...");
+                setKwe2("Jeśli tak uważa...");
                 lub();
                 switch (dec) {
                     case 1:
@@ -596,6 +620,7 @@ public class Decyzja {
                 break;
             case 24:
                 System.out.println("Zarządcy kamieniołomów żądają dostawy niewolników. Możni obywatele również.");
+                setKwestia("Zarządcy kamieniołomów żądają dostawy niewolników. Możni obywatele również.");
                 lub();
                 switch (dec) {
                     case 1:
@@ -658,7 +683,8 @@ public class Decyzja {
                 }
                 break;
             case 29:
-                System.out.println("Zbliżają się Saturnalia - święto Saturna. Czy zorganizować jego obchody?");
+                System.out.println(" Zbliżają się Saturnalia - święto Saturna. Czy zorganizować jego obchody?");
+                setKwestia("Zbliżają się Saturnalia - święto Saturna. Czy zorganizować jego obchody?");
                 lub();
                 switch (dec) {
                     case 1:
@@ -669,7 +695,7 @@ public class Decyzja {
                 break;
             case 30:
                 System.out.println("Coś27");
-                setKwestia("Senat wpadł na pomysł zorganizowania specjalnych szkoleń taktyki bitewnej dla centurionów.");
+                setKwestia("");
                 System.out.println("");
                 System.out.println("");
                 //dwie opcje do wyboru
@@ -1278,10 +1304,11 @@ public class Decyzja {
                 }
                 if(q == 1){
                     System.out.println("Pytanie bonus. Na wieści o podwyżce zareagował również jeden inny legion. Jego żołnierze także chcą podwyższenia płac.");
-
+                    setKwestia("Na wieści o podwyżce zareagował również jeden inny legion. Jego żołnierze także chcą podwyższenia płac.");
                 }
                 else {
                     System.out.println("Pytanie bonus. Na wieści o podwyżce zareagowały również " + q + " inne legiony. One także chcą podwyższenia płac.");
+                    setKwestia("Na wieści o podwyżce zareagowały również " + q + " inne legiony. One także chcą podwyższenia płac.");
                 }
                 System.out.println("1. Nie ma mowy.");
                 System.out.println("2.Wynegocjuj niewielką podwyżkę.");

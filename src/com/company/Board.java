@@ -12,8 +12,10 @@ public class Board extends JPanel implements MouseListener {
     public Game game;
     //public JLabel tekst = new JLabel();
     public JTextArea jTextArea = new JTextArea();
+    public JTextArea[] JJ = new JTextArea[2];
     //public JLabel[] counts = new JLabel[4];
-    ImageIcon[] icons = new ImageIcon[10];
+    ImageIcon[] icons = new ImageIcon[15];
+    ImageIcon[] staty = new ImageIcon[4];
     public int cezar_blink = 0;
 
     //Color[] cols = {Color.green, Color.yellow, Color.orange, Color.red};
@@ -32,42 +34,70 @@ public class Board extends JPanel implements MouseListener {
         //icons[4] = new ImageIcon("src/com/company/pixelpictures/tło.png");
         icons[4] = new ImageIcon("src/com/company/pixelpictures/pergamin4.png");
         icons[5] = new ImageIcon("src/com/company/buttons/ustawienia_button.png");
-        icons[6] = new ImageIcon("src/com/company/statystyki/coins_stats.png");
-        icons[7] = new ImageIcon("src/com/company/statystyki/army_stats.png");
-        icons[8] = new ImageIcon("src/com/company/statystyki/authority_stats.png");
-        icons[9] = new ImageIcon("src/com/company/statystyki/religion_stats.png");
+        icons[6] = new ImageIcon("src/com/company/pixelpictures/tymczasowy guzik1.png");
+        icons[7] = new ImageIcon("src/com/company/pixelpictures/tymczasowy guzik1.png");
+        icons[10] = new ImageIcon("src/com/company/pixelpictures/ramka.png");
+        staty[0] = new ImageIcon("src/com/company/statystyki/coins_stats.png");
+        staty[1] = new ImageIcon("src/com/company/statystyki/army_stats.png");
+        staty[2] = new ImageIcon("src/com/company/statystyki/authority_stats.png");
+        staty[3] = new ImageIcon("src/com/company/statystyki/religion_stats.png");
         //add(coins);
         this.game = game;
         Font romanfont = Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")).deriveFont(40f);
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")));
-        JTextArea jTextArea;
-        jTextArea = new JTextArea("");
-        jTextArea.setBounds(250, 520, 700, 300);
-        jTextArea.setBackground(new Color(0, 0, 0, 1));
-        jTextArea.setOpaque(false);
+        //JTextArea jTextArea;
+        this.jTextArea = new JTextArea("");
+        this.jTextArea.setBounds(200, 500, 800, 300);
+        this.jTextArea.setBackground(new Color(0, 0, 0, 1));
+        this.jTextArea.setOpaque(false);
         //jTextArea.setForeground(Color.red);
-        jTextArea.setFont(romanfont);
-        jTextArea.setLineWrap(true);
-        jTextArea.setEditable(false);
-        jTextArea.setWrapStyleWord(true);
+        this.jTextArea.setFont(romanfont);
+        this.jTextArea.setLineWrap(true);
+        this.jTextArea.setEditable(false);
+        this.jTextArea.setWrapStyleWord(true);
         //jTextArea.setText("ccaaaa");
-        jTextArea.setFont(romanfont);
+        this.jTextArea.setFont(romanfont);
         //jTextArea.setForeground(Color.getHSBColor(500,850,200));
 
         //MOŻNA WYBRAĆ WŁASNY KOLOR..
-        jTextArea.setForeground(new Color(177, 154, 8));
-
+        this.jTextArea.setForeground(new Color(111, 97, 9));
+        setSize(1200, 780);
+        add(this.jTextArea);
         //jTextArea.setForeground(Color.BLACK);
-        jTextArea.setVisible(true);
+        //this.jTextArea.setVisible(true);
         //tekst.setBounds(300, 500, 600, 200);
+        for(int i =0 ; i< 2; i++) {
+            JJ[i] = new JTextArea();
+            this.JJ[i] = new JTextArea("");
+            if(i == 0){
+                this.JJ[i].setBounds(230, 680, 500, 200);
+            }
+            else {
+                this.JJ[i].setBounds(720, 680, 500, 200);
+            }
+            this.JJ[i].setBackground(new Color(0, 0, 0, 1));
+            this.JJ[i].setOpaque(false);
+            //jTextArea.setForeground(Color.red);
+            this.JJ[i].setFont(romanfont);
+            this.JJ[i].setLineWrap(true);
+            this.JJ[i].setEditable(false);
+            this.JJ[i].setWrapStyleWord(true);
+            //jTextArea.setText("ccaaaa");
+            this.JJ[i].setFont(romanfont);
+            //jTextArea.setForeground(Color.getHSBColor(500,850,200));
 
-
+            //MOŻNA WYBRAĆ WŁASNY KOLOR..
+            this.JJ[i].setForeground(new Color(116, 14, 53));
+            add(this.JJ[i]);
+            //jTextArea.setForeground(Color.BLACK);
+            //this.JJ[i].setVisible(true);
+        }
         //jTextArea.setText("");
 
-        add(jTextArea);
 
-        setSize(1200, 780);
+
+
         /*for(int i =0 ; i< 4; i++) {
             counts[i] = new JLabel();
             counts[i].setBounds(100, 88 + 100 * i, 636, 98);
@@ -91,20 +121,25 @@ public class Board extends JPanel implements MouseListener {
             g.drawImage(icons[1].getImage(),465,200,685,510, 0, 0, 700, 1075, null);
         }
         else if(cezar_blink==1){
-            g.drawImage(icons[1].getImage(),465,200,685,510, 700, 0, 1400, 1075, null);
+            g.drawImage(icons[1].getImage(),465-3,200,685+5,510, 675, 0, 1400, 1075, null);
         }
         else if(cezar_blink==2){
-            g.drawImage(icons[1].getImage(),480,200,700,510, 1400, 0, 2100, 1075, null);
+            g.drawImage(icons[1].getImage(),480-16,200-1,700+4,510-2, 1340, 0, 2100, 1075, null);
         }
 
+        g.drawImage(icons[10].getImage(),225,25,750,150,null);
         g.drawImage(icons[2].getImage(), 30, 270, 350, 300, null);
         g.drawImage(icons[3].getImage(),1200, 250, -280, 300, null);
-        g.drawImage(icons[4].getImage(), -10, 470, 1230, 300, null);
-        g.drawImage(icons[6].getImage(),-20,-20,160,160, 0, 0, 125, 120,  null);
-        g.drawImage(icons[7].getImage(),185,30,330,160, 0, 0, 200, 180, null);
-        g.drawImage(icons[8].getImage(),360,-20,530,160, 0, 0, 240, 255, null);
-        g.drawImage(icons[9].getImage(),610,15,745,160, 0, 0, 200, 210, null);
-        //g.drawImage(icons[5].getImage(), 0, 0, 1200, 780, null);
+        g.drawImage(icons[4].getImage(), 10, 440, 1220, 300, null);
+        g.drawImage(icons[5].getImage(), 1120, 20, 50, 50, null);
+
+        g.drawImage(staty[0].getImage(),-20+200,-20,160+200,160, 0, 0, 125, 120,  null);
+        g.drawImage(staty[1].getImage(),185+230,30,330+230,160, 0, 0, 200, 180, null);
+        g.drawImage(staty[2].getImage(),360+230,-25,530+230,160, 0, 0, 240, 255, null);
+        g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        g.drawImage(icons[6].getImage(),100, 630, 500, 150, null);
+        g.drawImage(icons[7].getImage(),600, 630, 500, 150, null);
+
     }
 
     @Override

@@ -6,6 +6,7 @@ import java.awt.GraphicsEnvironment;
 import java.io.File;
 import java.io.IOException;
 import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JLabel;
 import javax.swing.JFrame;
 import java.io.*;
@@ -80,7 +81,7 @@ public class Main {
         System.exit(0);
     }
 
-    public static void main(String[] args) throws IOException, FontFormatException, InterruptedException, LineUnavailableException {
+    public static void main(String[] args) throws IOException, FontFormatException, InterruptedException, LineUnavailableException, UnsupportedAudioFileException {
 
         new Game();
 
