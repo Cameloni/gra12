@@ -183,22 +183,22 @@ public class Watek extends Thread {
     public void mruganie() {
         sec1++;
         if (game.wizualizacja == true) {
-            if (sec1 % (130 + mr)== 0) {
+            if (sec1 % (120 + mr)== 0) {
                 board.cezar_blink++;
                 board.repaint();
             }
-            if (sec1 % (130 + mr) == 4) {
+            if (sec1 % (120 + mr) == 3) {
                 board.cezar_blink++;
                 board.repaint();
             }
-            if (sec1 % (130 + mr) == 10) {
+            if (sec1 % (120 + mr) == 7) {
                 board.cezar_blink = 1;
                 board.repaint();
             }
-            if (sec1 % (130 +mr) == 14) {
+            if (sec1 % (120 +mr) == 10) {
                 board.cezar_blink = 0;
                 board.repaint();
-                mr = 150 - (int)(Math.random()*30);
+                mr = 150 - (int)(Math.random()*50);
                 //mm++;
             }
         }
