@@ -19,6 +19,8 @@ public class Game {
     File klikniecie_audio = new File("src/com/company/audio/przycisk_kliknięty_audio.wav");
     File pergamin_audio = new File("src/com/company/audio/przycisk_kliknięty_audio.wav");
     public Clip naj = AudioSystem.getClip();
+    public FloatControl volume1;
+    public FloatControl volume2;
 
     public Clip klik = AudioSystem.getClip();
 
@@ -63,12 +65,8 @@ public class Game {
         //coins = 1;
         window = new JFrame("Deus consilium");
         window.setIconImage(new ImageIcon("src/com/company/PNG/background/45.png").getImage());
-        try {
-            FloatControl volume1 = (FloatControl) naj.getControl(FloatControl.Type.MASTER_GAIN);
-            volume1.setValue(-40f);
-        } catch (IllegalArgumentException e){
+        klik.open(AudioSystem.getAudioInputStream(klikniecie_audio));
 
-        }
         Board wizualizacja = new Board(this);
 
 
@@ -105,6 +103,6 @@ public class Game {
 
 
 
-        }
+    }
 
     }

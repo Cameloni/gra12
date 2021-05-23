@@ -4,6 +4,7 @@ package com.company;
 import com.sun.jdi.IntegerValue;
 
 import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.FloatControl;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
@@ -32,7 +33,7 @@ public class Menu extends JPanel implements MouseListener {
     boolean flipper2 = false, flipper3 = false;
     public void mousetrack() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
         //if(game.menu == true) {
-        repaint();
+
             int x, y;
             //while (true) {
                 x = game.window.getMousePosition().x;
@@ -74,6 +75,8 @@ public class Menu extends JPanel implements MouseListener {
             wyjscie_najechany = true;
             if(!game.naj.isOpen()){
                 game.naj.open(AudioSystem.getAudioInputStream(game.najechanie_audio));
+
+
                 //game.naj.start();
             }
             if (exitflipper == false) {
@@ -92,11 +95,11 @@ public class Menu extends JPanel implements MouseListener {
         else {
             dc = false;
         }
-
+        repaint();
         if(exitflipper == false && wczytaj_flipper==false && newgame_flipper==false){
-            repaint();
             game.naj.close();
         }
+
 
         /*if(wczytaj_flipper== false){
             game.naj.close();
@@ -169,11 +172,57 @@ public class Menu extends JPanel implements MouseListener {
         if (e.getX() > 435 && e.getX() < 745 && e.getY() > 460 && e.getY() < 530) {
             game.menu = false;
             game.wizualizacja = true;
+            try {
+                //game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
+                //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
+                //game.volume2.setValue(-25f);
+                game.klik.loop(1);
+                //game.klik.start();
+                try {
+                    Thread.sleep(600);
+                } catch (InterruptedException en) {
+                    //e.printStackTrace();
+                }
+                game.klik.stop();
+            } catch (IllegalArgumentException exception){
+            }
             repaint();
             System.out.println("---------------Wczytaj--------------");;
         }
         if (e.getX() > 438 && e.getX() < 744 && e.getY() > 570 && e.getY() < 640) {
+            try {
+
+                //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
+                //game.volume2.setValue(-25f);
+                game.klik.loop(1);
+                //game.klik.start();
+                try {
+                    Thread.sleep(600);
+                } catch (InterruptedException en) {
+                    //e.printStackTrace();
+                }
+                game.klik.stop();
+            } catch (IllegalArgumentException exception){
+
+            }
             System.exit(0);
+        }
+        if(e.getX()>425 && e.getY() > 347 && e.getX() < 765 && e.getY() < 442){
+            try {
+
+                //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
+                //game.volume2.setValue(-25f);
+                game.klik.loop(1);
+                //game.klik.start();
+                try {
+                    Thread.sleep(600);
+                } catch (InterruptedException en) {
+                    //e.printStackTrace();
+                }
+                game.klik.stop();
+            } catch (IllegalArgumentException exception){
+
+            }
         }
 
     }

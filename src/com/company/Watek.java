@@ -6,6 +6,7 @@ import java.applet.AudioClip;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.io.InterruptedIOException;
 import java.util.Locale;
 import javax.sound.sampled.*;
 import javax.swing.JTextArea;
@@ -76,7 +77,7 @@ public class Watek extends Thread {
                 String tmp1;
 
                 String tmp2;
-                if(!decyzja.getKwestia().equals(tmp4)){
+                if (!decyzja.getKwestia().equals(tmp4)) {
                     addedcharacter = "";
                 }
                 this.character = decyzja.getKwestia().toCharArray();
@@ -84,19 +85,19 @@ public class Watek extends Thread {
 
                 if (i < character.length) {
                     //if (!addedcharacter.equals(tmp3)) {
-                        if (game.wypisywanie == true) {
-                            //JTextArea jTextArea = new JTextArea();
-                            // String blank = blank + character[i];
-                            addedcharacter = addedcharacter + character[i];
-                            //jTextArea.setText(addedcharacter);
-                            int c = 3;
-                            tmp1 = " ";
-                            //tmp1 = "(...)";
-                            ((JTextArea) a.getComponent(0)).setText(addedcharacter);
-                            ((Board) game.window.getContentPane().getComponent(0)).JJ[0].setText(tmp1);
-                            ((Board) game.window.getContentPane().getComponent(0)).JJ[1].setText(tmp1);
-                            //wypisznapergaminie2(addedcharacter);
-                            i++;
+                    if (game.wypisywanie == true) {
+                        //JTextArea jTextArea = new JTextArea();
+                        // String blank = blank + character[i];
+                        addedcharacter = addedcharacter + character[i];
+                        //jTextArea.setText(addedcharacter);
+                        int c = 3;
+                        tmp1 = " ";
+                        //tmp1 = "(...)";
+                        ((JTextArea) a.getComponent(0)).setText(addedcharacter);
+                        ((Board) game.window.getContentPane().getComponent(0)).JJ[0].setText(tmp1);
+                        ((Board) game.window.getContentPane().getComponent(0)).JJ[1].setText(tmp1);
+                        //wypisznapergaminie2(addedcharacter);
+                        i++;
                         //}
                     }
                 } else {
@@ -110,7 +111,7 @@ public class Watek extends Thread {
                     ii = 1;
                     i = 0;
                 }
-        }
+            }
 
         }
     }
@@ -183,7 +184,7 @@ public class Watek extends Thread {
     public void mruganie() {
         sec1++;
         if (game.wizualizacja == true) {
-            if (sec1 % (120 + mr)== 0) {
+            if (sec1 % (120 + mr) == 0) {
                 board.cezar_blink++;
                 board.repaint();
             }
@@ -195,10 +196,10 @@ public class Watek extends Thread {
                 board.cezar_blink = 1;
                 board.repaint();
             }
-            if (sec1 % (120 +mr) == 10) {
+            if (sec1 % (120 + mr) == 10) {
                 board.cezar_blink = 0;
                 board.repaint();
-                mr = 150 - (int)(Math.random()*50);
+                mr = 150 - (int) (Math.random() * 50);
                 //mm++;
             }
         }
@@ -221,21 +222,21 @@ public class Watek extends Thread {
             playmusic();
         }
         mr = 0;
-        Long s = game.naj.getMicrosecondLength()/1000;
+
         int secc = 0;
         tmp3 = "... ";
         tmp4 = " . . . . ";
         addedcharacter = "";
         while (true) {
-           // if(game.naj.isOpen()){
+            // if(game.naj.isOpen()){
             //secc++;}
             windows();
             //try{
             //if(secc*40 == s) {
-              //  if (game.naj.isOpen()) {
-                //    game.naj.close();
-               // }
-           // }} catch (ArithmeticException e){
+            //  if (game.naj.isOpen()) {
+            //    game.naj.close();
+            // }
+            // }} catch (ArithmeticException e){
 
             //}
 
@@ -245,7 +246,31 @@ public class Watek extends Thread {
 
 
                 if (game.menu == true) {
+
+                    try {
+                        game.volume1 = (FloatControl) game.naj.getControl(FloatControl.Type.MASTER_GAIN);
+                    } catch (IllegalArgumentException e) {
+
+                    }
+
+                    if (game.naj.isOpen()) {
+                        game.volume1.setValue(-25f);
+                        //game.naj.loop(1);
+                        game.naj.start();
+                        try {
+
+                            Thread.sleep(60);
+                            game.naj.stop();
+                            m.repaint();
+                            //} catch (InterruptedException e){
+
+                        } catch (IllegalArgumentException | InterruptedException e) {
+
+                        }
+
+                    }
                     /*game.naj.close();
+
                     try {
                         try {
                             if(m.flipper1 == true) {
@@ -270,11 +295,7 @@ public class Watek extends Thread {
                         try {
                             m.mousetrack();
 
-                            if(game.naj.isOpen()){
-                                m.repaint();
-                                game.naj.start();
 
-                            }
                         } catch (IOException e) {
                             e.printStackTrace();
                         } catch (UnsupportedAudioFileException e) {
@@ -284,7 +305,6 @@ public class Watek extends Thread {
                         }
                     } catch (NullPointerException e) {
                     }
-
 
 
                 }
