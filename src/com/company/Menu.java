@@ -26,7 +26,7 @@ public class Menu extends JPanel implements MouseListener {
     boolean nowa_gra_najechany = false;
     boolean wyjscie_najechany = false;
     boolean dc = false;
-    boolean wczytaj_flipper = false;
+    boolean newgame_flipper = false, wczytaj_flipper = false, exitflipper = false;
 
     public boolean flipper1 = false;
     boolean flipper2 = false, flipper3 = false;
@@ -36,22 +36,16 @@ public class Menu extends JPanel implements MouseListener {
             //while (true) {
                 x = game.window.getMousePosition().x;
                 y = game.window.getMousePosition().y;
+
         if (x > 440 && x < 755 && y > 375 && y < 450) {
             nowa_gra_najechany = true;
-                    if (flipper1 == false) {
-                        flipper1 = true;
-                    } else {
-                        //flipper1 = false;
-                    }
+            if (!newgame_flipper) {
+                newgame_flipper = true;
+                //tutaj trzeba wstawić komendę grającą kamyczkowy dźwięk
+            }
         } else {
             nowa_gra_najechany = false;
-            flipper1 = false;
-                    /*if (flipper1 == true) {
-                        flipper1 = false;
-                        flipper2 = true;
-                    } else {
-                        flipper2 = false;
-                    }*/
+            newgame_flipper = false;
         }
                 if (x > 440 && x < 755 && y > 490 && y < 560) {
                     wczytaj_najechany = true;
@@ -67,17 +61,15 @@ public class Menu extends JPanel implements MouseListener {
 
         if (x > 440 && x < 755 && y > 585 && y < 670) {
             wyjscie_najechany = true;
-            if (flipper1 == false) {
-                flipper1 = true;
-                //flipper2 = true;
-            } else {
-                //flipper1 = false;
+            if (!exitflipper) {
+                exitflipper = true;
+                //tutaj trzeba wstawić komendę grającą kamyczkowy dźwięk
             }
-        }
-        else {
+        } else {
             wyjscie_najechany = false;
-            flipper1 = false;
+            exitflipper = false;
         }
+
         if ((x > 420 && x < 765 && y > 45 + 14 && y < 285)||(x > 390 && x < 800 && y > 200+14 && y < 285 + 14)) {
             dc = true;
         }
