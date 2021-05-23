@@ -261,7 +261,7 @@ public class Decyzja {
         this.dec = 0;
         int los;
         //nr=0;
-        nr = 19;
+        //nr = 19;
 
 
         switch (nr) {

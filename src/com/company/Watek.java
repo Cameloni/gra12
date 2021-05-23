@@ -6,6 +6,7 @@ import java.applet.AudioClip;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.util.Locale;
 import javax.sound.sampled.*;
 import javax.swing.JTextArea;
 import javax.swing.*;
@@ -28,14 +29,15 @@ public class Watek extends Thread {
     JTextArea jTextArea = new JTextArea();
     Clip muz = AudioSystem.getClip();
 
-
+    String tmp3;
     Font romanfont;
     JPanel pergaminpanel;
-    JTextArea textArea;
+    //JTextArea textArea;
     Container con;
     String text;
     int i = 0;
     int ii = 0;
+    String tmp4 = "";
     String addedcharacter = "";
     //Font defaultfont = new Font("Times New Roman", Font.PLAIN, 30);
 
@@ -71,30 +73,40 @@ public class Watek extends Thread {
 
                 this.character = "".toCharArray();
 
-                this.character = decyzja.getKwestia().toCharArray();
-                if (i < character.length) {
-
-                    ii = 0;
-                    //JTextArea jTextArea = new JTextArea();
-                    // String blank = blank + character[i];
-                    addedcharacter = addedcharacter + character[i];
-                    //jTextArea.setText(addedcharacter);
-
-                    ((JTextArea) a.getComponent(0)).setText(addedcharacter);
-                    //wypisznapergaminie2(addedcharacter);
-                    i++;
-                } else {
+                String tmp1;
+                int cc = 3;
+                String tmp2;
+                if(!decyzja.getKwestia().equals(tmp4)){
                     addedcharacter = "";
-                    String tmp1;
-                    String tmp2;
+                }
+                this.character = decyzja.getKwestia().toCharArray();
+                tmp4 = decyzja.getKwestia();
+                if (i < character.length) {
+                    if (!addedcharacter.equals(tmp3)) {
+                        ii = 0;
+                        //JTextArea jTextArea = new JTextArea();
+                        // String blank = blank + character[i];
+                        addedcharacter = addedcharacter + character[i];
+                        //jTextArea.setText(addedcharacter);
+                        //tmp1 = "(...)";
+                        ((JTextArea) a.getComponent(0)).setText(addedcharacter);
+                        //((Board) game.window.getContentPane().getComponent(0)).JJ[0].setText(tmp1);
+                        //((Board) game.window.getContentPane().getComponent(0)).JJ[1].setText(tmp1);
+                        //wypisznapergaminie2(addedcharacter);
+                        i++;
+                    }
+                } else {
+                    tmp3 = addedcharacter;
+
                     tmp1 = decyzja.getKwe1();
                     tmp2 = decyzja.getKwe2();
-                    ((Board)game.window.getContentPane().getComponent(0)).JJ[0].setText(tmp1);
-                    ((Board)game.window.getContentPane().getComponent(0)).JJ[1].setText(tmp2);
+                    ((Board) game.window.getContentPane().getComponent(0)).JJ[0].setText(tmp1);
+                    ((Board) game.window.getContentPane().getComponent(0)).JJ[1].setText(tmp2);
                     ii = 1;
+                    i = 0;
                 }
+        }
 
-            }
         }
     }
 
@@ -204,6 +216,8 @@ public class Watek extends Thread {
             playmusic();
         }
         mr = 0;
+        tmp3 = "... ";
+        addedcharacter = "";
         while (true) {
             windows();
 
