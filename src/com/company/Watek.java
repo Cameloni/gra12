@@ -140,7 +140,7 @@ public class Watek extends Thread {
 
             muz.open(AudioSystem.getAudioInputStream(game.muzyka));
             FloatControl volume = (FloatControl) muz.getControl(FloatControl.Type.MASTER_GAIN);
-            volume.setValue(-40f);
+            volume.setValue(-30f);
             muz.loop(999999999);
             //muz.start();
 
@@ -221,12 +221,23 @@ public class Watek extends Thread {
             playmusic();
         }
         mr = 0;
+        Long s = game.naj.getMicrosecondLength()/1000;
+        int secc = 0;
         tmp3 = "... ";
         tmp4 = " . . . . ";
         addedcharacter = "";
         while (true) {
+           // if(game.naj.isOpen()){
+            //secc++;}
             windows();
+            //try{
+            //if(secc*40 == s) {
+              //  if (game.naj.isOpen()) {
+                //    game.naj.close();
+               // }
+           // }} catch (ArithmeticException e){
 
+            //}
 
             if (wglowne == true) {
 
@@ -254,17 +265,22 @@ public class Watek extends Thread {
                         }
                     } catch (NullPointerException e) {
                     }*/
+
                     try {
                         try {
                             m.mousetrack();
-                        } catch (IOException e) {
-                            //e.printStackTrace();
-                        } catch (UnsupportedAudioFileException e) {
-                           // e.printStackTrace();
-                        } catch (LineUnavailableException e) {
-                            //e.printStackTrace();
-                        } catch (IllegalStateException e){
 
+                            if(game.naj.isOpen()){
+                                m.repaint();
+                                game.naj.start();
+
+                            }
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        } catch (UnsupportedAudioFileException e) {
+                            e.printStackTrace();
+                        } catch (LineUnavailableException e) {
+                            e.printStackTrace();
                         }
                     } catch (NullPointerException e) {
                     }

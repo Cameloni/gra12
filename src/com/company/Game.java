@@ -63,7 +63,12 @@ public class Game {
         //coins = 1;
         window = new JFrame("Deus consilium");
         window.setIconImage(new ImageIcon("src/com/company/PNG/background/45.png").getImage());
+        try {
+            FloatControl volume1 = (FloatControl) naj.getControl(FloatControl.Type.MASTER_GAIN);
+            volume1.setValue(-40f);
+        } catch (IllegalArgumentException e){
 
+        }
         Board wizualizacja = new Board(this);
 
 

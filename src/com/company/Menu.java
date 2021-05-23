@@ -32,6 +32,7 @@ public class Menu extends JPanel implements MouseListener {
     boolean flipper2 = false, flipper3 = false;
     public void mousetrack() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
         //if(game.menu == true) {
+        repaint();
             int x, y;
             //while (true) {
                 x = game.window.getMousePosition().x;
@@ -39,8 +40,13 @@ public class Menu extends JPanel implements MouseListener {
 
         if (x > 440 && x < 755 && y > 375 && y < 450) {
             nowa_gra_najechany = true;
+            if(!game.naj.isOpen()){
+                game.naj.open(AudioSystem.getAudioInputStream(game.najechanie_audio));
+                //game.naj.start();
+            }
             if (!newgame_flipper) {
                 newgame_flipper = true;
+
                 //tutaj trzeba wstawić komendę grającą kamyczkowy dźwięk
             }
         } else {
@@ -49,8 +55,13 @@ public class Menu extends JPanel implements MouseListener {
         }
                 if (x > 440 && x < 755 && y > 490 && y < 560) {
                     wczytaj_najechany = true;
-                    if (!wczytaj_flipper) {
+                    if(!game.naj.isOpen()){
+                        game.naj.open(AudioSystem.getAudioInputStream(game.najechanie_audio));
+                        //game.naj.start();
+                    }
+                    if (wczytaj_flipper==false) {
                         wczytaj_flipper = true;
+
                         //tutaj trzeba wstawić komendę grającą kamyczkowy dźwięk
                     }
                 } else {
@@ -61,8 +72,13 @@ public class Menu extends JPanel implements MouseListener {
 
         if (x > 440 && x < 755 && y > 585 && y < 670) {
             wyjscie_najechany = true;
-            if (!exitflipper) {
+            if(!game.naj.isOpen()){
+                game.naj.open(AudioSystem.getAudioInputStream(game.najechanie_audio));
+                //game.naj.start();
+            }
+            if (exitflipper == false) {
                 exitflipper = true;
+
                 //tutaj trzeba wstawić komendę grającą kamyczkowy dźwięk
             }
         } else {
@@ -76,7 +92,18 @@ public class Menu extends JPanel implements MouseListener {
         else {
             dc = false;
         }
-        repaint();
+
+        if(exitflipper == false && wczytaj_flipper==false && newgame_flipper==false){
+            repaint();
+            game.naj.close();
+        }
+
+        /*if(wczytaj_flipper== false){
+            game.naj.close();
+        }
+        if(newgame_flipper == false){
+            game.naj.close();
+        }*/
 
 
     }

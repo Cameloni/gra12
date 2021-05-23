@@ -17,7 +17,8 @@ public class Board extends JPanel implements MouseListener {
     ImageIcon[] icons = new ImageIcon[15];
     ImageIcon[] staty = new ImageIcon[4];
     public int cezar_blink = 0;
-
+    boolean button1_najechany = false;
+    boolean button2_najechany = false;
     //Color[] cols = {Color.green, Color.yellow, Color.orange, Color.red};
 
     public Board(Game game) throws IOException, FontFormatException {
@@ -34,8 +35,8 @@ public class Board extends JPanel implements MouseListener {
         //icons[4] = new ImageIcon("src/com/company/pixelpictures/tło.png");
         icons[4] = new ImageIcon("src/com/company/pixelpictures/pergamin4.png");
         icons[5] = new ImageIcon("src/com/company/buttons/ustawienia_button.png");
-        icons[6] = new ImageIcon("src/com/company/pixelpictures/tymczasowy guzik1.png");
-        icons[7] = new ImageIcon("src/com/company/pixelpictures/tymczasowy guzik1.png");
+        icons[6] = new ImageIcon("src/com/company/buttons/potencialny_guzik_decyzji.png");
+        icons[7] = new ImageIcon("src/com/company/buttons/potencialny_guzik_decyzji.png");
         icons[10] = new ImageIcon("src/com/company/pixelpictures/ramka.png");
         staty[0] = new ImageIcon("src/com/company/statystyki/coins_stats.png");
         staty[1] = new ImageIcon("src/com/company/statystyki/army_stats.png");
@@ -140,7 +141,13 @@ public class Board extends JPanel implements MouseListener {
         g.drawImage(staty[1].getImage(),185+230,30,330+230,160, 0, 0, 200, 180, null);
         g.drawImage(staty[2].getImage(),360+230,-25,530+230,160, 0, 0, 240, 255, null);
         g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-        g.drawImage(icons[6].getImage(),100, 630, 500, 150, null);
+        //g.drawImage(icons[6].getImage(),100, 630, 500, 150, null);
+        if(button1_najechany==false){
+            g.drawImage(icons[6].getImage(),425,347,765,442, 0, 0, 1416 ,329, null);
+        }
+        else{
+            g.drawImage(icons[6].getImage(),427,345,767,442, 0, 336, 1416 ,672, null);
+        }
         g.drawImage(icons[7].getImage(),600, 630, 500, 150, null);
 
     }
