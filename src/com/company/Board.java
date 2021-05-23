@@ -48,6 +48,7 @@ public class Board extends JPanel implements MouseListener {
         ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")));
         //JTextArea jTextArea;
         this.jTextArea = new JTextArea("");
+        this.jTextArea.setVisible(true);
         this.jTextArea.setBounds(200, 500, 800, 300);
         this.jTextArea.setBackground(new Color(0, 0, 0, 1));
         this.jTextArea.setOpaque(false);
@@ -57,6 +58,7 @@ public class Board extends JPanel implements MouseListener {
         this.jTextArea.setEditable(false);
         this.jTextArea.setWrapStyleWord(true);
         //jTextArea.setText("ccaaaa");
+
         this.jTextArea.setFont(romanfont);
         //jTextArea.setForeground(Color.getHSBColor(500,850,200));
 
@@ -65,7 +67,7 @@ public class Board extends JPanel implements MouseListener {
         setSize(1200, 780);
         add(this.jTextArea);
         //jTextArea.setForeground(Color.BLACK);
-        //this.jTextArea.setVisible(true);
+
         //tekst.setBounds(300, 500, 600, 200);
         for(int i =0 ; i< 2; i++) {
             JJ[i] = new JTextArea();

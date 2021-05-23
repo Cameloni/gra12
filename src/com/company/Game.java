@@ -11,7 +11,7 @@ public class Game {
     public boolean menu;
     public boolean wizualizacja;
     public JFrame window;
-
+    public boolean wypisywanie;
     public FloatControl fc;
 
     File muzyka = new File("src/com/company/audio/gra_java_soundtrack(wav).wav");
@@ -74,12 +74,12 @@ public class Game {
         window.setLocationRelativeTo(null);
         window.setVisible(true);
 
-
+        wypisywanie = true;
         this.menu = true;
         //this.wizualizacja == false;
        // Menu.repaint();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        Decyzja wybor = new Decyzja(-1, wizualizacja);
+        Decyzja wybor = new Decyzja(-1, wizualizacja, this);
 
         Watek watek = new Watek(this, menu2, wybor, true, false,false, wizualizacja);
         Watek watek_dec = new Watek(this, menu2, wybor, false, true,false, wizualizacja);

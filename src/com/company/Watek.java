@@ -74,29 +74,34 @@ public class Watek extends Thread {
                 this.character = "".toCharArray();
 
                 String tmp1;
-                int cc = 3;
+
                 String tmp2;
                 if(!decyzja.getKwestia().equals(tmp4)){
                     addedcharacter = "";
                 }
                 this.character = decyzja.getKwestia().toCharArray();
                 tmp4 = decyzja.getKwestia();
+
                 if (i < character.length) {
-                    if (!addedcharacter.equals(tmp3)) {
-                        ii = 0;
-                        //JTextArea jTextArea = new JTextArea();
-                        // String blank = blank + character[i];
-                        addedcharacter = addedcharacter + character[i];
-                        //jTextArea.setText(addedcharacter);
-                        //tmp1 = "(...)";
-                        ((JTextArea) a.getComponent(0)).setText(addedcharacter);
-                        //((Board) game.window.getContentPane().getComponent(0)).JJ[0].setText(tmp1);
-                        //((Board) game.window.getContentPane().getComponent(0)).JJ[1].setText(tmp1);
-                        //wypisznapergaminie2(addedcharacter);
-                        i++;
+                    //if (!addedcharacter.equals(tmp3)) {
+                        if (game.wypisywanie == true) {
+                            //JTextArea jTextArea = new JTextArea();
+                            // String blank = blank + character[i];
+                            addedcharacter = addedcharacter + character[i];
+                            //jTextArea.setText(addedcharacter);
+                            int c = 3;
+                            tmp1 = " ";
+                            //tmp1 = "(...)";
+                            ((JTextArea) a.getComponent(0)).setText(addedcharacter);
+                            ((Board) game.window.getContentPane().getComponent(0)).JJ[0].setText(tmp1);
+                            ((Board) game.window.getContentPane().getComponent(0)).JJ[1].setText(tmp1);
+                            //wypisznapergaminie2(addedcharacter);
+                            i++;
+                        //}
                     }
                 } else {
-                    tmp3 = addedcharacter;
+                    //tmp3 = addedcharacter;
+                    game.wypisywanie = false;
 
                     tmp1 = decyzja.getKwe1();
                     tmp2 = decyzja.getKwe2();
@@ -217,6 +222,7 @@ public class Watek extends Thread {
         }
         mr = 0;
         tmp3 = "... ";
+        tmp4 = " . . . . ";
         addedcharacter = "";
         while (true) {
             windows();

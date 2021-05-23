@@ -36,6 +36,7 @@ public class Decyzja {
     int dec;
     //Watek watek;
     int kontynuacja;
+    public Game game;
    // Game game = new Game();
     public String kwestia;
     public String kwe1;
@@ -190,9 +191,9 @@ public class Decyzja {
         return nr;
     }
 
-    public Decyzja(int nr, Board board) throws IOException, InterruptedException, FontFormatException {
+    public Decyzja(int nr, Board board, Game game) throws IOException, InterruptedException, FontFormatException {
         this.nr = nr;
-
+        this.game = game;
         finanse = 50;
         obywatele = 50;
         legiony = 50;
@@ -260,8 +261,8 @@ public class Decyzja {
         //kwestia = "Coś";
         this.dec = 0;
         int los;
-        //nr=0;
-        //nr = 19;
+        //nr=19;
+        game.wypisywanie = true;
 
 
         switch (nr) {
@@ -553,6 +554,7 @@ public class Decyzja {
             case 19:
                 System.out.println(" Jeden z kapłanów prosi o pozwolenie na odprawienie czegoś, co nazywa 'rytuałem tysiąca słońc'. Zapewnia, że przyniesie to dobrobyt całemu cesarstwu.");
                 setKwestia("Jeden z kapłanów prosi o pozwolenie na odprawienie czegoś, co nazywa \"rytuałem tysiąca słońc\". Zapewnia, że przyniesie to dobrobyt całemu cesarstwu.");
+
                 System.out.println("Co za bzdury...");
                 setKwe1("Co za bzdury...");
                 System.out.println("Jeśli tak uważa...");
@@ -1352,6 +1354,7 @@ public class Decyzja {
             System.out.println("--|" + getTura()+ " tura |--");
             statystyki();
             setNr(nr);
+            game.wypisywanie = true;
             zbior();
             setJuzjest(nr, i % 20);
             nr = -1;
