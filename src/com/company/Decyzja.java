@@ -557,23 +557,14 @@ public class Decyzja {
                 setKwestia("Jeden z kapłanów prosi o pozwolenie na odprawienie czegoś, co nazywa \"rytuałem tysiąca słońc\". Zapewnia, że przyniesie to dobrobyt całemu cesarstwu.");
                 setKwe1("Co za bzdury...");
                 setKwe2("Jeśli tak uważa...");
-                los = (int)(Math.random()*2);
                 lub();
                 switch (dec) {
                     case 1:
 
                         break;
                     case 2:
-                        if(los==0){
-                            setKwestia("Rytuał okazał się sukcesem, uprawy rolne rosną szybciej niż kiedykolwiek.");
-                            setKwe1("...");
-                            setKwe2("...");
-                        }
-                        else{
-                            setKwestia("Rytuał przyniósł długotrwałą suszę, a w północnej części Cesarstwa wybuchła plaga myszy.");
-                            setKwe1("...");
-                            setKwe2("...");
-                        }
+                        setKontynuacja(200019);
+                        break;
                 }
                 break;
             case 20:
@@ -1694,6 +1685,24 @@ public class Decyzja {
 
 
 
+
+            case 200019:
+                los = (int)(Math.random()*2);
+                setTura(getTura()-1);
+                if(los==0){
+                    setKwestia("Rytuał okazał się sukcesem, uprawy rolne rosną szybciej niż kiedykolwiek.");
+                }
+                else{
+                    setKwestia("Rytuał przyniósł długotrwałą suszę, a w północnej części Cesarstwa wybuchła plaga myszy.");
+                }
+                setKwe1("...");
+                setKwe2("...");
+                lub();
+                break;
+
+
+
+
             case 100047:
                 setKwestia("Powstanie rzeczywiście było przygotowywane. Ludzie są wdzięczni za błyskawiczną reakcję wojska.");
                 setKwe1("...");
@@ -1711,6 +1720,13 @@ public class Decyzja {
         }
         setTura(getTura() + 1);
     }
+
+
+
+
+
+
+
     public void przebieg() throws IOException {
         int nr = -1;
         for (int iiii = 0; iiii < juzjest.length; iiii++){
