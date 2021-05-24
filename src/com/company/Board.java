@@ -75,10 +75,10 @@ public class Board extends JPanel implements MouseListener {
             JJ[i] = new JTextArea();
             this.JJ[i] = new JTextArea("");
             if(i == 0){
-                this.JJ[i].setBounds(230, 680, 500, 200);
+                this.JJ[i].setBounds(200, 680, 500, 200);
             }
             else {
-                this.JJ[i].setBounds(720, 680, 500, 200);
+                this.JJ[i].setBounds(650, 680, 500, 200);
             }
             this.JJ[i].setBackground(new Color(0, 0, 0, 1));
             this.JJ[i].setOpaque(false);
