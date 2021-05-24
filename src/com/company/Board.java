@@ -100,7 +100,7 @@ public class Board extends JPanel implements MouseListener {
         icons[2] = new ImageIcon("src/com/company/pixelpictures/sługa.png");
         icons[3] = new ImageIcon("src/com/company/pixelpictures/sługa2.png");
         //icons[4] = new ImageIcon("src/com/company/pixelpictures/tło.png");
-        icons[4] = new ImageIcon("src/com/company/pixelpictures/pergamin4.png");
+        icons[4] = new ImageIcon("src/com/company/pixelpictures/Bez nazwy2.png");
         icons[5] = new ImageIcon("src/com/company/buttons/ustawienia_button.png");
         icons[6] = new ImageIcon("src/com/company/buttons/potencialny_guzik_decyzji.png");
         icons[7] = new ImageIcon("src/com/company/buttons/potencialny_guzik_decyzji.png");
@@ -121,7 +121,7 @@ public class Board extends JPanel implements MouseListener {
         //JTextArea jTextArea;
         this.jTextArea = new JTextArea("");
         this.jTextArea.setVisible(true);
-        this.jTextArea.setBounds(200, 500, 800, 300);
+        this.jTextArea.setBounds(200, 480, 800, 300);
         this.jTextArea.setBackground(new Color(0, 0, 0, 1));
         this.jTextArea.setOpaque(false);
         //jTextArea.setForeground(Color.red);
@@ -205,7 +205,7 @@ public class Board extends JPanel implements MouseListener {
         g.drawImage(icons[10].getImage(),217,25,750,150,null);
        // g.drawImage(icons[2].getImage(), 30, 270, 350, 300, null);
        // g.drawImage(icons[3].getImage(),1200, 250, -280, 300, null);
-        g.drawImage(icons[4].getImage(), 10, 440, 1220, 300, null);
+        g.drawImage(icons[4].getImage(), -1150, 275, 3500, 650, null);
         g.drawImage(icons[5].getImage(), 1120, 20, 50, 50, null);
         g.drawImage(icons[11].getImage(), 618, -40, 630, 630, null);
         g.drawImage(icons[12].getImage(), 424, -40, 630, 630, null);
@@ -338,7 +338,7 @@ Decyzja.religia=100;
         else if(Decyzja.obywatele==55){
             g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
         }
-        else if(Decyzja.obywatele==530){
+        else if(Decyzja.obywatele==50){
             g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
         }
         else if(Decyzja.obywatele==45){

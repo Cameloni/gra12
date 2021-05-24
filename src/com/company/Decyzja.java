@@ -271,7 +271,7 @@ public class Decyzja {
         //nr=19;
         game.wypisywanie = true;
        // board.repaint();
-       // nr = 19;
+        nr = 47;
         //quest[15] = 1;
 
 
@@ -596,6 +596,7 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
+                            System.out.println("miauuu");
                             setKwestia("Inni gladiatorzy też chcą lepszego traktowania. Żądają ostrzejszego miecza i nowych sandałów dla każdego wojownika w Koloseum");
                             setKwe1("Niech będzie");
                             setKwe2("Nie ma mowy");
@@ -1662,7 +1663,7 @@ public class Decyzja {
 
         for (int i = 0; i < 50; i++) {
             while (nr < 0) {
-                nr = (int) (Math.random() * 30);
+                nr = (int) (Math.random() * 70);
 
                 for (int j = 0; j < 20; j++) {
                     if (getJuzjest(j) == -1) {
