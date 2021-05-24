@@ -17,13 +17,13 @@ public class Game {
     File muzyka = new File("src/com/company/audio/gra_java_soundtrack(wav).wav");
     File najechanie_audio = new File("src/com/company/audio/przycisk_najechany_audio.wav");
     File klikniecie_audio = new File("src/com/company/audio/przycisk_kliknięty_audio.wav");
-    File pergamin_audio = new File("src/com/company/audio/przycisk_kliknięty_audio.wav");
+    File pergamin_audio = new File("src/com/company/audio/pisanienapergaminie_audio.wav");
     public Clip naj = AudioSystem.getClip();
     public Clip naj2 = AudioSystem.getClip();
     public Clip naj3 = AudioSystem.getClip();
     public FloatControl volume1;
     public FloatControl volume2;
-
+    public Clip per = AudioSystem.getClip();
     public Clip klik = AudioSystem.getClip();
 
    // Menu menu = new Menu();
@@ -68,6 +68,7 @@ public class Game {
         window = new JFrame("Deus consilium");
         window.setIconImage(new ImageIcon("src/com/company/PNG/background/45.png").getImage());
         klik.open(AudioSystem.getAudioInputStream(klikniecie_audio));
+        per.open(AudioSystem.getAudioInputStream(pergamin_audio));
 
         Board wizualizacja = new Board(this);
 

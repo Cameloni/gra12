@@ -1,5 +1,8 @@
 package com.company;
 
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -8,8 +11,72 @@ import java.io.File;
 import java.io.IOException;
 
 public class Board extends JPanel implements MouseListener {
-
+/*
+    boolean button_1_najechany = false;
+    boolean button_1_flipper= false;
+    boolean button_2_flipper= false;
+    boolean button_2_najechany= false;
     public Game game;
+    public void mousetrack() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
+        //if(game.menu == true) {
+
+        int x, y;
+        //while (true) {
+        x = game.window.getMousePosition().x;
+        y = game.window.getMousePosition().y;
+
+
+        if (x > 440 && x < 755 && y > 490 && y < 560) {
+            button1_najechany = true;
+            if(!game.naj.isOpen()){
+                game.naj.open(AudioSystem.getAudioInputStream(game.najechanie_audio));
+                //game.naj.start();
+            }
+            if (wczytaj_flipper==false) {
+                wczytaj_flipper = true;
+
+                //tutaj trzeba wstawić komendę grającą kamyczkowy dźwięk
+            }
+        } else {
+            button1_najechany = false;
+            wczytaj_flipper = false;
+        }
+
+
+        if (x > 440 && x < 755 && y > 585 && y < 670) {
+            wyjscie_najechany = true;
+            if(!game.naj.isOpen()){
+                game.naj.open(AudioSystem.getAudioInputStream(game.najechanie_audio));
+
+
+                //game.naj.start();
+            }
+            if (exitflipper == false) {
+                exitflipper = true;
+
+                //tutaj trzeba wstawić komendę grającą kamyczkowy dźwięk
+            }
+        } else {
+            wyjscie_najechany = false;
+            exitflipper = false;
+        }
+
+
+        repaint();
+        if(exitflipper == false && wczytaj_flipper==false){
+            game.naj.close();
+        }
+
+*/
+        /*if(wczytaj_flipper== false){
+            game.naj.close();
+        }
+        if(newgame_flipper == false){
+            game.naj.close();
+        }
+
+
+    }*/
     //public JLabel tekst = new JLabel();
     public JTextArea jTextArea = new JTextArea();
     public JTextArea[] JJ = new JTextArea[2];
@@ -43,7 +110,7 @@ public class Board extends JPanel implements MouseListener {
         staty[2] = new ImageIcon("src/com/company/statystyki/authority_stats.png");
         staty[3] = new ImageIcon("src/com/company/statystyki/religion_stats.png");
         //add(coins);
-        this.game = game;
+        //this.game = game;
         Font romanfont = Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")).deriveFont(40f);
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")));
@@ -75,10 +142,10 @@ public class Board extends JPanel implements MouseListener {
             JJ[i] = new JTextArea();
             this.JJ[i] = new JTextArea("");
             if(i == 0){
-                this.JJ[i].setBounds(230, 680, 500, 200);
+                this.JJ[i].setBounds(200, 680, 500, 200);
             }
             else {
-                this.JJ[i].setBounds(720, 680, 500, 200);
+                this.JJ[i].setBounds(650, 680, 500, 200);
             }
             this.JJ[i].setBackground(new Color(0, 0, 0, 1));
             this.JJ[i].setOpaque(false);

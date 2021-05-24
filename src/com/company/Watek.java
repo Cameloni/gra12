@@ -80,12 +80,15 @@ public class Watek extends Thread {
                 if (!decyzja.getKwestia().equals(tmp4)) {
                     addedcharacter = "";
                 }
+
                 this.character = decyzja.getKwestia().toCharArray();
                 tmp4 = decyzja.getKwestia();
-
                 if (i < character.length) {
                     //if (!addedcharacter.equals(tmp3)) {
                     if (game.wypisywanie == true) {
+                        FloatControl volume = (FloatControl) game.per.getControl(FloatControl.Type.MASTER_GAIN);
+                        volume.setValue(-20f);
+                        game.per.loop(1);
                         //JTextArea jTextArea = new JTextArea();
                         // String blank = blank + character[i];
                         addedcharacter = addedcharacter + character[i];
@@ -103,7 +106,7 @@ public class Watek extends Thread {
                 } else {
                     //tmp3 = addedcharacter;
                     game.wypisywanie = false;
-
+                    game.per.stop();
                     tmp1 = decyzja.getKwe1();
                     tmp2 = decyzja.getKwe2();
                     ((Board) game.window.getContentPane().getComponent(0)).JJ[0].setText(tmp1);
@@ -254,7 +257,7 @@ public class Watek extends Thread {
                     }
 
                     if (game.naj.isOpen()) {
-                        game.volume1.setValue(-25f);
+                        game.volume1.setValue(-20f);
                         //game.naj.loop(1);
                         game.naj.start();
                         try {
