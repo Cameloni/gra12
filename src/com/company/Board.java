@@ -104,6 +104,10 @@ public class Board extends JPanel implements MouseListener {
         icons[5] = new ImageIcon("src/com/company/buttons/ustawienia_button.png");
         icons[6] = new ImageIcon("src/com/company/buttons/potencialny_guzik_decyzji.png");
         icons[7] = new ImageIcon("src/com/company/buttons/potencialny_guzik_decyzji.png");
+        icons[11] = new ImageIcon("src/com/company/pixelpictures/oznaczenie_modyfikowanej_statystyki_religia.png");
+        icons[12] = new ImageIcon("src/com/company/pixelpictures/oznaczenie_modyfikowanej_statystyki_autorytet.png");
+        icons[13] = new ImageIcon("src/com/company/pixelpictures/oznaczenie_modyfikowanej_statystyki_armia.png");
+        icons[14] = new ImageIcon("src/com/company/pixelpictures/oznaczenie_modyfikowanej_statystyki_finanse.png");
         icons[10] = new ImageIcon("src/com/company/pixelpictures/ramka.png");
         staty[0] = new ImageIcon("src/com/company/statystyki/coins_stats.png");
         staty[1] = new ImageIcon("src/com/company/statystyki/army_stats.png");
@@ -198,15 +202,19 @@ public class Board extends JPanel implements MouseListener {
             g.drawImage(icons[1].getImage(),480-16,200-1,700+4,510-2, 1340, 0, 2100, 1075, null);
         }
 
-        g.drawImage(icons[10].getImage(),225,25,750,150,null);
+        g.drawImage(icons[10].getImage(),217,25,750,150,null);
        // g.drawImage(icons[2].getImage(), 30, 270, 350, 300, null);
        // g.drawImage(icons[3].getImage(),1200, 250, -280, 300, null);
         g.drawImage(icons[4].getImage(), 10, 440, 1220, 300, null);
         g.drawImage(icons[5].getImage(), 1120, 20, 50, 50, null);
+        g.drawImage(icons[11].getImage(), 618, -40, 630, 630, null);
+        g.drawImage(icons[12].getImage(), 424, -40, 630, 630, null);
+        g.drawImage(icons[13].getImage(), 228, -40, 630, 630, null);
+        g.drawImage(icons[14].getImage(), 41, -35, 610, 610, null);
 
-        g.drawImage(staty[0].getImage(),-20+200,-20,160+200,160, 0, 0, 125, 120,  null);
-        g.drawImage(staty[1].getImage(),185+230,30,330+230,160, 0, 0, 200, 180, null);
-        g.drawImage(staty[2].getImage(),360+230,-25,530+230,160, 0, 0, 240, 255, null);
+        g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
 
         //g.drawImage(icons[6].getImage(),100, 630, 500, 150, null);
         if(button1_najechany==false){
@@ -221,11 +229,15 @@ public class Board extends JPanel implements MouseListener {
         else{
             g.drawImage(icons[7].getImage(),600,650,1050,770, 0, 166, 700 ,332, null);
         }
+
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Decyzja.religia=100;
         if(Decyzja.religia==100){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-        }
-        else if(Decyzja.religia==100){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+            g.drawImage(staty[3].getImage(),602+200,11,746+200,163, 0, 0, 200, 210, null);
         }
         else if(Decyzja.religia==95){
             g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
@@ -254,7 +266,7 @@ public class Board extends JPanel implements MouseListener {
         else if(Decyzja.religia==55){
             g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
         }
-        else if(Decyzja.religia==50){
+        else if(Decyzja.religia==530){
             g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
         }
         else if(Decyzja.religia==45){
@@ -287,6 +299,226 @@ public class Board extends JPanel implements MouseListener {
         else if(Decyzja.religia==0){
             g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
         }
+
+
+
+
+
+
+
+
+
+       /* if(Decyzja.religia==100){
+            g.drawImage(staty[3].getImage(),602+200,11,746+200,163, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==95){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==90){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==85){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==80){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==75){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==70){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==65){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==60){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==55){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==530){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==45){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==40){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==35){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==30){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==25){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==20){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==15){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==10){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==5){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==0){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+
+
+
+
+
+
+
+
+
+        if(Decyzja.religia==100){
+            g.drawImage(staty[3].getImage(),602+200,11,746+200,163, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==95){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==90){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==85){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==80){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==75){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==70){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==65){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==60){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==55){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==530){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==45){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==40){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==35){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==30){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==25){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==20){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==15){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==10){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==5){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==0){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        if(Decyzja.religia==100){
+            g.drawImage(staty[3].getImage(),602+200,11,746+200,163, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==95){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==90){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==85){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==80){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==75){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==70){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==65){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==60){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==55){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==530){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==45){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==40){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==35){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==30){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==25){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==20){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==15){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==10){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==5){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        }
+        else if(Decyzja.religia==0){
+            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
+        } */
         //g.drawImage(icons[7].getImage(),600, 630, 500, 150, null);
 ////
     }
