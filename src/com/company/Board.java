@@ -12,12 +12,13 @@ import java.io.IOException;
 
 public class Board extends JPanel implements MouseListener {
 /*
-    boolean button_1_najechany = false;
-    boolean button_1_flipper= false;
-    boolean button_2_flipper= false;
-    boolean button_2_najechany= false;
+    boolean button1_najechany = false;
+    boolean button2_najechany= false;
+    boolean button1_flipper= false;
+    boolean button2_flipper= false;
+
     public Game game;
-    public void mousetrack() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
+    public void mousetrack2() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
         //if(game.menu == true) {
 
         int x, y;
@@ -32,8 +33,8 @@ public class Board extends JPanel implements MouseListener {
                 game.naj.open(AudioSystem.getAudioInputStream(game.najechanie_audio));
                 //game.naj.start();
             }
-            if (wczytaj_flipper==false) {
-                wczytaj_flipper = true;
+            if (button1_flipper==false) {
+                button1_flipper = true;
 
                 //tutaj trzeba wstawić komendę grającą kamyczkowy dźwięk
             }
@@ -118,6 +119,9 @@ public class Board extends JPanel implements MouseListener {
         Font romanfont = Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")).deriveFont(40f);
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")));
+        Font romanfont1 = Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")).deriveFont(30f);
+        GraphicsEnvironment ge1 = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")));
         //JTextArea jTextArea;
         this.jTextArea = new JTextArea("");
         this.jTextArea.setVisible(true);
@@ -146,20 +150,20 @@ public class Board extends JPanel implements MouseListener {
             JJ[i] = new JTextArea();
             this.JJ[i] = new JTextArea("");
             if(i == 0){
-                this.JJ[i].setBounds(200, 680, 500, 200);
+                this.JJ[i].setBounds(200, 680, 500, 300);
             }
             else {
-                this.JJ[i].setBounds(650, 680, 500, 200);
+                this.JJ[i].setBounds(650, 680, 500, 300);
             }
             this.JJ[i].setBackground(new Color(0, 0, 0, 1));
             this.JJ[i].setOpaque(false);
             //jTextArea.setForeground(Color.red);
-            this.JJ[i].setFont(romanfont);
+            this.JJ[i].setFont(romanfont1);
             this.JJ[i].setLineWrap(true);
             this.JJ[i].setEditable(false);
             this.JJ[i].setWrapStyleWord(true);
             //jTextArea.setText("ccaaaa");
-            this.JJ[i].setFont(romanfont);
+            this.JJ[i].setFont(romanfont1);
             //jTextArea.setForeground(Color.getHSBColor(500,850,200));
 
             //MOŻNA WYBRAĆ WŁASNY KOLOR..
@@ -299,13 +303,6 @@ Decyzja.religia=100;
         else if(Decyzja.religia==0){
             g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
         }
-
-
-
-
-
-
-
 
 
         if(Decyzja.obywatele==100){

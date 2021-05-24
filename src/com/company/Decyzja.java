@@ -268,17 +268,22 @@ public class Decyzja {
         //kwestia = "Coś";
         this.dec = 0;
         int los;
-        //nr=19;
+        //nr=47;
         game.wypisywanie = true;
        // board.repaint();
-        nr = 47;
+        //nr = 47;
         //quest[15] = 1;
-
+        if(getKontynuacja() != 0){
+            nr = getKontynuacja();
+            setKontynuacja(0);
+        }
 
         switch (nr) {
 
             case 0:
                 setKwestia("Legioniści wracają do miasta z wygranej wojny. Czy zorganizować z tej okazji ucztę?");
+                setKwe1("Nie stać nas na to.");
+                setKwe2("To dobry pomysł.");
                 //dwie opcje do wyboru
                 System.out.println("1. Nie stać nas na to.");
                 System.out.println("2. To dobry pomysł.");
@@ -302,6 +307,8 @@ public class Decyzja {
                 System.out.println("1. Chyba oszaleli!");
                 System.out.println("2. Niech lud wykona ich rozkazy.");
                 //dwie opcje do wyboru
+                setKwe1("Chyba oszaleli!");
+                setKwe2("Niech lud wykona ich rozkazy.");
                 lub();
                 switch (dec) {
                     case 1:
@@ -323,6 +330,7 @@ public class Decyzja {
                 setKwestia("Żołnierze " + legion + "-ego legionu rządają zwiększenia ich żołdu. Grożą buntem.");
                 System.out.println("1. Ukarz ich decymacją.");
                 System.out.println("2. Zwiększ ich płace.");
+                //setKwe1("");
                 lub();
                 switch (dec) {
                     case 1:
@@ -1020,7 +1028,6 @@ public class Decyzja {
                     case 1:
                         break;
                     case 2:
-
                 }
                 break;
             case 47:
@@ -1031,14 +1038,10 @@ public class Decyzja {
                 lub();
                 switch (dec) {
                     case 1:
-                        setKwestia("Powstanie rzeczywiście było przygotowywane. Ludzie są wdzięczni za błyskawiczną reakcję wojska.");
-                        setKwe1("...");
-                        setKwe2("...");
+                        setKontynuacja(147);
                         break;
                     case 2:
-                        setKwestia("Powstanie nie było plotką. Wielu ludzi musiało uciekać ze swych domostw na zachód.");
-                        setKwe1("...");
-                        setKwe2("...");
+                        setKontynuacja(247);
                 }
                 break;
             case 48:
@@ -1226,7 +1229,6 @@ public class Decyzja {
                     case 1:
                         break;
                     case 2:
-
                 }
                 break;
             case 62:
@@ -1651,7 +1653,18 @@ public class Decyzja {
                         setLegiony(getLegiony() + q*5);
                         break;
                 }
-
+            case 147:
+                setKwestia("Powstanie rzeczywiście było przygotowywane. Ludzie są wdzięczni za błyskawiczną reakcję wojska.");
+                setKwe1("...");
+                setKwe2("...");
+                setTura(getTura()-1);
+                lub();
+            case 247:
+                setKwestia("Powstanie nie było plotką. Wielu ludzi musiało uciekać ze swych domostw na zachód.");
+                setKwe1("...");
+                setKwe2("...");
+                setTura(getTura()-1);
+                lub();
         }
         setTura(getTura() + 1);
     }
@@ -1685,10 +1698,7 @@ public class Decyzja {
             zbior();
             setJuzjest(nr, i % 20);
             nr = -1;
-            if(getKontynuacja() != 0){
-                nr = getKontynuacja();
-                setKontynuacja(0);
-            }
+
 
             // wyjscie(gra);
             //Odczyt(wybor);
