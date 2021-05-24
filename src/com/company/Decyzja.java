@@ -554,7 +554,6 @@ public class Decyzja {
             case 19:
                 System.out.println(" Jeden z kapłanów prosi o pozwolenie na odprawienie czegoś, co nazywa 'rytuałem tysiąca słońc'. Zapewnia, że przyniesie to dobrobyt całemu cesarstwu.");
                 setKwestia("Jeden z kapłanów prosi o pozwolenie na odprawienie czegoś, co nazywa \"rytuałem tysiąca słońc\". Zapewnia, że przyniesie to dobrobyt całemu cesarstwu.");
-
                 System.out.println("Co za bzdury...");
                 setKwe1("Co za bzdury...");
                 System.out.println("Jeśli tak uważa...");
@@ -1312,6 +1311,7 @@ public class Decyzja {
                     System.out.println("Pytanie bonus. Na wieści o podwyżce zareagowały również " + q + " inne legiony. One także chcą podwyższenia płac.");
                     setKwestia("Na wieści o podwyżce zareagowały również " + q + " inne legiony. One także chcą podwyższenia płac.");
                 }
+                setKwe1("Nie ma mowy.");
                 System.out.println("1. Nie ma mowy.");
                 System.out.println("2.Wynegocjuj niewielką podwyżkę.");
                 lub();
