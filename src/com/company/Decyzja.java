@@ -269,6 +269,7 @@ public class Decyzja {
         this.dec = 0;
         int los;
         //nr=47;
+        nr=15;
         game.wypisywanie = true;
        // board.repaint();
         //nr = 47;
@@ -491,84 +492,13 @@ public class Decyzja {
                     lub();
                     switch (dec){
                         case 1:
-                            setKwestia("Tylko miejski producent producent wina miał motyw - nieufność ludu wobec czystej wody zwiększyłoby jego zyski. Powinniśmy go przesłuchać");
-                            setKwe1("Dobrze");
-                            setKwe2("Mamy inne opcje??");
-                            lub();
-                            switch (dec){
-                                case 1:
-                                    setKwestia("Producent wina został przesłuchany. Twierdzi, że nie ma nic wspólnego z zatrutym źródłem.");
-                                    setKwe1("Jest winny! Stracić go!");
-                                    setKwe2("Mamy inne opcje?");
-                                    lub();
-                                    switch(dec){
-                                        case 1:
-                                            if(los==0){
-                                                setKwestia("Mężczyzna został stracony. W jego domu odnaleziono szkodliwą substancję, która zatruła źródło. Poddani są wdzięczni dzięki Twemu słusznemu osądowi");
-                                                setKwe1("...");
-                                                setKwe2("...");
-                                            }
-                                            else{
-                                                setKwestia("Mężczyzna został stracony. Kilka dni później pasterze znaleźli przy zanieczyszczonym źródle martwą owcę, która zatruwała wodę. Lud jest wściekły, przez Twój pochopny osąd winiarza.");
-                                                setKwe1("...");
-                                                setKwe2("...");
-                                            }
-                                        case 2:
-                                            setKwestia("Możemy też poszukać przyczyny zatrucia u źródła. Zorganizowanie wyprawy będzie jednak bardzo kosztowne.");
-                                            setKwe1("Niech będzie");
-                                            setKwe2("Nie, winiarz jest winny!");
-                                            switch(dec){
-                                                case 1:
-                                                    setKwestia("Ekspedycja odnalazła u zanieczyszczonego źródła martwą owcę, która zatruwała wodę. Winiarz okazał się być niewinny.");
-                                                    setKwe1("...");
-                                                    setKwe2("...");
-                                                case 2:
-                                                    if(los==0){
-                                                        setKwestia("Mężczyzna został stracony. W jego domu odnaleziono szkodliwą substancję, która zatruła źródło. Poddani są wdzięczni dzięki Twemu słusznemu osądowi");
-                                                        setKwe1("...");
-                                                        setKwe2("...");
-                                                    }
-                                                    else{
-                                                        setKwestia("Mężczyzna został stracony. Kilka dni później pasterze znaleźli przy zanieczyszczonym źródle martwą owcę, która zatruwała wodę. Lud jest wściekły, przez Twój pochopny osąd winiarza.");
-                                                        setKwe1("...");
-                                                        setKwe2("...");
-                                                    }
-
-                                            }
-                                    }
-                                    break;
-                                case 2:
-                                    setKwestia("Możemy też poszukać przyczyny zatrucia u źródła. Zorganizowanie wyprawy będzie jednak bardzo kosztowne.");
-                                    setKwe1("Niech będzie");
-                                    setKwe2("Nie, winiarz jest winny!");
-                                    switch(dec){
-                                        case 1:
-                                            setKwestia("Ekspedycja odnalazła u zanieczyszczonego źródła martwą owcę, która zatruwała wodę. Winiarz okazał się być niewinny.");
-                                            setKwe1("...");
-                                            setKwe2("...");
-                                        case 2:
-                                            if(los==0){
-                                                setKwestia("Mężczyzna został stracony. W jego domu odnaleziono szkodliwą substancję, która zatruła źródło. Poddani są wdzięczni dzięki Twemu słusznemu osądowi");
-                                                setKwe1("...");
-                                                setKwe2("...");
-                                            }
-                                            else{
-                                                setKwestia("Mężczyzna został stracony. Kilka dni później pasterze znaleźli przy zanieczyszczonym źródle martwą owcę, która zatruwała wodę. Lud jest wściekły, przez Twój pochopny osąd winiarza.");
-                                                setKwe1("...");
-                                                setKwe2("...");
-                                            }
-
-                                    }
-
-                                    break;
-                            }
+                            setKontynuacja(100015);
                             break;
                         case 2:
-                            setKwestia("W wyniku wypicia zanieczyszczonej wody, ginie szóstka dzieci. Lud jest rozgoryczony Twoją bezczynnością.");
+                            setKontynuacja(200015);
                             break;
                     }
-
-
+                    break;
             case 16:
                 if(quest[16] == 0) {
                     setKwestia("Senat wpadł na pomysł modernizacji floty rzymskiej, co pozwoliłoby na próbę podboju Północnej Afryki.");
@@ -604,19 +534,7 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            System.out.println("miauuu");
-                            setKwestia("Inni gladiatorzy też chcą lepszego traktowania. Żądają ostrzejszego miecza i nowych sandałów dla każdego wojownika w Koloseum");
-                            setKwe1("Niech będzie");
-                            setKwe2("Nie ma mowy");
-                            lub();
-                            switch (dec) {
-                                case 1:
-
-                                    break;
-                                case 2:
-
-                                    break;
-                            }
+                            setKontynuacja(100017);
                             break;
                         case 2:
 
@@ -1038,10 +956,10 @@ public class Decyzja {
                 lub();
                 switch (dec) {
                     case 1:
-                        setKontynuacja(147);
+                        setKontynuacja(100047);
                         break;
                     case 2:
-                        setKontynuacja(247);
+                        setKontynuacja(200047);
                 }
                 break;
             case 48:
@@ -1084,7 +1002,7 @@ public class Decyzja {
                 }
                 break;
             case 51:
-                setKwestia("Lud uważa, że kapłanom powodzi się zbyt dobrze. Oczekują obniżenia podatków dla ludzi świeckich i podwyższenia ich duchownym");
+                setKwestia("Lud uważa, że kapłanom powodzi się zbyt dobrze. Oczekują obniżenia podatków dla ludzi świeckich i podwyższenia ich duchownym.");
                 setKwe1("Jeśli to konieczne...");
                 setKwe2("Nie ma mowy!");
                 //dwie opcje do wyboru
@@ -1098,8 +1016,8 @@ public class Decyzja {
                 break;
             case 52:
                 setKwestia("Zorganizowanie wyścigu rydwanów w Circus Maximus z pewnością poprawiłoby nastrój obywatelom.");
-                setKwe1("Świetny pomysł");
-                setKwe2("Strata pieniędzy");
+                setKwe1("Świetny pomysł.");
+                setKwe2("Może innym razem.");
                 //dwie opcje do wyboru
                 lub();
                 switch (dec) {
@@ -1653,18 +1571,143 @@ public class Decyzja {
                         setLegiony(getLegiony() + q*5);
                         break;
                 }
-            case 147:
+
+
+
+
+
+
+
+            case 100015:
+                setKwestia("Tylko miejski producent producent wina miał motyw - nieufność ludu wobec czystej wody zwiększyłoby jego zyski. Powinniśmy go przesłuchać");
+                setKwe1("Dobrze");
+                setKwe2("Mamy inne opcje??");
+                lub();
+                switch(dec){
+                    case 1:
+                        setKontynuacja(110015);
+                        setTura(getTura()-1);
+                        break;
+                    case 2:
+                        setKontynuacja(120015);
+                        setTura(getTura()-1);
+                        break;
+                }
+                break;
+            case 110015:
+                setKwestia("Producent wina został przesłuchany. Twierdzi, że nie ma nic wspólnego z zatrutym źródłem.");
+                setKwe1("Jest winny! Stracić go!");
+                setKwe2("Mamy inne opcje?");
+                lub();
+                switch(dec){
+                    case 1:
+                        setKontynuacja(111015);
+                        setTura(getTura()-1);
+                        break;
+                    case 2:
+                       setKontynuacja(112015);
+                        setTura(getTura()-1);
+                       break;
+                }
+                break;
+            case 112115:
+            case 121015:
+                setKwestia("Ekspedycja odnalazła u zanieczyszczonego źródła martwą owcę, która zatruwała wodę. Winiarz okazał się być niewinny. Lud jest wdzięczny za Twoje starania w dojściu do prawdy.");
+                setKwe1("...");
+                setKwe2("...");
+                setKontynuacja(0);
+                setTura(getTura()-1);
+                lub();
+                break;
+            case 111015:
+            case 112215:
+            case 122015:
+                los = (int)(Math.random()*2);
+                if(los==0){
+                    setKwestia("Mężczyzna został stracony. W jego domu odnaleziono szkodliwą substancję, która zatruła źródło. Poddani są wdzięczni dzięki Twemu słusznemu osądowi");
+                }
+                else{
+                    setKwestia("Mężczyzna został stracony. Kilka dni później pasterze znaleźli przy zanieczyszczonym źródle martwą owcę, która zatruwała wodę. Lud jest wściekły, przez Twój pochopny osąd winiarza.");
+                }
+                setKwe1("...");
+                setKwe2("...");
+                lub();
+                setKontynuacja(0);
+                setTura(getTura()-1);
+                break;
+            case 112015:
+                setKwestia("Możemy też poszukać przyczyny zatrucia u źródła. Zorganizowanie wyprawy będzie jednak bardzo kosztowne.");
+                setKwe1("Niech będzie");
+                setKwe2("Nie, winiarz jest winny!");
+                setTura(getTura()-1);
+                lub();
+                switch(dec){
+                    case 1:
+                        setKontynuacja(112115);
+                        setTura(getTura()-1);
+                        break;
+                    case 2:
+                        setKontynuacja(112215);
+                        setTura(getTura()-1);
+                        break;
+                }
+                break;
+            case 120015:
+                setKwestia("Możemy też poszukać przyczyny zatrucia u źródła. Zorganizowanie wyprawy będzie jednak bardzo kosztowne.");
+                setKwe1("Niech będzie");
+                setKwe2("Nie, winiarz jest winny!");
+                lub();
+                switch(dec){
+                    case 1:
+                        setKontynuacja(121015);
+                        setTura(getTura()-1);
+                        break;
+                    case 2:
+                        setKontynuacja(122015);
+                        setTura(getTura()-1);
+                        break;
+                }
+                break;
+            case 200015:
+                setKwestia("W wyniku wypicia zanieczyszczonej wody, ginie szóstka dzieci. Lud jest rozgoryczony Twoją bezczynnością.");
+                setKwe1("...");
+                setKwe2("...");
+                setKontynuacja(0);
+                setTura(getTura()-1);
+                lub();
+                break;
+
+
+            case 100017:
+                setKwestia("Inni gladiatorzy też chcą lepszego traktowania. Żądają ostrzejszego miecza i nowych sandałów dla każdego wojownika w Koloseum");
+                setKwe1("Niech będzie");
+                setKwe2("Nie ma mowy");
+                setTura(getTura()-1);
+                lub();
+                switch(dec){
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                }
+                break;
+
+
+
+            case 100047:
                 setKwestia("Powstanie rzeczywiście było przygotowywane. Ludzie są wdzięczni za błyskawiczną reakcję wojska.");
                 setKwe1("...");
                 setKwe2("...");
                 setTura(getTura()-1);
                 lub();
-            case 247:
+                break;
+            case 200047:
                 setKwestia("Powstanie nie było plotką. Wielu ludzi musiało uciekać ze swych domostw na zachód.");
                 setKwe1("...");
                 setKwe2("...");
                 setTura(getTura()-1);
                 lub();
+                break;
         }
         setTura(getTura() + 1);
     }
