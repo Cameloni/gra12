@@ -19,6 +19,8 @@ public class Game {
     File klikniecie_audio = new File("src/com/company/audio/przycisk_kliknięty_audio.wav");
     File pergamin_audio = new File("src/com/company/audio/przycisk_kliknięty_audio.wav");
     public Clip naj = AudioSystem.getClip();
+    public Clip naj2 = AudioSystem.getClip();
+    public Clip naj3 = AudioSystem.getClip();
     public FloatControl volume1;
     public FloatControl volume2;
 
