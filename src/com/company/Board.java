@@ -101,7 +101,7 @@ public class Board extends JPanel implements MouseListener {
         icons[2] = new ImageIcon("src/com/company/pixelpictures/sługa.png");
         icons[3] = new ImageIcon("src/com/company/pixelpictures/sługa2.png");
         //icons[4] = new ImageIcon("src/com/company/pixelpictures/tło.png");
-        icons[4] = new ImageIcon("src/com/company/pixelpictures/Bez nazwy2.png");
+        icons[4] = new ImageIcon("src/com/company/pixelpictures/scroll.png");
         icons[5] = new ImageIcon("src/com/company/buttons/ustawienia_button.png");
         icons[6] = new ImageIcon("src/com/company/buttons/potencialny_guzik_decyzji.png");
         icons[7] = new ImageIcon("src/com/company/buttons/potencialny_guzik_decyzji.png");
@@ -209,7 +209,7 @@ public class Board extends JPanel implements MouseListener {
         g.drawImage(icons[10].getImage(),217,25,750,150,null);
        // g.drawImage(icons[2].getImage(), 30, 270, 350, 300, null);
        // g.drawImage(icons[3].getImage(),1200, 250, -280, 300, null);
-        g.drawImage(icons[4].getImage(), -1150, 275, 3500, 650, null);
+        g.drawImage(icons[4].getImage(), 25, 150, 1150, 830, null);
         g.drawImage(icons[5].getImage(), 1120, 20, 50, 50, null);
         g.drawImage(icons[11].getImage(), 618, -40, 630, 630, null);
         g.drawImage(icons[12].getImage(), 424, -40, 630, 630, null);
@@ -236,7 +236,7 @@ public class Board extends JPanel implements MouseListener {
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-//Decyzja.religia=0;
+//Decyzja.religia = 0;
         if(Decyzja.religia==100){
             g.drawImage(staty[3].getImage(),602+200,11,746+200,163, 0, 0, 200, 210, null);
         }
@@ -303,7 +303,7 @@ public class Board extends JPanel implements MouseListener {
 
 
 
-Decyzja.obywatele = 0;
+//Decyzja.obywatele = 0;
         if(Decyzja.obywatele==100){
            g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
         }
@@ -375,7 +375,7 @@ Decyzja.obywatele = 0;
 
 
 
-
+Decyzja.legiony = 100;
         if(Decyzja.legiony==100){
             g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
         }
