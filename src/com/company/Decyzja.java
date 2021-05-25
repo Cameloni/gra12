@@ -270,6 +270,7 @@ public class Decyzja {
         int los;
        // nr=70;
         //nr=44;
+        nr=2;
         game.wypisywanie = true;
        // board.repaint();
         //nr = 47;
@@ -285,10 +286,6 @@ public class Decyzja {
                 setKwestia("Legioniści wracają do miasta z wygranej wojny. Czy zorganizować z tej okazji ucztę?");
                 setKwe1("Nie stać nas na to.");
                 setKwe2("To dobry pomysł.");
-                //dwie opcje do wyboru
-                System.out.println("1. Nie stać nas na to.");
-                System.out.println("2. To dobry pomysł.");
-               // setFinanse(10);
                 lub();
                 switch (dec) {
                     case 1:
@@ -303,11 +300,7 @@ public class Decyzja {
                 }
                 break;
             case 1:
-                System.out.println("Kapłani uważają, że złe warunki pogodowe są znakiem gniewu Bogów. Wymagają złożenia przez twoich poddanych dużych ofiar zwierzęcych.");
                 setKwestia("Kapłani uważają, że złe warunki pogodowe są znakiem gniewu Bogów. Wymagają złożenia przez twoich poddanych dużych ofiar zwierzęcych.");
-                System.out.println("1. Chyba oszaleli!");
-                System.out.println("2. Niech lud wykona ich rozkazy.");
-                //dwie opcje do wyboru
                 setKwe1("Chyba oszaleli!");
                 setKwe2("Niech lud wykona ich rozkazy.");
                 lub();
@@ -323,15 +316,10 @@ public class Decyzja {
                 }
                 break;
             case 2:
-                int legion = 0;
-                while(legion == 0){
-                    legion = (int) (Math.random() * 31);
-                }
-                System.out.println("Żołnierze piątego legionu rządają zwiększenia ich żołdu. Grożą buntem.");
-                setKwestia("Żołnierze " + legion + "-ego legionu rządają zwiększenia ich żołdu. Grożą buntem.");
-                System.out.println("1. Ukarz ich decymacją.");
-                System.out.println("2. Zwiększ ich płace.");
-                //setKwe1("");
+                los = 1+(int)(Math.random()*30);
+                setKwestia("Żołnierze " + los + "-ego legionu rządają zwiększenia ich żołdu. Grożą buntem.");
+                setKwe1("Ukarz ich decymacją.");
+                setKwe2("Zwiększ ich płace.");
                 lub();
                 switch (dec) {
                     case 1:
@@ -349,8 +337,8 @@ public class Decyzja {
                 break;
             case 3:
                 setKwestia("Dwaj niewolnicy pokłócili się, w wyniku czego jeden dotkliwie pobił drugiego. Właścicel ofiary domaga się odszkodowania.");
-                setKwe1("");
-                setKwe2("");
+                setKwe1("Zapłaćcie poszkodowanemu.");
+                setKwe2("To jego problem.");
                 lub();
                 switch (dec) {
                     case 1:
