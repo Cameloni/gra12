@@ -268,7 +268,7 @@ public class Decyzja {
         //kwestia = "Coś";
         this.dec = 0;
         int los;
-        nr=70;
+       // nr=70;
         //nr=44;
         game.wypisywanie = true;
        // board.repaint();
