@@ -216,8 +216,6 @@ public class Board extends JPanel implements MouseListener {
         g.drawImage(icons[13].getImage(), 228, -40, 630, 630, null);
         g.drawImage(icons[14].getImage(), 41, -35, 610, 610, null);
 
-        g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
-        g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
 
 
         //g.drawImage(icons[6].getImage(),100, 630, 500, 150, null);
@@ -367,78 +365,6 @@ Decyzja.religia=100;
         }
         else if(Decyzja.obywatele==0){
             g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
-        }  /*
-
-
-
-
-
-
-
-
-
-        if(Decyzja.religia==100){
-            g.drawImage(staty[3].getImage(),602+200,11,746+200,163, 0, 0, 200, 210, null);
-        }
-        else if(Decyzja.religia==95){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-        }
-        else if(Decyzja.religia==90){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-        }
-        else if(Decyzja.religia==85){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-        }
-        else if(Decyzja.religia==80){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-        }
-        else if(Decyzja.religia==75){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-        }
-        else if(Decyzja.religia==70){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-        }
-        else if(Decyzja.religia==65){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-        }
-        else if(Decyzja.religia==60){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-        }
-        else if(Decyzja.religia==55){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-        }
-        else if(Decyzja.religia==530){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-        }
-        else if(Decyzja.religia==45){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-        }
-        else if(Decyzja.religia==40){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-        }
-        else if(Decyzja.religia==35){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-        }
-        else if(Decyzja.religia==30){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-        }
-        else if(Decyzja.religia==25){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-        }
-        else if(Decyzja.religia==20){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-        }
-        else if(Decyzja.religia==15){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-        }
-        else if(Decyzja.religia==10){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-        }
-        else if(Decyzja.religia==5){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
-        }
-        else if(Decyzja.religia==0){
-            g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
         }
 
 
@@ -446,6 +372,385 @@ Decyzja.religia=100;
 
 
 
+
+
+
+        if(Decyzja.legiony==100){
+            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        }
+        else if(Decyzja.legiony==95){
+            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        }
+        else if(Decyzja.legiony==90){
+            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        }
+        else if(Decyzja.legiony==85){
+            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        }
+        else if(Decyzja.legiony==80){
+            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        }
+        else if(Decyzja.legiony==75){
+            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        }
+        else if(Decyzja.legiony==70){
+            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        }
+        else if(Decyzja.legiony==65){
+            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        }
+        else if(Decyzja.legiony==60){
+            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        }
+        else if(Decyzja.legiony==55){
+            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        }
+        else if(Decyzja.legiony==50){
+            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        }
+        else if(Decyzja.legiony==45){
+            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        }
+        else if(Decyzja.legiony==40){
+            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        }
+        else if(Decyzja.legiony==35){
+            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        }
+        else if(Decyzja.legiony==30){
+            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        }
+        else if(Decyzja.legiony==25){
+            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        }
+        else if(Decyzja.legiony==20){
+            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        }
+        else if(Decyzja.legiony==15){
+            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        }
+        else if(Decyzja.legiony==10){
+            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        }
+        else if(Decyzja.legiony==5){
+            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        }
+        else if(Decyzja.legiony==0){
+            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        }
+
+
+
+
+
+        if(Decyzja.finanse==100){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==99){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==98){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==97){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==96){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==95){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==94){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==93){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==92){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==91){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==90){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==89){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==88){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==87){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==86){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==85){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==84){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==83){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==82){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==81){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==80){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==79){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==78){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==77){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==76){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==75){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==74){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==73){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==72){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==71){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==70){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==69){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==68){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==67){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==66){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==65){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==64){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==63){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==62){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==61){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==60){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==59){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==58){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==57){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==56){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==55){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==54){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==53){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==52){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==51){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==50){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==49){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==48){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==47){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==46){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==45){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==44){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==43){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==42){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==41){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==40){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==39){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==38){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==37){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==36){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==35){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==34){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==33){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==32){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==31){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==30){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==29){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==28){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==27){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==26){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==25){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==24){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==23){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==22){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==21){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==20){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==19){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==18){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==17){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==16){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==15){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==14){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==13){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==12){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==11){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==10){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==9){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==8){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==7){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==6){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==5){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==4){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==3){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==2){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==1){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+        else if(Decyzja.finanse==0){
+            g.drawImage(staty[0].getImage(),-25+200,-20,158+200,163, 0, 0, 125, 120,  null);
+        }
+
+
+
+
+/*
 
 
 
