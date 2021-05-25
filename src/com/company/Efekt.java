@@ -18,9 +18,6 @@ public class Efekt { //to będą te efekty chroniące przed śmiercią
         ilosc = 0;
     }
     public void uzyj(Decyzja W){
-        W.setFinanse(finanse);
-        W.setObywatele(obywatele);
-        W.setLegiony(legiony);
-        W.setReligia(religia);
+        W.setStats(finanse, legiony, obywatele, religia);
     }
 }

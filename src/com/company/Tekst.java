@@ -504,3 +504,117 @@ public class Tekst extends JPanel{
         else if(Decyzja.religia==0){
             g.drawImage(staty[3].getImage(),610+210,15,745+210,160, 0, 0, 200, 210, null);
         } */
+
+
+
+/*
+
+
+
+
+
+
+
+public void setFinanse(int finanse) {/*POŹNIEJ NAJPRAWDOPODOBNIEJ TRZEBA BĘDZIE ZMODYFIKOWAĆ TE SETTERY.
+        if (this.finanse > 0){
+            this.finanse += finanse;
+            if(this.finanse <= 0){
+                this.finanse = 0;
+            }
+            if(this.finanse > 100){
+            this.finanse = 100;
+            }
+        }*/
+
+
+
+/*
+        if(finanse>0) {
+        while (finanse > 0) {
+        this.finanse += 1;
+        finanse -= 1;
+        try {
+        Thread.sleep(100);
+        }catch(InterruptedException e){};
+        board.repaint();
+        }
+        }
+        else{
+        while(finanse<0){
+        this.finanse -= 1;
+        finanse += 1;
+        try {
+        Thread.sleep(500);
+        }catch(InterruptedException e){};
+        board.repaint();
+        }
+        }
+        }
+public void setObywatele(int obywatele) {
+        if(obywatele>0) {
+        while (obywatele > 0) {
+        this.obywatele += 5;
+        obywatele -= 5;
+        try {
+        Thread.sleep(500);
+        }catch(InterruptedException e){};
+        board.repaint();
+        }
+        }
+        else{
+        while(obywatele<0){
+        this.obywatele -= 5;
+        obywatele += 5;
+        try {
+        Thread.sleep(500);
+        }catch(InterruptedException e){};
+        board.repaint();
+        }
+        }
+        }
+
+public void setLegiony(int legiony) {
+        if(legiony>0) {
+        while (legiony > 0) {
+        this.legiony += 5;
+        legiony -= 5;
+        try {
+        Thread.sleep(500);
+        }catch(InterruptedException e){};
+        board.repaint();
+        }
+        }
+        else{
+        while(legiony<0){
+        this.legiony -= 5;
+        legiony += 5;
+        try {
+        Thread.sleep(500);
+        }catch(InterruptedException e){};
+        board.repaint();
+        }
+        }
+        }
+
+public void setReligia(int religia) {
+        if(religia>0) {
+        while (religia > 0) {
+        this.religia += 5;
+        religia -= 5;
+        try {
+        Thread.sleep(100);
+        }catch(InterruptedException e){};
+        board.repaint();
+        }
+        }
+        else{
+        while(religia<0){
+        this.religia -= 5;
+        religia += 5;
+        try {
+        Thread.sleep(500);
+        }catch(InterruptedException e){};
+        board.repaint();
+        }
+        }
+        } */

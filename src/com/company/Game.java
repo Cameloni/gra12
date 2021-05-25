@@ -56,10 +56,12 @@ public class Game {
         for(int i = 0; i < 20; i++){
             W.setJuzjest(in.nextInt(), i);
         }
-        W.setFinanse(in.nextInt());
-        W.setObywatele(in.nextInt());
-        W.setLegiony(in.nextInt());
-        W.setReligia(in.nextInt());
+        int s1, s2, s3, s4;
+        s1 = in.nextInt();
+        s2 = in.nextInt();
+        s3 = in.nextInt();
+        s4 = in.nextInt();
+        W.setStats(s1, s2, s3,s4);
     }
     Menu menu2 = new Menu(this);
 

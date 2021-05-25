@@ -76,105 +76,6 @@ public class Decyzja {
         return juzjest;
     }
 
-    public void setFinanse(int finanse) {/*POŹNIEJ NAJPRAWDOPODOBNIEJ TRZEBA BĘDZIE ZMODYFIKOWAĆ TE SETTERY.
-        if (this.finanse > 0){
-            this.finanse += finanse;
-            if(this.finanse <= 0){
-                this.finanse = 0;
-            }
-            if(this.finanse > 100){
-            this.finanse = 100;
-            }
-        }*/
-        if(finanse>0) {
-            while (finanse > 0) {
-                this.finanse += 1;
-                finanse -= 1;
-                try {
-                    Thread.sleep(100);
-                }catch(InterruptedException e){};
-                board.repaint();
-            }
-        }
-        else{
-            while(finanse<0){
-                this.finanse -= 1;
-                finanse += 1;
-                try {
-                    Thread.sleep(500);
-                }catch(InterruptedException e){};
-                board.repaint();
-            }
-        }
-    }
-    public void setObywatele(int obywatele) {
-        if(obywatele>0) {
-            while (obywatele > 0) {
-                this.obywatele += 5;
-                obywatele -= 5;
-                try {
-                    Thread.sleep(500);
-                }catch(InterruptedException e){};
-                board.repaint();
-            }
-        }
-        else{
-            while(obywatele<0){
-                this.obywatele -= 5;
-                obywatele += 5;
-                try {
-                    Thread.sleep(500);
-                }catch(InterruptedException e){};
-                board.repaint();
-            }
-        }
-    }
-
-    public void setLegiony(int legiony) {
-        if(legiony>0) {
-            while (legiony > 0) {
-                this.legiony += 5;
-                legiony -= 5;
-                try {
-                    Thread.sleep(500);
-                }catch(InterruptedException e){};
-                board.repaint();
-            }
-        }
-        else{
-            while(legiony<0){
-                this.legiony -= 5;
-                legiony += 5;
-                try {
-                    Thread.sleep(500);
-                }catch(InterruptedException e){};
-                board.repaint();
-            }
-        }
-    }
-
-    public void setReligia(int religia) {
-        if(religia>0) {
-            while (religia > 0) {
-                this.religia += 5;
-                religia -= 5;
-                try {
-                    Thread.sleep(100);
-                }catch(InterruptedException e){};
-                board.repaint();
-            }
-        }
-        else{
-            while(religia<0){
-                this.religia -= 5;
-                religia += 5;
-                try {
-                    Thread.sleep(500);
-                }catch(InterruptedException e){};
-                board.repaint();
-            }
-        }
-    }
 
     public void setStats(int fin, int leg, int oby, int rel){
         while(!(fin==0 && leg==0 && oby==0 && rel==0)) {
@@ -311,7 +212,7 @@ public class Decyzja {
         int los;
        // nr=70;
         //nr=44;
-        nr=2;
+        //nr=2;
         game.wypisywanie = true;
        // board.repaint();
         //nr = 47;
@@ -330,13 +231,8 @@ public class Decyzja {
                 lub();
                 switch (dec) {
                     case 1:
-                        setLegiony(-20);
-                        setObywatele(-10);
-                        setFinanse(10);
                         break;
                     case 2:
-                        setLegiony(20);
-                        setFinanse(-20);
                         break;
                 }
                 break;
@@ -347,12 +243,8 @@ public class Decyzja {
                 lub();
                 switch (dec) {
                     case 1:
-                        setReligia(-30);
-                        setObywatele(20);
                         break;
                     case 2:
-                        setReligia(20);
-                        setObywatele(-20);
                         break;
                 }
                 break;
@@ -1274,6 +1166,8 @@ public class Decyzja {
                         break;
                 }
                 break;
+
+                /*
             case 71:
                 setKwestia("");
                 setKwe1("");
@@ -1546,31 +1440,26 @@ public class Decyzja {
                     case 2:
 
                 }
-                break;
+                break; */
                 //casy kontynuujące dany wątek od razu po poprzednim
             case 100002:
-                int q = 0;
-                while(q == 0){
-                    q = (int) (Math.random() *4);
+                los = 0;
+                while(los == 0){
+                    los = (int) (Math.random() *4);
                 }
-                if(q == 1){
-                    System.out.println("Pytanie bonus. Na wieści o podwyżce zareagował również jeden inny legion. Jego żołnierze także chcą podwyższenia płac.");
+                if(los == 1){
                     setKwestia("Na wieści o podwyżce zareagował również jeden inny legion. Jego żołnierze także chcą podwyższenia płac.");
                 }
                 else {
-                    System.out.println("Pytanie bonus. Na wieści o podwyżce zareagowały również " + q + " inne legiony. One także chcą podwyższenia płac.");
-                    setKwestia("Na wieści o podwyżce zareagowały również " + q + " inne legiony. One także chcą podwyższenia płac.");
+                    setKwestia("Na wieści o podwyżce zareagowały również " + los + " inne legiony. One także chcą podwyższenia płac.");
                 }
-                System.out.println("1. Nie ma mowy.");
-                System.out.println("2.Wynegocjuj niewielką podwyżkę.");
+                setKwe1("1. Nie ma mowy.");
+                setKwe2("2.Wynegocjuj niewielką podwyżkę.");
                 lub();
                 switch (dec){
                     case 1:
-                        setLegiony(getLegiony()-q*5);
                         break;
                     case 2:
-                        setFinanse(getFinanse()- q*5);
-                        setLegiony(getLegiony() + q*5);
                         break;
                 }
 
