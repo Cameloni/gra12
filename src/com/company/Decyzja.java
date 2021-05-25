@@ -80,12 +80,12 @@ public class Decyzja {
     public void setStats(int fin, int leg, int oby, int rel){
         while(!(fin==0 && leg==0 && oby==0 && rel==0)) {
             if(fin>0){
-                fin -= 1;
-                finanse += 1;
+                fin -= 5;
+                finanse += 5;
             }
             if(fin<0){
-                fin += 1;
-                finanse -= 1;
+                fin += 5;
+                finanse -= 5;
             }
             if(leg>0){
                 leg -= 5;

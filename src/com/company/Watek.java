@@ -144,7 +144,7 @@ public class Watek extends Thread {
 
             muz.open(AudioSystem.getAudioInputStream(game.muzyka));
             FloatControl volume = (FloatControl) muz.getControl(FloatControl.Type.MASTER_GAIN);
-            volume.setValue(-30f);
+            volume.setValue(-60f);
             muz.loop(999999999);
             //muz.start();
 

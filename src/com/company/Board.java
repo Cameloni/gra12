@@ -303,7 +303,7 @@ public class Board extends JPanel implements MouseListener {
 
 
 
-
+Decyzja.obywatele = 0;
         if(Decyzja.obywatele==100){
            g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
         }
@@ -311,61 +311,61 @@ public class Board extends JPanel implements MouseListener {
             g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
         }
         else if(Decyzja.obywatele==90){
-           g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
+           g.drawImage(staty[2].getImage(),398+232,-25,520+230,159, 240, 0, 410, 255, null);
         }
         else if(Decyzja.obywatele==85){
-           g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
+            g.drawImage(staty[2].getImage(),397+232,-25,519+231,159, 410, 0, 580, 255, null);
         }
         else if(Decyzja.obywatele==80){
-            g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
+            g.drawImage(staty[2].getImage(),396+232,-25,518+231,159, 580, 0, 750, 255, null);
         }
         else if(Decyzja.obywatele==75){
-            g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
+            g.drawImage(staty[2].getImage(),395+233,-25,517+232,159, 750, 0, 920, 255, null);
         }
         else if(Decyzja.obywatele==70){
-            g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
+            g.drawImage(staty[2].getImage(),350+231,39,519+233,162, 0, 260, 240, 430, null);
         }
         else if(Decyzja.obywatele==65){
-            g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
+            g.drawImage(staty[2].getImage(),395+235,39,519+232,162, 240, 260, 410, 430, null);
         }
         else if(Decyzja.obywatele==60){
-            g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
+            g.drawImage(staty[2].getImage(),394+235,39,518+232,162, 410, 260, 580, 430, null);
         }
         else if(Decyzja.obywatele==55){
-            g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
+            g.drawImage(staty[2].getImage(),394+234,39,518+232,162, 580, 260, 750, 430, null);
         }
         else if(Decyzja.obywatele==50){
-            g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
+            g.drawImage(staty[2].getImage(),394+233,39,518+231,162, 750, 260, 920, 430, null);
         }
         else if(Decyzja.obywatele==45){
-            g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
+            g.drawImage(staty[2].getImage(),347+233,39,512+240,162, 0, 430, 240, 600, null);
         }
         else if(Decyzja.obywatele==40){
-            g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
+            g.drawImage(staty[2].getImage(),387+243,39,511+240,162, 240, 430, 410, 600, null);
         }
         else if(Decyzja.obywatele==35){
-            g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
+            g.drawImage(staty[2].getImage(),386+243,39,510+240,162, 410, 430, 580, 600, null);
         }
         else if(Decyzja.obywatele==30){
-            g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
+            g.drawImage(staty[2].getImage(),385+243,39,510+240,162, 580, 430, 750, 600, null);
         }
         else if(Decyzja.obywatele==25){
-            g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
+            g.drawImage(staty[2].getImage(),385+243,39,509+240,162, 750, 430, 920, 600, null);
         }
         else if(Decyzja.obywatele==20){
-            g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
+            g.drawImage(staty[2].getImage(),351+230,38,509+242,168, 0, 600, 240, 780, null);
         }
         else if(Decyzja.obywatele==15){
-            g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
+            g.drawImage(staty[2].getImage(),349+281,38,509+242,168, 240, 600, 410, 780, null);
         }
         else if(Decyzja.obywatele==10){
-            g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
+            g.drawImage(staty[2].getImage(),349+280,38,509+241,168, 410, 600, 580, 780, null);
         }
         else if(Decyzja.obywatele==5){
-            g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
+            g.drawImage(staty[2].getImage(),348+280,38,509+241,168, 580, 600, 750, 780, null);
         }
         else if(Decyzja.obywatele==0){
-            g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
+            g.drawImage(staty[2].getImage(),348+280,38,509+241,168, 750, 600, 920, 780, null);
         }
 
 
