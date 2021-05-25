@@ -268,8 +268,8 @@ public class Decyzja {
         //kwestia = "Coś";
         this.dec = 0;
         int los;
-        //nr=47;
-        nr=15;
+        nr=70;
+        //nr=44;
         game.wypisywanie = true;
        // board.repaint();
         //nr = 47;
@@ -649,9 +649,7 @@ public class Decyzja {
                 lub();
                 switch (dec) {
                     case 1:
-                        setKwestia("Specjaliści po powrocie do pałacu nie potrafili zdiagnozować choroby. Kilka dni później wszyscy w mieście dostali swędzącej wysypki. Szczęście w nieszczęściu, zaraza minęła po tygodniu.");
-                        setKwe1("...");
-                        setKwe2("...");
+                        setKontynuacja(100025);
                         break;
                     case 2:
 
@@ -712,9 +710,7 @@ public class Decyzja {
                 lub();
                 switch (dec) {
                     case 1:
-                        setKwestia("Metal okazał być się kompletnym niewypałem i zmarnowaniem funduszy.");
-                        setKwe1("...");
-                        setKwe2("...");
+                        setKontynuacja(100030);
                         break;
                     case 2:
 
@@ -728,14 +724,11 @@ public class Decyzja {
                 lub();
                 switch (dec) {
                     case 1:
-                        setKwestia("Gryzonie rozmnożyły się i rozlazły się po całym mieście. Obywatele są rozgoryczeni.");
-                        setKwe1("...");
-                        setKwe2("...");
+                        setKontynuacja(100031);
                         break;
                     case 2:
-                        setKwestia("Lud mógłby przygotować i rozłożyć w całym mieście trutki na gryzonie. Inną opcją jest zlecenie tego wojsku.");
-                        setKwe1("Wojsko się tym zajmie");
-                        setKwe2("Lud się tym zajmie");
+                        setKontynuacja(200031);
+                        break;
                 }
                 break;
             case 32:
@@ -787,10 +780,8 @@ public class Decyzja {
                     case 1:
                         break;
                     case 2:
-                        setKwestia("Obywatele zauważyli przekłamania i zatajenie wielu faktów w kronice. Niektórzy drwią sobie z Ciebie.");
-                        setKwe1("...");
-                        setKwe2("...");
-
+                        setKontynuacja(200035);
+                        break;
                 }
                 break;
             case 36:
@@ -853,12 +844,10 @@ public class Decyzja {
                 lub();
                 switch (dec) {
                     case 1:
-                        setKwestia("Miecz okazał się być zupełną porażką i stratą pieniędzy");
-                        setKwe1("...");
-                        setKwe2("...");
+                        setKontynuacja(100040);
                         break;
                     case 2:
-
+                        break;
                 }
                 break;
             case 41:
@@ -869,6 +858,7 @@ public class Decyzja {
                 lub();
                 switch (dec) {
                     case 1:
+                        setKontynuacja(100041);
                         break;
                     case 2:
 
@@ -908,10 +898,10 @@ public class Decyzja {
                 lub();
                 switch (dec) {
                     case 1:
-                        setKwestia("Biorąc kąpiel zaczynasz tracić świadomość, umierasz w basenie z powodu udaru.");
+                        setKontynuacja(100044);
                         break;
                     case 2:
-
+                        break;
                 }
                 break;
             case 45:
@@ -1104,12 +1094,10 @@ public class Decyzja {
                 lub();
                 switch (dec) {
                     case 1:
-                        setKwestia("Maść okazuje się być sukcesem, stała się bardzo popularna wśród elity mieszkańców Rzymu.");
-                        setKwe1("...");
-                        setKwe2("...");
+                        setKontynuacja(100059);
                         break;
                     case 2:
-
+                        break;
                 }
                 break;
             case 60:
@@ -1120,12 +1108,10 @@ public class Decyzja {
                 lub();
                 switch (dec) {
                     case 1:
-                        setKwestia("Środek okazał się wywoływać problemy z trawieniem i utratę świadomości. Dwaj testowani niewolnicy zmarli po jego zażyciu.");
-                        setKwe1("...");
-                        setKwe2("...");
+                        setKontynuacja(100060);
                         break;
                     case 2:
-
+                        break;
                 }
                 break;
             case 61:
@@ -1148,12 +1134,10 @@ public class Decyzja {
                 lub();
                 switch (dec) {
                     case 1:
-                        setKwestia("Siedząc na fotelu, zamykasz oczy. Nagle fryzjer przykłada Ci do ust kawałek szmatki, przez co nie możesz oddychać.. Umierasz przez uduszenie.");
-                        setKwe1("...");
-                        setKwe2("...");
+                        setKontynuacja(100062);
                         break;
                     case 2:
-
+                        break;
                 }
                 break;
             case 63:
@@ -1203,10 +1187,10 @@ public class Decyzja {
                 lub();
                 switch (dec) {
                     case 1:
-                        setKwestia("Pijąc wino, odczuwasz kręcenie w głowie. Chwilę póżniej, leżysz martwy przed tronem.");
+                        setKontynuacja(100066);
                         break;
                     case 2:
-
+                        break;
                 }
                 break;
             case 67:
@@ -1219,8 +1203,8 @@ public class Decyzja {
                     case 1:
                         break;
                     case 2:
-                        setKwestia("Zapach olejków usypia Cię, twoja głowa robi się ciężka. Godzinę później służba znajduje Cię martwego z powodu odurzenia olejkami");
-
+                        setKontynuacja(200067);
+                        break;
                 }
                 break;
             case 68:
@@ -1251,16 +1235,16 @@ public class Decyzja {
                 break;
             case 70:
                 setKwestia("Senat wpadł na pomysł wprowadzenia nowej konkurencji walk gladiatorów - walki wręcz - czyli pojedynków bez użycia broni.");
-                setKwe1("Świetny pomysł!");
-                setKwe2("To nie ma sensu");
+                setKwe1("To nie ma sensu...");
+                setKwe2("Świetny pomysł!");
                 //dwie opcje do wyboru
                 lub();
                 switch (dec) {
                     case 1:
-                        setKwestia("Walki wręcz okazują się być straszliwie mało dynamiczne, nizbyt krwawe oraz po prostu nudne. Ludzie nie chcą oglądać nowej konkurencji.");
                         break;
                     case 2:
-
+                        setKontynuacja(200070);
+                        break;
                 }
                 break;
             case 71:
@@ -1571,7 +1555,7 @@ public class Decyzja {
 
             case 100015:
                 setKwestia("Tylko miejski producent producent wina miał motyw - nieufność ludu wobec czystej wody zwiększyłoby jego zyski. Powinniśmy go przesłuchać");
-                setKwe1("Dobrze");
+                setKwe1("Dobrze.");
                 setKwe2("Mamy inne opcje??");
                 lub();
                 switch(dec){
@@ -1615,7 +1599,7 @@ public class Decyzja {
             case 122015:
                 los = (int)(Math.random()*2);
                 if(los==0){
-                    setKwestia("Mężczyzna został stracony. W jego domu odnaleziono szkodliwą substancję, która zatruła źródło. Poddani są wdzięczni dzięki Twemu słusznemu osądowi");
+                    setKwestia("Mężczyzna został stracony. W jego domu odnaleziono szkodliwą substancję, która zatruła źródło. Poddani są wdzięczni dzięki Twemu słusznemu osądowi.");
                 }
                 else{
                     setKwestia("Mężczyzna został stracony. Kilka dni później pasterze znaleźli przy zanieczyszczonym źródle martwą owcę, która zatruwała wodę. Lud jest wściekły, przez Twój pochopny osąd winiarza.");
@@ -1628,7 +1612,7 @@ public class Decyzja {
                 break;
             case 112015:
                 setKwestia("Możemy też poszukać przyczyny zatrucia u źródła. Zorganizowanie wyprawy będzie jednak bardzo kosztowne.");
-                setKwe1("Niech będzie");
+                setKwe1("Niech będzie.");
                 setKwe2("Nie, winiarz jest winny!");
                 setTura(getTura()-1);
                 lub();
@@ -1645,7 +1629,7 @@ public class Decyzja {
                 break;
             case 120015:
                 setKwestia("Możemy też poszukać przyczyny zatrucia u źródła. Zorganizowanie wyprawy będzie jednak bardzo kosztowne.");
-                setKwe1("Niech będzie");
+                setKwe1("Niech będzie.");
                 setKwe2("Nie, winiarz jest winny!");
                 lub();
                 switch(dec){
@@ -1670,9 +1654,9 @@ public class Decyzja {
 
 
             case 100017:
-                setKwestia("Inni gladiatorzy też chcą lepszego traktowania. Żądają ostrzejszego miecza i nowych sandałów dla każdego wojownika w Koloseum");
-                setKwe1("Niech będzie");
-                setKwe2("Nie ma mowy");
+                setKwestia("Inni gladiatorzy też chcą lepszego traktowania. Żądają ostrzejszego miecza i nowych sandałów dla każdego wojownika w Koloseum.");
+                setKwe1("Niech będzie.");
+                setKwe2("Nie ma mowy.");
                 setTura(getTura()-1);
                 lub();
                 switch(dec){
@@ -1702,12 +1686,95 @@ public class Decyzja {
 
 
 
+            case 100025:
+                setKwestia("Specjaliści po powrocie do pałacu nie potrafili zdiagnozować choroby. Kilka dni później wszyscy w mieście dostali swędzącej wysypki. Szczęście w nieszczęściu, zaraza minęła po tygodniu.");
+                setKwe1("...");
+                setKwe2("...");
+                setTura(getTura()-1);
+                setKontynuacja(0);
+                lub();
+                break;
+
+
+
+            case 100030:
+                setKwestia("Metal okazał być się kompletnym niewypałem i zmarnowaniem funduszy.");
+                setKwe1("...");
+                setKwe2("...");
+                setTura(getTura()-1);
+                setKontynuacja(0);
+                lub();
+                break;
+
+
+
+            case 100031:
+                setKwestia("Gryzonie rozmnożyły się i rozlazły się po całym mieście. Obywatele są rozgoryczeni.");
+                setKwe1("...");
+                setKwe2("...");
+                setTura(getTura()-1);
+                setKontynuacja(0);
+                lub();
+                break;
+            case 200031:
+                setKwestia("Lud mógłby przygotować i rozłożyć w całym mieście trutki na gryzonie. Inną opcją jest zlecenie tego wojsku.");
+                setKwe1("Wojsko się tym zajmie.");
+                setKwe2("Lud się tym zajmie.");
+                setTura(getTura()-1);
+                setKontynuacja(0);
+                lub();
+                break;
+
+
+
+            case 200035:
+                setKwestia("Obywatele zauważyli przekłamania i zatajenie wielu faktów w kronice. Niektórzy drwią sobie z Ciebie.");
+                setKwe1("...");
+                setKwe2("...");
+                setTura(getTura()-1);
+                setKontynuacja(0);
+                lub();
+                break;
+
+
+
+            case 100040:
+                setKwestia("Miecz okazał się być zupełną porażką i stratą pieniędzy");
+                setKwe1("...");
+                setKwe2("...");
+                setTura(getTura()-1);
+                setKontynuacja(0);
+                lub();
+                break;
+
+
+
+            case 100041:
+                setKwestia("Najedzeni gladiatorzy stali się ociężali i powolni. Lud od razu zauważył spadek ich formy.");
+                setKwe1("...");
+                setKwe2("...");
+                setTura(getTura()-1);
+                setKontynuacja(0);
+                lub();
+                break;
+
+
+
+            case 100044:
+                setKwestia("Biorąc kąpiel zaczynasz tracić świadomość, umierasz w basenie z powodu udaru.");
+                setKwe1("...");
+                setKwe2("...");
+                setTura(getTura()-1);
+                setKontynuacja(0);
+                lub();
+                break;
 
             case 100047:
                 setKwestia("Powstanie rzeczywiście było przygotowywane. Ludzie są wdzięczni za błyskawiczną reakcję wojska.");
                 setKwe1("...");
                 setKwe2("...");
                 setTura(getTura()-1);
+                setKontynuacja(0);
                 lub();
                 break;
             case 200047:
@@ -1715,6 +1782,73 @@ public class Decyzja {
                 setKwe1("...");
                 setKwe2("...");
                 setTura(getTura()-1);
+                setKontynuacja(0);
+                lub();
+                break;
+
+
+
+            case 100059:
+                setKwestia("Maść okazuje się być sukcesem, stała się bardzo popularna wśród elity mieszkańców Rzymu.");
+                setKwe1("...");
+                setKwe2("...");
+                setTura(getTura()-1);
+                setKontynuacja(0);
+                lub();
+                break;
+
+
+
+            case 100060:
+                setKwestia("Środek okazał się wywoływać problemy z trawieniem i utratę świadomości. Dwaj testowani niewolnicy zmarli po jego zażyciu.");
+                setKwe1("...");
+                setKwe2("...");
+                setTura(getTura()-1);
+                setKontynuacja(0);
+                lub();
+                break;
+
+
+
+            case 100062:
+                setKwestia("Siedząc na fotelu, zamykasz oczy. Nagle fryzjer przykłada Ci do ust kawałek szmatki, przez co nie możesz oddychać.. Umierasz przez uduszenie.");
+                setKwe1("...");
+                setKwe2("...");
+                setTura(getTura()-1);
+                setKontynuacja(0);
+                lub();
+                break;
+
+
+
+            case 100066:
+                setKwestia("Pijąc wino, odczuwasz kręcenie w głowie. Chwilę póżniej, leżysz martwy przed tronem.");
+                setKwe1("...");
+                setKwe2("...");
+                setTura(getTura()-1);
+                setKontynuacja(0);
+                lub();
+                break;
+
+
+
+            case 200067:
+                setKwestia("Zapach olejków usypia Cię, twoja głowa robi się ciężka. Godzinę później służba znajduje Cię martwego z powodu odurzenia olejkami");
+                setKwe1("...");
+                setKwe2("...");
+                setTura(getTura()-1);
+                setKontynuacja(0);
+                lub();
+                break;
+
+
+
+            case 200070:
+                setKwestia("Walki wręcz okazują się być straszliwie mało dynamiczne, niezbyt krwawe oraz po prostu nudne. Ludzie nie chcą oglądać nowej konkurencji.");
+                setKwe1("...");
+                setKwe2("...");
+                setTura(getTura()-1);
+                setKontynuacja(0);
                 lub();
                 break;
         }
