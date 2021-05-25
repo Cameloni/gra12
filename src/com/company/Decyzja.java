@@ -176,6 +176,47 @@ public class Decyzja {
         }
     }
 
+    public void setStats(int fin, int leg, int oby, int rel){
+        while(!(fin==0 && leg==0 && oby==0 && rel==0)) {
+            if(fin>0){
+                fin -= 1;
+                finanse += 1;
+            }
+            if(fin<0){
+                fin += 1;
+                finanse -= 1;
+            }
+            if(leg>0){
+                leg -= 5;
+                legiony += 5;
+            }
+            if(leg<0){
+                leg += 5;
+                legiony -= 5;
+            }
+            if(oby>0){
+                oby -= 5;
+                obywatele += 5;
+            }
+            if(oby<0){
+                oby += 5;
+                obywatele -= 5;
+            }
+            if(rel>0){
+                rel -= 5;
+                religia += 5;
+            }
+            if(rel<0){
+                rel += 5;
+                religia -= 5;
+            }
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {};
+            board.repaint();
+        }
+    }
+
     public int getFinanse() {
         return finanse;
     }
@@ -323,14 +364,12 @@ public class Decyzja {
                 lub();
                 switch (dec) {
                     case 1:
-                        setLegiony(-30);
-                        setFinanse(20);
+                        setStats(20, -40, 30, 40);
                         break;
                     case 2:
-                        setLegiony(20);
-                        setFinanse(-20);
+                        setStats(20, -40, 30, -40);
                         if((int)(Math.random()*10) >= 3) {
-                            setKontynuacja(100);
+                             setKontynuacja(100002);
                         }
                         break;
                 }
@@ -1509,7 +1548,7 @@ public class Decyzja {
                 }
                 break;
                 //casy kontynuujące dany wątek od razu po poprzednim
-            case 100:
+            case 100002:
                 int q = 0;
                 while(q == 0){
                     q = (int) (Math.random() *4);
