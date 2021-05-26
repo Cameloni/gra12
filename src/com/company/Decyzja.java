@@ -212,7 +212,7 @@ public class Decyzja {
         int los;
        // nr=70;
         //nr=44;
-        //nr=2;
+      //  nr=2;
         game.wypisywanie = true;
        // board.repaint();
         //nr = 47;
@@ -256,7 +256,7 @@ public class Decyzja {
                 lub();
                 switch (dec) {
                     case 1:
-                        setStats(20, -40, 30, 40);
+                        setStats(20, -40, -30, 40);
                         break;
                     case 2:
                         setStats(20, -40, 30, -40);
@@ -290,7 +290,6 @@ public class Decyzja {
 
                 }
                 break;
-            // itd.
             case 5:
                 System.out.println("Coś5");
                 setKwestia("cos");
@@ -1462,6 +1461,7 @@ public class Decyzja {
                     case 2:
                         break;
                 }
+                break;
 
 
 

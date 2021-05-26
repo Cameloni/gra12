@@ -209,7 +209,7 @@ public class Board extends JPanel implements MouseListener {
         g.drawImage(icons[10].getImage(),217,25,750,150,null);
        // g.drawImage(icons[2].getImage(), 30, 270, 350, 300, null);
        // g.drawImage(icons[3].getImage(),1200, 250, -280, 300, null);
-        g.drawImage(icons[4].getImage(), 25, 150, 1150, 830, null);
+        g.drawImage(icons[4].getImage(), 25, 130, 1150, 920, null);
         g.drawImage(icons[5].getImage(), 1120, 20, 50, 50, null);
         g.drawImage(icons[11].getImage(), 618, -40, 630, 630, null);
         g.drawImage(icons[12].getImage(), 424, -40, 630, 630, null);
@@ -375,7 +375,7 @@ public class Board extends JPanel implements MouseListener {
 
 
 
-Decyzja.legiony = 100;
+//Decyzja.legiony = 0;
         if(Decyzja.legiony==100){
             g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
         }
@@ -383,61 +383,61 @@ Decyzja.legiony = 100;
             g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
         }
         else if(Decyzja.legiony==90){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),175+260,32,321+231,162, 207, 0, 370, 180, null);
         }
         else if(Decyzja.legiony==85){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),173+260,32,321+232,162, 374, 0, 544, 180, null);
         }
         else if(Decyzja.legiony==80){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),172+260,32,321+232,162, 544, 0, 714, 180, null);
         }
         else if(Decyzja.legiony==75){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),171+260,32,321+232,162, 714, 0, 884, 180, null);
         }
         else if(Decyzja.legiony==70){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),170+240,38,321+232,160, 0, 180, 200, 350, null);
         }
         else if(Decyzja.legiony==65){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),175+260,38,321+231,160, 206, 180, 370, 350, null);
         }
         else if(Decyzja.legiony==60){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),170+263,38,321+231,160, 375, 180, 540, 350, null);
         }
         else if(Decyzja.legiony==55){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),170+262,38,321+233,160, 545, 180, 715, 350, null);
         }
         else if(Decyzja.legiony==50){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),170+262,38,321+231,160, 715, 180, 884, 350, null);
         }
         else if(Decyzja.legiony==45){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),170+240,38,321+235,160, 0, 350, 205, 520, null);
         }
         else if(Decyzja.legiony==40){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),170+264,38,322+230,160, 205, 350, 370, 520, null);
         }
         else if(Decyzja.legiony==35){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),170+260,38,322+230,160, 370, 350, 540, 520, null);
         }
         else if(Decyzja.legiony==30){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),169+260,38,322+230,160, 540, 350, 710, 520, null);
         }
         else if(Decyzja.legiony==25){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),169+260,38,322+230,160, 712, 350, 880, 520, null);
         }
         else if(Decyzja.legiony==20){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),169+241,37,322+234,159, 0, 520, 205, 690, null);
         }
         else if(Decyzja.legiony==15){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),169+265,37,323+229,159, 205, 520, 370, 690, null);
         }
         else if(Decyzja.legiony==10){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),165+265,37,323+229,159, 370, 520, 540, 690, null);
         }
         else if(Decyzja.legiony==5){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),164+265,37,323+229,159, 540, 520, 712, 690, null);
         }
         else if(Decyzja.legiony==0){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),166+267,37,326+227,159, 716, 520, 885, 690, null);
         }
 
 
