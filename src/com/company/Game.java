@@ -12,6 +12,7 @@ public class Game {
     public boolean wizualizacja;
     public JFrame window;
     public boolean wypisywanie;
+    public int death = 0;
     public FloatControl fc;
 
     File muzyka = new File("src/com/company/audio/gra_java_soundtrack(wav).wav");

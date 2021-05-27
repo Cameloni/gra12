@@ -209,7 +209,7 @@ public class Board extends JPanel implements MouseListener {
         g.drawImage(icons[10].getImage(),217,25,750,150,null);
        // g.drawImage(icons[2].getImage(), 30, 270, 350, 300, null);
        // g.drawImage(icons[3].getImage(),1200, 250, -280, 300, null);
-        g.drawImage(icons[4].getImage(), 25, 150, 1150, 830, null);
+        g.drawImage(icons[4].getImage(), 25, 130, 1150, 920, null);
         g.drawImage(icons[5].getImage(), 1120, 20, 50, 50, null);
         g.drawImage(icons[11].getImage(), 618, -40, 630, 630, null);
         g.drawImage(icons[12].getImage(), 424, -40, 630, 630, null);
@@ -237,7 +237,7 @@ public class Board extends JPanel implements MouseListener {
 
 
 //Decyzja.religia = 0;
-        if(Decyzja.religia==100){
+        if(Decyzja.religia>=100){
             g.drawImage(staty[3].getImage(),602+200,11,746+200,163, 0, 0, 200, 210, null);
         }
         else if(Decyzja.religia==95){
@@ -297,14 +297,14 @@ public class Board extends JPanel implements MouseListener {
         else if(Decyzja.religia==5){
             g.drawImage(staty[3].getImage(),622+200,38,744+200,160, 540, 550, 710, 720, null);
         }
-        else if(Decyzja.religia==0){
+        else if(Decyzja.religia<=0){
             g.drawImage(staty[3].getImage(),622+200,38,743+200,160, 710, 550, 880, 720, null);
         }
 
 
 
 //Decyzja.obywatele = 0;
-        if(Decyzja.obywatele==100){
+        if(Decyzja.obywatele>=100){
            g.drawImage(staty[2].getImage(),350+230,-25,520+232,160, 0, 0, 240, 255, null);
         }
         else if(Decyzja.obywatele==95){
@@ -364,7 +364,7 @@ public class Board extends JPanel implements MouseListener {
         else if(Decyzja.obywatele==5){
             g.drawImage(staty[2].getImage(),348+280,38,509+241,168, 580, 600, 750, 780, null);
         }
-        else if(Decyzja.obywatele==0){
+        else if(Decyzja.obywatele<=0){
             g.drawImage(staty[2].getImage(),348+280,38,509+241,168, 750, 600, 920, 780, null);
         }
 
@@ -375,69 +375,69 @@ public class Board extends JPanel implements MouseListener {
 
 
 
-Decyzja.legiony = 100;
-        if(Decyzja.legiony==100){
+//Decyzja.legiony = 0;
+        if(Decyzja.legiony>=100){
             g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
         }
         else if(Decyzja.legiony==95){
             g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
         }
         else if(Decyzja.legiony==90){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),175+260,32,321+231,162, 207, 0, 370, 180, null);
         }
         else if(Decyzja.legiony==85){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),173+260,32,321+232,162, 374, 0, 544, 180, null);
         }
         else if(Decyzja.legiony==80){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),172+260,32,321+232,162, 544, 0, 714, 180, null);
         }
         else if(Decyzja.legiony==75){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),171+260,32,321+232,162, 714, 0, 884, 180, null);
         }
         else if(Decyzja.legiony==70){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),170+240,38,321+232,160, 0, 180, 200, 350, null);
         }
         else if(Decyzja.legiony==65){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),175+260,38,321+231,160, 206, 180, 370, 350, null);
         }
         else if(Decyzja.legiony==60){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),170+263,38,321+231,160, 375, 180, 540, 350, null);
         }
         else if(Decyzja.legiony==55){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),170+262,38,321+233,160, 545, 180, 715, 350, null);
         }
         else if(Decyzja.legiony==50){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),170+262,38,321+231,160, 715, 180, 884, 350, null);
         }
         else if(Decyzja.legiony==45){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),170+240,38,321+235,160, 0, 350, 205, 520, null);
         }
         else if(Decyzja.legiony==40){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),170+264,38,322+230,160, 205, 350, 370, 520, null);
         }
         else if(Decyzja.legiony==35){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),170+260,38,322+230,160, 370, 350, 540, 520, null);
         }
         else if(Decyzja.legiony==30){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),169+260,38,322+230,160, 540, 350, 710, 520, null);
         }
         else if(Decyzja.legiony==25){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),169+260,38,322+230,160, 712, 350, 880, 520, null);
         }
         else if(Decyzja.legiony==20){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),169+241,37,322+234,159, 0, 520, 205, 690, null);
         }
         else if(Decyzja.legiony==15){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),169+265,37,323+229,159, 205, 520, 370, 690, null);
         }
         else if(Decyzja.legiony==10){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),165+265,37,323+229,159, 370, 520, 540, 690, null);
         }
         else if(Decyzja.legiony==5){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+            g.drawImage(staty[1].getImage(),164+265,37,323+229,159, 540, 520, 712, 690, null);
         }
-        else if(Decyzja.legiony==0){
-            g.drawImage(staty[1].getImage(),180+230,32,321+231,162, 0, 0, 200, 180, null);
+        else if(Decyzja.legiony<=0){
+            g.drawImage(staty[1].getImage(),166+267,37,326+227,159, 716, 520, 885, 690, null);
         }
 
 
@@ -445,69 +445,69 @@ Decyzja.legiony = 100;
 
 
 
-//Decyzja.finanse=100;
-        if(Decyzja.finanse==100){
+//Decyzja.finanse=0;
+        if(Decyzja.finanse>=100){
             g.drawImage(staty[0].getImage(),230+3,30+5,158+200-3,160-3, 0, 0, 400, 400,   null);
         }
         else if(Decyzja.finanse==95){
             g.drawImage(staty[0].getImage(),230+3,30+5,158+200-3,160-3, 0, 0, 400, 400,   null);
         }
         else if(Decyzja.finanse==90){
-            g.drawImage(staty[0].getImage(),230+3,30+5,158+200-3,160-3, 0, 0, 400, 400,   null);
+            g.drawImage(staty[0].getImage(),230+6,30+5,155+203,160-3, 400, 0, 800, 400,   null);
         }
         else if(Decyzja.finanse==85){
-            g.drawImage(staty[0].getImage(),230+3,30+5,158+200-3,160-3, 0, 0, 400, 400,   null);
+            g.drawImage(staty[0].getImage(),230+9,30+5,155+206,160-3, 800, 0, 1200, 400,   null);
         }
         else if(Decyzja.finanse==80){
-            g.drawImage(staty[0].getImage(),230+3,30+5,158+200-3,160-3, 0, 0, 400, 400,   null);
+            g.drawImage(staty[0].getImage(),233+9,30+5,150+211,160-3, 1200, 0, 1590, 400,   null);
         }
         else if(Decyzja.finanse==75){
-            g.drawImage(staty[0].getImage(),230+3,30+5,158+200-3,160-3, 0, 0, 400, 400,   null);
+            g.drawImage(staty[0].getImage(),232+10,30+5,150+214,160-3, 1590, 0, 1990, 400,   null);
         }
         else if(Decyzja.finanse==70){
-            g.drawImage(staty[0].getImage(),230+3,30+5,158+200-3,160-3, 0, 0, 400, 400,   null);
+            g.drawImage(staty[0].getImage(),223+10,30+8,140+215,160, 0, 400, 400, 800,   null);
         }
         else if(Decyzja.finanse==65){
-            g.drawImage(staty[0].getImage(),230+3,30+5,158+200-3,160-3, 0, 0, 400, 400,   null);
+            g.drawImage(staty[0].getImage(),223+13,30+8,140+218,160, 400, 400, 800, 800,   null);
         }
         else if(Decyzja.finanse==60){
-            g.drawImage(staty[0].getImage(),230+3,30+5,158+200-3,160-3, 0, 0, 400, 400,   null);
+            g.drawImage(staty[0].getImage(),226+13,30+8,143+218,160, 800, 400, 1200, 800,   null);
         }
         else if(Decyzja.finanse==55){
-            g.drawImage(staty[0].getImage(),230+3,30+5,158+200-3,160-3, 0, 0, 400, 400,   null);
+            g.drawImage(staty[0].getImage(),229+13,30+8,143+218,160, 1200, 400, 1590, 800,   null);
         }
         else if(Decyzja.finanse==50){
-            g.drawImage(staty[0].getImage(),230+3,30+5,158+200-3,160-3, 0, 0, 400, 400,   null);
+            g.drawImage(staty[0].getImage(),229+11,30+8,143+224,160, 1585, 400, 2000, 800,   null);
         }
         else if(Decyzja.finanse==45){
-            g.drawImage(staty[0].getImage(),230+3,30+5,158+200-3,160-3, 0, 0, 400, 400,   null);
+            g.drawImage(staty[0].getImage(),224+9,30+11,143+212,163, 0, 800, 400, 1200,   null);
         }
         else if(Decyzja.finanse==40){
-            g.drawImage(staty[0].getImage(),230+3,30+5,158+200-3,160-3, 0, 0, 400, 400,   null);
+            g.drawImage(staty[0].getImage(),227+9,30+11,143+215,163, 400, 800, 800, 1200,   null);
         }
         else if(Decyzja.finanse==35){
-            g.drawImage(staty[0].getImage(),230+3,30+5,158+200-3,160-3, 0, 0, 400, 400,   null);
+            g.drawImage(staty[0].getImage(),229+10,30+11,146+215,163, 800, 800, 1200, 1200,   null);
         }
         else if(Decyzja.finanse==30){
-            g.drawImage(staty[0].getImage(),230+3,30+5,158+200-3,160-3, 0, 0, 400, 400,   null);
+            g.drawImage(staty[0].getImage(),229+13,30+11,146+215,163, 1200, 800, 1590, 1200,   null);
         }
         else if(Decyzja.finanse==25){
-            g.drawImage(staty[0].getImage(),230+3,30+5,158+200-3,160-3, 0, 0, 400, 400,   null);
+            g.drawImage(staty[0].getImage(),229+13,30+11,148+219,163, 1590, 800, 2000, 1200,   null);
         }
         else if(Decyzja.finanse==20){
-            g.drawImage(staty[0].getImage(),230+3,30+5,158+200-3,160-3, 0, 0, 400, 400,   null);
+            g.drawImage(staty[0].getImage(),219+14,30+14,138+217,166, 0, 1200, 400, 1600,   null);
         }
         else if(Decyzja.finanse==15){
-            g.drawImage(staty[0].getImage(),230+3,30+5,158+200-3,160-3, 0, 0, 400, 400,   null);
+            g.drawImage(staty[0].getImage(),222+14,30+14,141+217,166, 400, 1200, 800, 1600,   null);
         }
         else if(Decyzja.finanse==10){
-            g.drawImage(staty[0].getImage(),230+3,30+5,158+200-3,160-3, 0, 0, 400, 400,   null);
+            g.drawImage(staty[0].getImage(),225+14,30+14,144+217,166, 800, 1200, 1200, 1600,   null);
         }
         else if(Decyzja.finanse==5){
-            g.drawImage(staty[0].getImage(),230+3,30+5,158+200-3,160-3, 0, 0, 400, 400,   null);
+            g.drawImage(staty[0].getImage(),228+14,30+14,144+217,166, 1200, 1200, 1590, 1600,   null);
         }
-        else if(Decyzja.finanse==0){
-            g.drawImage(staty[0].getImage(),230+3,30+5,158+200-3,160-3, 0, 0, 400, 400,   null);
+        else if(Decyzja.finanse<=0){
+            g.drawImage(staty[0].getImage(),227+15,30+14,150+217,166, 1590, 1200, 2000, 1600,   null);
         }
 
         //g.drawImage(icons[7].getImage(),600, 630, 500, 150, null);
