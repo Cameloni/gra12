@@ -82,42 +82,64 @@ public class Decyzja {
             if(fin>0){
                 fin -= 5;
                 finanse += 5;
+                if(finanse >= 100){
+                    game.death = 2;
+                }
             }
             if(fin<0){
                 fin += 5;
                 finanse -= 5;
+                if(finanse <= 0){
+                    game.death = 1;
+                }
             }
             if(leg>0){
                 leg -= 5;
                 legiony += 5;
-                if(legiony>=100){
-                    game.death=1;
+                if(legiony >= 100){
+                    game.death = 4;
                 }
             }
             if(leg<0){
                 leg += 5;
                 legiony -= 5;
+                if(legiony <= 0){
+                    game.death = 3;
+                }
             }
             if(oby>0){
                 oby -= 5;
                 obywatele += 5;
+                if(obywatele >= 100){
+                    game.death = 6;
+                }
             }
             if(oby<0){
                 oby += 5;
                 obywatele -= 5;
+                if(obywatele <= 0){
+                    game.death = 5;
+                }
             }
             if(rel>0){
                 rel -= 5;
                 religia += 5;
+                if(religia >= 100){
+                    game.death = 8;
+                }
             }
             if(rel<0){
                 rel += 5;
                 religia -= 5;
+                if(religia <= 0){
+                    game.death = 7;
+                }
             }
-            try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {};
             board.repaint();
+            try {
+                Thread.sleep(400);
+            } catch (InterruptedException e) {};
+
         }
     }
 
@@ -215,7 +237,7 @@ public class Decyzja {
         int los;
         // nr=70;
         //nr=44;
-         nr=2;
+         //nr=2;
         game.wypisywanie = true;
         // board.repaint();
         //nr = 47;
@@ -259,7 +281,7 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(20, 40, -30, 40);
+                            setStats(15, -15, -10, 10);
                             break;
                         case 2:
                             setStats(20, -40, 30, -40);
@@ -590,8 +612,8 @@ public class Decyzja {
                     break;
                 case 27:
                     setKwestia("Senat wpadł na pomysł zorganizowania specjalnych szkoleń taktyki bitewnej dla centurionów.");
-                    setKwe1("");
-                    setKwe2("");
+                    setKwe1("Macie moją zgodę.");
+                    setKwe2("Nie ma mowy.");
                     //dwie opcje do wyboru
                     lub();
                     switch (dec) {
@@ -602,9 +624,9 @@ public class Decyzja {
                     }
                     break;
                 case 28:
-                    setKwestia("Dziś w nocy któs włamał się do pałacowej stajni i uśmiercił wszystkie konie.");
-                    setKwe1("");
-                    setKwe2("");
+                    setKwestia("Naczelny generał skarży się, że racje żywnościowe dla legionistów są zbyt małe. Uważa, że powinniśmy przekazywać wojsku część jedzenia przeznaczonego dla obywateli.");
+                    setKwe1("Zgadzam się z nim.");
+                    setKwe2("Legioniści mają walczyć, nie jeść.");
                     lub();
                     switch (dec) {
                         case 1:
@@ -667,8 +689,8 @@ public class Decyzja {
                     break;
                 case 33:
                     setKwestia("Twój syn prosi o nowego rumaka");
-                    setKwe1("Dajcie mu go");
-                    setKwe2("Nie mam na to czasu");
+                    setKwe1("Dajcie mu go.");
+                    setKwe2("Nie mam na to czasu.");
                     //dwie opcje do wyboru
                     lub();
                     switch (dec) {
@@ -680,8 +702,8 @@ public class Decyzja {
                     break;
                 case 34:
                     setKwestia("Piraci napadają na naszych kupców. Musimy zapewnić nieustanną ochronę morską dla handlarzy. [To będzie miało stały efekt]");
-                    setKwe1("Zapewnijcie im wsparcie armii");
-                    setKwe2("Dadzą sobie radę bez naszej pomocy");
+                    setKwe1("Zapewnijcie im wsparcie armii.");
+                    setKwe2("Dadzą sobie radę bez naszej pomocy.");
                     //dwie opcje do wyboru
                     lub();
                     switch (dec) {
@@ -819,7 +841,7 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setKontynuacja(100044);
+                            game.death = 8;
                             break;
                         case 2:
                             break;
@@ -1055,7 +1077,7 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setKontynuacja(100062);
+                            game.death = 9;
                             break;
                         case 2:
                             break;
@@ -1108,7 +1130,7 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setKontynuacja(100066);
+                            game.death = 10;
                             break;
                         case 2:
                             break;
@@ -1124,7 +1146,7 @@ public class Decyzja {
                         case 1:
                             break;
                         case 2:
-                            setKontynuacja(200067);
+                            game.death = 11;
                             break;
                     }
                     break;
@@ -1662,14 +1684,6 @@ public class Decyzja {
                     break;
 
 
-                case 100044:
-                    setKwestia("Biorąc kąpiel zaczynasz tracić świadomość, umierasz w basenie z powodu udaru.");
-                    setKwe1("...");
-                    setKwe2("...");
-                    setTura(getTura() - 1);
-                    setKontynuacja(0);
-                    lub();
-                    break;
 
                 case 100047:
                     setKwestia("Powstanie rzeczywiście było przygotowywane. Ludzie są wdzięczni za błyskawiczną reakcję wojska.");
@@ -1709,34 +1723,7 @@ public class Decyzja {
                     break;
 
 
-                case 100062:
-                    setKwestia("Siedząc na fotelu, zamykasz oczy. Nagle fryzjer przykłada Ci do ust kawałek szmatki, przez co nie możesz oddychać.. Umierasz przez uduszenie.");
-                    setKwe1("...");
-                    setKwe2("...");
-                    setTura(getTura() - 1);
-                    setKontynuacja(0);
-                    lub();
-                    break;
 
-
-                case 100066:
-                    setKwestia("Pijąc wino, odczuwasz kręcenie w głowie. Chwilę póżniej, leżysz martwy przed tronem.");
-                    setKwe1("...");
-                    setKwe2("...");
-                    setTura(getTura() - 1);
-                    setKontynuacja(0);
-                    lub();
-                    break;
-
-
-                case 200067:
-                    setKwestia("Zapach olejków usypia Cię, twoja głowa robi się ciężka. Godzinę później służba znajduje Cię martwego z powodu odurzenia olejkami");
-                    setKwe1("...");
-                    setKwe2("...");
-                    setTura(getTura() - 1);
-                    setKontynuacja(0);
-                    lub();
-                    break;
 
 
                 case 200070:
@@ -1793,25 +1780,25 @@ public class Decyzja {
             lub();
         }
         else if(game.death==8){
-            setKwestia("");
+            setKwestia("Biorąc kąpiel zaczynasz tracić świadomość, umierasz w basenie z powodu udaru.");
             setKwe1("...");
             setKwe2("...");
             lub();
         }
         else if(game.death==9){
-            setKwestia("");
+            setKwestia("Siedząc na fotelu, zamykasz oczy. Nagle fryzjer przykłada Ci do ust kawałek szmatki, przez co nie możesz oddychać.. Umierasz przez uduszenie.");
             setKwe1("...");
             setKwe2("...");
             lub();
         }
         else if(game.death==10){
-            setKwestia("");
+            setKwestia("Pijąc wino, odczuwasz kręcenie w głowie. Chwilę póżniej, leżysz martwy przed tronem.");
             setKwe1("...");
             setKwe2("...");
             lub();
         }
         else if(game.death==11){
-            setKwestia("");
+            setKwestia("Zapach olejków usypia Cię, twoja głowa robi się ciężka. Godzinę później służba znajduje Cię martwego z powodu odurzenia olejkami");
             setKwe1("...");
             setKwe2("...");
             lub();
