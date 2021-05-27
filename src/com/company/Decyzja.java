@@ -256,6 +256,7 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
+                           // setStats();
                             break;
                         case 2:
                             break;
