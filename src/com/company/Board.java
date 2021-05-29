@@ -11,6 +11,88 @@ import java.io.File;
 import java.io.IOException;
 
 public class Board extends JPanel implements MouseListener {
+    Game game;
+    static public Boolean opcja1 = false;
+    static public Boolean opcja2 = false;
+    /*public void mousetrack1() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
+        //if(game.menu == true) {
+
+        int x, y;
+        //while (true) {
+        x = game.window.getMousePosition().x;
+        y = game.window.getMousePosition().y;
+
+        if (x > 440 && x < 755 && y > 375 && y < 450) {
+            nowa_gra_najechany = true;
+            if(!game.naj.isOpen()){
+                game.naj.open(AudioSystem.getAudioInputStream(game.najechanie_audio));
+                //game.naj.start();
+            }
+            if (!newgame_flipper) {
+                newgame_flipper = true;
+
+                //tutaj trzeba wstawić komendę grającą kamyczkowy dźwięk
+            }
+        } else {
+            nowa_gra_najechany = false;
+            newgame_flipper = false;
+        }
+        if (x > 440 && x < 755 && y > 490 && y < 560) {
+            wczytaj_najechany = true;
+            if(!game.naj.isOpen()){
+                game.naj.open(AudioSystem.getAudioInputStream(game.najechanie_audio));
+                //game.naj.start();
+            }
+            if (wczytaj_flipper==false) {
+                wczytaj_flipper = true;
+
+                //tutaj trzeba wstawić komendę grającą kamyczkowy dźwięk
+            }
+        } else {
+            wczytaj_najechany = false;
+            wczytaj_flipper = false;
+        }
+
+
+        if (x > 440 && x < 755 && y > 585 && y < 670) {
+            wyjscie_najechany = true;
+            if(!game.naj.isOpen()){
+                game.naj.open(AudioSystem.getAudioInputStream(game.najechanie_audio));
+
+
+                //game.naj.start();
+            }
+            if (exitflipper == false) {
+                exitflipper = true;
+
+                //tutaj trzeba wstawić komendę grającą kamyczkowy dźwięk
+            }
+        } else {
+            wyjscie_najechany = false;
+            exitflipper = false;
+        }
+
+        if ((x > 420 && x < 765 && y > 45 + 14 && y < 285)||(x > 390 && x < 800 && y > 200+14 && y < 285 + 14)) {
+            dc = true;
+        }
+        else {
+            dc = false;
+        }
+        repaint();
+        if(exitflipper == false && wczytaj_flipper==false && newgame_flipper==false){
+            game.naj.close();
+        }
+
+
+        /*if(wczytaj_flipper== false){
+            game.naj.close();
+        }
+        if(newgame_flipper == false){
+            game.naj.close();
+        }*/
+
+
+    //}
 /*
     boolean button1_najechany = false;
     boolean button2_najechany= false;
@@ -88,10 +170,65 @@ public class Board extends JPanel implements MouseListener {
     boolean button1_najechany = false;
     boolean button2_najechany = false;
     //Color[] cols = {Color.green, Color.yellow, Color.orange, Color.red};
+    public MouseListener TextKlik = new MouseListener() {
+        @Override
+        public void mouseClicked(MouseEvent e) {
+            System.out.println("x " + e.getX() + "  y " + e.getY());
+            opcja1 = true;
+        }
 
+        @Override
+        public void mousePressed(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e) {
+
+        }
+    };
+    public MouseListener TextKlik1 = new MouseListener() {
+        @Override
+        public void mouseClicked(MouseEvent e) {
+            System.out.println("x1 " + e.getX() + "  y1 " + e.getY());
+            opcja2 = true;
+        }
+
+        @Override
+        public void mousePressed(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e) {
+
+        }
+    };
     public Board(Game game) throws IOException, FontFormatException {
         this.setLayout(null);
-
+        this.game = game;
+        //opcja1 = false;
+        //opcja2 = false;
         /*icons[0] = new ImageIcon("src/com/company/pixelpictures/SalaTronowa.png");
         icons[1] = new ImageIcon("src/com/company/pixelpictures/CezarSam.png");
         icons[2] = new ImageIcon("src/com/company/pixelpictures/pergamin4.png");
@@ -103,8 +240,8 @@ public class Board extends JPanel implements MouseListener {
         //icons[4] = new ImageIcon("src/com/company/pixelpictures/tło.png");
         icons[4] = new ImageIcon("src/com/company/pixelpictures/scroll.png");
         icons[5] = new ImageIcon("src/com/company/buttons/ustawienia_button.png");
-        icons[6] = new ImageIcon("src/com/company/buttons/potencialny_guzik_decyzji.png");
-        icons[7] = new ImageIcon("src/com/company/buttons/potencialny_guzik_decyzji.png");
+        icons[6] = new ImageIcon("src/com/company/buttons/decision_button.png");
+        icons[7] = new ImageIcon("src/com/company/buttons/decision_button.png");
         icons[11] = new ImageIcon("src/com/company/pixelpictures/oznaczenie_modyfikowanej_statystyki_religia.png");
         icons[12] = new ImageIcon("src/com/company/pixelpictures/oznaczenie_modyfikowanej_statystyki_autorytet.png");
         icons[13] = new ImageIcon("src/com/company/pixelpictures/oznaczenie_modyfikowanej_statystyki_armia.png");
@@ -125,7 +262,7 @@ public class Board extends JPanel implements MouseListener {
         //JTextArea jTextArea;
         this.jTextArea = new JTextArea("");
         this.jTextArea.setVisible(true);
-        this.jTextArea.setBounds(200, 480, 800, 300);
+        this.jTextArea.setBounds(200, 480, 800, 193);
         this.jTextArea.setBackground(new Color(0, 0, 0, 1));
         this.jTextArea.setOpaque(false);
         //jTextArea.setForeground(Color.red);
@@ -140,8 +277,11 @@ public class Board extends JPanel implements MouseListener {
         //jTextArea.setForeground(Color.getHSBColor(500,850,200));
 
         //MOŻNA WYBRAĆ WŁASNY KOLOR..
-        this.jTextArea.setForeground(new Color(111, 97, 9));
+
+        this.jTextArea.setForeground(new Color(116, 14, 53));
+
         setSize(1200, 780);
+        setBounds(0,0,1200, 780);
         add(this.jTextArea);
         //jTextArea.setForeground(Color.BLACK);
 
@@ -150,16 +290,19 @@ public class Board extends JPanel implements MouseListener {
             JJ[i] = new JTextArea();
             this.JJ[i] = new JTextArea("");
             if(i == 0){
-                this.JJ[i].setBounds(200, 680, 500, 300);
+                this.JJ[i].setBounds(200, 680, 270, 300);
+                this.JJ[i].addMouseListener(TextKlik);
             }
             else {
-                this.JJ[i].setBounds(650, 680, 500, 300);
+                this.JJ[i].setBounds(650, 680, 370, 300);
+                this.JJ[i].addMouseListener(TextKlik1);
             }
             this.JJ[i].setBackground(new Color(0, 0, 0, 1));
             this.JJ[i].setOpaque(false);
             //jTextArea.setForeground(Color.red);
             this.JJ[i].setFont(romanfont1);
             this.JJ[i].setLineWrap(true);
+            this.jTextArea.setHighlighter(null);
             this.JJ[i].setEditable(false);
             this.JJ[i].setWrapStyleWord(true);
             //jTextArea.setText("ccaaaa");
@@ -167,7 +310,9 @@ public class Board extends JPanel implements MouseListener {
             //jTextArea.setForeground(Color.getHSBColor(500,850,200));
 
             //MOŻNA WYBRAĆ WŁASNY KOLOR..
-            this.JJ[i].setForeground(new Color(116, 14, 53));
+            this.JJ[i].setForeground(new Color(158, 139, 14));
+            //this.JJ[i].setForeground(new Color(111, 97, 9));
+            //this.JJ[i].addMouseListener(this);
             add(this.JJ[i]);
             //jTextArea.setForeground(Color.BLACK);
             //this.JJ[i].setVisible(true);
@@ -184,6 +329,7 @@ public class Board extends JPanel implements MouseListener {
             this.counts[i].setForeground(Color.black);
             add(counts[i]);
         }*/addMouseListener(this);
+
     }
     @Override
     public void paintComponent(Graphics g){
@@ -220,16 +366,16 @@ public class Board extends JPanel implements MouseListener {
 
         //g.drawImage(icons[6].getImage(),100, 630, 500, 150, null);
         if(button1_najechany==false){
-            g.drawImage(icons[6].getImage(),150,650,600,770, 0, 0, 700 ,166, null);
+            g.drawImage(icons[6].getImage(),150,650,600,770, 0, 0, 814 ,230, null);
         }
         else{
-            g.drawImage(icons[6].getImage(),150,650,600,770, 0, 166, 700 ,332, null);
+            g.drawImage(icons[6].getImage(),150,650,600,770, 0, 230, 814 ,460, null);
         }
         if(button2_najechany==false){
-            g.drawImage(icons[7].getImage(),600,650,1050,770, 0, 0, 700 ,166, null);
+            g.drawImage(icons[7].getImage(),600,650,1050,770, 0, 0, 814 ,230, null);
         }
         else{
-            g.drawImage(icons[7].getImage(),600,650,1050,770, 0, 166, 700 ,332, null);
+            g.drawImage(icons[7].getImage(),600,650,1050,770, 0, 230, 814 ,460, null);
         }
 
 
@@ -516,6 +662,25 @@ public class Board extends JPanel implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        System.out.println("x " + e.getX() + "  y " + e.getY());
+        /*if (e.getX() > 170 && e.getX() < 370 && e.getY() > 260 && e.getY() < 530) {
+
+            try {
+                //game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
+                //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
+                //game.volume2.setValue(-25f);
+                game.klik.loop(1);
+                //game.klik.start();
+                try {
+                    Thread.sleep(600);
+                } catch (InterruptedException en) {
+                    //e.printStackTrace();
+                }
+                game.klik.stop();
+            } catch (IllegalArgumentException exception){
+            }
+            repaint();
+        }
         /*System.out.println("--------------------------");
         System.out.println("X: .. " + e.getX() + "  Y:.." + e.getY());
         if(e.getY()>78+100 && e.getY()< 78+100+98){

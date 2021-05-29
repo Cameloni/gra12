@@ -121,11 +121,11 @@ public class Watek extends Thread {
 
     public void dec_run() throws IOException {
         if (wdec == true) {
-            if (game.wizualizacja == true) {
+            //if (game.wizualizacja == true) {
                 decyzja.przebieg();
-            } else {
+            //} else {
 
-            }
+           // }
         }
     }               /* } catch (NullPointerException e){
                     decyzja.setKwestia("AAAA");
@@ -144,7 +144,7 @@ public class Watek extends Thread {
 
             muz.open(AudioSystem.getAudioInputStream(game.muzyka));
             FloatControl volume = (FloatControl) muz.getControl(FloatControl.Type.MASTER_GAIN);
-            volume.setValue(-60f);
+            volume.setValue(-30f);
             muz.loop(999999999);
             //muz.start();
 
@@ -224,12 +224,17 @@ public class Watek extends Thread {
         if (grane == true) {
             playmusic();
         }
+
         mr = 0;
 
         int secc = 0;
         tmp3 = "... ";
         tmp4 = " . . . . ";
         addedcharacter = "";
+        try {
+            dec_run();
+        } catch (IOException e) {
+        }
         while (true) {
             // if(game.naj.isOpen()){
             //secc++;}
@@ -313,10 +318,6 @@ public class Watek extends Thread {
                 }
             }
 
-            try {
-                dec_run();
-            } catch (IOException e) {
-            }
 
             napisy();
 
