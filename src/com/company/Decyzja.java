@@ -280,6 +280,7 @@ public class Decyzja {
                            // setStats();
                             break;
                         case 2:
+                            //setStats();
                             break;
                     }
                     break;
@@ -290,9 +291,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-
+                            //setStats();
                             break;
                         case 2:
+                           // setStats();
                             break;
                     }
                     break;
@@ -327,43 +329,46 @@ public class Decyzja {
                     }
                     break;
                 case 4:
-                    setKwestia("");
-                    setKwe1("");
-                    setKwe2("");
+                    setKwestia("Pałacowy medyk wynalazł recepturę na środek przeciw bólowi głowi. Aby jednak poddani mogli go stosować, musi być najpierw przetestowany na niewolnikach.");
+                    setKwe1("Zgadzam się");
+                    setKwe2("To zbyt ryzykowne");
                     lub();
                     switch (dec) {
                         case 1:
+                            setKontynuacja(100004);
                             break;
                         case 2:
-
+                            break;
                     }
                     break;
                 case 5:
-                    System.out.println("Coś5");
-                    setKwestia("cos");
-                    //dwie opcje do wyboru
+                    setKwestia("Grupa blduźnierców głosi na ulicach skandaliczne hasła oczerniające bogów. Powinniśmy posłać wojsko i natychmiast rozbić to zgromadzenie.");
+                    setKwe1("Naprzód!");
+                    setKwe2("Nie działajmy zbyt pochopnie");
                     lub();
                     switch (dec) {
                         case 1:
                             break;
                         case 2:
-
                     }
                     break;
                 case 6:
-                    System.out.println("Coś6");
-                    setKwestia("cos");
+                    setKwestia("Twój syn zaoferował Ci usługę u swojego fryzjera. Gwarantuje powalający efekt.");
+                    setKwe1("Z przyjemnością");
+                    setKwe2("Cesarska fryzura nie wymaga poprawy");
                     lub();
                     switch (dec) {
                         case 1:
+                            game.death = 9;
                             break;
                         case 2:
-
+                            break;
                     }
                     break;
                 case 7:
-                    System.out.println("Coś7");
-                    setKwestia("cos");
+                    setKwestia("Grupy niewolników uciekają z cesarstwa, po tym jak zbuntowali się przeciwko swoim możnym panom.");
+                    setKwe1("Jeśli taka ich wola...");
+                    setKwe2("Poślijcie za nimi wojsko");
                     lub();
                     switch (dec) {
                         case 1:
@@ -373,8 +378,9 @@ public class Decyzja {
                     }
                     break;
                 case 8:
-                    System.out.println("Coś8");
-                    setKwestia("cos");
+                    setKwestia("Zbliżają się Wulkanalia - święto boga Wulkana. Tradycja nakazuje każdemu mieszkańcowi miasta wrzucić w ogień ofiarę z ryby");
+                    setKwe1("Niech tak będzie");
+                    setKwe2("To marnowanie jedzenia!");
                     lub();
                     switch (dec) {
                         case 1:
@@ -384,9 +390,9 @@ public class Decyzja {
                     }
                     break;
                 case 9:
-                    System.out.println("Coś9");
-                    setKwestia("cos");
-                    //dwie opcje do wyboru
+                    setKwestia("Szpiedzy donoszą, że w mieście rozwija się nielegalny handel. Sugerują przeszukanie kupieckich karawan.");
+                    setKwe1("Zgadzam się");
+                    setKwe2("Nie zgadzam się");
                     lub();
                     switch (dec) {
                         case 1:
@@ -396,19 +402,35 @@ public class Decyzja {
                     }
                     break;
                 case 10:
-                    System.out.println("Coś10");
-                    setKwestia("cos");
+                    setKwestia("Twój syn przysyła ci amforę wybornego wina. Czy chcesz spróbować?");
+                    setKwe1("Jasne!");
+                    setKwe2("Nie jestem spragniony");
                     lub();
                     switch (dec) {
                         case 1:
+                            game.death = 10;
                             break;
                         case 2:
-
+                            break;
                     }
                     break;
                 case 11:
-                    System.out.println("Coś11");
-                    setKwestia("cos");
+                    setKwestia("Twój syn przysyła Ci w prezencie olejki zapachowe. Wyglądają na bardzo drogie. Czy chcesz ich użyć?");
+                    setKwe1("Nie potrzebuję olejków");
+                    setKwe2("To miło z jego strony");
+                    lub();
+                    switch (dec) {
+                        case 1:
+                            break;
+                        case 2:
+                            game.death = 11;
+                            break;
+                    }
+                    break;
+                case 12:
+                    setKwestia("Rybacy potrzebują drewna na budowę łodzi. Żołnierze zaś domagają się nowych włóczni i oszczepów.");
+                    setKwe1("Wspieram rybaków");
+                    setKwe2("Wspieram żołnierzy");
                     lub();
                     switch (dec) {
                         case 1:
@@ -417,20 +439,10 @@ public class Decyzja {
 
                     }
                     break;
-                case 12:
-                    System.out.println("Coś12");
-                    setKwestia("cos");
-                    lub();
-                    switch (dec) {
-                        case 1:
-                            break;
-                        case 2:
-                    }
-                    break;
                 case 13:
-                    System.out.println("Coś13");
-                    setKwestia("cos");
-                    //dwie opcje do wyboru
+                    setKwestia("Runęła kolumna w świątyni i przygniotłą modlącego się tam kapłana oraz centuriona. Na miejscu jest medyk, ale ma czas na uratowanie tylko jednej osoby");
+                    setKwe1("Ratujcie centuriona!");
+                    setKwe2("Ratujcie kapłana!");
                     lub();
                     switch (dec) {
                         case 1:
@@ -1067,139 +1079,6 @@ public class Decyzja {
                     }
                     break;
                 case 60:
-                    setKwestia("Pałacowy medyk wynalazł recepturę na środek przeciw bólowi głowi. Aby jednak poddani mogli go stosować, musi być najpierw przetestowany na niewolnikach.");
-                    setKwe1("Zgadzam się");
-                    setKwe2("To zbyt ryzykowne");
-                    //dwie opcje do wyboru
-                    lub();
-                    switch (dec) {
-                        case 1:
-                            setKontynuacja(100060);
-                            break;
-                        case 2:
-                            break;
-                    }
-                    break;
-                case 61:
-                    setKwestia("Grupa blduźnierców głosi na ulicach skandaliczne hasła oczerniające bogów. Powinniśmy posłać wojsko i natychmiast rozbić to zgromadzenie.");
-                    setKwe1("Naprzód!");
-                    setKwe2("Nie działajmy zbyt pochopnie");
-                    //dwie opcje do wyboru
-                    lub();
-                    switch (dec) {
-                        case 1:
-                            break;
-                        case 2:
-                    }
-                    break;
-                case 62:
-                    setKwestia("Twój syn zaoferował Ci usługę u swojego fryzjera. Gwarantuje powalający efekt.");
-                    setKwe1("Z przyjemnością");
-                    setKwe2("Cesarska fryzura nie wymaga poprawy");
-                    //dwie opcje do wyboru
-                    lub();
-                    switch (dec) {
-                        case 1:
-                            game.death = 9;
-                            break;
-                        case 2:
-                            break;
-                    }
-                    break;
-                case 63:
-                    setKwestia("Grupy niewolników uciekają z cesarstwa, po tym jak zbuntowali się przeciwko swoim możnym panom.");
-                    setKwe1("Jeśli taka ich wola...");
-                    setKwe2("Poślijcie za nimi wojsko");
-                    //dwie opcje do wyboru
-                    lub();
-                    switch (dec) {
-                        case 1:
-                            break;
-                        case 2:
-
-                    }
-                    break;
-                case 64:
-                    setKwestia("Zbliżają się Wulkanalia - święto boga Wulkana. Tradycja nakazuje każdemu mieszkańcowi miasta wrzucić w ogień ofiarę z ryby");
-                    setKwe1("Niech tak będzie");
-                    setKwe2("To marnowanie jedzenia!");
-                    //dwie opcje do wyboru
-                    lub();
-                    switch (dec) {
-                        case 1:
-                            break;
-                        case 2:
-
-                    }
-                    break;
-                case 65:
-                    setKwestia("Szpiedzy donoszą, że w mieście rozwija się nielegalny handel. Sugerują przeszukanie kupieckich karawan.");
-                    setKwe1("Zgadzam się");
-                    setKwe2("Nie zgadzam się");
-                    //dwie opcje do wyboru
-                    lub();
-                    switch (dec) {
-                        case 1:
-                            break;
-                        case 2:
-
-                    }
-                    break;
-                case 66:
-                    setKwestia("Twój syn przysyła ci amforę wybornego wina. Czy chcesz spróbować?");
-                    setKwe1("Jasne!");
-                    setKwe2("Nie jestem spragniony");
-                    //dwie opcje do wyboru
-                    lub();
-                    switch (dec) {
-                        case 1:
-                            game.death = 10;
-                            break;
-                        case 2:
-                            break;
-                    }
-                    break;
-                case 67:
-                    setKwestia("Twój syn przysyła Ci w prezencie olejki zapachowe. Wyglądają na bardzo drogie. Czy chcesz ich użyć?");
-                    setKwe1("Nie potrzebuję olejków");
-                    setKwe2("To miło z jego strony");
-                    //dwie opcje do wyboru
-                    lub();
-                    switch (dec) {
-                        case 1:
-                            break;
-                        case 2:
-                            game.death = 11;
-                            break;
-                    }
-                    break;
-                case 68:
-                    setKwestia("Rybacy potrzebują drewna na budowę łodzi. Żołnierze zaś domagają się nowych włóczni i oszczepów.");
-                    setKwe1("Wspieram rybaków");
-                    setKwe2("Wspieram żołnierzy");
-                    //dwie opcje do wyboru
-                    lub();
-                    switch (dec) {
-                        case 1:
-                            break;
-                        case 2:
-
-                    }
-                    break;
-                case 69:
-                    setKwestia("Runęła kolumna w świątyni i przygniotłą modlącego się tam kapłana oraz centuriona. Na miejscu jest medyk, ale ma czas na uratowanie tylko jednej osoby");
-                    setKwe1("Ratujcie centuriona!");
-                    setKwe2("Ratujcie kapłana!");
-                    //dwie opcje do wyboru
-                    lub();
-                    switch (dec) {
-                        case 1:
-                            break;
-                        case 2:
-
-                    }
-                    break;
-                case 70:
                     setKwestia("Senat wpadł na pomysł wprowadzenia nowej konkurencji walk gladiatorów - walki wręcz - czyli pojedynków bez użycia broni.");
                     setKwe1("To nie ma sensu...");
                     setKwe2("Świetny pomysł!");
@@ -1209,7 +1088,7 @@ public class Decyzja {
                         case 1:
                             break;
                         case 2:
-                            setKontynuacja(200070);
+                            setKontynuacja(200060);
                             break;
                     }
                     break;
@@ -1236,6 +1115,18 @@ public class Decyzja {
                             break;
                     }
                     break;
+
+
+
+                case 100004:
+                    setKwestia("Środek okazał się wywoływać problemy z trawieniem i utratę świadomości. Dwaj testowani niewolnicy zmarli po jego zażyciu.");
+                    setKwe1("...");
+                    setKwe2("...");
+                    setTura(getTura() - 1);
+                    setKontynuacja(0);
+                    lub();
+                    break;
+
 
 
                 case 100015:
@@ -1463,20 +1354,11 @@ public class Decyzja {
                     break;
 
 
-                case 100060:
-                    setKwestia("Środek okazał się wywoływać problemy z trawieniem i utratę świadomości. Dwaj testowani niewolnicy zmarli po jego zażyciu.");
-                    setKwe1("...");
-                    setKwe2("...");
-                    setTura(getTura() - 1);
-                    setKontynuacja(0);
-                    lub();
-                    break;
 
 
 
 
-
-                case 200070:
+                case 200060:
                     setKwestia("Walki wręcz okazują się być straszliwie mało dynamiczne, niezbyt krwawe oraz po prostu nudne. Ludzie nie chcą oglądać nowej konkurencji.");
                     setKwe1("...");
                     setKwe2("...");
@@ -1512,7 +1394,7 @@ public class Decyzja {
             lub();
         }
         else if(game.death==5){
-            setKwestia("Oddział niezadowolonych z Twoich rządów rebeliantów wdziera się do pałacu i przegania Cię po ulicach miasta. Zostajesz znieważony i ukamieniowany.");
+            setKwestia("Oddział niezadowolonych z Twoich rządów rebeliantów wdziera się do pałacu i przegania Cię po ulicach miasta. Zostajesz znieważony i ukrzyżowany.");
             setKwe1("...");
             setKwe2("...");
             lub();
