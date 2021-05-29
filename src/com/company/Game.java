@@ -22,7 +22,10 @@ public class Game {
     public Clip naj = AudioSystem.getClip();
     public Clip naj2 = AudioSystem.getClip();
     public Clip naj3 = AudioSystem.getClip();
+
     public FloatControl volume1;
+    public FloatControl volume_naj2;
+    public FloatControl volume_naj3;
     public FloatControl volume2;
     public Clip per = AudioSystem.getClip();
     public Clip klik = AudioSystem.getClip();
@@ -72,7 +75,9 @@ public class Game {
         window.setIconImage(new ImageIcon("src/com/company/PNG/background/45.png").getImage());
         klik.open(AudioSystem.getAudioInputStream(klikniecie_audio));
         per.open(AudioSystem.getAudioInputStream(pergamin_audio));
-
+        naj.open(AudioSystem.getAudioInputStream(najechanie_audio));
+        naj2.open(AudioSystem.getAudioInputStream(najechanie_audio));
+        naj3.open(AudioSystem.getAudioInputStream(najechanie_audio));
         Board wizualizacja = new Board(this);
 
 

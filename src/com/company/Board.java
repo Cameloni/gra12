@@ -12,6 +12,7 @@ import java.io.IOException;
 
 public class Board extends JPanel implements MouseListener {
     Game game;
+    static public Boolean mozna = false;
     static public Boolean opcja1 = false;
     static public Boolean opcja2 = false;
     /*public void mousetrack1() throws IOException, UnsupportedAudioFileException, LineUnavailableException {

@@ -140,7 +140,7 @@ public class Decyzja {
             }
             board.repaint();
             try {
-                Thread.sleep(100);
+                Thread.sleep(120);
             } catch (InterruptedException e) {};
 
         }
@@ -201,7 +201,7 @@ public class Decyzja {
         return p;
     }
     public void lub() throws IOException {
-        while (true) {
+        while (this.dec != 1 || this.dec != 2) {
             //String dec1 = "";
             //System.out.print("");
             if(Board.opcja1 == true) {
@@ -217,7 +217,7 @@ public class Decyzja {
                 //    sc.nextLine();
             }
             try {
-                Thread.sleep(100);
+                Thread.sleep(1);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -258,7 +258,8 @@ public class Decyzja {
         this.dec = 0;
         int los;
         // nr=70;
-        //nr=24;
+        //nr=15;
+        //nr = 2;
         game.wypisywanie = true;
         // board.repaint();
         //nr = 47;
@@ -1136,8 +1137,8 @@ public class Decyzja {
                     } else {
                         setKwestia("Na wieści o podwyżce zareagowały również " + los + " inne legiony. One także chcą podwyższenia płac.");
                     }
-                    setKwe1("1. Nie ma mowy.");
-                    setKwe2("2.Wynegocjuj niewielką podwyżkę.");
+                    setKwe1("Nie ma mowy.");
+                    setKwe2("Wynegocjuj niewielką podwyżkę.");
                     lub();
                     switch (dec) {
                         case 1:
@@ -1161,7 +1162,7 @@ public class Decyzja {
 
 
                 case 100015:
-                    setKwestia("Tylko miejski producent producent wina miał motyw - nieufność ludu wobec czystej wody zwiększyłoby jego zyski. Powinniśmy go przesłuchać");
+                    setKwestia("Tylko miejski producent producent wina miał motyw - nieufność ludu wobec czystej wody zwiększyłoby jego zyski. Powinniśmy go przesłuchać.");
                     setKwe1("Dobrze.");
                     setKwe2("Mamy inne opcje??");
                     lub();

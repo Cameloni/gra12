@@ -277,6 +277,50 @@ public class Watek extends Thread {
                         }
 
                     }
+                    try {
+                        game.volume_naj2 = (FloatControl) game.naj2.getControl(FloatControl.Type.MASTER_GAIN);
+                    } catch (IllegalArgumentException e) {
+
+                    }
+
+                    if (game.naj2.isOpen()) {
+                        game.volume_naj2.setValue(-20f);
+                        //game.naj.loop(1);
+                        game.naj2.start();
+                        try {
+
+                            Thread.sleep(60);
+                            game.naj2.stop();
+                            m.repaint();
+                            //} catch (InterruptedException e){
+
+                        } catch (IllegalArgumentException | InterruptedException e) {
+
+                        }
+
+                    }
+                    try {
+                        game.volume_naj3 = (FloatControl) game.naj3.getControl(FloatControl.Type.MASTER_GAIN);
+                    } catch (IllegalArgumentException e) {
+
+                    }
+
+                    if (game.naj3.isOpen()) {
+                        game.volume_naj3.setValue(-20f);
+                        //game.naj.loop(1);
+                        game.naj3.start();
+                        try {
+
+                            Thread.sleep(60);
+                            game.naj3.stop();
+                            m.repaint();
+                            //} catch (InterruptedException e){
+
+                        } catch (IllegalArgumentException | InterruptedException e) {
+
+                        }
+
+                    }
                     /*game.naj.close();
 
                     try {

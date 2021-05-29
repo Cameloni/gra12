@@ -56,8 +56,8 @@ public class Menu extends JPanel implements MouseListener {
         }
                 if (x > 440 && x < 755 && y > 490 && y < 560) {
                     wczytaj_najechany = true;
-                    if(!game.naj.isOpen()){
-                        game.naj.open(AudioSystem.getAudioInputStream(game.najechanie_audio));
+                    if(!game.naj2.isOpen()){
+                        game.naj2.open(AudioSystem.getAudioInputStream(game.najechanie_audio));
                         //game.naj.start();
                     }
                     if (wczytaj_flipper==false) {
@@ -73,8 +73,8 @@ public class Menu extends JPanel implements MouseListener {
 
         if (x > 440 && x < 755 && y > 585 && y < 670) {
             wyjscie_najechany = true;
-            if(!game.naj.isOpen()){
-                game.naj.open(AudioSystem.getAudioInputStream(game.najechanie_audio));
+            if(!game.naj3.isOpen()){
+                game.naj3.open(AudioSystem.getAudioInputStream(game.najechanie_audio));
 
 
                 //game.naj.start();
@@ -96,8 +96,14 @@ public class Menu extends JPanel implements MouseListener {
             dc = false;
         }
         repaint();
-        if(exitflipper == false && wczytaj_flipper==false && newgame_flipper==false){
+        if(newgame_flipper == false){
             game.naj.close();
+        }
+        if(wczytaj_flipper == false){
+            game.naj2.close();
+        }
+        if(exitflipper == false){
+            game.naj3.close();
         }
 
 
