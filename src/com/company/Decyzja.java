@@ -263,7 +263,7 @@ public class Decyzja {
         this.dec = 0;
         int los;
         // nr=70;
-        //nr=15;
+        nr=15;
         //nr = 2;
         game.wypisywanie = true;
         // board.repaint();
@@ -1652,11 +1652,11 @@ public class Decyzja {
             setJuzjest(-1, iiii);
         }
 
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 999999999; i++) {
             while (nr < 0) {
                 nr = (int) (Math.random() * 61);
 
-                for (int j = 0; j < 20; j++) {
+                for (int j = 0; j < 40; j++) {
                     if (getJuzjest(j) == -1) {
                         //tutaj chodziło że jeżeli to będzie równe -1 to nie ma już porównywać bo dalsze numery też
                         //będą równe -1, czyli nie są jeszcze wypełnione.
@@ -1674,7 +1674,7 @@ public class Decyzja {
             setNr(nr);
             game.wypisywanie = true;
             zbior();
-            setJuzjest(nr, i % 20);
+            setJuzjest(nr, i % 40);
             nr = -1;
 
 
