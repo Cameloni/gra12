@@ -158,7 +158,7 @@ public class Menu extends JPanel implements MouseListener {
             g.drawImage(wczytaj.getImage(),425,457,765,552, 0, 0, 1416 ,327, null);
         }
         else{
-            g.drawImage(wczytaj.getImage(),425,460,765,560, 0, 330, 1416 ,672, null);
+            g.drawImage(wczytaj.getImage(),426,461,766,561, 0, 330, 1416 ,672, null);
 
 
         }
@@ -166,7 +166,7 @@ public class Menu extends JPanel implements MouseListener {
             g.drawImage(wyjscie.getImage(),425,570,765,670, 0, 330, 1416 ,672, null);
         }
         else{
-            g.drawImage(wyjscie.getImage(),425,567,765,662, 0, 0, 1416 ,325, null);
+            g.drawImage(wyjscie.getImage(),424,568,764,663, 0, 0, 1416 ,325, null);
         }
 
 
