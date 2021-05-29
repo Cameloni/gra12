@@ -278,10 +278,10 @@ public class Decyzja {
                     lub();
                     switch (this.dec) {
                         case 1:
-                            setStats(15, -15, 0, 0);
+                            setStats(15, -20, 0, 0);
                             break;
                         case 2:
-                            setStats(-15, 15, 0, 0);
+                            setStats(-20, 15, 0, 0);
                             break;
                     }
                     break;
@@ -292,10 +292,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(15, 0, 0, -15);
+                            setStats(15, 0, 0, -20);
                             break;
                         case 2:
-                            setStats(-15, 0, 0, 15);
+                            setStats(-20, 0, 0, 15);
                             break;
                     }
                     break;
@@ -307,10 +307,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(15, -15, 0, 0);
+                            setStats(15, -20, 0, 0);
                             break;
                         case 2:
-                            setStats(-15, 15, 0 ,0);
+                            setStats(-20, 15, 0 ,0);
                             if ((int) (Math.random() * 10) >= 3) {
                                 setKontynuacja(100002);
                             }
@@ -324,10 +324,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-15, 0, 15, 0);
+                            setStats(-20, 0, 15, 0);
                             break;
                         case 2:
-                            setStats(15, 0, -15, 0);
+                            setStats(15, 0, -20, 0);
                             break;
                     }
                     break;
@@ -351,10 +351,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, -15, 0, 15);
+                            setStats(0, -20, 0, 15);
                             break;
                         case 2:
-                            setStats(0, 0, 15, -15);
+                            setStats(0, 0, 15, -20);
                             break;
                     }
                     break;
@@ -368,7 +368,7 @@ public class Decyzja {
                             game.death = 9;
                             break;
                         case 2:
-                            setStats(0, 0, -10, 0);
+                            setStats(0, 0, -15, 0);
                             break;
                     }
                     break;
@@ -379,10 +379,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 15, -15, 0);
+                            setStats(0, 15, -20, 0);
                             break;
                         case 2:
-                            setStats(10, -15, 10, 0 );
+                            setStats(10, -20, 10, 0 );
                             break;
                     }
                     break;
@@ -393,10 +393,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-15, 0, 0, 15);
+                            setStats(-20, 0, 0, 15);
                             break;
                         case 2:
-                            setStats(15, 0, 0, -15);
+                            setStats(15, 0, 0, -20);
                             break;
                     }
                     break;
@@ -407,7 +407,7 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-10, -10, 15, 0);
+                            setStats(-15, -10, 15, 0);
                             break;
                         case 2:
                             setStats(0, 10, -15, 0);
@@ -424,7 +424,7 @@ public class Decyzja {
                             game.death = 10;
                             break;
                         case 2:
-                            setStats(0, 0, -10, 0);
+                            setStats(0, 0, -5, 0);
                             break;
                     }
                     break;
@@ -435,7 +435,7 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 0, -10, 0);
+                            setStats(0, 0, -5, 0);
                             break;
                         case 2:
                             game.death = 11;
@@ -449,10 +449,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, -15, 15, 0);
+                            setStats(0, -20, 15, 0);
                             break;
                         case 2:
-                            setStats(0, 15, -15, 0);
+                            setStats(0, 15, -20, 0);
                             break;
                     }
                     break;
@@ -463,10 +463,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 20, 0, -20);
+                            setStats(0, 20, 0, -25);
                             break;
                         case 2:
-                            setStats(0, -20, 0, 20);
+                            setStats(0, -25, 0, 20);
                             break;
                     }
                     break;
@@ -498,6 +498,7 @@ public class Decyzja {
                             break;
                     }
                     break;
+                case 62:
                 case 16:
                     if (quest[16] == 0) {
                         setKwestia("Senat wpadł na pomysł modernizacji floty rzymskiej, co pozwoliłoby na próbę podboju Kartaginy w Północnej Afryce.");
@@ -533,7 +534,7 @@ public class Decyzja {
                         setKwe2("Wspaniale!");
                         setQuest(3, 16);
                         lub();
-                        setStats(30, 30, 30, 30);
+                        setStats(25, 25, 25, 25);
                         switch(dec){
                             case 1:
                                 break;
@@ -550,10 +551,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 0, -10, 0);
+                            setStats(0, 0, -15, 0);
                             break;
                         case 2:
-                            setStats(-10, 0, 10, 0);
+                            setStats(-15, 0, 10, 0);
                             setKontynuacja(200017);
                             break;
                     }
@@ -565,10 +566,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-15, 0, 15, 0);
+                            setStats(-20, 0, 15, 0);
                             break;
                         case 2:
-                            setStats(0, 0, -15, 15);
+                            setStats(0, 0, -20, 15);
                             break;
                     }
                     break;
@@ -608,10 +609,10 @@ public class Decyzja {
                         lub();
                         switch (dec) {
                             case 1:
-                                setStats(-15, 0, 15, 0);
+                                setStats(-20, 0, 15, 0);
                                 break;
                             case 2:
-                                setStats(15, 0, -15, 0);
+                                setStats(10, 0, -15, 0);
                                 break;
                         }
                         break;
@@ -623,10 +624,10 @@ public class Decyzja {
                         lub();
                         switch (dec) {
                             case 1:
-                                setStats(-30, 0, 15, 15);
+                                setStats(-30, 0, 15, 10);
                                 break;
                             case 2:
-                                setStats(20, 0, -10 ,-10);
+                                setStats(20, 0, -15 ,-10);
                                 break;
                         }
                         break;
@@ -647,14 +648,16 @@ public class Decyzja {
                     break;
                 case 23:
                     setKwestia("Specjaliści donoszą, że główny szyb w jednej z kopalni miedzi może w każdej chwili ulec zawaleniu.");
-                    setKwe1("To mało prawdopodobne");
-                    setKwe2("Ewakuujcie górników");
+                    setKwe1("To mało prawdopodobne.");
+                    setKwe2("Ewakuujcie górników.");
                     //dwie opcje do wyboru
                     lub();
                     switch (dec) {
                         case 1:
+                            setKontynuacja(100023);
                             break;
                         case 2:
+                            setKontynuacja(200023);
                             break;
                     }
                     break;
@@ -665,10 +668,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 15, -15, 0);
+                            setStats(0, 15, -20, 0);
                             break;
                         case 2:
-                            setStats(0, -15, 15, 0);
+                            setStats(0, -20, 15, 0);
                             break;
                     }
                     break;
@@ -694,10 +697,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-15, 0, 15, 0);
+                            setStats(-15, 0, 10, 0);
                             break;
                         case 2:
-                            setStats(15, 0, -15, 0);
+                            setStats(10, 0, -15, 0);
                             break;
                     }
                     break;
@@ -708,10 +711,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-15, 20, 0, 0);
+                            setStats(-15, 15, 0, 0);
                             break;
                         case 2:
-                            setStats(20, -15, 0 ,0);
+                            setStats(15, -15, 0 ,0);
                             break;
                     }
                     break;
@@ -722,10 +725,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 15, -15, 0);
+                            setStats(0, 15, -20, 0);
                             break;
                         case 2:
-                            setStats(0, -15, 15 ,0);
+                            setStats(0, -20, 15 ,0);
                             break;
                     }
                     break;
@@ -736,10 +739,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(30, -10, -10, -10);
+                            setStats(30, -10, -15, -10);
                             break;
                         case 2:
-                            setStats(-30, 10, 10, 10);
+                            setStats(-30, 5, 10, 10);
                             break;
                     }
                     break;
@@ -753,7 +756,7 @@ public class Decyzja {
                             setKontynuacja(100030);
                             break;
                         case 2:
-                            setStats(10, 0, -15, 0);
+                            setStats(5, 0, -15, 0);
                             break;
                     }
                     break;
@@ -778,10 +781,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, -25, 25, 0);
+                            setStats(0, -25, 20, 0);
                             break;
                         case 2:
-                            setStats(0, 25, -25, 0);
+                            setStats(0, 20, -25, 0);
                             break;
                     }
                     break;
@@ -792,7 +795,7 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-10, 0, 15, 0);
+                            setStats(-10, 0, 10, 0);
                             break;
                         case 2:
                             setStats(10, 0, -15, 0);
@@ -806,10 +809,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(15, -30, 15, 0);
+                            setStats(15, -30, 10, 0);
                             break;
                         case 2:
-                            setStats(-15, 30, -15, 0);
+                            setStats(-15, 25, -15, 0);
                             break;
                     }
                     break;
@@ -833,10 +836,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 15, -15, 0);
+                            setStats(0, 15, -20, 0);
                             break;
                         case 2:
-                            setStats(0, -15, 15, 0);
+                            setStats(0, -20, 15, 0);
                             break;
                     }
                     break;
@@ -861,10 +864,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-10, 0, -10, 20);
+                            setStats(-10, 0, -10, 15);
                             break;
                         case 2:
-                            setStats(10, 0, 10, -20);
+                            setStats(10, 0, 5, -20);
                             break;
                     }
                     break;
@@ -875,10 +878,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, -15, 0, 15);
+                            setStats(0, -20, 0, 15);
                             break;
                         case 2:
-                            setStats(0, 15, 0, -15);
+                            setStats(0, 15, 0, -20);
                             break;
                     }
                     break;
@@ -892,7 +895,7 @@ public class Decyzja {
                             setKontynuacja(100040);
                             break;
                         case 2:
-                            setStats(5, 0, -5, 0);
+                            setStats(0, 0, -5, 0);
                             break;
                     }
                     break;
@@ -906,7 +909,7 @@ public class Decyzja {
                             setKontynuacja(100041);
                             break;
                         case 2:
-                            setStats(10, 0, -5, 0);
+                            setStats(10, 0, -10, 0);
                             break;
                     }
                     break;
@@ -917,10 +920,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 0, -15, 15);
+                            setStats(0, 0, -20, 15);
                             break;
                         case 2:
-                            setStats(0, 0, 15, -15);
+                            setStats(0, 0, 15, -20);
                             break;
                     }
                     break;
@@ -957,7 +960,6 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-15, 0, 0, 0);
                             setKontynuacja(100045);
                             break;
                         case 2:
@@ -971,10 +973,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, -15, 0, 15);
+                            setStats(0, -20, 0, 15);
                             break;
                         case 2:
-                            setStats(0, 15, 0,-15);
+                            setStats(0, 15, 0,-20);
                             break;
                     }
                     break;
@@ -1013,10 +1015,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, -15, 0, 15);
+                            setStats(0, -20, 0, 15);
                             break;
                         case 2:
-                            setStats(0, 15, 0, -15);
+                            setStats(0, 15, 0, -20);
                             break;
                     }
                     break;
@@ -1027,10 +1029,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-15, 0, 0, 15);
+                            setStats(-15, 0, -5, 15);
                             break;
                         case 2:
-                            setStats(15, 0, 0, 15);
+                            setStats(15, 0, 0, -20);
                             break;
                     }
                     break;
@@ -1044,7 +1046,7 @@ public class Decyzja {
                             setStats(-10, 0, 20, -15);
                             break;
                         case 2:
-                            setStats(10, 0, -20, 15);
+                            setStats(10, 0, -20, 10);
                             break;
                     }
                     break;
@@ -1055,10 +1057,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-20, 0, 15, 10);
+                            setStats(-30, 0, 15, 10);
                             break;
                         case 2:
-                            setStats(20, 0, -15, -5);
+                            setStats(20, 0, -15, -10);
                             break;
                     }
                     break;
@@ -1109,10 +1111,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 0, 15, -15);
+                            setStats(0, 0, 15, -20);
                             break;
                         case 2:
-                            setStats(0, 0, -15, 15);
+                            setStats(0, 0, -20, 15);
                             break;
                     }
                     break;
@@ -1123,7 +1125,7 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(15, -30, 15, 0 );
+                            setStats(15, -30, 10, 0 );
                             break;
                         case 2:
                             setStats(-15, 20, -10, 0);
