@@ -1059,7 +1059,7 @@ public class Decyzja {
                     }
                     break;
                 case 61:
-                    setKwestia("Grupa bluźnierców głosi na ulicach skandaliczne hasła oczerniające bogów. Powinniśmy posłać wojsko i natychmiast rozbić to zgromadzenie.");
+                    setKwestia("Grupa blduźnierców głosi na ulicach skandaliczne hasła oczerniające bogów. Powinniśmy posłać wojsko i natychmiast rozbić to zgromadzenie.");
                     setKwe1("Naprzód!");
                     setKwe2("Nie działajmy zbyt pochopnie");
                     //dwie opcje do wyboru
