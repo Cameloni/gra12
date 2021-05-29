@@ -17,12 +17,14 @@ import java.util.ArrayList;
 public class Menu extends JPanel implements MouseListener {
     ImageIcon tlo;
     ImageIcon nowa_gra;
+    ImageIcon newgame;
     ImageIcon wczytaj;
     ImageIcon wyjscie;
     ImageIcon nazwa;
     ImageIcon nazwa2;
     Game game;
     //ArrayList<Point> punkty = new ArrayList<Point>();
+    static boolean newgame_boll = false;
     boolean wczytaj_najechany = false;
     boolean nowa_gra_najechany = false;
     boolean wyjscie_najechany = false;
@@ -124,6 +126,7 @@ public class Menu extends JPanel implements MouseListener {
         this.game = game;
         ImageIcon tlo = new ImageIcon("src/com/company/pixelpictures/tło2.png");
         ImageIcon nowa_gra = new ImageIcon("src/com/company/buttons/roman_button (1).png");
+        ImageIcon newgame = new ImageIcon("src/com/company/buttons/newgame.png");
         ImageIcon wczytaj = new ImageIcon("src/com/company/buttons/roman_button (2).png");
         ImageIcon wyjscie = new ImageIcon("src/com/company/buttons/roman_button (3).png");
         ImageIcon DC = new ImageIcon("src/com/company/pixelpictures/tytuł.dc.png");
@@ -132,6 +135,7 @@ public class Menu extends JPanel implements MouseListener {
         this.wczytaj = wczytaj;
         this.wyjscie = wyjscie;
         this.tlo = tlo;
+        this.newgame = newgame;
         nazwa = DC;
         nazwa2 = DC2;
         setSize(1200, 780);
@@ -148,11 +152,14 @@ public class Menu extends JPanel implements MouseListener {
         else{
             g.drawImage(nazwa2.getImage(), 350, 20, 500, 300, null);
         }
-        if(nowa_gra_najechany==false){
-            g.drawImage(nowa_gra.getImage(),425,347,765,442, 0, 0, 1416 ,329, null);
-        }
-        else{
-            g.drawImage(nowa_gra.getImage(),427,345,767,442, 0, 336, 1416 ,672, null);
+        if(newgame_boll==true){
+            g.drawImage(newgame.getImage(),425,347,340,95, null);
+        } else {
+            if (nowa_gra_najechany == false) {
+                g.drawImage(nowa_gra.getImage(), 425, 347, 765, 442, 0, 0, 1416, 329, null);
+            } else {
+                g.drawImage(nowa_gra.getImage(), 427, 345, 767, 442, 0, 336, 1416, 672, null);
+            }
         }
         if(wczytaj_najechany==false){
             g.drawImage(wczytaj.getImage(),425,457,765,552, 0, 0, 1416 ,327, null);
@@ -218,6 +225,8 @@ public class Menu extends JPanel implements MouseListener {
 
                 //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
                 //game.volume2.setValue(-25f);
+                //newgame_boll = true;
+                //repaint();
                 game.klik.loop(1);
                 //game.klik.start();
                 try {

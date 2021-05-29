@@ -1435,7 +1435,7 @@ public class Decyzja {
                     setKwe2("...");
                     setTura(getTura() - 1);
                     setKontynuacja(0);
-                    setStats(0, 0, -15, 0);
+                    setStats(0, -5, -15, 0);
                     lub();
                     break;
 
@@ -1470,7 +1470,7 @@ public class Decyzja {
                         setKwe2("...");
                         setTura(getTura() - 1);
                         setKontynuacja(0);
-                        setStats(20, 0, 0, 0);
+                        setStats(25, 0, 0, 0);
                         lub();
                         break;
                     }
@@ -1480,7 +1480,7 @@ public class Decyzja {
                         setKwe2("...");
                         setTura(getTura() - 1);
                         setKontynuacja(0);
-                        setStats(-20, 0, 0, 0);
+                        //setStats(-20, 0, 0, 0);
                         lub();
                         break;
                     }
@@ -1634,7 +1634,7 @@ public class Decyzja {
 
         for (int i = 0; i < 50; i++) {
             while (nr < 0) {
-                nr = (int) (Math.random() * 60);
+                nr = (int) (Math.random() * 61);
 
                 for (int j = 0; j < 20; j++) {
                     if (getJuzjest(j) == -1) {
