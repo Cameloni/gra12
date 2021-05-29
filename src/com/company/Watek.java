@@ -86,6 +86,7 @@ public class Watek extends Thread {
                 if (i < character.length) {
                     //if (!addedcharacter.equals(tmp3)) {
                     if (game.wypisywanie == true) {
+                        board.mozna = false;
                         FloatControl volume = (FloatControl) game.per.getControl(FloatControl.Type.MASTER_GAIN);
                         volume.setValue(-20f);
                         game.per.loop(1);
@@ -104,6 +105,7 @@ public class Watek extends Thread {
                         //}
                     }
                 } else {
+                    board.mozna = true;
                     //tmp3 = addedcharacter;
                     game.wypisywanie = false;
                     game.per.stop();
@@ -347,7 +349,6 @@ public class Watek extends Thread {
                         try {
                             m.mousetrack();
 
-
                         } catch (IOException e) {
                             e.printStackTrace();
                         } catch (UnsupportedAudioFileException e) {
@@ -358,6 +359,22 @@ public class Watek extends Thread {
                     } catch (NullPointerException e) {
                     }
 
+
+                }
+                if(game.wizualizacja == true){
+                    try {
+                        try {
+                            board.mousetrack2();
+
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        } catch (UnsupportedAudioFileException e) {
+                            e.printStackTrace();
+                        } catch (LineUnavailableException e) {
+                            e.printStackTrace();
+                        }
+                    } catch (NullPointerException e) {
+                    }
 
                 }
             }
