@@ -278,7 +278,7 @@ public class Decyzja {
         // board.repaint();
         //nr = 47;
         //quest[15] = 1;
-        finanse=0;
+        //finanse=0;
         if(nr == 16 && getQuest()[16] == 3){
             nr = (int)(Math.random()*15);
         }
@@ -1598,60 +1598,70 @@ public class Decyzja {
             setKwe1("...");
             setKwe2("...");
             lub();
+            changeDeath_screen();
         }
         else if(game.death==3){
             setKwestia("Rzym zostaje najechany przez dzikie plemiona barbarzyńców z północy. Razem ze swoim ostatnim generałem zostajesz otoczony i zamordowany. Twoje ciało spoczywa w kałuży krwi.");
             setKwe1("...");
             setKwe2("...");
             lub();
+            changeDeath_screen();
         }
         else if(game.death==4){
             setKwestia("Naczelny generał, wykorzystując potęgę armii rzymskiej, otacza Twój pałac i domaga się natychmiastowej kapitulacji. Po złożeniu broni, zostajesz publicznie stracony.");
             setKwe1("...");
             setKwe2("...");
             lub();
+            changeDeath_screen();
         }
         else if(game.death==5){
             setKwestia("Oddział niezadowolonych z Twoich rządów rebeliantów wdziera się do pałacu i przegania Cię po ulicach miasta. Zostajesz znieważony i ukrzyżowany.");
             setKwe1("...");
             setKwe2("...");
             lub();
+            changeDeath_screen();
         }
         else if(game.death==6){
             setKwestia("");
             setKwe1("...");
             setKwe2("...");
             lub();
+            changeDeath_screen();
         }
         else if(game.death==7){
             setKwestia("W czasie kryzysu wiary lud podważa Twoje prawo do władzy i zwraca się przeciwko Tobie i kapłanom. Giniesz stratowany przez wściekłą tłuszczę.");
             setKwe1("...");
             setKwe2("...");
             lub();
+            changeDeath_screen();
         }
         else if(game.death==8){
             setKwestia("Biorąc kąpiel zaczynasz tracić świadomość, umierasz w basenie z powodu udaru.");
             setKwe1("...");
             setKwe2("...");
             lub();
+            changeDeath_screen();
         }
         else if(game.death==9){
             setKwestia("Siedząc na fotelu, zamykasz oczy. Nagle fryzjer przykłada Ci do ust kawałek szmatki, przez co nie możesz oddychać.. Umierasz przez uduszenie.");
             setKwe1("...");
             setKwe2("...");
             lub();
+            changeDeath_screen();
         }
         else if(game.death==10){
             setKwestia("Pijąc wino, odczuwasz kręcenie w głowie. Chwilę póżniej, leżysz martwy przed tronem.");
             setKwe1("...");
             setKwe2("...");
             lub();
+            changeDeath_screen();
         }
         else if(game.death==11){
             setKwestia("Zapach olejków usypia Cię, twoja głowa robi się ciężka. Godzinę później służba znajduje Cię martwego z powodu odurzenia olejkami");
             setKwe1("...");
             setKwe2("...");
             lub();
+            changeDeath_screen();
         }
     }
 

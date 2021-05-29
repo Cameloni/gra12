@@ -100,6 +100,9 @@ public class Board extends JPanel implements MouseListener {
         y = game.window.getMousePosition().y;
         if(x > 399 && x < 810 && y > 424 && y < 611){
             again_najechany = true;
+            if(!game.naj2.isOpen()) {
+                game.naj2.open(AudioSystem.getAudioInputStream(game.najechanie_audio));
+            }
         }
         else{
             again_najechany = false;
