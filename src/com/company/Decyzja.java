@@ -258,7 +258,7 @@ public class Decyzja {
         this.dec = 0;
         int los;
         // nr=70;
-        //nr=2;
+        //nr=24;
         game.wypisywanie = true;
         // board.repaint();
         //nr = 47;
@@ -624,7 +624,7 @@ public class Decyzja {
                     setKwestia("Kończą nam się zapasy liści laurowych.");
                     setKwe1("Zakupcie nowe jak najprędzej");
                     setKwe2("Obejdę się bez liści");
-                    ;
+
                     lub();
                     switch (dec) {
                         case 1:
