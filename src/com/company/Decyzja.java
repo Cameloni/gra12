@@ -789,7 +789,7 @@ public class Decyzja {
                     }
                     break;
                 case 33:
-                    setKwestia("Twój syn prosi o nowego rumaka");
+                    setKwestia("Twój syn prosi o nowego rumaka. Stary podobno mu się znudził.");
                     setKwe1("Dajcie mu go.");
                     setKwe2("Nie mam na to czasu.");
                     lub();
@@ -1222,10 +1222,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(15, -15, 0, 0);
+                            setStats(10, -15, 0, 0);
                             break;
                         case 2:
-                            setStats(-los*5, los*5, 0, 0 );
+                            setStats(-los*5-5, los*5, 0, 0 );
                             break;
                     }
                     break;
@@ -1297,7 +1297,7 @@ public class Decyzja {
                         setStats(0, 20, 20, 20);
                     } else {
                         setKwestia("Mężczyzna został stracony. Kilka dni później pasterze znaleźli przy zanieczyszczonym źródle martwą owcę, która zatruwała wodę. Lud jest wściekły, przez Twój pochopny osąd winiarza.");
-                        setStats(0, -15, -15, -15);
+                        setStats(0, -20, -20, -20);
                     }
                     lub();
                     setKontynuacja(0);
@@ -1342,7 +1342,7 @@ public class Decyzja {
                     setKwe2("...");
                     setKontynuacja(0);
                     setTura(getTura() - 1);
-                    setStats(0, -15, -15, -15);
+                    setStats(0, -20, -20, -20);
                     lub();
                     break;
 
@@ -1356,10 +1356,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-20, 20, 0, 0);
+                            setStats(-20, 15, 0, 0);
                             break;
                         case 2:
-                            setStats(15, -15, 0, 0);
+                            setStats(15, -20, 0, 0);
                             break;
                     }
                     break;
@@ -1372,11 +1372,11 @@ public class Decyzja {
                     setKwe1("...");
                     setKwe2("...");
                     if (los == 0) {
-                        setKwestia("Rytuał okazał się sukcesem, uprawy rolne rosną szybciej niż kiedykolwiek.");
-                        setStats(20, 0, 15, 20);
+                        setKwestia("Rytuał okazał się sukcesem, uprawy rolne rosną szybciej niż kiedykolwiek. W Cesarstwie nastał dobrobyt.");
+                        setStats(15, 15, 15, 15);
                     } else {
                         setKwestia("Rytuał przyniósł długotrwałą suszę, a w północnej części Cesarstwa wybuchła plaga myszy.");
-                        setStats(-15, 0, -15, -15);
+                        setStats(-15, -15, -15, -15);
                     }
                     lub();
                     break;
@@ -1386,7 +1386,7 @@ public class Decyzja {
                     setKwestia("Specjaliści po powrocie do pałacu nie potrafili zdiagnozować choroby. Kilka dni później wszyscy w mieście dostali swędzącej wysypki. Szczęście w nieszczęściu, zaraza minęła po tygodniu.");
                     setKwe1("...");
                     setKwe2("...");
-                    setStats(-10, -10, -10, -10);
+                    setStats(-15, -15, -15, -15);
                     setTura(getTura() - 1);
                     setKontynuacja(0);
                     lub();
@@ -1408,7 +1408,7 @@ public class Decyzja {
                     setKwestia("Gryzonie rozmnożyły się i rozlazły się po całym mieście. Obywatele są rozgoryczeni.");
                     setKwe1("...");
                     setKwe2("...");
-                    setStats(0, 0, -15, 0);
+                    setStats(0, 0, -20, 0);
                     setTura(getTura() - 1);
                     setKontynuacja(0);
                     lub();
@@ -1422,10 +1422,10 @@ public class Decyzja {
                     lub();
                     switch(dec){
                         case 1:
-                            setStats(0, -15, 15, 0);
+                            setStats(0, -15, 10, 0);
                             break;
                         case 2:
-                            setStats(0, 15, -15,0);
+                            setStats(0, 10, -15,0);
                             break;
                     }
                     break;
@@ -1472,7 +1472,7 @@ public class Decyzja {
                         setKwe2("...");
                         setTura(getTura() - 1);
                         setKontynuacja(0);
-                        setStats(25, 0, 0, 0);
+                        setStats(20, 0, 0, 0);
                         lub();
                         break;
                     }
@@ -1504,13 +1504,13 @@ public class Decyzja {
                     setKwe2("...");
                     setTura(getTura() - 1);
                     setKontynuacja(0);
-                    setStats(0, -10, -15, 0);
+                    setStats(0, -15, -15, -15);
                     lub();
                     break;
 
 
                 case 100058:
-                    setKwestia("Hodowcy pozostali przy używaniu nawozu. Problem ze słonym mlekiem pozostał nierozwiązany.");
+                    setKwestia("Hodowcy pozostali przy używaniu nawozu. Problem ze słonym mlekiem pozostał nierozwiązany. Chore krowy musiały zostać zabite.");
                     setKwe1("...");
                     setKwe2("...");
                     setTura(getTura() - 1);
@@ -1549,7 +1549,7 @@ public class Decyzja {
                     setKwe2("...");
                     setTura(getTura() - 1);
                     setKontynuacja(0);
-                    setStats(0, 0, -15, 0);
+                    setStats(0, 0, -20, 0);
                     lub();
                     break;
 
