@@ -1528,7 +1528,7 @@ public class Decyzja {
 
 
                 case 100059:
-                    setKwestia("Maść okazuje się być sukcesem, stała się bardzo popularna wśród elity mieszkańców Rzymu.");
+                    setKwestia("Maść okazsuje się być sukcesem, stała się bardzo popularna wśród elity mieszkańców Rzymu.");
                     setKwe1("...");
                     setKwe2("...");
                     setTura(getTura() - 1);
