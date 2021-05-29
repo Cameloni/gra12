@@ -256,9 +256,9 @@ public class Board extends JPanel implements MouseListener {
         Font romanfont = Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")).deriveFont(40f);
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")));
-        Font romanfont1 = Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")).deriveFont(30f);
+        Font romanfont1 = Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")).deriveFont(33f);
         GraphicsEnvironment ge1 = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")));
+        ge1.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("src/com/company/fonts/CyborgSister.ttf")));
         //JTextArea jTextArea;
         this.jTextArea = new JTextArea("");
         this.jTextArea.setVisible(true);
@@ -290,7 +290,7 @@ public class Board extends JPanel implements MouseListener {
             JJ[i] = new JTextArea();
             this.JJ[i] = new JTextArea("");
             if(i == 0){
-                this.JJ[i].setBounds(200, 680, 270, 300);
+                this.JJ[i].setBounds(200, 680, 370, 300);
                 this.JJ[i].addMouseListener(TextKlik);
             }
             else {
@@ -366,16 +366,16 @@ public class Board extends JPanel implements MouseListener {
 
         //g.drawImage(icons[6].getImage(),100, 630, 500, 150, null);
         if(button1_najechany==false){
-            g.drawImage(icons[6].getImage(),150,650,600,770, 0, 0, 814 ,230, null);
+            g.drawImage(icons[6].getImage(),150,650,600-10,770, 0, 0, 814 ,230, null);
         }
         else{
-            g.drawImage(icons[6].getImage(),150,650,600,770, 0, 230, 814 ,460, null);
+            g.drawImage(icons[6].getImage(),150,650,600-10,770, 0, 230, 814 ,460, null);
         }
         if(button2_najechany==false){
-            g.drawImage(icons[7].getImage(),600,650,1050,770, 0, 0, 814 ,230, null);
+            g.drawImage(icons[7].getImage(),600,650,1050-10,770, 0, 0, 814 ,230, null);
         }
         else{
-            g.drawImage(icons[7].getImage(),600,650,1050,770, 0, 230, 814 ,460, null);
+            g.drawImage(icons[7].getImage(),600,650,1050-10,770, 0, 230, 814 ,460, null);
         }
 
 
