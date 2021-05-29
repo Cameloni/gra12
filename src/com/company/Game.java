@@ -10,6 +10,9 @@ import java.io.File;
 public class Game {
     public boolean menu;
     public boolean wizualizacja;
+    public boolean zapis_boll;
+    public boolean odczyt_boll;
+    public boolean opcje_boll;
     public JFrame window;
     public boolean wypisywanie;
     public int death = 0;

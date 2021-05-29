@@ -1,6 +1,4 @@
 package com.company;
-
-
 import com.sun.jdi.IntegerValue;
 
 import javax.sound.sampled.AudioSystem;
@@ -22,12 +20,20 @@ public class Menu extends JPanel implements MouseListener {
     ImageIcon wyjscie;
     ImageIcon nazwa;
     ImageIcon nazwa2;
+    ImageIcon kwadrat;
+    ImageIcon zapis1_icon;
+    ImageIcon zapis2_icon;
+    ImageIcon zapis3_icon;
+    ImageIcon wroc;
     Game game;
     //ArrayList<Point> punkty = new ArrayList<Point>();
     static boolean newgame_boll = false;
     boolean wczytaj_najechany = false;
     boolean nowa_gra_najechany = false;
     boolean wyjscie_najechany = false;
+    boolean zapis1_najechany = false;
+    boolean zapis2_najechany = false;
+    boolean zapis3_najechany = false;
     boolean dc = false;
     boolean newgame_flipper = false, wczytaj_flipper = false, exitflipper = false;
 
@@ -131,10 +137,20 @@ public class Menu extends JPanel implements MouseListener {
         ImageIcon wyjscie = new ImageIcon("src/com/company/buttons/roman_button (3).png");
         ImageIcon DC = new ImageIcon("src/com/company/pixelpictures/tytuł.dc.png");
         ImageIcon DC2 = new ImageIcon("src/com/company/pixelpictures/pixil-frame-0 (20).png");
+        ImageIcon kwadrat = new ImageIcon("src/com/company/pixelpictures/tlo_opcji.png");
+        ImageIcon zapis1_icon = new ImageIcon("src/com/company/buttons/roman_button (5).png");
+        ImageIcon zapis2_icon = new ImageIcon("src/com/company/buttons/roman_button (6).png");
+        ImageIcon zapis3_icon = new ImageIcon("src/com/company/buttons/roman_button (7).png");
+        ImageIcon wroc = new ImageIcon("src/com/company/buttons/return_button.png");
         this.nowa_gra = nowa_gra;
         this.wczytaj = wczytaj;
         this.wyjscie = wyjscie;
         this.tlo = tlo;
+        this.kwadrat = kwadrat;
+        this.wroc = wroc;
+        this.zapis1_icon = zapis1_icon;
+        this.zapis2_icon = zapis2_icon;
+        this.zapis3_icon = zapis3_icon;
         this.newgame = newgame;
         nazwa = DC;
         nazwa2 = DC2;
@@ -146,45 +162,85 @@ public class Menu extends JPanel implements MouseListener {
         super.paintComponent(g);
         //g.drawRect(40, 80, 640 - 80, 480 - 160);
         g.drawImage(tlo.getImage(), 0, 0,1200,780, null);
-        if(dc == false) {
-            g.drawImage(nazwa.getImage(), 350, 20, 500, 300, null);
-        }
-        else{
-            g.drawImage(nazwa2.getImage(), 350, 20, 500, 300, null);
-        }
-        if(newgame_boll==true){
-            g.drawImage(newgame.getImage(),425,347,340,95, null);
-        } else {
+        if(game.zapis_boll == false && game.odczyt_boll == false) {
+            if (dc == false) {
+                g.drawImage(nazwa.getImage(), 350, 20, 500, 300, null);
+            } else {
+                g.drawImage(nazwa2.getImage(), 350, 20, 500, 300, null);
+            }
             if (nowa_gra_najechany == false) {
                 g.drawImage(nowa_gra.getImage(), 425, 347, 765, 442, 0, 0, 1416, 329, null);
             } else {
                 g.drawImage(nowa_gra.getImage(), 427, 345, 767, 442, 0, 336, 1416, 672, null);
             }
-        }
-        if(wczytaj_najechany==false){
-            g.drawImage(wczytaj.getImage(),425,457,765,552, 0, 0, 1416 ,327, null);
-        }
-        else{
-            g.drawImage(wczytaj.getImage(),426,461,766,561, 0, 330, 1416 ,672, null);
+            if (wczytaj_najechany == false) {
+                g.drawImage(wczytaj.getImage(), 425, 457, 765, 552, 0, 0, 1416, 327, null);
+            } else {
+                g.drawImage(wczytaj.getImage(), 426, 461, 766, 561, 0, 330, 1416, 672, null);
 
 
-        }
-        if(wyjscie_najechany==false){
-            g.drawImage(wyjscie.getImage(),425,570,765,670, 0, 330, 1416 ,672, null);
-        }
-        else{
-            g.drawImage(wyjscie.getImage(),424,568,764,663, 0, 0, 1416 ,325, null);
-        }
+            }
+            if (wyjscie_najechany == false) {
+                g.drawImage(wyjscie.getImage(), 425, 570, 765, 670, 0, 330, 1416, 672, null);
+            } else {
+                g.drawImage(wyjscie.getImage(), 424, 568, 764, 663, 0, 0, 1416, 325, null);
+            }
+        } else {
+            g.drawImage(kwadrat.getImage(), 210, 0, 780, 780, null);
+
+            if (newgame_boll == true) {
+                g.drawImage(newgame.getImage(), 425, 347, 340, 95, null);
+            } else {
+                if (nowa_gra_najechany == false) {
+                    g.drawImage(nowa_gra.getImage(), 425, 347, 765, 442, 0, 0, 1416, 329, null);
+                } else {
+                    g.drawImage(nowa_gra.getImage(), 427, 345, 767, 442, 0, 336, 1416, 672, null);
+                }
+            }
+            if (wczytaj_najechany == false) {
+                g.drawImage(wczytaj.getImage(), 425, 457, 765, 552, 0, 0, 1416, 327, null);
+            } else {
+                g.drawImage(wczytaj.getImage(), 426, 461, 766, 561, 0, 330, 1416, 672, null);
 
 
+            }
+            if (wyjscie_najechany == false) {
+                g.drawImage(wyjscie.getImage(), 425, 570, 765, 670, 0, 330, 1416, 672, null);
+            } else {
+                g.drawImage(wyjscie.getImage(), 424, 568, 764, 663, 0, 0, 1416, 325, null);
+            }
+        }
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
         System.out.println("x " + e.getX() + "  y " + e.getY());
+        if(e.getX()>425 && e.getY() > 347 && e.getX() < 765 && e.getY() < 442){
+            game.zapis_boll = true;
+            try {
+
+                //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
+                //game.volume2.setValue(-25f);
+                //newgame_boll = true;
+                //repaint();
+                game.klik.loop(1);
+                //game.klik.start();
+                try {
+                    Thread.sleep(600);
+                } catch (InterruptedException en) {
+                    //e.printStackTrace();
+                }
+                game.klik.stop();
+            } catch (IllegalArgumentException exception){
+
+            }
+            repaint();
+            System.out.println("---------------Nowa gra--------------");
+        }
         if (e.getX() > 435 && e.getX() < 745 && e.getY() > 460 && e.getY() < 530) {
             game.menu = false;
             game.wizualizacja = true;
+            game.odczyt_boll = true;
             try {
                 //game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
                 //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
@@ -200,7 +256,7 @@ public class Menu extends JPanel implements MouseListener {
             } catch (IllegalArgumentException exception){
             }
             repaint();
-            System.out.println("---------------Wczytaj--------------");;
+            System.out.println("---------------Wczytaj--------------");
         }
         if (e.getX() > 438 && e.getX() < 744 && e.getY() > 570 && e.getY() < 640) {
             try {
@@ -220,25 +276,7 @@ public class Menu extends JPanel implements MouseListener {
             }
             System.exit(0);
         }
-        if(e.getX()>425 && e.getY() > 347 && e.getX() < 765 && e.getY() < 442){
-            try {
 
-                //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
-                //game.volume2.setValue(-25f);
-                //newgame_boll = true;
-                //repaint();
-                game.klik.loop(1);
-                //game.klik.start();
-                try {
-                    Thread.sleep(600);
-                } catch (InterruptedException en) {
-                    //e.printStackTrace();
-                }
-                game.klik.stop();
-            } catch (IllegalArgumentException exception){
-
-            }
-        }
 
     }
 

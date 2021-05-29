@@ -220,6 +220,7 @@ public class Watek extends Thread {
             game.window.getContentPane().getComponent(0).setVisible(false);
         if (game.wizualizacja == true && game.window.getContentPane().getComponent(0).isVisible() == false)
             game.window.getContentPane().getComponent(0).setVisible(true);
+        //if (game.odczyt_boll == false && game.window.getContentPane().getComponent(2).isVisible() == true)
     }
 
     public void run() {

@@ -5,6 +5,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.io.IOException;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class Decyzja {
@@ -32,6 +33,8 @@ public class Decyzja {
     int[] juzjest;
     int tura;
     int nr;
+    int qq16;
+    int qq21;
     public static int finanse;
     public static int obywatele;
     public static int legiony;
@@ -182,8 +185,10 @@ public class Decyzja {
         kwestia = "";
         kwe1 = "";
         kwe2 = "";
+        qq16 = 0;
+        qq21 = 0;
         kontynuacja = 0;
-        juzjest = new int[20];
+        juzjest = new int[40];
         quest = new int[50];
 
     }
@@ -264,6 +269,23 @@ public class Decyzja {
         // board.repaint();
         //nr = 47;
         //quest[15] = 1;
+        if(getQuest()[16] == 3){
+            nr = (int)Math.random()*15;
+        }
+        if(getQuest()[16] != 0 && getKontynuacja() == 0 && getQuest()[16] != 3){
+            qq16++;
+        }
+        if(getQuest()[21] != 0 && getKontynuacja() == 0 && qq16 != 15){
+            qq21++;
+        }
+        if(qq16 == 15){
+            nr = 16;
+            qq16 = 0;
+        }
+        if(qq21 == 6){
+            nr = 21;
+            qq21 = -999999;
+        }
         if (getKontynuacja() != 0) {
             nr = getKontynuacja();
             setKontynuacja(0);
@@ -498,7 +520,7 @@ public class Decyzja {
                             break;
                     }
                     break;
-                case 62:
+                //case 62:
                 case 16:
                     if (quest[16] == 0) {
                         setKwestia("Senat wpadł na pomysł modernizacji floty rzymskiej, co pozwoliłoby na próbę podboju Kartaginy w Północnej Afryce.");
@@ -535,12 +557,7 @@ public class Decyzja {
                         setQuest(3, 16);
                         lub();
                         setStats(25, 25, 25, 25);
-                        switch(dec){
-                            case 1:
-                                break;
-                            case 2:
-                                break;
-                        }
+                        setQuest(3,16);
                     }
                     break;
                 case 17:
@@ -954,12 +971,13 @@ public class Decyzja {
                     }
                     break;
                 case 45:
-                    setKwestia("Grupa mężczyzn propopuje nam swe usługi jako poławiacze pereł. W zamian za regularną pensję, będą łowić dla nas te rzadkie klejnoty");
-                    setKwe1("Uczyńmy tak.");
-                    setKwe2("To się nam nie opłaci.");
+                    setKwestia("Grupa mężczyzn propopuje nam swe usługi jako poławiacze pereł. W zamian za regularną pensję, będą łowić dla nas te rzadkie klejnoty.");
+                    setKwe1("Uczyńmy tak");
+                    setKwe2("To się nam nie opłaci");
                     lub();
                     switch (dec) {
                         case 1:
+                            setStats(-15, 0, 0, 0);
                             setKontynuacja(100045);
                             break;
                         case 2:
@@ -1472,7 +1490,7 @@ public class Decyzja {
                         setKwe2("...");
                         setTura(getTura() - 1);
                         setKontynuacja(0);
-                        setStats(20, 0, 0, 0);
+                        setStats(25, 0, 0, 0);
                         lub();
                         break;
                     }
