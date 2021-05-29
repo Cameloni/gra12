@@ -1,6 +1,9 @@
 package com.company;
 
 import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -137,7 +140,7 @@ public class Decyzja {
             }
             board.repaint();
             try {
-                Thread.sleep(400);
+                Thread.sleep(100);
             } catch (InterruptedException e) {};
 
         }
@@ -198,21 +201,40 @@ public class Decyzja {
         return p;
     }
     public void lub() throws IOException {
-        while (dec != 1 && dec != 2) {
-            String dec1 = sc.next();
-            sc.nextLine();
-            if (!dec1.equals("1") && !dec1.equals("2") /*&& !dec1.equals("3")*/) {
-                System.out.println("wybierz \"1\" lub \"2\"");
+        while (true) {
+            //String dec1 = "";
+            //System.out.print("");
+            if(Board.opcja1 == true) {
+                this.dec = 1;
+                Board.opcja1 = false;
+                break;
+                //    sc.nextLine();
+            }
+            if(Board.opcja2 == true) {
+                this.dec = 2;
+                Board.opcja2 = false;
+                break;
+                //    sc.nextLine();
+            }
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            /*if (!dec1.equals("1") && !dec1.equals("2") ) {
+                //System.out.println("wybierz \"1\" lub \"2\"");
                 continue;
             }
             dec = Integer.valueOf(dec1);
+            break;*/
+        }
             /*if(dec == 3){
                 Zapis(8, 4, getFinanse(), getLiczebnosc(), getObrona(), getJedzenie());
 
             }*/
-        }
-
     }
+
 
     public void statystyki() {
         System.out.println("Finanse:       " + pasek(finanse, 100));
@@ -236,8 +258,7 @@ public class Decyzja {
         this.dec = 0;
         int los;
         // nr=70;
-        //nr=44;
-         //nr=2;
+        //nr=2;
         game.wypisywanie = true;
         // board.repaint();
         //nr = 47;
@@ -254,7 +275,7 @@ public class Decyzja {
                     setKwe1("Nie stać nas na to.");
                     setKwe2("To dobry pomysł.");
                     lub();
-                    switch (dec) {
+                    switch (this.dec) {
                         case 1:
                            // setStats();
                             break;
@@ -269,6 +290,7 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
+
                             break;
                         case 2:
                             break;
