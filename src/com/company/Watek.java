@@ -143,7 +143,6 @@ public class Watek extends Thread {
             //FloatControl volume = (FloatControl) muz.getControl(VOLUME);
 
             //volume.setValue(-10f);
-
             muz.open(AudioSystem.getAudioInputStream(game.muzyka));
             FloatControl volume = (FloatControl) muz.getControl(FloatControl.Type.MASTER_GAIN);
             volume.setValue(-30f);
@@ -366,6 +365,7 @@ public class Watek extends Thread {
                     try {
                         try {
                             board.mousetrack2();
+                            board.mousetrack3();
 
                         } catch (IOException e) {
                             e.printStackTrace();

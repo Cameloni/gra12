@@ -39,6 +39,7 @@ public class Decyzja {
     public static int obywatele;
     public static int legiony;
     public static int religia;
+    public static int death_screen = 0;
     int dec;
     //Watek watek;
     int kontynuacja;
@@ -82,6 +83,14 @@ public class Decyzja {
         return juzjest;
     }
 
+    public void changeDeath_screen(){
+        for(int i=0; i<11; i++){
+            death_screen = i;
+            try{
+            Thread.sleep(100);
+        } catch (InterruptedException e) {};
+        }
+    }
 
     public void setStats(int fin, int leg, int oby, int rel){
         while(!(fin==0 && leg==0 && oby==0 && rel==0)) {
@@ -269,6 +278,7 @@ public class Decyzja {
         // board.repaint();
         //nr = 47;
         //quest[15] = 1;
+        finanse=0;
         if(nr == 16 && getQuest()[16] == 3){
             nr = (int)(Math.random()*15);
         }
@@ -1527,16 +1537,8 @@ public class Decyzja {
                     break;
 
 
+
                 case 100058:
-                    setKwestia("Hodowcy pozostali przy używaniu nawozu. Problem ze słonym mlekiem pozostał nierozwiązany. Chore krowy musiały zostać zabite.");
-                    setKwe1("...");
-                    setKwe2("...");
-                    setTura(getTura() - 1);
-                    setKontynuacja(0);
-                    setStats(-10, 0, 0, 0);
-                    lub();
-                    break;
-                case 200058:
                     setKwestia("Po pozbyciu się nawozu, zwierzęta wyzdrowiały. Hodowcy są wdzięczni za Twoją pomoc");
                     setKwe1("...");
                     setKwe2("...");
@@ -1545,6 +1547,16 @@ public class Decyzja {
                     setKontynuacja(0);
                     lub();
                     break;
+                case 200058:
+                    setKwestia("Hodowcy pozostali przy używaniu nawozu. Problem ze słonym mlekiem pozostał nierozwiązany. Chore krowy musiały zostać zabite.");
+                    setKwe1("...");
+                    setKwe2("...");
+                    setTura(getTura() - 1);
+                    setKontynuacja(0);
+                    setStats(-10, 0, 0, 0);
+                    lub();
+                    break;
+
 
 
                 case 100059:
@@ -1579,9 +1591,10 @@ public class Decyzja {
             setKwe1("...");
             setKwe2("...");
             lub();
+            changeDeath_screen();
         }
         else if(game.death==2){
-            setKwestia("");
+            setKwestia("Plemiona barbarzyńców, widząc bogactwo Cesarstwa, postanawiają się zjednoczyć i wspólnie najechać Rzym. Twoje państwo zostaje splądrowane, a Ty musisz udać się na wygnanie. Z rozpaczy popełniasz samobójstwo.");
             setKwe1("...");
             setKwe2("...");
             lub();

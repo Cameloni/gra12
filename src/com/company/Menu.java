@@ -277,7 +277,6 @@ public class Menu extends JPanel implements MouseListener {
             System.exit(0);
         }
 
-
     }
 
     @Override
