@@ -263,14 +263,14 @@ public class Decyzja {
         this.dec = 0;
         int los;
         // nr=70;
-        nr=15;
+        //nr=15;
         //nr = 2;
         game.wypisywanie = true;
         // board.repaint();
         //nr = 47;
         //quest[15] = 1;
-        if(getQuest()[16] == 3){
-            nr = (int)Math.random()*15;
+        if(nr == 16 && getQuest()[16] == 3){
+            nr = (int)(Math.random()*15);
         }
         if(getQuest()[16] != 0 && getKontynuacja() == 0 && getQuest()[16] != 3){
             qq16++;
