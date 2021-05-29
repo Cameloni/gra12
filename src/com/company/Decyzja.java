@@ -258,7 +258,7 @@ public class Decyzja {
         this.dec = 0;
         int los;
         // nr=70;
-        //nr=15;
+        nr=15;
         //nr = 2;
         game.wypisywanie = true;
         // board.repaint();
@@ -512,10 +512,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setKontynuacja(100017);
+
                             break;
                         case 2:
-
+                            setKontynuacja(100017);
                             break;
                     }
                     break;
@@ -1162,7 +1162,7 @@ public class Decyzja {
 
 
                 case 100015:
-                    setKwestia("Tylko miejski producent producent wina miał motyw - nieufność ludu wobec czystej wody zwiększyłoby jego zyski. Powinniśmy go przesłuchać.");
+                    setKwestia("Tylko miejski producent wina miał motyw - nieufność ludu wobec czystej wody zwiększyłoby jego zyski. Powinniśmy go przesłuchać.");
                     setKwe1("Dobrze.");
                     setKwe2("Mamy inne opcje??");
                     lub();
