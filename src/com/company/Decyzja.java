@@ -1449,7 +1449,7 @@ public class Decyzja {
 
         for (int i = 0; i < 50; i++) {
             while (nr < 0) {
-                nr = (int) (Math.random() * 70);
+                nr = (int) (Math.random() * 60);
 
                 for (int j = 0; j < 20; j++) {
                     if (getJuzjest(j) == -1) {
