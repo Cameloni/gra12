@@ -1092,6 +1092,37 @@ public class Decyzja {
                             break;
                     }
                     break;
+                case 61:
+                    if(quest[61]==0){
+
+                    }
+                    else if(quest[61]==1){
+
+                    }
+                    else if(quest[61]==2){
+
+                    }
+                    else if(quest[61]==3){
+
+                    }
+                    else if(quest[61]==4){
+
+                    }
+                    else if(quest[61]==5){
+
+                    }
+                    else if(quest[61]==6){
+
+                    }
+                    else if(quest[61]==7){
+
+                    }
+                    else if(quest[61]==8){
+
+                    }
+                    else if(quest[61]==9){
+
+                    }
 
 
                 //casy kontynuujące dany wątek od razu po poprzednim
