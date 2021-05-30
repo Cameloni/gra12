@@ -1722,7 +1722,7 @@ public class Decyzja {
             changeDeath_screen();
         }
         else if(game.death==10){
-            setKwestia("Pijąc wino, odczuwasz kręcenie w głowie. Chwilę póżniej, leżysz martwy przed tronem.");
+            setKwestia("Pijąc wino, odczuwasz kręcenie w głowie. Chwilę później, leżysz martwy przed tronem.");
             setKwe1("...");
             setKwe2("...");
             lub();

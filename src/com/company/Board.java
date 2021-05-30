@@ -321,10 +321,10 @@ public class Board extends JPanel implements MouseListener {
             g.drawImage(icons[1].getImage(),465,200,685,510, 0, 0, 700, 1075, null);
         }
         else if(cezar_blink==1){
-            g.drawImage(icons[1].getImage(),465-3,200-1,685+5,510-1, 675, 0, 1400, 1075, null);
+            g.drawImage(icons[1].getImage(),465-3,200,685+5,510, 675, 0, 1400, 1075, null);
         }
         else if(cezar_blink==2){
-            g.drawImage(icons[1].getImage(),480-16,200-2,700+4,510-3, 1340, 0, 2100, 1075, null);
+            g.drawImage(icons[1].getImage(),480-16,200-1,700+4,510-2, 1340, 0, 2100, 1075, null);
         }
 
         g.drawImage(icons[10].getImage(),217,25,750,150,null);
