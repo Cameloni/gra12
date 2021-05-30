@@ -15,6 +15,8 @@ public class Game {
     public boolean opcje_boll;
     public JFrame window;
     public boolean wypisywanie;
+    public static int aktualny_zapis = 0;
+    public boolean nowy_zapis = false;
     public int death = 0;
     public FloatControl fc;
 
@@ -38,16 +40,17 @@ public class Game {
     //public int coins;
     //int[] lines = new int[4];
     //double[] price = new double[4];
-   public static void Zapis(int x, int tura, int[] juz, int fin, int oby, int leg, int rel, int[] que, int kon, int q16, int q21, int nr) throws IOException {
+   public static void Zapis(int x, int tura, int[] juz, int fin, int leg, int oby, int rel,  int[] que, int kon, int q16, int q21, int nr) throws IOException {
        FileWriter za = new FileWriter("src/com/company/Pliki/Zapis_gry_"+ x);
+       aktualny_zapis = x;
        PrintWriter out = new PrintWriter(za);
        out.println(tura);
        for(int i = 0; i < 40; i++){
            out.println(juz[i]);
        }
        out.println(fin);
-       out.println(oby);
        out.println(leg);
+       out.println(oby);
        out.println(rel);
        for(int i = 0; i < 50; i++){
            out.println(que[i]);
@@ -67,15 +70,26 @@ public class Game {
         for(int i = 0; i < 40; i++){
             W.setJuzjest(in.nextInt(), i);
         }
-        int s1, s2, s3, s4;
+        /*int s1, s2, s3, s4;
         s1 = in.nextInt();
         s2 = in.nextInt();
         s3 = in.nextInt();
-        s4 = in.nextInt();
+        s4 = in.nextInt();*/
+        W.setFinanse(in.nextInt());
+        W.setLegiony(in.nextInt());
+        W.setObywatele(in.nextInt());
+        W.setReligia(in.nextInt());
+        for(int i = 0; i < 50; i++){
+            W.setQuest(i,in.nextInt());
+        }
+        W.setKontynuacja(in.nextInt());
+        W.qq16 = in.nextInt();
+        W.qq21 = in.nextInt();
+        W.setNr(in.nextInt());
 
-        W.setStats(s1, s2, s3,s4);
+        //W.setStats(s1, s2, s3,s4);
     }
-    Menu menu2 = new Menu(this);
+
 
     public Game() throws IOException, FontFormatException, InterruptedException, LineUnavailableException, UnsupportedAudioFileException {
         //coins = 1;
@@ -87,7 +101,8 @@ public class Game {
         naj2.open(AudioSystem.getAudioInputStream(najechanie_audio));
         naj3.open(AudioSystem.getAudioInputStream(najechanie_audio));
         Board wizualizacja = new Board(this);
-
+        Decyzja wybor = new Decyzja(-1, wizualizacja, this);
+        Menu menu2 = new Menu(this, wybor);
 
         //Decyzja wybor = new Decyzja(nr);
         //this.tekst = "ctccoś";
@@ -108,7 +123,7 @@ public class Game {
         //this.wizualizacja == false;
        // Menu.repaint();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        Decyzja wybor = new Decyzja(-1, wizualizacja, this);
+
 
         Watek watek = new Watek(this, menu2, wybor, true, false,false, wizualizacja);
         Watek watek_dec = new Watek(this, menu2, wybor, false, true,false, wizualizacja);
