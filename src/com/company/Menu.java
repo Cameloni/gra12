@@ -273,6 +273,24 @@ public class Menu extends JPanel implements MouseListener {
             if (e.getX() > 435 && e.getX() < 745 && e.getY() > 460 && e.getY() < 530) {
                 game.menu = false;
                 game.wizualizacja = true;
+                int[] jj = new int[40];
+                int[] q = new int[50];
+                for(int i = 0; i < 40; i++){
+                    jj[i] = 0;
+                }
+                for(int i = 0; i < 50; i++){
+                    q[i] = 0;
+                }
+                try {
+                    game.Zapis(2,1, jj,50,50,50,50, q,0,0,0,-1);
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                }
+                try {
+                    game.Odczyt(2, decyzja);
+                } catch (FileNotFoundException fileNotFoundException) {
+                    fileNotFoundException.printStackTrace();
+                }
                 try {
                     try {
                         game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
@@ -303,6 +321,24 @@ public class Menu extends JPanel implements MouseListener {
             if (e.getX() > 438 && e.getX() < 744 && e.getY() > 570 && e.getY() < 640) {
                 game.menu = false;
                 game.wizualizacja = true;
+                int[] jj = new int[40];
+                int[] q = new int[50];
+                for(int i = 0; i < 40; i++){
+                    jj[i] = 0;
+                }
+                for(int i = 0; i < 50; i++){
+                    q[i] = 0;
+                }
+                try {
+                    game.Zapis(2,1, jj,50,50,50,50, q,0,0,0,-1);
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                }
+                try {
+                    game.Odczyt(2, decyzja);
+                } catch (FileNotFoundException fileNotFoundException) {
+                    fileNotFoundException.printStackTrace();
+                }
                 try {
                     try {
                         game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
