@@ -1476,17 +1476,17 @@ public class Board extends JPanel implements MouseListener {
                 } else if (Decyzja.legiony == 35) {
                     g.drawImage(staty[1].getImage(), 170 + 260, 38, 322 + 230, 160, 370, 350, 540, 520, null);
                 } else if (Decyzja.legiony == 30) {
-                    g.drawImage(staty[1].getImage(), 169 + 260, 38, 322 + 230, 160, 540, 350, 710, 520, null);
+                    g.drawImage(staty[1].getImage(), 169 + 260, 38, 322 + 230, 160, 543, 350, 713, 520, null);
                 } else if (Decyzja.legiony == 25) {
-                    g.drawImage(staty[1].getImage(), 169 + 260, 38, 322 + 230, 160, 712, 350, 880, 520, null);
+                    g.drawImage(staty[1].getImage(), 169 + 260, 38, 322 + 230, 160, 715, 350, 883, 520, null);
                 } else if (Decyzja.legiony == 20) {
-                    g.drawImage(staty[1].getImage(), 169 + 241, 37, 322 + 234, 159, 0, 520, 205, 690, null);
+                    g.drawImage(staty[1].getImage(), 169 + 241, 37, 322 + 234, 159, 3, 520, 208, 690, null);
                 } else if (Decyzja.legiony == 15) {
-                    g.drawImage(staty[1].getImage(), 169 + 265, 37, 323 + 229, 159, 205, 520, 370, 690, null);
+                    g.drawImage(staty[1].getImage(), 169 + 265, 37, 323 + 229, 159, 208, 520, 373, 690, null);
                 } else if (Decyzja.legiony == 10) {
-                    g.drawImage(staty[1].getImage(), 165 + 265, 37, 323 + 229, 159, 370, 520, 540, 690, null);
+                    g.drawImage(staty[1].getImage(), 165 + 265, 37, 323 + 229, 159, 373, 520, 543, 690, null);
                 } else if (Decyzja.legiony == 5) {
-                    g.drawImage(staty[1].getImage(), 164 + 265, 37, 323 + 229, 159, 540, 520, 712, 690, null);
+                    g.drawImage(staty[1].getImage(), 164 + 265, 37, 323 + 229, 159, 543, 520, 713, 690, null);
                 } else if (Decyzja.legiony <= 0) {
                     g.drawImage(staty[1].getImage(), 166 + 267, 37, 326 + 227, 159, 716, 520, 885, 690, null);
                 }
