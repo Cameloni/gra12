@@ -19,6 +19,7 @@ public class Game {
     public boolean nowy_zapis = false;
     public int death = 0;
     public FloatControl fc;
+    public static boolean grane = true;
 
     File muzyka = new File("src/com/company/audio/gra_java_soundtrack(wav).wav");
     File najechanie_audio = new File("src/com/company/audio/przycisk_najechany_audio.wav");
