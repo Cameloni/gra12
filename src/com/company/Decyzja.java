@@ -84,6 +84,22 @@ public class Decyzja {
         return juzjest;
     }
 
+    public static void setReligia(int religia) {
+        Decyzja.religia = religia;
+    }
+
+    public static void setLegiony(int legiony) {
+        Decyzja.legiony = legiony;
+    }
+
+    public static void setObywatele(int obywatele) {
+        Decyzja.obywatele = obywatele;
+    }
+
+    public static void setFinanse(int finanse) {
+        Decyzja.finanse = finanse;
+    }
+
     public void changeDeath_screen(){
         for(int i=0; i<11; i++){
             death_screen = i;
@@ -289,11 +305,11 @@ public class Decyzja {
         if(getQuest()[21] != 0 && getKontynuacja() == 0 && qq16 != 15){
             qq21++;
         }
-        if(qq16 == 15){
+        if(qq16 == 6){
             nr = 16;
             qq16 = 0;
         }
-        if(qq21 == 6){
+        if(qq21 == 4){
             nr = 15;
             qq21 = -999999;
         }
@@ -1728,6 +1744,8 @@ public class Decyzja {
 
     public void przebieg() throws IOException {
         int nr = -1;
+        //if()
+        //int aktual_zapis = game.aktualny_zapis;
         for (int iiii = 0; iiii < juzjest.length; iiii++){
             setJuzjest(-1, iiii);
         }

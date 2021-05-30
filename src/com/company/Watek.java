@@ -242,10 +242,7 @@ public class Watek extends Thread {
         tmp3 = "... ";
         tmp4 = " . . . . ";
         addedcharacter = "";
-        try {
-            dec_run();
-        } catch (IOException e) {
-        }
+
         while (true) {
             // if(game.naj.isOpen()){
             //secc++;}
@@ -258,7 +255,10 @@ public class Watek extends Thread {
             // }} catch (ArithmeticException e){
 
             //}
-
+            try {
+                dec_run();
+            } catch (IOException e) {
+            }
             if (wglowne == true) {
 
                 mruganie();
