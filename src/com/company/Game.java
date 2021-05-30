@@ -93,7 +93,7 @@ public class Game {
 
     public Game() throws IOException, FontFormatException, InterruptedException, LineUnavailableException, UnsupportedAudioFileException {
         //coins = 1;
-        window = new JFrame("Deus consilium");
+        window = new JFrame("Deus Consilium");
         window.setIconImage(new ImageIcon("src/com/company/PNG/background/45.png").getImage());
 
         per.open(AudioSystem.getAudioInputStream(pergamin_audio));

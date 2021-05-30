@@ -1007,8 +1007,9 @@ public class Board extends JPanel implements MouseListener {
     //public JLabel tekst = new JLabel();
     public JTextArea jTextArea = new JTextArea();
     public JTextArea[] JJ = new JTextArea[2];
+    public JTextArea licznik = new JTextArea();
     //public JLabel[] counts = new JLabel[4];
-    ImageIcon[] icons = new ImageIcon[28];
+    ImageIcon[] icons = new ImageIcon[40];
     ImageIcon[] staty = new ImageIcon[4];
     ImageIcon kwadrat;
     ImageIcon zapis1_icon;
@@ -1017,6 +1018,7 @@ public class Board extends JPanel implements MouseListener {
     ImageIcon wroc;
     ImageIcon nazwa;
     ImageIcon nazwa2;
+    ImageIcon wczytaj;
     public int cezar_blink = 0;
 
     //Color[] cols = {Color.green, Color.yellow, Color.orange, Color.red};
@@ -1119,16 +1121,19 @@ public class Board extends JPanel implements MouseListener {
         icons[25] = new ImageIcon("src/com/company/death_screen/death_screen (1).png");
         icons[26] = new ImageIcon("src/com/company/buttons/again_button.png");
         icons[27] = new ImageIcon("src/com/company/buttons/menu_button.png");
+        icons[28] = new ImageIcon("src/com/company/buttons/roman_button (4).png");
         ImageIcon kwadrat = new ImageIcon("src/com/company/pixelpictures/tlo_opcji.png");
         ImageIcon zapis1_icon = new ImageIcon("src/com/company/buttons/roman_button (5).png");
         ImageIcon zapis2_icon = new ImageIcon("src/com/company/buttons/roman_button (6).png");
         ImageIcon zapis3_icon = new ImageIcon("src/com/company/buttons/roman_button (7).png");
+        ImageIcon wczytaj = new ImageIcon("src/com/company/buttons/roman_button (2).png");
         ImageIcon wroc = new ImageIcon("src/com/company/buttons/return_button.png");
         ImageIcon DC = new ImageIcon("src/com/company/pixelpictures/tytuł.dc.png");
         ImageIcon DC2 = new ImageIcon("src/com/company/pixelpictures/pixil-frame-0 (20).png");
 
         this.kwadrat = kwadrat;
         this.wroc = wroc;
+        this.wczytaj = wczytaj;
         this.zapis1_icon = zapis1_icon;
         this.zapis2_icon = zapis2_icon;
         this.zapis3_icon = zapis3_icon;
@@ -1521,21 +1526,30 @@ public class Board extends JPanel implements MouseListener {
                 g.drawImage(nazwa2.getImage(), 350, 20, 500, 300, null);
             }
             if (nowa_gra_najechany == true) {
-                g.drawImage(zapis1_icon.getImage(), 425-8, 347, 765-8, 442, 0, 0, 1416, 329, null);
+                g.drawImage(icons[28].getImage(), 425-8, 347, 765-8, 442, 0, 0, 1416, 329, null);
             } else {
-                g.drawImage(zapis1_icon.getImage(), 427-10, 345+8, 767-10, 442+8, 0, 336, 1416, 672, null);
+                g.drawImage(icons[28].getImage(), 427-10, 345+8, 767-10, 442+8, 0, 336, 1416, 672, null);
             }
             if (wczytaj_najechany == false) {
-                g.drawImage(zapis2_icon.getImage(), 425, 457, 765, 552, 0, 0, 1416, 327, null);
+                //g.drawImage(icons[28].getImage(), 425, 457, 765, 552, 0, 0, 1416, 327, null);
+                g.drawImage(wczytaj.getImage(), 425, 457, 765, 552, 0, 0, 1416, 327, null);
+                //g.drawImage(zapis2_icon.getImage(), 425, 457, 765, 552, 0, 0, 1416, 327, null);
             } else {
-                g.drawImage(zapis2_icon.getImage(), 426, 461+1, 766, 561+1, 0, 330, 1416, 672, null);
+                g.drawImage(wczytaj.getImage(), 426, 461, 766, 561, 0, 330, 1416, 672, null);
+                //g.drawImage(icons[28].getImage(), 426, 461+1, 766, 561+1, 0, 330, 1416, 672, null);
+                //g.drawImage(zapis2_icon.getImage(), 426, 461+1, 766, 561+1, 0, 330, 1416, 672, null);
 
 
             }
-            if (wyjscie_najechany == true) {
+            /*if (wyjscie_najechany == true) {
                 g.drawImage(zapis3_icon.getImage(), 425-3, 570+2, 765-3, 670+2, 0, 330, 1416, 672, null);
             } else {
                 g.drawImage(zapis3_icon.getImage(), 424, 568, 764, 663, 0, 0, 1416, 325, null);
+            }*/
+            if (menu_najechany == false) {
+                g.drawImage(icons[27].getImage(), 337, 600, 867, 750, 0, 0, 1400, 350, null);
+            } else {
+                g.drawImage(icons[27].getImage(), 337, 631, 867, 769, 0, 350, 1400, 670, null);
             }
             g.drawImage(wroc.getImage(),500,450,158*5,92*6,null);
         }
@@ -1869,6 +1883,18 @@ public class Board extends JPanel implements MouseListener {
                 }
             }
             if(ustawienia_boll == true){
+                int x, y;
+                x = game.window.getMousePosition().x;
+                y = game.window.getMousePosition().y;
+                if(x > 410 && x < 810 && y > 667 && y < 754){
+                    game.zapis_boll = false;
+                    game.odczyt_boll = false;
+                    game.wizualizacja = false;
+                    game.menu = true;
+                    ustawienia_boll = false;
+                    Decyzja.death_screen = 0;
+                }
+
                 if (e.getX() > 812 && e.getX() < 950 && e.getY() > 692 && e.getY() < 747) {
                     //game.menu = true;
                     ustawienia_boll = false;
@@ -1914,6 +1940,7 @@ public class Board extends JPanel implements MouseListener {
                 game.zapis_boll = false;
                 game.odczyt_boll = false;
                 game.wizualizacja = false;
+                ustawienia_boll = false;
                 game.menu = true;
                 Decyzja.death_screen = 0;
             }
