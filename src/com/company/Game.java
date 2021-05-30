@@ -38,11 +38,11 @@ public class Game {
     //public int coins;
     //int[] lines = new int[4];
     //double[] price = new double[4];
-   public static void Zapis(int tura, int[] juz, int fin, int oby, int leg, int rel, int[] que) throws IOException {
-       FileWriter za = new FileWriter("src/com/company/Pliki/Zapis_gry_1");
+   public static void Zapis(int x, int tura, int[] juz, int fin, int oby, int leg, int rel, int[] que, int kon, int q16, int q21, int nr) throws IOException {
+       FileWriter za = new FileWriter("src/com/company/Pliki/Zapis_gry_"+ x);
        PrintWriter out = new PrintWriter(za);
        out.println(tura);
-       for(int i = 0; i < 20; i++){
+       for(int i = 0; i < 40; i++){
            out.println(juz[i]);
        }
        out.println(fin);
@@ -52,15 +52,19 @@ public class Game {
        for(int i = 0; i < 50; i++){
            out.println(que[i]);
        }
+       out.println(kon);
+       out.println(q16);
+       out.println(q21);
+       out.println(nr);
        out.close();
    }
 
-    public static void Odczyt(Decyzja W) throws FileNotFoundException {
-        File plik = new File("src/com/company/Pliki/Zapis_gry_1");
+    public static void Odczyt(int x, Decyzja W) throws FileNotFoundException {
+        File plik = new File("src/com/company/Pliki/Zapis_gry_" + x);
         Scanner in = new Scanner(plik);
         W.setTura(in.nextInt());
         in.nextLine();
-        for(int i = 0; i < 20; i++){
+        for(int i = 0; i < 40; i++){
             W.setJuzjest(in.nextInt(), i);
         }
         int s1, s2, s3, s4;
@@ -68,6 +72,7 @@ public class Game {
         s2 = in.nextInt();
         s3 = in.nextInt();
         s4 = in.nextInt();
+
         W.setStats(s1, s2, s3,s4);
     }
     Menu menu2 = new Menu(this);
@@ -76,7 +81,7 @@ public class Game {
         //coins = 1;
         window = new JFrame("Deus consilium");
         window.setIconImage(new ImageIcon("src/com/company/PNG/background/45.png").getImage());
-        klik.open(AudioSystem.getAudioInputStream(klikniecie_audio));
+
         per.open(AudioSystem.getAudioInputStream(pergamin_audio));
         naj.open(AudioSystem.getAudioInputStream(najechanie_audio));
         naj2.open(AudioSystem.getAudioInputStream(najechanie_audio));
