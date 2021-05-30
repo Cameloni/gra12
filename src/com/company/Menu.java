@@ -222,6 +222,7 @@ public class Menu extends JPanel implements MouseListener {
         if (game.zapis_boll == true) {
             if (e.getX() > 425 && e.getY() > 347 && e.getX() < 765 && e.getY() < 442) {
                 game.menu = false;
+                game.grane = true;
                 game.wizualizacja = true;
                 int[] jj = new int[40];
                 int[] q = new int[50];
@@ -274,6 +275,7 @@ public class Menu extends JPanel implements MouseListener {
             if (e.getX() > 435 && e.getX() < 745 && e.getY() > 460 && e.getY() < 530) {
                 game.menu = false;
                 game.wizualizacja = true;
+                game.grane = true;
                 int[] jj = new int[40];
                 int[] q = new int[50];
                 for(int i = 0; i < 40; i++){
@@ -289,6 +291,7 @@ public class Menu extends JPanel implements MouseListener {
                 }
                 game.death = 0;
                 decyzja.death_screen = 0;
+                decyzja.setNr((int)(Math.random()*61));
                 try {
                     game.Odczyt(2, decyzja);
                 } catch (FileNotFoundException fileNotFoundException) {
@@ -403,6 +406,7 @@ public class Menu extends JPanel implements MouseListener {
             if (e.getX() > 425 && e.getY() > 347 && e.getX() < 765 && e.getY() < 442) {
                 game.menu = false;
                 game.wizualizacja = true;
+                game.grane = true;
                 try {
                     game.Odczyt(1, decyzja);
                 } catch (FileNotFoundException fileNotFoundException) {
@@ -440,6 +444,7 @@ public class Menu extends JPanel implements MouseListener {
             if (e.getX() > 435 && e.getX() < 745 && e.getY() > 460 && e.getY() < 530) {
                 game.menu = false;
                 game.wizualizacja = true;
+                game.grane = true;
                 try {
                     game.Odczyt(2, decyzja);
                 } catch (FileNotFoundException fileNotFoundException) {
@@ -480,6 +485,7 @@ public class Menu extends JPanel implements MouseListener {
                 }
                 game.menu = false;
                 game.wizualizacja = true;
+                game.grane = true;
                 try {
                     try {
                         game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));

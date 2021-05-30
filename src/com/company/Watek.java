@@ -96,7 +96,7 @@ public class Watek extends Thread {
                 tmp4 = decyzja.getKwestia();
                 if (i < character.length) {
                     //if (!addedcharacter.equals(tmp3)) {
-                    if (game.wypisywanie == true) {
+                    if (game.wypisywanie == true && game.grane == true) {
                         board.mozna = false;
                         FloatControl volume = (FloatControl) game.per.getControl(FloatControl.Type.MASTER_GAIN);
                         volume.setValue(-20f);
