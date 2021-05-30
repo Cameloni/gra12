@@ -1665,8 +1665,9 @@ public class Decyzja {
             setKwe1("...");
             setKwe2("...");
             game.death = 0;
+            game.grane = false;
             lub();
-            Board.death2 = true;
+
             changeDeath_screen();
         }
         else if(game.death==2){
@@ -1675,8 +1676,9 @@ public class Decyzja {
             setKwe1("...");
             setKwe2("...");
             game.death = 0;
+            game.grane = false;
             lub();
-            Board.death2 = true;
+
             changeDeath_screen();
         }
         else if(game.death==3){
@@ -1685,8 +1687,9 @@ public class Decyzja {
             setKwe1("...");
             setKwe2("...");
             game.death = 0;
+            game.grane = false;
             lub();
-            Board.death2 = true;
+
             changeDeath_screen();
         }
         else if(game.death==4){
@@ -1695,8 +1698,9 @@ public class Decyzja {
             setKwe1("...");
             setKwe2("...");
             game.death = 0;
+            game.grane = false;
             lub();
-            Board.death2 = true;
+
             changeDeath_screen();
         }
         else if(game.death==5){
@@ -1705,8 +1709,9 @@ public class Decyzja {
             setKwe1("...");
             setKwe2("...");
             game.death = 0;
+            game.grane = false;
             lub();
-            Board.death2 = true;
+
             changeDeath_screen();
         }
         else if(game.death==6){
@@ -1715,8 +1720,8 @@ public class Decyzja {
             setKwe1("...");
             setKwe2("...");
             game.death = 0;
+            game.grane = false;
             lub();
-            Board.death2 = true;
             changeDeath_screen();
         }
         else if(game.death==7){
@@ -1725,8 +1730,9 @@ public class Decyzja {
             setKwe1("...");
             setKwe2("...");
             game.death = 0;
+            game.grane = false;
             lub();
-            Board.death2 = true;
+
             changeDeath_screen();
         }
         else if(game.death==8){
@@ -1735,8 +1741,9 @@ public class Decyzja {
             setKwe1("...");
             setKwe2("...");
             game.death = 0;
+            game.grane = false;
             lub();
-            Board.death2 = true;
+
             changeDeath_screen();
         }
         else if(game.death==9){
@@ -1745,8 +1752,8 @@ public class Decyzja {
             setKwe1("...");
             setKwe2("...");
             game.death = 0;
+            game.grane = false;
             lub();
-            Board.death2 = true;
             changeDeath_screen();
         }
         else if(game.death==10){
@@ -1755,8 +1762,9 @@ public class Decyzja {
             setKwe1("...");
             setKwe2("...");
             game.death = 0;
+            game.grane = false;
             lub();
-            Board.death2 = true;
+
             changeDeath_screen();
         }
         else if(game.death==11){
@@ -1765,8 +1773,9 @@ public class Decyzja {
             setKwe1("...");
             setKwe2("...");
             game.death = 0;
+            game.grane = false;
             lub();
-            Board.death2 = true;
+
             changeDeath_screen();
         }
     }

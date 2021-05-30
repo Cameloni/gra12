@@ -327,6 +327,7 @@ public class Menu extends JPanel implements MouseListener {
             if (e.getX() > 438 && e.getX() < 744 && e.getY() > 570 && e.getY() < 640) {
                 game.menu = false;
                 game.wizualizacja = true;
+                game.grane = true;
                 int[] jj = new int[40];
                 int[] q = new int[50];
                 for(int i = 0; i < 40; i++){
