@@ -1355,7 +1355,7 @@ public class Board extends JPanel implements MouseListener {
             }
 
 
-//Decyzja.legiony = 0;
+//Decyzja.legiony = 30;
             if (Decyzja.legiony >= 100) {
                 g.drawImage(staty[1].getImage(), 180 + 230, 32, 321 + 231, 162, 0, 0, 200, 180, null);
             } else if (Decyzja.legiony == 95) {
@@ -1385,7 +1385,7 @@ public class Board extends JPanel implements MouseListener {
             } else if (Decyzja.legiony == 35) {
                 g.drawImage(staty[1].getImage(), 170 + 260, 38, 322 + 230, 160, 370, 350, 540, 520, null);
             } else if (Decyzja.legiony == 30) {
-                g.drawImage(staty[1].getImage(), 169 + 260, 38, 322 + 230, 160, 540, 350, 710, 520, null);
+                g.drawImage(staty[1].getImage(), 169 + 260, 38, 322 + 230, 160, 543, 350, 713, 520, null);
             } else if (Decyzja.legiony == 25) {
                 g.drawImage(staty[1].getImage(), 169 + 260, 38, 322 + 230, 160, 712, 350, 880, 520, null);
             } else if (Decyzja.legiony == 20) {
