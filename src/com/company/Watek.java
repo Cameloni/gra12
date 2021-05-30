@@ -72,7 +72,17 @@ public class Watek extends Thread {
         if (wglowne == true) {
             if (game.wizualizacja == true) {
                 JPanel a = (JPanel) game.window.getContentPane().getComponent(0);
-
+                if(board.ustawienia_boll == true){
+                    ((Board) game.window.getContentPane().getComponent(0)).jTextArea.setVisible(false);
+                    ((Board) game.window.getContentPane().getComponent(0)).jlicznik.setVisible(false);
+                    ((Board) game.window.getContentPane().getComponent(0)).JJ[0].setVisible(false);
+                    ((Board) game.window.getContentPane().getComponent(0)).JJ[1].setVisible(false);
+                } else {
+                    ((Board) game.window.getContentPane().getComponent(0)).jTextArea.setVisible(true);
+                    ((Board) game.window.getContentPane().getComponent(0)).jlicznik.setVisible(true);
+                    ((Board) game.window.getContentPane().getComponent(0)).JJ[0].setVisible(true);
+                    ((Board) game.window.getContentPane().getComponent(0)).JJ[1].setVisible(true);
+                }
                 this.character = "".toCharArray();
 
                 String tmp1;
@@ -106,6 +116,7 @@ public class Watek extends Thread {
                         ((JTextArea) a.getComponent(0)).setText(addedcharacter);
                         ((Board) game.window.getContentPane().getComponent(0)).JJ[0].setText(tmp1);
                         ((Board) game.window.getContentPane().getComponent(0)).JJ[1].setText(tmp1);
+                        ((Board) game.window.getContentPane().getComponent(0)).jlicznik.setText(String.valueOf("Tura : " + decyzja.getTura()));
                         //wypisznapergaminie2(addedcharacter);
                         i++;
                         //}
@@ -122,6 +133,7 @@ public class Watek extends Thread {
                     tmp2 = decyzja.getKwe2();
                     ((Board) game.window.getContentPane().getComponent(0)).JJ[0].setText(tmp1);
                     ((Board) game.window.getContentPane().getComponent(0)).JJ[1].setText(tmp2);
+                    ((Board) game.window.getContentPane().getComponent(0)).jlicznik.setText("Tura : " + String.valueOf(decyzja.getTura()));
                     ii = 1;
                     i = 0;
                 }
