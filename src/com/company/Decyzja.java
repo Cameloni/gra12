@@ -324,7 +324,7 @@ public class Decyzja {
             switch (nr) {
 
                 case 0:
-                    setKwestia("Legioniści wracają do miasta z wygranej wojny. Czy zorganizować z tej okazji ucztę?");
+                    setKwestia("Legioniści wracają do miasta z wygranej wojny. Powinniśmy wyprawić ucztę na ich cześć.");
                     setKwe1("Nie stać nas na to.");
                     setKwe2("To dobry pomysł.");
                     lub();
