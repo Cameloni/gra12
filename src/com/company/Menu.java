@@ -370,7 +370,7 @@ public class Menu extends JPanel implements MouseListener {
                 }
                 game.klik.close();
                 repaint();
-                System.out.println("---------------Nowa gra1--------------");
+                System.out.println("---------------Nowa gra--------------");
             }
             if (e.getX() > 435 && e.getX() < 745 && e.getY() > 460 && e.getY() < 530) {
                 game.menu = false;
@@ -400,11 +400,10 @@ public class Menu extends JPanel implements MouseListener {
                 }
                 game.klik.close();
                 repaint();
-                System.out.println("---------------Nowa Gra2--------------");
+                System.out.println("---------------Nowa Gra--------------");
             }
             if (e.getX() > 438 && e.getX() < 744 && e.getY() > 570 && e.getY() < 640) {
                 game.menu = false;
-                //game.Zapis(3,0,);
                 game.wizualizacja = true;
                 try {
                     try {
