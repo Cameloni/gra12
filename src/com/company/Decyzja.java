@@ -324,7 +324,7 @@ public class Decyzja {
             switch (nr) {
 
                 case 0:
-                    setKwestia("Legioniści wracają do miasta z wygranej wojny. Czy zorganizować z tej okazji ucztę?");
+                    setKwestia("Legioniści wracają do miasta z wygranej wojny. Powinniśmy wyprawić ucztę na ich cześć.");
                     setKwe1("Nie stać nas na to.");
                     setKwe2("To dobry pomysł.");
                     lub();
@@ -528,7 +528,7 @@ public class Decyzja {
                     setKwe2("Mamy już ich wystarczająco");
                     switch (dec) {
                         case 1:
-                            setStats(-30, 0, 20, 10);
+                            setStats(-30, 5, 20, 5);
                             break;
                         case 2:
                             setStats(15, 0, -15-difficulty, 0);
@@ -739,7 +739,7 @@ public class Decyzja {
                 case 26:
                     setKwestia("Kończą nam się zapasy liści laurowych. Cesarski wizerunek może na tym ucierpieć.");
                     setKwe1("Zakupcie nowe jak najprędzej!");
-                    setKwe2("Obejdę się bez liści");
+                    setKwe2("Obejdę się bez liści.");
 
                     lub();
                     switch (dec) {
@@ -753,8 +753,8 @@ public class Decyzja {
                     break;
                 case 27:
                     setKwestia("Senat wpadł na pomysł zorganizowania specjalnych szkoleń taktyki bitewnej dla centurionów.");
-                    setKwe1("Macie moją zgodę");
-                    setKwe2("Nie ma mowy");
+                    setKwe1("Macie moją zgodę.");
+                    setKwe2("Nie ma mowy.");
                     lub();
                     switch (dec) {
                         case 1:
@@ -906,8 +906,8 @@ public class Decyzja {
                     break;
                 case 38:
                     setKwestia("Astrologowie proszą o pozwolenie na złożenie w ofierze Jowiszowi dziesięciu baranków.");
-                    setKwe1("Niech tak zrobią");
-                    setKwe2("To nie jest konieczne");
+                    setKwe1("Niech tak zrobią.");
+                    setKwe2("To nie jest konieczne.");
                     lub();
                     switch (dec) {
                         case 1:
@@ -947,9 +947,9 @@ public class Decyzja {
                     }
                     break;
                 case 41:
-                    setKwestia("Jeden z doradców sugeruje zwiększenie racji żywnościowych gladiatorom, dzięki czemu walczyliby bardziej zacięcie");
-                    setKwe1("Dobrze");
-                    setKwe2("Nie zgadzam się");
+                    setKwestia("Jeden z doradców sugeruje zwiększenie racji żywnościowych gladiatorom, dzięki czemu walczyliby bardziej zacięcie.");
+                    setKwe1("Dobrze.");
+                    setKwe2("Nie zgadzam się.");
                     lub();
                     switch (dec) {
                         case 1:
@@ -1004,8 +1004,8 @@ public class Decyzja {
                     break;
                 case 45:
                     setKwestia("Grupa mężczyzn propopuje nam swe usługi jako poławiacze pereł. W zamian za regularną pensję, będą łowić dla nas te rzadkie klejnoty.");
-                    setKwe1("Uczyńmy tak");
-                    setKwe2("To się nam nie opłaci");
+                    setKwe1("Uczyńmy tak.");
+                    setKwe2("To się nam nie opłaci.");
                     lub();
                     switch (dec) {
                         case 1:
@@ -1013,14 +1013,13 @@ public class Decyzja {
                             setKontynuacja(100045);
                             break;
                         case 2:
-                            setStats(10, 0, 0,0);
                             break;
                     }
                     break;
                 case 46:
                     setKwestia("Jeden z legionistów wdał się w sprzeczkę z kapłanem i śmiertelnie go zranił. Kolegium, do którego przynależył denat domaga się sprawiedliwości.");
-                    setKwe1("Ukarzcie legionistę");
-                    setKwe2("To był wypadek");
+                    setKwe1("Ukarzcie legionistę.");
+                    setKwe2("To był wypadek.");
                     lub();
                     switch (dec) {
                         case 1:
@@ -1061,8 +1060,8 @@ public class Decyzja {
                     break;
                 case 49:
                     setKwestia("Mamy nadwyżki w mięsie i winie. Co powinniśmy z nimi zrobić?");
-                    setKwe1("Dajcie je kapłanom");
-                    setKwe2("Dajcie je wojsku");
+                    setKwe1("Dajcie je kapłanom.");
+                    setKwe2("Dajcie je wojsku.");
                     lub();
                     switch (dec) {
                         case 1:
