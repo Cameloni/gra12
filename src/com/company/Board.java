@@ -26,6 +26,7 @@ public class Board extends JPanel implements MouseListener {
     boolean wczytaj_najechany = false;
     boolean nowa_gra_najechany = false;
     boolean wyjscie_najechany = false;
+    public static boolean death2;
 
     boolean dc = false;
     boolean newgame_flipper = false, wczytaj_flipper = false, exitflipper = false;
