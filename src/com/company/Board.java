@@ -196,7 +196,7 @@ public class Board extends JPanel implements MouseListener {
         icons[3] = new ImageIcon("src/com/company/pixelpictures/sługa2.png");
         //icons[4] = new ImageIcon("src/com/company/pixelpictures/tło.png");
         icons[4] = new ImageIcon("src/com/company/pixelpictures/scroll.png");
-        icons[5] = new ImageIcon("src/com/company/buttons/ustawienia_button.png");
+        icons[5] = new ImageIcon("src/com/company/buttons/ustawienia_button1.png");
         icons[6] = new ImageIcon("src/com/company/buttons/decision_button.png");
         icons[7] = new ImageIcon("src/com/company/buttons/decision_button.png");
         icons[8] = new ImageIcon("src/com/company/buttons/decision_button_null.png");
@@ -327,7 +327,7 @@ public class Board extends JPanel implements MouseListener {
        // g.drawImage(icons[2].getImage(), 30, 270, 350, 300, null);
        // g.drawImage(icons[3].getImage(),1200, 250, -280, 300, null);
         g.drawImage(icons[4].getImage(), 25, 130, 1150, 920, null);
-        g.drawImage(icons[5].getImage(), 1120, 20, 50, 50, null);
+        g.drawImage(icons[5].getImage(), 1120, 20, 60, 60, null);
         g.drawImage(icons[11].getImage(), 618, -40, 630, 630, null);
         g.drawImage(icons[12].getImage(), 424, -40, 630, 630, null);
         g.drawImage(icons[13].getImage(), 228, -40, 630, 630, null);

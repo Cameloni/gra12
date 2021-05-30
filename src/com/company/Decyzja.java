@@ -126,7 +126,7 @@ public class Decyzja {
                 oby -= 5;
                 obywatele += 5;
                 if(obywatele >= 100){
-                    game.death = 6;
+                    obywatele = 100;
                 }
             }
             if(oby<0){
@@ -293,7 +293,7 @@ public class Decyzja {
             qq16 = 0;
         }
         if(qq21 == 6){
-            nr = 21;
+            nr = 15;
             qq21 = -999999;
         }
         if (getKontynuacja() != 0) {
@@ -313,7 +313,7 @@ public class Decyzja {
                             setStats(15, -20, 0, 0);
                             break;
                         case 2:
-                            setStats(-20, 15, 0, 0);
+                            setStats(-20, 15, 5, 0);
                             break;
                     }
                     break;
@@ -324,10 +324,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(15, 0, 0, -20);
+                            setStats(5, 0, 15, -20);
                             break;
                         case 2:
-                            setStats(-20, 0, 0, 15);
+                            setStats(-5, 0, -15, 15);
                             break;
                     }
                     break;
@@ -339,10 +339,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(15, -20, 0, 0);
+                            setStats(20, -25, 0, 0);
                             break;
                         case 2:
-                            setStats(-20, 15, 0 ,0);
+                            setStats(-20, 20, 0 ,0);
                             if ((int) (Math.random() * 10) >= 3) {
                                 setKontynuacja(100002);
                             }
@@ -351,8 +351,8 @@ public class Decyzja {
                     break;
                 case 3:
                     setKwestia("Dwaj niewolnicy pokłócili się, w wyniku czego jeden dotkliwie pobił drugiego. Właścicel ofiary domaga się odszkodowania.");
-                    setKwe1("Zapłaćcie poszkodowanemu.");
-                    setKwe2("To jego problem.");
+                    setKwe1("Zapłaćcie poszkodowanemu");
+                    setKwe2("To jego problem");
                     lub();
                     switch (dec) {
                         case 1:
@@ -383,10 +383,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, -20, 0, 15);
+                            setStats(0, -20, -5, 20);
                             break;
                         case 2:
-                            setStats(0, 0, 15, -20);
+                            setStats(0, 5, 10, -20);
                             break;
                     }
                     break;
@@ -400,7 +400,7 @@ public class Decyzja {
                             game.death = 9;
                             break;
                         case 2:
-                            setStats(0, 0, -15, 0);
+                            setStats(0, 0, -10, 0);
                             break;
                     }
                     break;
@@ -411,24 +411,24 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 15, -20, 0);
+                            setStats(-10, 15, -10, 0);
                             break;
                         case 2:
-                            setStats(10, -20, 10, 0 );
+                            setStats(20, -20, 0, 0 );
                             break;
                     }
                     break;
                 case 8:
-                    setKwestia("Zbliżają się Wulkanalia - święto boga Wulkana. Tradycja nakazuje każdemu mieszkańcowi miasta rzucić w ogień ofiarę z ryby");
-                    setKwe1("Niech tak będzie.");
+                    setKwestia("Zbliżają się Wulkanalia - święto boga Wulkana. Tradycja nakazuje każdemu mieszkańcowi miasta rzucić w ogień ofiarę z ryby.");
+                    setKwe1("Niech tak będzie");
                     setKwe2("To marnowanie jedzenia!");
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-20, 0, 0, 15);
+                            setStats(-15, 0, -5, 15);
                             break;
                         case 2:
-                            setStats(15, 0, 0, -20);
+                            setStats(10, 0, 5, -20);
                             break;
                     }
                     break;
@@ -508,10 +508,10 @@ public class Decyzja {
                     setKwe2("Mamy już ich wystarczająco");
                     switch (dec) {
                         case 1:
-                            setStats(-30, 10, 10, 10);
+                            setStats(-30, 10, 20, 5);
                             break;
                         case 2:
-                            setStats(15, -5, -10, 0);
+                            setStats(15, -5, -15, 0);
                             break;
                     }
                     break;
@@ -541,7 +541,7 @@ public class Decyzja {
                             case 1:
                                 break;
                             case 2:
-                                setStats(-30, 0, 0, 0);
+                                setStats(-30, 15, 0, 0);
                                 setQuest(1, 16);
                                 break;
                         }
@@ -552,7 +552,7 @@ public class Decyzja {
                         lub();
                         switch (dec) {
                             case 1:
-                                setStats(-15, -15, 0, 0);
+                                setStats(-10, -10, 0, 0);
                                 setQuest(2, 16);
                                 break;
                             case 2:
@@ -567,7 +567,7 @@ public class Decyzja {
                         setQuest(3, 16);
                         lub();
                         setStats(25, 25, 25, 25);
-                        setQuest(3,16);
+                        //setQuest(3,16);
                     }
                     break;
                 case 17:
@@ -578,10 +578,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 0, -15, 0);
+                            setStats(5, 0, -15, 0);
                             break;
                         case 2:
-                            setStats(-15, 0, 10, 0);
+                            setStats(-10, 0, 10, 0);
                             setKontynuacja(200017);
                             break;
                     }
@@ -596,7 +596,7 @@ public class Decyzja {
                             setStats(-20, 0, 15, 0);
                             break;
                         case 2:
-                            setStats(0, 0, -20, 15);
+                            setStats(0, 0, -20, 20);
                             break;
                     }
                     break;
@@ -607,7 +607,7 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 0, 0, -15);
+                            setStats(0, 5, 0, -15);
                             break;
                         case 2:
                             setKontynuacja(200019);
@@ -630,7 +630,7 @@ public class Decyzja {
                     break;
                 case 21:
                     if (quest[21] == 0) {
-                        setKwestia("Senat zaleca odnowienie dróg prowadzących do miasta");
+                        setKwestia("Senat zaleca odnowienie dróg prowadzących do miasta.");
                         setKwe1("Odnówmy je");
                         setKwe2("Nie jest to konieczne");
                         lub();
@@ -651,7 +651,7 @@ public class Decyzja {
                         lub();
                         switch (dec) {
                             case 1:
-                                setStats(-30, 0, 15, 10);
+                                setStats(-25, 0, 15, 10);
                                 break;
                             case 2:
                                 setStats(20, 0, -15 ,-10);
@@ -675,15 +675,17 @@ public class Decyzja {
                     break;
                 case 23:
                     setKwestia("Specjaliści donoszą, że główny szyb w jednej z kopalni miedzi może w każdej chwili ulec zawaleniu.");
-                    setKwe1("To mało prawdopodobne.");
-                    setKwe2("Ewakuujcie górników.");
+                    setKwe1("To mało prawdopodobne");
+                    setKwe2("Ewakuujcie górników");
                     //dwie opcje do wyboru
                     lub();
                     switch (dec) {
                         case 1:
+                            setStats(15,10,-30,0);
                             setKontynuacja(100023);
                             break;
                         case 2:
+                            setStats(-10,-10,20,0);
                             setKontynuacja(200023);
                             break;
                     }
@@ -695,10 +697,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 15, -20, 0);
+                            setStats(0, 20, -20, 0);
                             break;
                         case 2:
-                            setStats(0, -20, 15, 0);
+                            setStats(0, -20, 20, 0);
                             break;
                     }
                     break;
@@ -719,22 +721,22 @@ public class Decyzja {
                 case 26:
                     setKwestia("Kończą nam się zapasy liści laurowych.");
                     setKwe1("Zakupcie nowe jak najprędzej!");
-                    setKwe2("Obejdę się bez liści.");
+                    setKwe2("Obejdę się bez liści");
 
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-15, 0, 10, 0);
+                            setStats(-15, 0, 5, 0);
                             break;
                         case 2:
-                            setStats(10, 0, -15, 0);
+                            setStats(10, 0, -10, 0);
                             break;
                     }
                     break;
                 case 27:
                     setKwestia("Senat wpadł na pomysł zorganizowania specjalnych szkoleń taktyki bitewnej dla centurionów.");
-                    setKwe1("Macie moją zgodę.");
-                    setKwe2("Nie ma mowy.");
+                    setKwe1("Macie moją zgodę");
+                    setKwe2("Nie ma mowy");
                     lub();
                     switch (dec) {
                         case 1:
@@ -747,8 +749,8 @@ public class Decyzja {
                     break;
                 case 28:
                     setKwestia("Naczelny generał skarży się, że racje żywnościowe dla legionistów są zbyt małe. Uważa, że powinniśmy przekazywać wojsku część jedzenia przeznaczonego dla obywateli.");
-                    setKwe1("Zgadzam się z nim.");
-                    setKwe2("Legioniści mają walczyć, nie jeść.");
+                    setKwe1("Zgadzam się z nim");
+                    setKwe2("Legioniści mają walczyć, nie jeść");
                     lub();
                     switch (dec) {
                         case 1:
@@ -1250,10 +1252,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(10, -15, 0, 0);
+                            setStats(5, -15, 0, 0);
                             break;
                         case 2:
-                            setStats(-los*5-5, los*5, 0, 0 );
+                            setStats(-los*5, los*5-5, 0, 0 );
                             break;
                     }
                     break;
@@ -1274,12 +1276,13 @@ public class Decyzja {
 
                 case 100015:
                     setKwestia("Tylko miejski producent wina miał motyw - nieufność ludu wobec czystej wody zwiększyłoby jego zyski. Powinniśmy go przesłuchać.");
-                    setKwe1("Dobrze.");
+                    setKwe1("Dobrze");
                     setKwe2("Mamy inne opcje??");
                     lub();
                     switch (dec) {
                         case 1:
                             setKontynuacja(110015);
+                            setStats(0,0,-5,0);
                             setTura(getTura() - 1);
                             break;
                         case 2:
@@ -1310,7 +1313,7 @@ public class Decyzja {
                     setKwe1("...");
                     setKwe2("...");
                     setTura(getTura() - 1);
-                    setStats(0, 20, 20, 20);
+                    setStats(-30, 20, 20, 20);
                     setKontynuacja(0);
                     lub();
                     break;
@@ -1322,10 +1325,10 @@ public class Decyzja {
                     setKwe2("...");
                     if (los == 0) {
                         setKwestia("Mężczyzna został stracony. W jego domu odnaleziono szkodliwą substancję, która zatruła źródło. Poddani są wdzięczni dzięki Twemu słusznemu osądowi.");
-                        setStats(0, 20, 20, 20);
+                        setStats(0, 15, 20, 15);
                     } else {
                         setKwestia("Mężczyzna został stracony. Kilka dni później pasterze znaleźli przy zanieczyszczonym źródle martwą owcę, która zatruwała wodę. Lud jest wściekły, przez Twój pochopny osąd winiarza.");
-                        setStats(0, -20, -20, -20);
+                        setStats(0, -15, -25, -15);
                     }
                     lub();
                     setKontynuacja(0);
@@ -1333,7 +1336,7 @@ public class Decyzja {
                     break;
                 case 112015:
                     setKwestia("Możemy też poszukać przyczyny zatrucia u źródła. Zorganizowanie wyprawy będzie jednak bardzo kosztowne.");
-                    setKwe1("Niech będzie.");
+                    setKwe1("Niech będzie");
                     setKwe2("Nie, winiarz jest winny!");
                     setTura(getTura() - 1);
                     lub();
@@ -1350,7 +1353,7 @@ public class Decyzja {
                     break;
                 case 120015:
                     setKwestia("Możemy też poszukać przyczyny zatrucia u źródła. Zorganizowanie wyprawy będzie jednak bardzo kosztowne.");
-                    setKwe1("Niech będzie.");
+                    setKwe1("Niech będzie");
                     setKwe2("Nie, winiarz jest winny!");
                     lub();
                     switch (dec) {
@@ -1377,17 +1380,17 @@ public class Decyzja {
 
                 case 200017:
                     setKwestia("Inni gladiatorzy też chcą lepszego traktowania. Żądają ostrzejszego miecza i nowych sandałów dla każdego wojownika w Koloseum.");
-                    setKwe1("Niech będzie.");
-                    setKwe2("Nie ma mowy.");
+                    setKwe1("Niech będzie");
+                    setKwe2("Nie ma mowy");
                     setTura(getTura() - 1);
                     setKontynuacja(0);
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-20, 15, 0, 0);
+                            setStats(-20, 0, 20, 0);
                             break;
                         case 2:
-                            setStats(15, -20, 0, 0);
+                            setStats(15, 0, -20, 0);
                             break;
                     }
                     break;
@@ -1401,10 +1404,10 @@ public class Decyzja {
                     setKwe2("...");
                     if (los == 0) {
                         setKwestia("Rytuał okazał się sukcesem, uprawy rolne rosną szybciej niż kiedykolwiek. W Cesarstwie nastał dobrobyt.");
-                        setStats(15, 15, 15, 15);
+                        setStats(10, 10, 10, 10);
                     } else {
                         setKwestia("Rytuał przyniósł długotrwałą suszę, a w północnej części Cesarstwa wybuchła plaga myszy.");
-                        setStats(-15, -15, -15, -15);
+                        setStats(-10, -10, -10, -10);
                     }
                     lub();
                     break;
@@ -1693,7 +1696,7 @@ public class Decyzja {
                 }
             }
             System.out.println("--|" + getTura()+ " tura |--");
-            statystyki();
+            //statystyki();
             setNr(nr);
             game.wypisywanie = true;
             zbior();
