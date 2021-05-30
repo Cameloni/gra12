@@ -27,6 +27,7 @@ public class Watek extends Thread {
     int mr;
     int mm;
     boolean grane;
+    boolean d = false;
     JTextArea jTextArea = new JTextArea();
     Clip muz = AudioSystem.getClip();
 
@@ -89,12 +90,17 @@ public class Watek extends Thread {
                         board.mozna = false;
                         FloatControl volume = (FloatControl) game.per.getControl(FloatControl.Type.MASTER_GAIN);
                         volume.setValue(-20f);
-                        game.per.loop(1);
+                        if(game.death == 0){
+                            d = false;
+                        }
+                        if(d == false) {
+                            game.per.loop(1);
+                        }
                         //JTextArea jTextArea = new JTextArea();
                         // String blank = blank + character[i];
                         addedcharacter = addedcharacter + character[i];
                         //jTextArea.setText(addedcharacter);
-                        int c = 3;
+                        //int c = 3;
                         tmp1 = " ";
                         //tmp1 = "(...)";
                         ((JTextArea) a.getComponent(0)).setText(addedcharacter);
@@ -106,6 +112,9 @@ public class Watek extends Thread {
                     }
                 } else {
                     board.mozna = true;
+                    if(game.death != 0){
+                        d = true;
+                    }
                     //tmp3 = addedcharacter;
                     game.wypisywanie = false;
                     game.per.stop();

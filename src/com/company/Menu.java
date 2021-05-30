@@ -188,97 +188,369 @@ public class Menu extends JPanel implements MouseListener {
         } else {
             g.drawImage(kwadrat.getImage(), 210, 0, 780, 780, null);
 
-            if (newgame_boll == true) {
-                g.drawImage(newgame.getImage(), 425, 347, 340, 95, null);
+            if (dc == false) {
+                g.drawImage(nazwa.getImage(), 350, 20, 500, 300, null);
             } else {
-                if (nowa_gra_najechany == false) {
-                    g.drawImage(nowa_gra.getImage(), 425, 347, 765, 442, 0, 0, 1416, 329, null);
-                } else {
-                    g.drawImage(nowa_gra.getImage(), 427, 345, 767, 442, 0, 336, 1416, 672, null);
-                }
+                g.drawImage(nazwa2.getImage(), 350, 20, 500, 300, null);
+            }
+            if (nowa_gra_najechany == true) {
+                g.drawImage(zapis1_icon.getImage(), 425-8, 347, 765-8, 442, 0, 0, 1416, 329, null);
+            } else {
+                g.drawImage(zapis1_icon.getImage(), 427-10, 345+8, 767-10, 442+8, 0, 336, 1416, 672, null);
             }
             if (wczytaj_najechany == false) {
-                g.drawImage(wczytaj.getImage(), 425, 457, 765, 552, 0, 0, 1416, 327, null);
+                g.drawImage(zapis2_icon.getImage(), 425, 457, 765, 552, 0, 0, 1416, 327, null);
             } else {
-                g.drawImage(wczytaj.getImage(), 426, 461, 766, 561, 0, 330, 1416, 672, null);
+                g.drawImage(zapis2_icon.getImage(), 426, 461+1, 766, 561+1, 0, 330, 1416, 672, null);
 
 
             }
-            if (wyjscie_najechany == false) {
-                g.drawImage(wyjscie.getImage(), 425, 570, 765, 670, 0, 330, 1416, 672, null);
+            if (wyjscie_najechany == true) {
+                g.drawImage(zapis3_icon.getImage(), 425-3, 570+2, 765-3, 670+2, 0, 330, 1416, 672, null);
             } else {
-                g.drawImage(wyjscie.getImage(), 424, 568, 764, 663, 0, 0, 1416, 325, null);
+                g.drawImage(zapis3_icon.getImage(), 424, 568, 764, 663, 0, 0, 1416, 325, null);
             }
+            g.drawImage(wroc.getImage(),500,450,158*5,92*6,null);
         }
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
         System.out.println("x " + e.getX() + "  y " + e.getY());
-        if(e.getX()>425 && e.getY() > 347 && e.getX() < 765 && e.getY() < 442){
-            game.zapis_boll = true;
-            try {
-
-                //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
-                //game.volume2.setValue(-25f);
-                //newgame_boll = true;
-                //repaint();
-                game.klik.loop(1);
-                //game.klik.start();
+        if (game.zapis_boll == true) {
+            if (e.getX() > 425 && e.getY() > 347 && e.getX() < 765 && e.getY() < 442) {
+                game.menu = false;
+                game.wizualizacja = true;
                 try {
-                    Thread.sleep(600);
-                } catch (InterruptedException en) {
-                    //e.printStackTrace();
-                }
-                game.klik.stop();
-            } catch (IllegalArgumentException exception){
+                    try {
+                        game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
+                    } catch (LineUnavailableException lineUnavailableException) {
+                        lineUnavailableException.printStackTrace();
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                        unsupportedAudioFileException.printStackTrace();
+                    }
+                    //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
+                    //game.volume2.setValue(-25f);
+                    //newgame_boll = true;
+                    //repaint();
+                    game.klik.loop(1);
+                    //game.klik.start();
+                    try {
+                        Thread.sleep(450);
+                    } catch (InterruptedException en) {
+                        //e.printStackTrace();
+                    }
+                    //game.klik.stop();
+                } catch (IllegalArgumentException exception) {
 
+                }
+                game.klik.close();
+                repaint();
+                System.out.println("---------------Nowa gra--------------");
             }
-            repaint();
-            System.out.println("---------------Nowa gra--------------");
-        }
-        if (e.getX() > 435 && e.getX() < 745 && e.getY() > 460 && e.getY() < 530) {
-            game.menu = false;
-            game.wizualizacja = true;
-            game.odczyt_boll = true;
-            try {
-                //game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
-                //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
-                //game.volume2.setValue(-25f);
-                game.klik.loop(1);
-                //game.klik.start();
+            if (e.getX() > 435 && e.getX() < 745 && e.getY() > 460 && e.getY() < 530) {
+                game.menu = false;
+                game.wizualizacja = true;
                 try {
-                    Thread.sleep(600);
-                } catch (InterruptedException en) {
-                    //e.printStackTrace();
+                    try {
+                        game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
+                    } catch (LineUnavailableException lineUnavailableException) {
+                        lineUnavailableException.printStackTrace();
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                        unsupportedAudioFileException.printStackTrace();
+                    }
+                    //game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
+                    //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
+                    //game.volume2.setValue(-25f);
+                    game.klik.loop(1);
+                    //game.klik.start();
+                    try {
+                        Thread.sleep(450);
+                    } catch (InterruptedException en) {
+                        //e.printStackTrace();
+                    }
+                    //game.klik.stop();
+                } catch (IllegalArgumentException exception) {
                 }
-                game.klik.stop();
-            } catch (IllegalArgumentException exception){
+                game.klik.close();
+                repaint();
+                System.out.println("---------------Nowa Gra--------------");
             }
-            repaint();
-            System.out.println("---------------Wczytaj--------------");
-        }
-        if (e.getX() > 438 && e.getX() < 744 && e.getY() > 570 && e.getY() < 640) {
-            try {
-
-                //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
-                //game.volume2.setValue(-25f);
-                game.klik.loop(1);
-                //game.klik.start();
+            if (e.getX() > 438 && e.getX() < 744 && e.getY() > 570 && e.getY() < 640) {
+                game.menu = false;
+                game.wizualizacja = true;
                 try {
-                    Thread.sleep(600);
-                } catch (InterruptedException en) {
-                    //e.printStackTrace();
-                }
-                game.klik.stop();
-            } catch (IllegalArgumentException exception){
+                    try {
+                        game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
+                    } catch (LineUnavailableException lineUnavailableException) {
+                        lineUnavailableException.printStackTrace();
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                        unsupportedAudioFileException.printStackTrace();
+                    }
+                    //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
+                    //game.volume2.setValue(-25f);
+                    game.klik.loop(1);
+                    //game.klik.start();
+                    try {
+                        Thread.sleep(450);
+                    } catch (InterruptedException en) {
+                        //e.printStackTrace();
+                    }
+                    //game.klik.stop();
+                } catch (IllegalArgumentException exception) {
 
+                }
+                game.klik.close();
+                repaint();
             }
-            System.exit(0);
+            if (e.getX() > 812 && e.getX() < 950 && e.getY() > 692 && e.getY() < 747) {
+                //game.menu = true;
+                game.zapis_boll = false;
+                try {
+                    try {
+                        game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
+                    } catch (LineUnavailableException lineUnavailableException) {
+                        lineUnavailableException.printStackTrace();
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                        unsupportedAudioFileException.printStackTrace();
+                    }
+                    //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
+                    //game.volume2.setValue(-25f);
+                    game.klik.loop(1);
+                    //game.klik.start();
+                    try {
+                        Thread.sleep(450);
+                    } catch (InterruptedException en) {
+                        //e.printStackTrace();
+                    }
+                    //game.klik.stop();
+                } catch (IllegalArgumentException exception) {
+
+                }
+                game.klik.close();
+                repaint();
+            }
         }
+        if (game.odczyt_boll == true) {
+            if (e.getX() > 425 && e.getY() > 347 && e.getX() < 765 && e.getY() < 442) {
+                game.menu = false;
+                game.wizualizacja = true;
+                try {
+                    try {
+                        game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
+                    } catch (LineUnavailableException lineUnavailableException) {
+                        lineUnavailableException.printStackTrace();
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                        unsupportedAudioFileException.printStackTrace();
+                    }
+                    //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
+                    //game.volume2.setValue(-25f);
+                    //newgame_boll = true;
+                    //repaint();
+                    game.klik.loop(1);
+                    //game.klik.start();
+                    try {
+                        Thread.sleep(450);
+                    } catch (InterruptedException en) {
+                        //e.printStackTrace();
+                    }
+                   // game.klik.stop();
+                } catch (IllegalArgumentException exception) {
+
+                }
+                game.klik.close();
+                repaint();
+                System.out.println("---------------Nowa gra--------------");
+            }
+            if (e.getX() > 435 && e.getX() < 745 && e.getY() > 460 && e.getY() < 530) {
+                game.menu = false;
+                game.wizualizacja = true;
+                try {
+                    try {
+                        game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
+                    } catch (LineUnavailableException lineUnavailableException) {
+                        lineUnavailableException.printStackTrace();
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                        unsupportedAudioFileException.printStackTrace();
+                    }
+                    //game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
+                    //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
+                    //game.volume2.setValue(-25f);
+                    game.klik.loop(1);
+                    //game.klik.start();
+                    try {
+                        Thread.sleep(450);
+                    } catch (InterruptedException en) {
+                        //e.printStackTrace();
+                    }
+                   // game.klik.stop();
+                } catch (IllegalArgumentException exception) {
+                }
+                game.klik.close();
+                repaint();
+                System.out.println("---------------Nowa Gra--------------");
+            }
+            if (e.getX() > 438 && e.getX() < 744 && e.getY() > 570 && e.getY() < 640) {
+                game.menu = false;
+                game.wizualizacja = true;
+                try {
+                    try {
+                        game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
+                    } catch (LineUnavailableException lineUnavailableException) {
+                        lineUnavailableException.printStackTrace();
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                        unsupportedAudioFileException.printStackTrace();
+                    }
+                    //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
+                    //game.volume2.setValue(-25f);
+                    game.klik.loop(1);
+                    //game.klik.start();
+                    try {
+                        Thread.sleep(450);
+                    } catch (InterruptedException en) {
+                        //e.printStackTrace();
+                    }
+                    game.klik.close();
+                } catch (IllegalArgumentException exception) {
+
+                }
+                repaint();
+            }
+            if (e.getX() > 812 && e.getX() < 950 && e.getY() > 692 && e.getY() < 747) {
+                //game.menu = true;
+                game.odczyt_boll = false;
+                try {
+                    try {
+                        game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
+                    } catch (LineUnavailableException lineUnavailableException) {
+                        lineUnavailableException.printStackTrace();
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                        unsupportedAudioFileException.printStackTrace();
+                    }
+                    //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
+                    //game.volume2.setValue(-25f);
+                    game.klik.loop(1);
+                    //game.klik.start();
+                    try {
+                        Thread.sleep(450);
+                    } catch (InterruptedException en) {
+                        //e.printStackTrace();
+                    }
+                    game.klik.close();
+                } catch (IllegalArgumentException exception) {
+
+                }
+                repaint();
+            }
+        }
+        if (game.zapis_boll == false && game.odczyt_boll == false) {
+            if (e.getX() > 425 && e.getY() > 347 && e.getX() < 765 && e.getY() < 442) {
+                game.zapis_boll = true;
+                try {
+                    try {
+                        game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
+                    } catch (LineUnavailableException lineUnavailableException) {
+                        lineUnavailableException.printStackTrace();
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                        unsupportedAudioFileException.printStackTrace();
+                    }
+                    //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
+                    //game.volume2.setValue(-25f);
+                    //newgame_boll = true;
+                    //repaint();
+                    game.klik.loop(1);
+                    //game.klik.start();
+                    try {
+                        Thread.sleep(450);
+                    } catch (InterruptedException en) {
+                        //e.printStackTrace();
+                    }
+                    game.klik.close();
+                    //game.klik.stop();
+                } catch (IllegalArgumentException exception) {
+
+                }
+                repaint();
+                System.out.println("---------------Nowa gra--------------");
+            }
+            if (e.getX() > 435 && e.getX() < 745 && e.getY() > 460 && e.getY() < 530) {
+                //game.menu = false;
+                //game.wizualizacja = true;
+                game.odczyt_boll = true;
+                try {
+                    try {
+                    game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
+                } catch (LineUnavailableException lineUnavailableException) {
+                    lineUnavailableException.printStackTrace();
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                    unsupportedAudioFileException.printStackTrace();
+                }
+                    //game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
+                    //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
+                    //game.volume2.setValue(-25f);
+                    game.klik.loop(1);
+                    //game.klik.start();
+                    try {
+                        Thread.sleep(450);
+                    } catch (InterruptedException en) {
+                        //e.printStackTrace();
+                    }
+                    game.klik.close();
+                } catch (IllegalArgumentException exception) {
+                }
+                repaint();
+                System.out.println("---------------Wczytaj--------------");
+            }
+            if (e.getX() > 438 && e.getX() < 744 && e.getY() > 570 && e.getY() < 640) {
+                try {
+                    try {
+                        game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
+                    } catch (LineUnavailableException lineUnavailableException) {
+                        lineUnavailableException.printStackTrace();
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    } catch (UnsupportedAudioFileException unsupportedAudioFileException) {
+                        unsupportedAudioFileException.printStackTrace();
+                    }
+                    //game.volume2 = (FloatControl) game.klik.getControl(FloatControl.Type.MASTER_GAIN);
+                    //game.volume2.setValue(-25f);
+                    game.klik.loop(1);
+                    //game.klik.start();
+                    try {
+                        Thread.sleep(450);
+                    } catch (InterruptedException en) {
+                        //e.printStackTrace();
+                    }
+                    game.klik.close();
+                } catch (IllegalArgumentException exception) {
+
+                }
+                System.exit(0);
+            }
 
     }
 
+    }
     @Override
     public void mousePressed(MouseEvent e) {
 
@@ -293,7 +565,7 @@ public class Menu extends JPanel implements MouseListener {
     public void mouseEntered(MouseEvent e) {
 
 
-    }
+        }
 
     @Override
     public void mouseExited(MouseEvent e) {
