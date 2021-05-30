@@ -72,7 +72,15 @@ public class Watek extends Thread {
         if (wglowne == true) {
             if (game.wizualizacja == true) {
                 JPanel a = (JPanel) game.window.getContentPane().getComponent(0);
-
+                if(board.ustawienia_boll == true){
+                    ((Board) game.window.getContentPane().getComponent(0)).jTextArea.setVisible(false);
+                    ((Board) game.window.getContentPane().getComponent(0)).JJ[0].setVisible(false);
+                    ((Board) game.window.getContentPane().getComponent(0)).JJ[1].setVisible(false);
+                } else {
+                    ((Board) game.window.getContentPane().getComponent(0)).jTextArea.setVisible(true);
+                    ((Board) game.window.getContentPane().getComponent(0)).JJ[0].setVisible(true);
+                    ((Board) game.window.getContentPane().getComponent(0)).JJ[1].setVisible(true);
+                }
                 this.character = "".toCharArray();
 
                 String tmp1;

@@ -236,6 +236,7 @@ public class Menu extends JPanel implements MouseListener {
                 } catch (IOException ioException) {
                     ioException.printStackTrace();
                 }
+                game.death = 0;
                 try {
                     game.Odczyt(1, decyzja);
                 } catch (FileNotFoundException fileNotFoundException) {
@@ -286,6 +287,7 @@ public class Menu extends JPanel implements MouseListener {
                 } catch (IOException ioException) {
                     ioException.printStackTrace();
                 }
+                game.death = 0;
                 try {
                     game.Odczyt(2, decyzja);
                 } catch (FileNotFoundException fileNotFoundException) {
@@ -334,6 +336,7 @@ public class Menu extends JPanel implements MouseListener {
                 } catch (IOException ioException) {
                     ioException.printStackTrace();
                 }
+                game.death = 0;
                 try {
                     game.Odczyt(2, decyzja);
                 } catch (FileNotFoundException fileNotFoundException) {
