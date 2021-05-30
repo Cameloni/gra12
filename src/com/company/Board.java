@@ -50,40 +50,40 @@ public class Board extends JPanel implements MouseListener {
 
             switch (nr){
                 case 0:
-                    green_fin1 = false;
-                    green_leg1 = false;
+                    green_fin1 = true;
+                    green_leg1 = true;
                     green_oby1 = false;
                     green_rel1 = false;
                     break;
                 case 1:
-                    green_fin1 = false;
+                    green_fin1 = true;
                     green_leg1 = false;
-                    green_oby1 = false;
-                    green_rel1 = false;
+                    green_oby1 = true;
+                    green_rel1 = true;
                     break;
                 case 2:
-                    green_fin1 = false;
-                    green_leg1 = false;
+                    green_fin1 = true;
+                    green_leg1 = true;
                     green_oby1 = false;
                     green_rel1 = false;
                     break;
                 case 3:
-                    green_fin1 = false;
+                    green_fin1 = true;
                     green_leg1 = false;
-                    green_oby1 = false;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 4:
                     green_fin1 = false;
                     green_leg1 = false;
-                    green_oby1 = false;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 5:
                     green_fin1 = false;
-                    green_leg1 = false;
+                    green_leg1 = true;
                     green_oby1 = false;
-                    green_rel1 = false;
+                    green_rel1 = true;
                     break;
                 case 6:
                     green_fin1 = false;
@@ -92,21 +92,21 @@ public class Board extends JPanel implements MouseListener {
                     green_rel1 = false;
                     break;
                 case 7:
-                    green_fin1 = false;
-                    green_leg1 = false;
-                    green_oby1 = false;
+                    green_fin1 = true;
+                    green_leg1 = true;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 8:
-                    green_fin1 = false;
+                    green_fin1 = true;
                     green_leg1 = false;
                     green_oby1 = false;
-                    green_rel1 = false;
+                    green_rel1 = true;
                     break;
                 case 9:
-                    green_fin1 = false;
-                    green_leg1 = false;
-                    green_oby1 = false;
+                    green_fin1 = true;
+                    green_leg1 = true;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 10:
@@ -118,26 +118,26 @@ public class Board extends JPanel implements MouseListener {
                 case 11:
                     green_fin1 = false;
                     green_leg1 = false;
-                    green_oby1 = false;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 12:
                     green_fin1 = false;
-                    green_leg1 = false;
-                    green_oby1 = false;
+                    green_leg1 = true;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 13:
                     green_fin1 = false;
-                    green_leg1 = false;
+                    green_leg1 = true;
                     green_oby1 = false;
-                    green_rel1 = false;
+                    green_rel1 = true;
                     break;
                 case 14:
-                    green_fin1 = false;
-                    green_leg1 = false;
-                    green_oby1 = false;
-                    green_rel1 = false;
+                    green_fin1 = true;
+                    green_leg1 = true;
+                    green_oby1 = true;
+                    green_rel1 = true;
                     break;
                 case 15:
                     green_fin1 = false;
@@ -146,91 +146,107 @@ public class Board extends JPanel implements MouseListener {
                     green_rel1 = false;
                     break;
                 case 16:
-                    green_fin1 = false;
-                    green_leg1 = false;
-                    green_oby1 = false;
-                    green_rel1 = false;
+                    if(Decyzja.quest[16] == 0) {
+                        green_fin1 = false;
+                        green_leg1 = false;
+                        green_oby1 = false;
+                        green_rel1 = false;
+                    }
+                    else if(Decyzja.quest[16] == 1){
+                        green_fin1 = true;
+                        green_leg1 = true;
+                        green_oby1 = false;
+                        green_rel1 = false;
+                    }
                     break;
                 case 17:
-                    green_fin1 = false;
+                    green_fin1 = true;
                     green_leg1 = false;
-                    green_oby1 = false;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 18:
-                    green_fin1 = false;
+                    green_fin1 = true;
                     green_leg1 = false;
-                    green_oby1 = false;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 19:
                     green_fin1 = false;
                     green_leg1 = false;
                     green_oby1 = false;
-                    green_rel1 = false;
+                    green_rel1 = true;
                     break;
                 case 20:
                     green_fin1 = false;
-                    green_leg1 = false;
-                    green_oby1 = false;
+                    green_leg1 = true;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 21:
-                    green_fin1 = false;
-                    green_leg1 = false;
-                    green_oby1 = false;
-                    green_rel1 = false;
+                    if(Decyzja.quest[21] == 0) {
+                        green_fin2 = true;
+                        green_leg2 = false;
+                        green_oby2 = true;
+                        green_rel2 = false;
+                    }
+                    else if(Decyzja.quest[21] == 1){
+                        green_fin2 = true;
+                        green_leg2 = false;
+                        green_oby2 = true;
+                        green_rel2 = true;
+                    }
                     break;
                 case 22:
                     green_fin1 = false;
                     green_leg1 = false;
                     green_oby1 = false;
-                    green_rel1 = false;
+                    green_rel1 = true;
                     break;
                 case 23:
-                    green_fin1 = false;
+                    green_fin1 = true;
                     green_leg1 = false;
-                    green_oby1 = false;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 24:
                     green_fin1 = false;
-                    green_leg1 = false;
-                    green_oby1 = false;
+                    green_leg1 = true;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 25:
-                    green_fin1 = false;
-                    green_leg1 = false;
-                    green_oby1 = false;
-                    green_rel1 = false;
+                    green_fin1 = true;
+                    green_leg1 = true;
+                    green_oby1 = true;
+                    green_rel1 = true;
                     break;
                 case 26:
-                    green_fin1 = false;
+                    green_fin1 = true;
                     green_leg1 = false;
-                    green_oby1 = false;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 27:
-                    green_fin1 = false;
-                    green_leg1 = false;
+                    green_fin1 = true;
+                    green_leg1 = true;
                     green_oby1 = false;
                     green_rel1 = false;
                     break;
                 case 28:
                     green_fin1 = false;
-                    green_leg1 = false;
-                    green_oby1 = false;
+                    green_leg1 = true;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 29:
-                    green_fin1 = false;
-                    green_leg1 = false;
-                    green_oby1 = false;
-                    green_rel1 = false;
+                    green_fin1 = true;
+                    green_leg1 = true;
+                    green_oby1 = true;
+                    green_rel1 = true;
                     break;
                 case 30:
-                    green_fin1 = false;
+                    green_fin1 = true;
                     green_leg1 = false;
                     green_oby1 = false;
                     green_rel1 = false;
@@ -238,25 +254,25 @@ public class Board extends JPanel implements MouseListener {
                 case 31:
                     green_fin1 = false;
                     green_leg1 = false;
-                    green_oby1 = false;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 32:
                     green_fin1 = false;
-                    green_leg1 = false;
-                    green_oby1 = false;
+                    green_leg1 = true;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 33:
-                    green_fin1 = false;
+                    green_fin1 = true;
                     green_leg1 = false;
-                    green_oby1 = false;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 34:
-                    green_fin1 = false;
-                    green_leg1 = false;
-                    green_oby1 = false;
+                    green_fin1 = true;
+                    green_leg1 = true;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 35:
@@ -267,50 +283,50 @@ public class Board extends JPanel implements MouseListener {
                     break;
                 case 36:
                     green_fin1 = false;
-                    green_leg1 = false;
-                    green_oby1 = false;
+                    green_leg1 = true;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 37:
-                    green_fin1 = false;
-                    green_leg1 = false;
-                    green_oby1 = false;
-                    green_rel1 = false;
+                    green_fin1 = true;
+                    green_leg1 = true;
+                    green_oby1 = true;
+                    green_rel1 = true;
                     break;
                 case 38:
-                    green_fin1 = false;
+                    green_fin1 = true;
                     green_leg1 = false;
-                    green_oby1 = false;
-                    green_rel1 = false;
+                    green_oby1 = true;
+                    green_rel1 = true;
                     break;
                 case 39:
                     green_fin1 = false;
-                    green_leg1 = false;
+                    green_leg1 = true;
                     green_oby1 = false;
-                    green_rel1 = false;
+                    green_rel1 = true;
                     break;
                 case 40:
-                    green_fin1 = false;
+                    green_fin1 = true;
                     green_leg1 = false;
                     green_oby1 = false;
                     green_rel1 = false;
                     break;
                 case 41:
-                    green_fin1 = false;
+                    green_fin1 = true;
                     green_leg1 = false;
-                    green_oby1 = false;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 42:
                     green_fin1 = false;
                     green_leg1 = false;
-                    green_oby1 = false;
-                    green_rel1 = false;
+                    green_oby1 = true;
+                    green_rel1 = true;
                     break;
                 case 43:
-                    green_fin1 = false;
+                    green_fin1 = true;
                     green_leg1 = false;
-                    green_oby1 = false;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 44:
@@ -320,93 +336,93 @@ public class Board extends JPanel implements MouseListener {
                     green_rel1 = false;
                     break;
                 case 45:
-                    green_fin1 = false;
+                    green_fin1 = true;
                     green_leg1 = false;
                     green_oby1 = false;
                     green_rel1 = false;
                     break;
                 case 46:
                     green_fin1 = false;
-                    green_leg1 = false;
+                    green_leg1 = true;
                     green_oby1 = false;
-                    green_rel1 = false;
+                    green_rel1 = true;
                     break;
                 case 47:
                     green_fin1 = false;
-                    green_leg1 = false;
-                    green_oby1 = false;
-                    green_rel1 = false;
+                    green_leg1 = true;
+                    green_oby1 = true;
+                    green_rel1 = true;
                     break;
                 case 48:
                     green_fin1 = false;
                     green_leg1 = false;
-                    green_oby1 = false;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 49:
                     green_fin1 = false;
-                    green_leg1 = false;
+                    green_leg1 = true;
                     green_oby1 = false;
-                    green_rel1 = false;
+                    green_rel1 = true;
                     break;
                 case 50:
-                    green_fin1 = false;
+                    green_fin1 = true;
                     green_leg1 = false;
-                    green_oby1 = false;
-                    green_rel1 = false;
+                    green_oby1 = true;
+                    green_rel1 = true;
                     break;
                 case 51:
-                    green_fin1 = false;
+                    green_fin1 = true;
                     green_leg1 = false;
-                    green_oby1 = false;
-                    green_rel1 = false;
+                    green_oby1 = true;
+                    green_rel1 = true;
                     break;
                 case 52:
-                    green_fin1 = false;
+                    green_fin1 = true;
                     green_leg1 = false;
-                    green_oby1 = false;
-                    green_rel1 = false;
+                    green_oby1 = true;
+                    green_rel1 = true;
                     break;
                 case 53:
                     green_fin1 = false;
-                    green_leg1 = false;
+                    green_leg1 = true;
                     green_oby1 = false;
-                    green_rel1 = false;
+                    green_rel1 = true;
                     break;
                 case 54:
-                    green_fin1 = false;
+                    green_fin1 = true;
                     green_leg1 = false;
-                    green_oby1 = false;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 55:
-                    green_fin1 = false;
-                    green_leg1 = false;
+                    green_fin1 = true;
+                    green_leg1 = true;
                     green_oby1 = false;
                     green_rel1 = false;
                     break;
                 case 56:
                     green_fin1 = false;
                     green_leg1 = false;
-                    green_oby1 = false;
-                    green_rel1 = false;
+                    green_oby1 = true;
+                    green_rel1 = true;
                     break;
                 case 57:
-                    green_fin1 = false;
-                    green_leg1 = false;
-                    green_oby1 = false;
+                    green_fin1 = true;
+                    green_leg1 = true;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 58:
-                    green_fin1 = false;
+                    green_fin1 = true;
                     green_leg1 = false;
-                    green_oby1 = false;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 59:
-                    green_fin1 = false;
+                    green_fin1 = true;
                     green_leg1 = false;
-                    green_oby1 = false;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 60:
@@ -417,38 +433,48 @@ public class Board extends JPanel implements MouseListener {
                     break;
                 case 61:
                     green_fin1 = false;
-                    green_leg1 = false;
+                    green_leg1 = true;
+                    green_oby1 = false;
+                    green_rel1 = true;
+                    break;
+                case 100002:
+                    green_fin1 = true;
+                    green_leg1 = true;
                     green_oby1 = false;
                     green_rel1 = false;
-                    break;
+                case 100015:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = true;
+                    green_rel1 = false;
                 case 110015:
                     green_fin1 = false;
-                    green_leg1 = false;
-                    green_oby1 = false;
-                    green_rel1 = false;
+                    green_leg1 = true;
+                    green_oby1 = true;
+                    green_rel1 = true;
                     break;
                 case 112015:
-                    green_fin1 = false;
-                    green_leg1 = false;
-                    green_oby1 = false;
-                    green_rel1 = false;
+                    green_fin1 = true;
+                    green_leg1 = true;
+                    green_oby1 = true;
+                    green_rel1 = true;
                     break;
                 case 120015:
-                    green_fin1 = false;
-                    green_leg1 = false;
-                    green_oby1 = false;
-                    green_rel1 = false;
+                    green_fin1 = true;
+                    green_leg1 = true;
+                    green_oby1 = true;
+                    green_rel1 = true;
                     break;
                 case 200017:
-                    green_fin1 = false;
+                    green_fin1 = true;
                     green_leg1 = false;
-                    green_oby1 = false;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
                 case 200031:
                     green_fin1 = false;
-                    green_leg1 = false;
-                    green_oby1 = false;
+                    green_leg1 = true;
+                    green_oby1 = true;
                     green_rel1 = false;
                     break;
 
@@ -479,27 +505,27 @@ public class Board extends JPanel implements MouseListener {
 
             switch (nr) {
                 case 0:
-                    green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
+                    green_fin2 = true;
+                    green_leg2 = true;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 1:
-                    green_fin2 = false;
+                    green_fin2 = true;
                     green_leg2 = false;
-                    green_oby2 = false;
-                    green_rel2 = false;
+                    green_oby2 = true;
+                    green_rel2 = true;
                     break;
                 case 2:
-                    green_fin2 = false;
-                    green_leg2 = false;
+                    green_fin2 = true;
+                    green_leg2 = true;
                     green_oby2 = false;
                     green_rel2 = false;
                     break;
                 case 3:
-                    green_fin2 = false;
+                    green_fin2 = true;
                     green_leg2 = false;
-                    green_oby2 = false;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 4:
@@ -510,38 +536,38 @@ public class Board extends JPanel implements MouseListener {
                     break;
                 case 5:
                     green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
-                    green_rel2 = false;
+                    green_leg2 = true;
+                    green_oby2 = true;
+                    green_rel2 = true;
                     break;
                 case 6:
                     green_fin2 = false;
                     green_leg2 = false;
-                    green_oby2 = false;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 7:
-                    green_fin2 = false;
-                    green_leg2 = false;
+                    green_fin2 = true;
+                    green_leg2 = true;
                     green_oby2 = false;
                     green_rel2 = false;
                     break;
                 case 8:
-                    green_fin2 = false;
+                    green_fin2 = true;
                     green_leg2 = false;
-                    green_oby2 = false;
-                    green_rel2 = false;
+                    green_oby2 = true;
+                    green_rel2 = true;
                     break;
                 case 9:
                     green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
+                    green_leg2 = true;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 10:
                     green_fin2 = false;
                     green_leg2 = false;
-                    green_oby2 = false;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 11:
@@ -552,200 +578,216 @@ public class Board extends JPanel implements MouseListener {
                     break;
                 case 12:
                     green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
+                    green_leg2 = true;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 13:
                     green_fin2 = false;
-                    green_leg2 = false;
+                    green_leg2 = true;
                     green_oby2 = false;
-                    green_rel2 = false;
+                    green_rel2 = true;
                     break;
                 case 14:
-                    green_fin2 = false;
+                    green_fin2 = true;
                     green_leg2 = false;
-                    green_oby2 = false;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 15:
                     green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
-                    green_rel2 = false;
+                    green_leg2 = true;
+                    green_oby2 = true;
+                    green_rel2 = true;
                     break;
                 case 16:
-                    green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
-                    green_rel2 = false;
+                    if(Decyzja.quest[16] == 0) {
+                        green_fin2 = true;
+                        green_leg2 = true;
+                        green_oby2 = false;
+                        green_rel2 = false;
+                    }
+                    else if(Decyzja.quest[16] == 1){
+                        green_fin2 = false;
+                        green_leg2 = true;
+                        green_oby2 = false;
+                        green_rel2 = false;
+                    }
                     break;
                 case 17:
-                    green_fin2 = false;
+                    green_fin2 = true;
                     green_leg2 = false;
-                    green_oby2 = false;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 18:
                     green_fin2 = false;
                     green_leg2 = false;
-                    green_oby2 = false;
-                    green_rel2 = false;
+                    green_oby2 = true;
+                    green_rel2 = true;
                     break;
                 case 19:
-                    green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
-                    green_rel2 = false;
+                    green_fin2 = true;
+                    green_leg2 = true;
+                    green_oby2 = true;
+                    green_rel2 = true;
                     break;
                 case 20:
                     green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
+                    green_leg2 = true;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 21:
-                    green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
-                    green_rel2 = false;
+                    if(Decyzja.quest[21] == 0) {
+                        green_fin2 = true;
+                        green_leg2 = false;
+                        green_oby2 = true;
+                        green_rel2 = false;
+                    }
+                    else if(Decyzja.quest[21] == 1){
+                        green_fin2 = true;
+                        green_leg2 = false;
+                        green_oby2 = true;
+                        green_rel2 = true;
+                    }
                     break;
                 case 22:
                     green_fin2 = false;
                     green_leg2 = false;
-                    green_oby2 = false;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 23:
-                    green_fin2 = false;
+                    green_fin2 = true;
                     green_leg2 = false;
-                    green_oby2 = false;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 24:
                     green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
+                    green_leg2 = true;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 25:
-                    green_fin2 = false;
+                    green_fin2 = true;
                     green_leg2 = false;
-                    green_oby2 = false;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 26:
-                    green_fin2 = false;
+                    green_fin2 = true;
                     green_leg2 = false;
-                    green_oby2 = false;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 27:
-                    green_fin2 = false;
-                    green_leg2 = false;
+                    green_fin2 = true;
+                    green_leg2 = true;
                     green_oby2 = false;
                     green_rel2 = false;
                     break;
                 case 28:
                     green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
+                    green_leg2 = true;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 29:
-                    green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
-                    green_rel2 = false;
+                    green_fin2 = true;
+                    green_leg2 = true;
+                    green_oby2 = true;
+                    green_rel2 = true;
                     break;
                 case 30:
-                    green_fin2 = false;
+                    green_fin2 = true;
                     green_leg2 = false;
-                    green_oby2 = false;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 31:
                     green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
+                    green_leg2 = true;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 32:
                     green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
+                    green_leg2 = true;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 33:
-                    green_fin2 = false;
+                    green_fin2 = true;
                     green_leg2 = false;
-                    green_oby2 = false;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 34:
-                    green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
+                    green_fin2 = true;
+                    green_leg2 = true;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 35:
                     green_fin2 = false;
                     green_leg2 = false;
-                    green_oby2 = false;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 36:
                     green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
+                    green_leg2 = true;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 37:
-                    green_fin2 = false;
+                    green_fin2 = true;
                     green_leg2 = false;
                     green_oby2 = false;
                     green_rel2 = false;
                     break;
                 case 38:
-                    green_fin2 = false;
+                    green_fin2 = true;
                     green_leg2 = false;
                     green_oby2 = false;
-                    green_rel2 = false;
+                    green_rel2 = true;
                     break;
                 case 39:
                     green_fin2 = false;
-                    green_leg2 = false;
+                    green_leg2 = true;
                     green_oby2 = false;
-                    green_rel2 = false;
+                    green_rel2 = true;
                     break;
                 case 40:
                     green_fin2 = false;
                     green_leg2 = false;
-                    green_oby2 = false;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 41:
-                    green_fin2 = false;
+                    green_fin2 = true;
                     green_leg2 = false;
-                    green_oby2 = false;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 42:
                     green_fin2 = false;
                     green_leg2 = false;
-                    green_oby2 = false;
-                    green_rel2 = false;
+                    green_oby2 = true;
+                    green_rel2 = true;
                     break;
                 case 43:
-                    green_fin2 = false;
+                    green_fin2 = true;
                     green_leg2 = false;
-                    green_oby2 = false;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 44:
                     green_fin2 = false;
                     green_leg2 = false;
-                    green_oby2 = false;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 45:
@@ -756,78 +798,78 @@ public class Board extends JPanel implements MouseListener {
                     break;
                 case 46:
                     green_fin2 = false;
-                    green_leg2 = false;
+                    green_leg2 = true;
                     green_oby2 = false;
-                    green_rel2 = false;
+                    green_rel2 = true;
                     break;
                 case 47:
                     green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
-                    green_rel2 = false;
+                    green_leg2 = true;
+                    green_oby2 = true;
+                    green_rel2 = true;
                     break;
                 case 48:
                     green_fin2 = false;
                     green_leg2 = false;
-                    green_oby2 = false;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 49:
                     green_fin2 = false;
-                    green_leg2 = false;
+                    green_leg2 = true;
                     green_oby2 = false;
-                    green_rel2 = false;
+                    green_rel2 = true;
                     break;
                 case 50:
-                    green_fin2 = false;
+                    green_fin2 = true;
                     green_leg2 = false;
                     green_oby2 = false;
-                    green_rel2 = false;
+                    green_rel2 = true;
                     break;
                 case 51:
-                    green_fin2 = false;
+                    green_fin2 = true;
                     green_leg2 = false;
-                    green_oby2 = false;
-                    green_rel2 = false;
+                    green_oby2 = true;
+                    green_rel2 = true;
                     break;
                 case 52:
-                    green_fin2 = false;
+                    green_fin2 = true;
                     green_leg2 = false;
-                    green_oby2 = false;
-                    green_rel2 = false;
+                    green_oby2 = true;
+                    green_rel2 = true;
                     break;
                 case 53:
                     green_fin2 = false;
-                    green_leg2 = false;
+                    green_leg2 = true;
                     green_oby2 = false;
-                    green_rel2 = false;
+                    green_rel2 = true;
                     break;
                 case 54:
-                    green_fin2 = false;
+                    green_fin2 = true;
                     green_leg2 = false;
-                    green_oby2 = false;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 55:
-                    green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
+                    green_fin2 = true;
+                    green_leg2 = true;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 56:
                     green_fin2 = false;
                     green_leg2 = false;
-                    green_oby2 = false;
-                    green_rel2 = false;
+                    green_oby2 = true;
+                    green_rel2 = true;
                     break;
                 case 57:
-                    green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
+                    green_fin2 = true;
+                    green_leg2 = true;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 58:
-                    green_fin2 = false;
+                    green_fin2 = true;
                     green_leg2 = false;
                     green_oby2 = false;
                     green_rel2 = false;
@@ -841,7 +883,7 @@ public class Board extends JPanel implements MouseListener {
                 case 60:
                     green_fin2 = false;
                     green_leg2 = false;
-                    green_oby2 = false;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 61:
@@ -850,6 +892,11 @@ public class Board extends JPanel implements MouseListener {
                     green_oby2 = false;
                     green_rel2 = false;
                     break;
+                case 100002:
+                    green_fin2 = true;
+                    green_leg2 = true;
+                    green_oby2 = false;
+                    green_rel2 = false;
                 case 110015:
                     green_fin2 = false;
                     green_leg2 = false;
@@ -858,26 +905,26 @@ public class Board extends JPanel implements MouseListener {
                     break;
                 case 112015:
                     green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
-                    green_rel2 = false;
+                    green_leg2 = true;
+                    green_oby2 = true;
+                    green_rel2 = true;
                     break;
                 case 120015:
                     green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
-                    green_rel2 = false;
+                    green_leg2 = true;
+                    green_oby2 = true;
+                    green_rel2 = true;
                     break;
                 case 200017:
-                    green_fin2 = false;
+                    green_fin2 = true;
                     green_leg2 = false;
-                    green_oby2 = false;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
                 case 200031:
                     green_fin2 = false;
-                    green_leg2 = false;
-                    green_oby2 = false;
+                    green_leg2 = true;
+                    green_oby2 = true;
                     green_rel2 = false;
                     break;
             }
