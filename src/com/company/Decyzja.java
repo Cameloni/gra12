@@ -29,7 +29,7 @@ public class Decyzja {
     public void setQuest(int quest, int i) {
         this.quest[i] = quest;
     }
-    int[] quest;
+    public static int[] quest;
     int[] juzjest;
     int tura;
     int nr;
@@ -803,7 +803,7 @@ public class Decyzja {
                             setKontynuacja(100030);
                             break;
                         case 2:
-                            setStats(5, 0, -15, 0);
+                            setStats(5, 0, -10, 0);
                             break;
                     }
                     break;
@@ -1009,7 +1009,6 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-15-difficulty, 0, 0, 0);
                             setKontynuacja(100045);
                             break;
                         case 2:
@@ -1441,7 +1440,7 @@ public class Decyzja {
                         setKwestia("Obawy specjalistów okazały się być nieuzasadnione. Ku naszej uldze, szyb nie zawalił się. Praca górników pozostała niezakłócona.");
                         setKwe1("...");
                         setKwe2("...");
-                        setStats(20, -0, 0, 0);
+                        setStats(20, 0, 5, 0);
                         setTura(getTura() - 1);
                         setKontynuacja(0);
                         lub();
@@ -1451,7 +1450,7 @@ public class Decyzja {
                         setKwestia("Specjaliści mieli rację. Szyb zawalił się, powodując śmierć kilkunastu ludzi. Poddani są wściekli.");
                         setKwe1("...");
                         setKwe2("...");
-                        setStats(-15, 0, -15-difficulty, 0);
+                        setStats(-10, 0, -15-difficulty, 0);
                         setTura(getTura() - 1);
                         setKontynuacja(0);
                         lub();
@@ -1463,7 +1462,7 @@ public class Decyzja {
                         setKwestia("Obawy specjalistów okazały się być nieuzasadnione. Szyb nie zawalił się, a ewakuacja górników spowodowała opóźnienia w dostawie miedzi.");
                         setKwe1("...");
                         setKwe2("...");
-                        setStats(-15-difficulty, 0, 0, 0);
+                        setStats(-10-difficulty, 0, -5, 0);
                         setTura(getTura() - 1);
                         setKontynuacja(0);
                         lub();
@@ -1473,7 +1472,7 @@ public class Decyzja {
                         setKwestia("Specjaliści mieli rację. Szyb zawalił się, a górnicy z ulgą stwierdzili, że ich ewakuacja uratowała im życie.");
                         setKwe1("...");
                         setKwe2("...");
-                        setStats(0, 0, 20, 0);
+                        setStats(5, 0, 20, 0);
                         setTura(getTura() - 1);
                         setKontynuacja(0);
                         lub();
@@ -1536,7 +1535,7 @@ public class Decyzja {
                     setKwe2("...");
                     setTura(getTura() - 1);
                     setKontynuacja(0);
-                    setStats(0, -5, -15, 0);
+                    setStats(0, 0, -15, 0);
                     lub();
                     break;
 
@@ -1581,7 +1580,7 @@ public class Decyzja {
                         setKwe2("...");
                         setTura(getTura() - 1);
                         setKontynuacja(0);
-                        //setStats(-20, 0, 0, 0);
+                        setStats(-15-difficulty, 0, 0, 0);
                         lub();
                         break;
                     }
