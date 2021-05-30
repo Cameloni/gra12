@@ -1657,7 +1657,7 @@ public class Decyzja {
             changeDeath_screen();
         }
         else if(game.death==11){
-            setKwestia("Zapach olejków usypia Cię, twoja głowa robi się ciężka. Godzinę później służba znajduje Cię martwego z powodu odurzenia olejkami");
+            setKwestia("Zapach olejków usypia Cię, twojka głowa robi się ciężka. Godzinę później służba znajduje Cię martwego z powodu odurzenia olejkami");
             setKwe1("...");
             setKwe2("...");
             lub();
