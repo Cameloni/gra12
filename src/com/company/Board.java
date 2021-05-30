@@ -24,10 +24,15 @@ public class Board extends JPanel implements MouseListener {
     boolean menu_najechany;
     boolean again_najechany;
     boolean flipper = false;
-    boolean green_fin = false;
-    boolean green_leg = false;
-    boolean green_oby = false;
-    boolean green_rel = false;
+    boolean green_fin1;
+    boolean green_leg1;
+    boolean green_oby1;
+    boolean green_rel1;
+    boolean green_fin2;
+    boolean green_leg2;
+    boolean green_oby2;
+    boolean green_rel2;
+    public static int nr = -1;
     public void mousetrack2() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
         //if(game.menu == true) {
 
@@ -42,14 +47,427 @@ public class Board extends JPanel implements MouseListener {
                 //game.naj.open(AudioSystem.getAudioInputStream(game.najechanie_audio));
                 //game.naj.start();
             //}
+
+            switch (nr){
+                case 0:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 1:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 2:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 3:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 4:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 5:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 6:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 7:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 8:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 9:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 10:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 11:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 12:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 13:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 14:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 15:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 16:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 17:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 18:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 19:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 20:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 21:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 22:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 23:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 24:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 25:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 26:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 27:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 28:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 29:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 30:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 31:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 32:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 33:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 34:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 35:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 36:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 37:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 38:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 39:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 40:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 41:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 42:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 43:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 44:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 45:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 46:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 47:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 48:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 49:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 50:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 51:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 52:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 53:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 54:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 55:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 56:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 57:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 58:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 59:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 60:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 61:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 110015:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 112015:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 120015:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 200017:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+                case 200031:
+                    green_fin1 = false;
+                    green_leg1 = false;
+                    green_oby1 = false;
+                    green_rel1 = false;
+                    break;
+
+
+            }
+
+
             if (!opcja1_flipper) {
                 opcja1_flipper = true;
 
-                //tutaj trzeba wstawić komendę grającą kamyczkowy dźwięk
             }
-        } else {
+        }
+        else {
             button1_najechany = false;
             opcja1_flipper = false;
+            green_fin1 = false;
+            green_leg1 = false;
+            green_oby1 = false;
+            green_rel1 = false;
         }
         if (x > 610 && x < 1030+5 && y > 680 && y < 756+30) {
             button2_najechany = true;
@@ -57,14 +475,426 @@ public class Board extends JPanel implements MouseListener {
             //    game.naj2.open(AudioSystem.getAudioInputStream(game.najechanie_audio));
                 //game.naj.start();
             //}
-            if (button2_najechany == false) {
-                button2_najechany = true;
 
-                //tutaj trzeba wstawić komendę grającą kamyczkowy dźwięk
+
+            switch (nr) {
+                case 0:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 1:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 2:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 3:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 4:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 5:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 6:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 7:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 8:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 9:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 10:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 11:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 12:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 13:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 14:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 15:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 16:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 17:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 18:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 19:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 20:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 21:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 22:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 23:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 24:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 25:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 26:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 27:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 28:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 29:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 30:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 31:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 32:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 33:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 34:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 35:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 36:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 37:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 38:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 39:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 40:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 41:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 42:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 43:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 44:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 45:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 46:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 47:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 48:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 49:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 50:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 51:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 52:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 53:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 54:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 55:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 56:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 57:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 58:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 59:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 60:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 61:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 110015:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 112015:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 120015:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 200017:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
+                case 200031:
+                    green_fin2 = false;
+                    green_leg2 = false;
+                    green_oby2 = false;
+                    green_rel2 = false;
+                    break;
             }
-        } else {
+
+
+            if (!opcja2_flipper) {
+                opcja2_flipper = true;
+
+            }
+        }
+        else {
             button2_najechany = false;
-            button2_najechany = false;
+            opcja2_flipper = false;
+            green_fin2 = false;
+            green_leg2 = false;
+            green_oby2 = false;
+            green_rel2 = false;
         }
 
 
@@ -332,10 +1162,6 @@ public class Board extends JPanel implements MouseListener {
        // g.drawImage(icons[3].getImage(),1200, 250, -280, 300, null);
         g.drawImage(icons[4].getImage(), 25, 130, 1150, 920, null);
         g.drawImage(icons[5].getImage(), 1120, 20, 60, 60, null);
-        g.drawImage(icons[11].getImage(), 618, -40, 630, 630, null);
-        g.drawImage(icons[12].getImage(), 424, -40, 630, 630, null);
-        g.drawImage(icons[13].getImage(), 228, -40, 630, 630, null);
-        g.drawImage(icons[14].getImage(), 41, -35, 610, 610, null);
         if(Decyzja.death_screen != 0) {
             this.jTextArea.setVisible(false);
             this.JJ[0].setVisible(false);
@@ -345,16 +1171,42 @@ public class Board extends JPanel implements MouseListener {
 
 
         //g.drawImage(icons[6].getImage(),100, 630, 500, 150, null);
-        if(mozna == true) {
+        if(mozna) {
             if (button1_najechany == false) {
                 g.drawImage(icons[6].getImage(), 150, 650, 600 - 10, 770, 0, 0, 814, 230-3, null);
-            } else {
-                g.drawImage(icons[6].getImage(), 150, 650, 600 - 10, 770, 0, 230, 814, 460, null);
             }
-            if (button2_najechany == false) {
+            else {
+                g.drawImage(icons[6].getImage(), 150, 650, 600 - 10, 770, 0, 230, 814, 460, null);
+                if(green_fin1){
+                    g.drawImage(icons[14].getImage(), 41, -35, 610, 610, null);
+                }
+                if(green_leg1){
+                    g.drawImage(icons[13].getImage(), 228, -40, 630, 630, null);
+                }
+                if(green_oby1){
+                    g.drawImage(icons[12].getImage(), 424, -40, 630, 630, null);
+                }
+                if(green_rel1){
+                    g.drawImage(icons[11].getImage(), 618, -40, 630, 630, null);
+                }
+            }
+            if (!button2_najechany) {
                 g.drawImage(icons[7].getImage(), 600, 650, 1050 - 10, 770, 0, 0, 814, 230-3, null);
-            } else {
+            }
+            else {
                 g.drawImage(icons[7].getImage(), 600, 650, 1050 - 10, 770, 0, 230, 814, 460, null);
+                if(green_fin2){
+                    g.drawImage(icons[14].getImage(), 41, -35, 610, 610, null);
+                }
+                if(green_leg2){
+                    g.drawImage(icons[13].getImage(), 228, -40, 630, 630, null);
+                }
+                if(green_oby2){
+                    g.drawImage(icons[12].getImage(), 424, -40, 630, 630, null);
+                }
+                if(green_rel2){
+                    g.drawImage(icons[11].getImage(), 618, -40, 630, 630, null);
+                }
             }
         } else {
             //g.drawImage(icons[8].getImage(), 150, 650, 440, 120, null);

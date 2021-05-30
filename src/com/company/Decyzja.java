@@ -291,9 +291,11 @@ public class Decyzja {
         // nr=70;
        // nr=15;
         //nr = 2;
+       // nr=31;
         game.wypisywanie = true;
         // board.repaint();
         //nr = 47;
+        //nr = 1;
         //quest[15] = 1;
         //finanse=0;
         if(nr == 16 && getQuest()[16] == 3){
@@ -317,6 +319,7 @@ public class Decyzja {
             nr = getKontynuacja();
             setKontynuacja(0);
         }
+        Board.nr = nr;
         if (game.death==0) {
             switch (nr) {
 
@@ -1295,9 +1298,9 @@ public class Decyzja {
 
 
                 case 100015:
-                    setKwestia("Tylko miejski producent wina miał motyw - nieufność ludu wobec czystej wody zwiększyłoby jego zyski. Powinniśmy go przesłuchać.");
+                    setKwestia("Tylko miejski producent wina miał motyw - nieufność ludu wobec czystej wody zwiększyłaby jego zyski. Powinniśmy go przesłuchać.");
                     setKwe1("Dobrze");
-                    setKwe2("Mamy inne opcje??");
+                    setKwe2("Mamy inne opcje?");
                     lub();
                     switch (dec) {
                         case 1:
@@ -1357,7 +1360,7 @@ public class Decyzja {
                 case 112015:
                     setKwestia("Możemy też poszukać przyczyny zatrucia u źródła. Zorganizowanie wyprawy będzie jednak bardzo kosztowne.");
                     setKwe1("Niech będzie");
-                    setKwe2("Nie, winiarz jest winny!");
+                    setKwe2("Nie, rzućcie winiarza lwom na pożarcie!");
                     setTura(getTura() - 1);
                     lub();
                     switch (dec) {
@@ -1374,7 +1377,7 @@ public class Decyzja {
                 case 120015:
                     setKwestia("Możemy też poszukać przyczyny zatrucia u źródła. Zorganizowanie wyprawy będzie jednak bardzo kosztowne.");
                     setKwe1("Niech będzie");
-                    setKwe2("Nie, winiarz jest winny!");
+                    setKwe2("Nie, rzućcie winiarza lwom na pożarcie!");
                     lub();
                     switch (dec) {
                         case 1:
@@ -1687,7 +1690,7 @@ public class Decyzja {
             changeDeath_screen();
         }
         else if(game.death==5){
-            setKwestia("Oddział niezadowolonych z Twoich rządów rebeliantów wdziera się do pałacu i przegania Cię po ulicach miasta. Zostajesz znieważony i ukrzyżowany.");
+            setKwestia("Oddział niezadowolonych z Twoich rządów rebeliantów wdziera się do pałacu i przegania Cię po ulicach miasta. Zostajesz znieważony i rzucony lwom na pożarcie.");
             setKwe1("...");
             setKwe2("...");
             lub();
