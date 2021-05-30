@@ -288,6 +288,7 @@ public class Menu extends JPanel implements MouseListener {
                     ioException.printStackTrace();
                 }
                 game.death = 0;
+                decyzja.death_screen = 0;
                 try {
                     game.Odczyt(2, decyzja);
                 } catch (FileNotFoundException fileNotFoundException) {

@@ -1007,6 +1007,7 @@ public class Board extends JPanel implements MouseListener {
     //public JLabel tekst = new JLabel();
     public JTextArea jTextArea = new JTextArea();
     public JTextArea[] JJ = new JTextArea[2];
+    public JTextArea jlicznik = new JTextArea();
     public JTextArea licznik = new JTextArea();
     //public JLabel[] counts = new JLabel[4];
     ImageIcon[] icons = new ImageIcon[40];
@@ -1170,6 +1171,26 @@ public class Board extends JPanel implements MouseListener {
         setSize(1200, 780);
         setBounds(0,0,1200, 780);
         add(this.jTextArea);
+        this.jlicznik = new JTextArea("");
+        this.jlicznik.setVisible(true);
+        this.jlicznik.setBounds(20, 20, 140, 50);
+        this.jlicznik.setBackground(new Color(104, 79, 26, 111));
+        this.jlicznik.setOpaque(false);
+        //jTextArea.setForeground(Color.red);
+        this.jlicznik.setFont(romanfont);
+        this.jlicznik.setLineWrap(true);
+        this.jlicznik.setEditable(false);
+        this.jlicznik.setHighlighter(null);
+        this.jlicznik.setWrapStyleWord(true);
+        //jTextArea.setText("ccaaaa");
+
+        this.jlicznik.setFont(romanfont);
+        //jTextArea.setForeground(Color.getHSBColor(500,850,200));
+
+        //MOŻNA WYBRAĆ WŁASNY KOLOR..
+
+        this.jlicznik.setForeground(new Color(51, 8, 88));
+        add(this.jlicznik);
         //jTextArea.setForeground(Color.BLACK);
 
         //tekst.setBounds(300, 500, 600, 200);
@@ -1892,7 +1913,7 @@ public class Board extends JPanel implements MouseListener {
                     game.wizualizacja = false;
                     game.menu = true;
                     ustawienia_boll = false;
-                    Decyzja.death_screen = 0;
+                    //Decyzja.death_screen = 0;
                 }
 
                 if (e.getX() > 812 && e.getX() < 950 && e.getY() > 692 && e.getY() < 747) {
