@@ -9,6 +9,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -28,6 +29,7 @@ public class Menu extends JPanel implements MouseListener {
     Game game;
     //ArrayList<Point> punkty = new ArrayList<Point>();
     static boolean newgame_boll = false;
+    public Decyzja decyzja;
     boolean wczytaj_najechany = false;
     boolean nowa_gra_najechany = false;
     boolean wyjscie_najechany = false;
@@ -127,8 +129,8 @@ public class Menu extends JPanel implements MouseListener {
     //}
 
 
-    public Menu(Game game){
-
+    public Menu(Game game, Decyzja decyzja){
+        this.decyzja = decyzja;
         this.game = game;
         ImageIcon tlo = new ImageIcon("src/com/company/pixelpictures/tło2.png");
         ImageIcon nowa_gra = new ImageIcon("src/com/company/buttons/roman_button (1).png");
@@ -221,6 +223,24 @@ public class Menu extends JPanel implements MouseListener {
             if (e.getX() > 425 && e.getY() > 347 && e.getX() < 765 && e.getY() < 442) {
                 game.menu = false;
                 game.wizualizacja = true;
+                int[] jj = new int[40];
+                int[] q = new int[50];
+                for(int i = 0; i < 40; i++){
+                    jj[i] = 0;
+                }
+                for(int i = 0; i < 50; i++){
+                    q[i] = 0;
+                }
+                try {
+                    game.Zapis(1,1, jj,50,50,50,50, q,0,0,0,-1);
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                }
+                try {
+                    game.Odczyt(1, decyzja);
+                } catch (FileNotFoundException fileNotFoundException) {
+                    fileNotFoundException.printStackTrace();
+                }
                 try {
                     try {
                         game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
@@ -344,6 +364,11 @@ public class Menu extends JPanel implements MouseListener {
                 game.menu = false;
                 game.wizualizacja = true;
                 try {
+                    game.Odczyt(1, decyzja);
+                } catch (FileNotFoundException fileNotFoundException) {
+                    fileNotFoundException.printStackTrace();
+                }
+                try {
                     try {
                         game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
                     } catch (LineUnavailableException lineUnavailableException) {
@@ -376,6 +401,11 @@ public class Menu extends JPanel implements MouseListener {
                 game.menu = false;
                 game.wizualizacja = true;
                 try {
+                    game.Odczyt(2, decyzja);
+                } catch (FileNotFoundException fileNotFoundException) {
+                    fileNotFoundException.printStackTrace();
+                }
+                try {
                     try {
                         game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
                     } catch (LineUnavailableException lineUnavailableException) {
@@ -403,6 +433,11 @@ public class Menu extends JPanel implements MouseListener {
                 System.out.println("---------------Nowa Gra--------------");
             }
             if (e.getX() > 438 && e.getX() < 744 && e.getY() > 570 && e.getY() < 640) {
+                try {
+                    game.Odczyt(3, decyzja);
+                } catch (FileNotFoundException fileNotFoundException) {
+                    fileNotFoundException.printStackTrace();
+                }
                 game.menu = false;
                 game.wizualizacja = true;
                 try {
