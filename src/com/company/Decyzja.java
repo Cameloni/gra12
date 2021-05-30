@@ -48,6 +48,7 @@ public class Decyzja {
    // Game game = new Game();
     public String kwestia;
     public String kwe1;
+    int difficulty = 0;
 
     public String getKwe2() {
         return kwe2;
@@ -272,7 +273,7 @@ public class Decyzja {
         this.dec = 0;
         int los;
         // nr=70;
-        nr=15;
+       // nr=15;
         //nr = 2;
         game.wypisywanie = true;
         // board.repaint();
@@ -310,24 +311,24 @@ public class Decyzja {
                     lub();
                     switch (this.dec) {
                         case 1:
-                            setStats(15, -20, 0, 0);
+                            setStats(15, -20-difficulty, 0, 0);
                             break;
                         case 2:
-                            setStats(-20, 15, 5, 0);
+                            setStats(-15-difficulty, 15, 5, 0);
                             break;
                     }
                     break;
                 case 1:
-                    setKwestia("Kapłani uważają, że złe warunki pogodowe są znakiem gniewu Bogów. Wymagają złożenia przez twoich poddanych dużych ofiar zwierzęcych.");
+                    setKwestia("Kapłani uważają, że złe warunki pogodowe są znakiem gniewu Bogów. Wymagają złożenia przez Twoich poddanych dużych ofiar zwierzęcych.");
                     setKwe1("Chyba oszaleli!");
                     setKwe2("Niech lud wykona ich rozkazy.");
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(5, 0, 15, -20);
+                            setStats(5, 0, 15, -20-difficulty);
                             break;
                         case 2:
-                            setStats(-5, 0, -15, 15);
+                            setStats(-5-difficulty, 0, -15, 15);
                             break;
                     }
                     break;
@@ -342,7 +343,7 @@ public class Decyzja {
                             setStats(20, -25, 0, 0);
                             break;
                         case 2:
-                            setStats(-20, 20, 0 ,0);
+                            setStats(-20-difficulty, 20, 0 ,0);
                             if ((int) (Math.random() * 10) >= 3) {
                                 setKontynuacja(100002);
                             }
@@ -350,16 +351,16 @@ public class Decyzja {
                     }
                     break;
                 case 3:
-                    setKwestia("Dwaj niewolnicy pokłócili się, w wyniku czego jeden dotkliwie pobił drugiego. Właścicel ofiary domaga się odszkodowania.");
-                    setKwe1("Zapłaćcie poszkodowanemu");
-                    setKwe2("To jego problem");
+                    setKwestia("Dwaj niewolnicy pokłócili się, w wyniku czego jeden dotkliwie pobił drugiego. Właściciel ofiary domaga się odszkodowania.");
+                    setKwe1("Zapłaćcie poszkodowanemu.");
+                    setKwe2("To jego problem.");
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-20, 0, 15, 0);
+                            setStats(-20-difficulty, 0, 15, 0);
                             break;
                         case 2:
-                            setStats(15, 0, -20, 0);
+                            setStats(15, 0, -20-difficulty, 0);
                             break;
                     }
                     break;
@@ -379,11 +380,11 @@ public class Decyzja {
                 case 5:
                     setKwestia("Grupa bluźnierców głosi na ulicach skandaliczne hasła oczerniające bogów. Powinniśmy posłać wojsko i natychmiast rozbić to zgromadzenie.");
                     setKwe1("Naprzód!");
-                    setKwe2("Nie działajmy zbyt pochopnie");
+                    setKwe2("Nie działajmy zbyt pochopnie.");
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, -20, -5, 20);
+                            setStats(0, -15-difficulty, 0, 15);
                             break;
                         case 2:
                             setStats(0, 5, 10, -20);
@@ -400,7 +401,7 @@ public class Decyzja {
                             game.death = 9;
                             break;
                         case 2:
-                            setStats(0, 0, -10, 0);
+                            setStats(0, 0, -5-difficulty, 0);
                             break;
                     }
                     break;
@@ -411,7 +412,7 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-10, 15, -10, 0);
+                            setStats(-10, 15+difficulty, -10-difficulty, 0);
                             break;
                         case 2:
                             setStats(20, -20, 0, 0 );
@@ -425,7 +426,7 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-15, 0, -5, 15);
+                            setStats(-15-difficulty, 0, 0, 15);
                             break;
                         case 2:
                             setStats(10, 0, 5, -20);
@@ -439,10 +440,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-15, -10, 15, 0);
+                            setStats(-10-difficulty, -10, 15, 0);
                             break;
                         case 2:
-                            setStats(0, 10, -15, 0);
+                            setStats(0, 10, -15-difficulty, 0);
                             break;
                     }
                     break;
@@ -456,18 +457,18 @@ public class Decyzja {
                             game.death = 10;
                             break;
                         case 2:
-                            setStats(0, 0, -5, 0);
+                            setStats(0, 0, -5-difficulty, 0);
                             break;
                     }
                     break;
                 case 11:
                     setKwestia("Twój syn przysyła Ci w prezencie olejki zapachowe. Wyglądają na bardzo drogie. Czy chcesz ich użyć?");
-                    setKwe1("Nie potrzebuję olejków");
-                    setKwe2("To miło z jego strony");
+                    setKwe1("Nie potrzebuję olejków.");
+                    setKwe2("To miło z jego strony.");
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 0, -5, 0);
+                            setStats(0, 0, -5-difficulty, 0);
                             break;
                         case 2:
                             game.death = 11;
@@ -476,8 +477,8 @@ public class Decyzja {
                     break;
                 case 12:
                     setKwestia("Rybacy potrzebują drewna na budowę łodzi. Żołnierze zaś domagają się nowych włóczni i oszczepów.");
-                    setKwe1("Wspieram rybaków");
-                    setKwe2("Wspieram żołnierzy");
+                    setKwe1("Wspieram rybaków.");
+                    setKwe2("Wspieram żołnierzy.");
                     lub();
                     switch (dec) {
                         case 1:
@@ -495,10 +496,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 20, 0, -25);
+                            setStats(0, 15, 0, -20-difficulty);
                             break;
                         case 2:
-                            setStats(0, -25, 0, 20);
+                            setStats(0, -20-difficulty, 0, 15);
                             break;
                     }
                     break;
@@ -508,10 +509,10 @@ public class Decyzja {
                     setKwe2("Mamy już ich wystarczająco");
                     switch (dec) {
                         case 1:
-                            setStats(-30, 10, 20, 5);
+                            setStats(-30, 0, 20, 10);
                             break;
                         case 2:
-                            setStats(15, -5, -15, 0);
+                            setStats(15, 0, -15-difficulty, 0);
                             break;
                     }
                     break;
@@ -541,7 +542,7 @@ public class Decyzja {
                             case 1:
                                 break;
                             case 2:
-                                setStats(-30, 15, 0, 0);
+                                setStats(-20-difficulty, 15, 0, 0);
                                 setQuest(1, 16);
                                 break;
                         }
@@ -566,7 +567,7 @@ public class Decyzja {
                         setKwe2("Wspaniale!");
                         setQuest(3, 16);
                         lub();
-                        setStats(25, 25, 25, 25);
+                        setStats(20, 20, 20, 20);
                         //setQuest(3,16);
                     }
                     break;
@@ -578,10 +579,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(5, 0, -15, 0);
+                            setStats(10, 0, -15-difficulty, 0);
                             break;
                         case 2:
-                            setStats(-10, 0, 10, 0);
+                            setStats(-15-difficulty, 0, 10, 0);
                             setKontynuacja(200017);
                             break;
                     }
@@ -593,10 +594,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-20, 0, 15, 0);
+                            setStats(-20-difficulty, 0, 15, 0);
                             break;
                         case 2:
-                            setStats(0, 0, -20, 20);
+                            setStats(0, 0, -15-difficulty, 10);
                             break;
                     }
                     break;
@@ -607,7 +608,7 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 5, 0, -15);
+                            setStats(0, 0, 0, -15-difficulty);
                             break;
                         case 2:
                             setKontynuacja(200019);
@@ -621,10 +622,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 15, -20, 0);
+                            setStats(0, 15, -20-difficulty, 0);
                             break;
                         case 2:
-                            setStats(0, -20, 15, 0);
+                            setStats(0, -20-difficulty, 15, 0);
                             break;
                     }
                     break;
@@ -636,10 +637,10 @@ public class Decyzja {
                         lub();
                         switch (dec) {
                             case 1:
-                                setStats(-20, 0, 15, 0);
+                                setStats(-20-difficulty, 0, 15+difficulty, 0);
                                 break;
                             case 2:
-                                setStats(10, 0, -15, 0);
+                                setStats(10+difficulty, 0, -15-difficulty, 0);
                                 break;
                         }
                         break;
@@ -651,10 +652,10 @@ public class Decyzja {
                         lub();
                         switch (dec) {
                             case 1:
-                                setStats(-25, 0, 15, 10);
+                                setStats(-20-difficulty, 0, 10+difficulty, 10);
                                 break;
                             case 2:
-                                setStats(20, 0, -15 ,-10);
+                                setStats(15+difficulty, 0, -10-difficulty ,-10);
                                 break;
                         }
                         break;
@@ -681,11 +682,9 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(15,10,-30,0);
                             setKontynuacja(100023);
                             break;
                         case 2:
-                            setStats(-10,-10,20,0);
                             setKontynuacja(200023);
                             break;
                     }
@@ -697,10 +696,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 20, -20, 0);
+                            setStats(0, 15, -15-difficulty, 0);
                             break;
                         case 2:
-                            setStats(0, -20, 20, 0);
+                            setStats(0, -15-difficulty, 15, 0);
                             break;
                     }
                     break;
@@ -714,7 +713,7 @@ public class Decyzja {
                             setKontynuacja(100025);
                             break;
                         case 2:
-                            setStats(-10, 0, -10, 0);
+                            setStats(-10-difficulty, 0, -10-difficulty, 0);
                             break;
                     }
                     break;
@@ -729,7 +728,7 @@ public class Decyzja {
                             setStats(-15, 0, 5, 0);
                             break;
                         case 2:
-                            setStats(10, 0, -10, 0);
+                            setStats(10, 0, -10-difficulty, 0);
                             break;
                     }
                     break;
@@ -740,10 +739,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-15, 15, 0, 0);
+                            setStats(-15-difficulty, 15, 0, 0);
                             break;
                         case 2:
-                            setStats(15, -15, 0 ,0);
+                            setStats(15, -15-difficulty, 0 ,0);
                             break;
                     }
                     break;
@@ -768,10 +767,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(30, -10, -15, -10);
+                            setStats(20+difficulty, -10, -10-difficulty, -10-difficulty);
                             break;
                         case 2:
-                            setStats(-30, 5, 10, 10);
+                            setStats(-25-difficulty, 10, 10, 10);
                             break;
                     }
                     break;
@@ -810,10 +809,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, -25, 20, 0);
+                            setStats(0, -20-difficulty, 15, 0);
                             break;
                         case 2:
-                            setStats(0, 20, -25, 0);
+                            setStats(0, 15, -20-difficulty, 0);
                             break;
                     }
                     break;
@@ -824,10 +823,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-10, 0, 10, 0);
+                            setStats(-10-difficulty, 0, 10, 0);
                             break;
                         case 2:
-                            setStats(10, 0, -15, 0);
+                            setStats(10, 0, -10-difficulty, 0);
                             break;
                     }
                     break;
@@ -838,10 +837,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(15, -30, 10, 0);
+                            setStats(15, -25-difficulty, 10, 0);
                             break;
                         case 2:
-                            setStats(-15, 25, -15, 0);
+                            setStats(-15-difficulty, 25, -15, 0);
                             break;
                     }
                     break;
@@ -865,10 +864,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 15, -20, 0);
+                            setStats(0, 15, -20-difficulty, 0);
                             break;
                         case 2:
-                            setStats(0, -20, 15, 0);
+                            setStats(0, -20-difficulty, 15, 0);
                             break;
                     }
                     break;
@@ -893,10 +892,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-10, 0, -10, 15);
+                            setStats(-10, 0, -10-difficulty, 15);
                             break;
                         case 2:
-                            setStats(10, 0, 5, -20);
+                            setStats(10, 0, 0, -15-difficulty);
                             break;
                     }
                     break;
@@ -907,10 +906,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, -20, 0, 15);
+                            setStats(0, -20-difficulty, 0, 15);
                             break;
                         case 2:
-                            setStats(0, 15, 0, -20);
+                            setStats(0, 15, 0, -20-difficulty);
                             break;
                     }
                     break;
@@ -938,7 +937,7 @@ public class Decyzja {
                             setKontynuacja(100041);
                             break;
                         case 2:
-                            setStats(10, 0, -10, 0);
+                            setStats(10, 0, -10-difficulty, 0);
                             break;
                     }
                     break;
@@ -949,22 +948,24 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 0, -20, 15);
+                            setStats(0, 0, -20-difficulty, 15);
                             break;
                         case 2:
-                            setStats(0, 0, 15, -20);
+                            setStats(0, 0, 15, -20-difficulty);
                             break;
                     }
                     break;
                 case 43:
-                    setKwestia("Zeszłęj nocy wybuchł pożar w domu właściciela Rzymskich Łaźni. Wszyscy zdążyli się ewakuować, ale budynek całkowicie spłonął.");
-                    setKwe1("");
-                    setKwe2("");
+                    setKwestia("Zeszłęj nocy wybuchł pożar w domu właściciela Rzymskich Łaźni. Wszyscy zdążyli się ewakuować, ale budynek całkowicie spłonął. Poszkodowany prosi o wsparcie finansowe.");
+                    setKwe1("Stać go na zakup nowego domu.");
+                    setKwe2("Nie ma sprawy.");
                     lub();
                     switch (dec) {
                         case 1:
+                            setStats(15, 0, -15-difficulty, 0);
                             break;
                         case 2:
+                            setStats(-15-difficulty, 0, 15, 0);
                             break;
                     }
                     break;
@@ -978,7 +979,7 @@ public class Decyzja {
                             game.death = 8;
                             break;
                         case 2:
-                            setStats(0, 0, -10, 0);
+                            setStats(0, 0, -5-difficulty, 0);
                             break;
                     }
                     break;
@@ -989,10 +990,11 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-15, 0, 0, 0);
+                            setStats(-15-difficulty, 0, 0, 0);
                             setKontynuacja(100045);
                             break;
                         case 2:
+                            setStats(10, 0, 0,0);
                             break;
                     }
                     break;
@@ -1031,7 +1033,7 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 0, -10, 0);
+                            setStats(0, 0, -10-difficulty, 0);
                             break;
                         case 2:
                             setStats(0, 0, 10, 0);
@@ -1045,24 +1047,24 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, -20, 0, 15);
+                            setStats(0, -15-difficulty, 0, 15);
                             break;
                         case 2:
-                            setStats(0, 15, 0, -20);
+                            setStats(0, 15, 0, -15-difficulty);
                             break;
                     }
                     break;
                 case 50:
                     setKwestia("Kapłani twierdzą, że bogowie patrzą na nas krzywym okiem. Radzą rozpalanie ognia w każdym domostwie przez najbliższy miesiąc.");
-                    setKwe1("Niech będzie");
-                    setKwe2("Nie ma opcji");
+                    setKwe1("Niech będzie.");
+                    setKwe2("Nie ma opcji!");
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-15, 0, -5, 15);
+                            setStats(-15, 0, -5-difficulty, 15);
                             break;
                         case 2:
-                            setStats(15, 0, 0, -20);
+                            setStats(15, 0, 0, -20-difficulty);
                             break;
                     }
                     break;
@@ -1073,10 +1075,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(-10, 0, 20, -15);
+                            setStats(-10, 0, 10, -15-difficulty);
                             break;
                         case 2:
-                            setStats(10, 0, -20, 10);
+                            setStats(10, 0, -15-difficulty, 10);
                             break;
                     }
                     break;
@@ -1095,14 +1097,16 @@ public class Decyzja {
                     }
                     break;
                 case 53:
-                    setKwestia("Dziś rano córka naczelnego architekta zostałą znaleziona martwa w swojej sypialni. Lud domaga się natychmiastowego śledztwa.");
-                    setKwe1("");
-                    setKwe2("");
+                    setKwestia("Jeden z legionistów splunął na ścianę świątyni bogini Wenus. Kapłani są oburzeni - rządają wymierzenia dotkliwej kary.");
+                    setKwe1("Nie ma takiej potrzeby.");
+                    setKwe2("Poniesie konsekwencje.");
                     lub();
                     switch (dec) {
                         case 1:
+                            setStats(0, 15, 0, -15-difficulty);
                             break;
                         case 2:
+                            setStats(0, -15-difficulty, 0, 15);
                             break;
                     }
                     break;
@@ -1113,10 +1117,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(10, 0, -15, 0);
+                            setStats(10, 0, -15-difficulty, 0);
                             break;
                         case 2:
-                            setStats(-15, 0, 10, 0);
+                            setStats(-15-difficulty, 0, 10, 0);
                             break;
                     }
                     break;
@@ -1141,10 +1145,10 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(0, 0, 15, -20);
+                            setStats(0, 0, 15, -10-difficulty);
                             break;
                         case 2:
-                            setStats(0, 0, -20, 15);
+                            setStats(0, 0, -10-difficulty, 15);
                             break;
                     }
                     break;
@@ -1252,7 +1256,7 @@ public class Decyzja {
                     lub();
                     switch (dec) {
                         case 1:
-                            setStats(5, -15, 0, 0);
+                            setStats(5+difficulty, -15-difficulty, 0, 0);
                             break;
                         case 2:
                             setStats(-los*5, los*5-5, 0, 0 );
@@ -1411,6 +1415,52 @@ public class Decyzja {
                     }
                     lub();
                     break;
+
+
+                case 100023:
+                    los = (int) (Math.random() * 2);
+                    if(los==0){
+                        setKwestia("Obawy specjalistów okazały się być nieuzasadnione. Ku naszej uldze, szyb nie zawalił się. Praca górników pozostała niezakłócona.");
+                        setKwe1("...");
+                        setKwe2("...");
+                        setStats(20, -0, 0, 0);
+                        setTura(getTura() - 1);
+                        setKontynuacja(0);
+                        lub();
+                        break;
+                    }
+                    else{
+                        setKwestia("Specjaliści mieli rację. Szyb zawalił się, powodując śmierć kilkunastu ludzi. Poddani są wściekli.");
+                        setKwe1("...");
+                        setKwe2("...");
+                        setStats(-15, 0, -15-difficulty, 0);
+                        setTura(getTura() - 1);
+                        setKontynuacja(0);
+                        lub();
+                        break;
+                    }
+                case 200023:
+                    los = (int) (Math.random() * 2);
+                    if(los==0) {
+                        setKwestia("Obawy specjalistów okazały się być nieuzasadnione. Szyb nie zawalił się, a ewakuacja górników spowodowała opóźnienia w dostawie miedzi.");
+                        setKwe1("...");
+                        setKwe2("...");
+                        setStats(-15-difficulty, 0, 0, 0);
+                        setTura(getTura() - 1);
+                        setKontynuacja(0);
+                        lub();
+                        break;
+                    }
+                    else{
+                        setKwestia("Specjaliści mieli rację. Szyb zawalił się, a górnicy z ulgą stwierdzili, że ich ewakuacja uratowała im życie.");
+                        setKwe1("...");
+                        setKwe2("...");
+                        setStats(0, 0, 20, 0);
+                        setTura(getTura() - 1);
+                        setKontynuacja(0);
+                        lub();
+                        break;
+                    }
 
 
                 case 100025:
@@ -1588,6 +1638,9 @@ public class Decyzja {
 
             }
             setTura(getTura() + 1);
+            if(getTura() % 10 == 0){
+                difficulty += 5;
+            }
         }
         else if(game.death==1){
             setKwestia("Z powodu panującej w Twoim państwie biedy i ubóstwa, na południu Cesarstwa wybucha śmiertelna zaraza, która dziesiątkuje ludność. Umierasz w swojej sypialni, kaszląc i plując krwią.");
@@ -1660,13 +1713,14 @@ public class Decyzja {
             changeDeath_screen();
         }
         else if(game.death==11){
-            setKwestia("Zapach olejków usypia Cię, twojka głowa robi się ciężka. Godzinę później służba znajduje Cię martwego z powodu odurzenia olejkami");
+            setKwestia("Zapach olejków usypia Cię, twoja głowa robi się ciężka. Godzinę później służba znajduje Cię martwego z powodu odurzenia olejkami.");
             setKwe1("...");
             setKwe2("...");
             lub();
             changeDeath_screen();
         }
     }
+
 
 
 

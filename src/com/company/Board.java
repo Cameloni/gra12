@@ -24,6 +24,10 @@ public class Board extends JPanel implements MouseListener {
     boolean menu_najechany;
     boolean again_najechany;
     boolean flipper = false;
+    boolean green_fin = false;
+    boolean green_leg = false;
+    boolean green_oby = false;
+    boolean green_rel = false;
     public void mousetrack2() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
         //if(game.menu == true) {
 
