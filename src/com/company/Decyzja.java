@@ -1641,6 +1641,7 @@ public class Decyzja {
             if(getTura() % 10 == 0){
                 difficulty += 5;
             }
+            System.out.println(difficulty);
         }
         else if(game.death==1){
             setKwestia("Z powodu panującej w Twoim państwie biedy i ubóstwa, na południu Cesarstwa wybucha śmiertelna zaraza, która dziesiątkuje ludność. Umierasz w swojej sypialni, kaszląc i plując krwią.");
