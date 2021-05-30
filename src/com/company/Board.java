@@ -32,6 +32,7 @@ public class Board extends JPanel implements MouseListener {
     boolean green_leg2;
     boolean green_oby2;
     boolean green_rel2;
+    public Watek watek;
     public static int nr = -1;
     public void mousetrack2() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
         //if(game.menu == true) {
@@ -708,8 +709,8 @@ public class Board extends JPanel implements MouseListener {
                     break;
                 case 31:
                     green_fin2 = false;
-                    green_leg2 = true;
-                    green_oby2 = true;
+                    green_leg2 = false;
+                    green_oby2 = false;
                     green_rel2 = false;
                     break;
                 case 32:
@@ -1215,6 +1216,11 @@ public class Board extends JPanel implements MouseListener {
             this.JJ[1].setVisible(false);
 
         }
+        if(Decyzja.death_screen == 0) {
+            this.jTextArea.setVisible(true);
+            this.JJ[0].setVisible(true);
+            this.JJ[1].setVisible(true);
+        }
 
 
         //g.drawImage(icons[6].getImage(),100, 630, 500, 150, null);
@@ -1402,7 +1408,7 @@ public class Board extends JPanel implements MouseListener {
             }
 
 
-//Decyzja.legiony = 30;
+//Decyzja.legiony = 25;
             if (Decyzja.legiony >= 100) {
                 g.drawImage(staty[1].getImage(), 180 + 230, 32, 321 + 231, 162, 0, 0, 200, 180, null);
             } else if (Decyzja.legiony == 95) {
@@ -1434,7 +1440,7 @@ public class Board extends JPanel implements MouseListener {
             } else if (Decyzja.legiony == 30) {
                 g.drawImage(staty[1].getImage(), 169 + 260, 38, 322 + 230, 160, 543, 350, 713, 520, null);
             } else if (Decyzja.legiony == 25) {
-                g.drawImage(staty[1].getImage(), 169 + 260, 38, 322 + 230, 160, 712, 350, 880, 520, null);
+                g.drawImage(staty[1].getImage(), 169 + 260, 38, 322 + 230, 160, 715, 350, 885, 520, null);
             } else if (Decyzja.legiony == 20) {
                 g.drawImage(staty[1].getImage(), 169 + 241, 37, 322 + 234, 159, 0, 520, 205, 690, null);
             } else if (Decyzja.legiony == 15) {
@@ -1525,6 +1531,7 @@ public class Board extends JPanel implements MouseListener {
                 game.wizualizacja = false;
                 game.menu = true;
                 Decyzja.death_screen = 0;
+
             }
         }
         /*if (e.getX() > 170 && e.getX() < 370 && e.getY() > 260 && e.getY() < 530) {

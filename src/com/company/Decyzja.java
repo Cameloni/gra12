@@ -695,8 +695,8 @@ public class Decyzja {
                     break;
                 case 23:
                     setKwestia("Specjaliści donoszą, że główny szyb w jednej z kopalni miedzi może w każdej chwili ulec zawaleniu.");
-                    setKwe1("To mało prawdopodobne");
-                    setKwe2("Ewakuujcie górników");
+                    setKwe1("To mało prawdopodobne.");
+                    setKwe2("Ewakuujcie górników.");
                     //dwie opcje do wyboru
                     lub();
                     switch (dec) {
@@ -710,8 +710,8 @@ public class Decyzja {
                     break;
                 case 24:
                     setKwestia("Centurioni żądają dostawy niewolników. Możni obywatele również.");
-                    setKwe1("Wojsko ma pierwszeństwo");
-                    setKwe2("Lud ma pierwszeństwo");
+                    setKwe1("Wojsko ma pierwszeństwo.");
+                    setKwe2("Lud ma pierwszeństwo.");
                     lub();
                     switch (dec) {
                         case 1:
@@ -724,8 +724,8 @@ public class Decyzja {
                     break;
                 case 25:
                     setKwestia("Na jednej z nadgranicznych farm, wykryto u kóz dziwny rodzaj wysypki. Podobno jest bardzo zakaźna.");
-                    setKwe1("Wyślijcie tam specjalistów");
-                    setKwe2("Zabijcie chore kozy");
+                    setKwe1("Wyślijcie tam specjalistów.");
+                    setKwe2("Zabijcie chore kozy.");
                     lub();
                     switch (dec) {
                         case 1:
@@ -767,8 +767,8 @@ public class Decyzja {
                     break;
                 case 28:
                     setKwestia("Naczelny generał skarży się, że racje żywnościowe dla legionistów są zbyt małe. Uważa, że powinniśmy przekazywać wojsku część jedzenia przeznaczonego dla obywateli.");
-                    setKwe1("Zgadzam się z nim");
-                    setKwe2("Legioniści mają walczyć, nie jeść");
+                    setKwe1("Zgadzam się z nim.");
+                    setKwe2("Legioniści mają walczyć, nie jeść.");
                     lub();
                     switch (dec) {
                         case 1:
@@ -1623,7 +1623,7 @@ public class Decyzja {
                     setKwe2("...");
                     setTura(getTura() - 1);
                     setKontynuacja(0);
-                    setStats(-10, 0, 0, 0);
+                    setStats(-15, 0, 0, 0);
                     lub();
                     break;
 
@@ -1660,6 +1660,7 @@ public class Decyzja {
             }
         }
         else if(game.death==1){
+            game.death = 0;
             setKwestia("Z powodu panującej w Twoim państwie biedy i ubóstwa, na południu Cesarstwa wybucha śmiertelna zaraza, która dziesiątkuje ludność. Umierasz w swojej sypialni, kaszląc i plując krwią.");
             setKwe1("...");
             setKwe2("...");
@@ -1667,6 +1668,7 @@ public class Decyzja {
             changeDeath_screen();
         }
         else if(game.death==2){
+            game.death = 0;
             setKwestia("Plemiona barbarzyńców, widząc bogactwo Cesarstwa, postanawiają się zjednoczyć i wspólnie najechać Rzym. Twoje państwo zostaje splądrowane, a Ty musisz udać się na wygnanie. Z rozpaczy popełniasz samobójstwo.");
             setKwe1("...");
             setKwe2("...");
@@ -1674,6 +1676,7 @@ public class Decyzja {
             changeDeath_screen();
         }
         else if(game.death==3){
+            game.death = 0;
             setKwestia("Rzym zostaje najechany przez dzikie plemiona barbarzyńców z północy. Razem ze swoim ostatnim generałem zostajesz otoczony i zamordowany. Twoje ciało spoczywa w kałuży krwi.");
             setKwe1("...");
             setKwe2("...");
@@ -1681,6 +1684,7 @@ public class Decyzja {
             changeDeath_screen();
         }
         else if(game.death==4){
+            game.death = 0;
             setKwestia("Naczelny generał, wykorzystując potęgę armii rzymskiej, otacza Twój pałac i domaga się natychmiastowej kapitulacji. Po złożeniu broni, zostajesz publicznie stracony.");
             setKwe1("...");
             setKwe2("...");
@@ -1688,6 +1692,7 @@ public class Decyzja {
             changeDeath_screen();
         }
         else if(game.death==5){
+            game.death = 0;
             setKwestia("Oddział niezadowolonych z Twoich rządów rebeliantów wdziera się do pałacu i przegania Cię po ulicach miasta. Zostajesz znieważony i rzucony lwom na pożarcie.");
             setKwe1("...");
             setKwe2("...");
@@ -1695,6 +1700,7 @@ public class Decyzja {
             changeDeath_screen();
         }
         else if(game.death==6){
+            game.death = 0;
             setKwestia("");
             setKwe1("...");
             setKwe2("...");
@@ -1702,6 +1708,7 @@ public class Decyzja {
             changeDeath_screen();
         }
         else if(game.death==7){
+            game.death = 0;
             setKwestia("W czasie kryzysu wiary lud podważa Twoje prawo do władzy i zwraca się przeciwko Tobie i kapłanom. Giniesz stratowany przez wściekłą tłuszczę.");
             setKwe1("...");
             setKwe2("...");
@@ -1709,6 +1716,7 @@ public class Decyzja {
             changeDeath_screen();
         }
         else if(game.death==8){
+            game.death = 0;
             setKwestia("Biorąc kąpiel zaczynasz tracić świadomość, umierasz w basenie z powodu udaru.");
             setKwe1("...");
             setKwe2("...");
@@ -1716,6 +1724,7 @@ public class Decyzja {
             changeDeath_screen();
         }
         else if(game.death==9){
+            game.death = 0;
             setKwestia("Siedząc na fotelu, zamykasz oczy. Nagle fryzjer przykłada Ci do ust kawałek szmatki, przez co nie możesz oddychać.. Umierasz przez uduszenie.");
             setKwe1("...");
             setKwe2("...");
@@ -1723,6 +1732,7 @@ public class Decyzja {
             changeDeath_screen();
         }
         else if(game.death==10){
+            game.death = 0;
             setKwestia("Pijąc wino, odczuwasz kręcenie w głowie. Chwilę później, leżysz martwy przed tronem.");
             setKwe1("...");
             setKwe2("...");
@@ -1730,6 +1740,7 @@ public class Decyzja {
             changeDeath_screen();
         }
         else if(game.death==11){
+            game.death = 0;
             setKwestia("Zapach olejków usypia Cię, twoja głowa robi się ciężka. Godzinę później służba znajduje Cię martwego z powodu odurzenia olejkami.");
             setKwe1("...");
             setKwe2("...");
@@ -1752,34 +1763,36 @@ public class Decyzja {
         }
 
         for (int i = 0; i < 999999999; i++) {
-            while (nr < 0) {
-                nr = (int) (Math.random() * 61);
+            //if(death_screen == 0) {
+                while (nr < 0) {
+                    nr = (int) (Math.random() * 61);
 
-                for (int j = 0; j < 40; j++) {
-                    if (getJuzjest(j) == -1) {
-                        //tutaj chodziło że jeżeli to będzie równe -1 to nie ma już porównywać bo dalsze numery też
-                        //będą równe -1, czyli nie są jeszcze wypełnione.
-                        break;
-                    }
-                    if (nr == getJuzjest(j)) {
-                        //tutaj natomiast sprawdzam czy pojawił się już dany numer.
-                        nr = -1;
-                        break;
+                    for (int j = 0; j < 40; j++) {
+                        if (getJuzjest(j) == -1) {
+                            //tutaj chodziło że jeżeli to będzie równe -1 to nie ma już porównywać bo dalsze numery też
+                            //będą równe -1, czyli nie są jeszcze wypełnione.
+                            break;
+                        }
+                        if (nr == getJuzjest(j)) {
+                            //tutaj natomiast sprawdzam czy pojawił się już dany numer.
+                            nr = -1;
+                            break;
+                        }
                     }
                 }
+                System.out.println("--|" + getTura() + " tura |--");
+                statystyki();
+                setNr(nr);
+                game.wypisywanie = true;
+                zbior();
+                setJuzjest(nr, i % 40);
+                nr = -1;
             }
-            System.out.println("--|" + getTura()+ " tura |--");
-            statystyki();
-            setNr(nr);
-            game.wypisywanie = true;
-            zbior();
-            setJuzjest(nr, i % 40);
-            nr = -1;
 
 
             // wyjscie(gra);
             //Odczyt(wybor);
             //Zapis(wybor.getTura(), wybor.getJuz(), wybor.getFinanse(), wybor.getObywatele(), wybor.getLegiony(), wybor.getReligia(), wybor.getQuest());
-        }
+       // }
     }
 }
