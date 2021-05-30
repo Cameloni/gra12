@@ -718,7 +718,7 @@ public class Decyzja {
                     }
                     break;
                 case 26:
-                    setKwestia("Kończą nam się zapasy liści laurowych.");
+                    setKwestia("Kończą nam się zapasy liści laurowych. Cesarski wizerunek może na tym ucierpieć.");
                     setKwe1("Zakupcie nowe jak najprędzej!");
                     setKwe2("Obejdę się bez liści");
 
@@ -956,7 +956,7 @@ public class Decyzja {
                     }
                     break;
                 case 43:
-                    setKwestia("Zeszłęj nocy wybuchł pożar w domu właściciela Rzymskich Łaźni. Wszyscy zdążyli się ewakuować, ale budynek całkowicie spłonął. Poszkodowany prosi o wsparcie finansowe.");
+                    setKwestia("Zeszłej nocy wybuchł pożar w domu właściciela Rzymskich Łaźni. Wszyscy zdążyli się ewakuować, ale budynek całkowicie spłonął. Poszkodowany prosi o wsparcie finansowe.");
                     setKwe1("Stać go na zakup nowego domu.");
                     setKwe2("Nie ma sprawy.");
                     lub();
