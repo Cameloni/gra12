@@ -1663,6 +1663,7 @@ public class Decyzja {
             setKwestia("Z powodu panującej w Twoim państwie biedy i ubóstwa, na południu Cesarstwa wybucha śmiertelna zaraza, która dziesiątkuje ludność. Umierasz w swojej sypialni, kaszląc i plując krwią.");
             setKwe1("...");
             setKwe2("...");
+            game.death = 0;
             lub();
             changeDeath_screen();
         }
@@ -1670,6 +1671,7 @@ public class Decyzja {
             setKwestia("Plemiona barbarzyńców, widząc bogactwo Cesarstwa, postanawiają się zjednoczyć i wspólnie najechać Rzym. Twoje państwo zostaje splądrowane, a Ty musisz udać się na wygnanie. Z rozpaczy popełniasz samobójstwo.");
             setKwe1("...");
             setKwe2("...");
+            game.death = 0;
             lub();
             changeDeath_screen();
         }
@@ -1677,6 +1679,7 @@ public class Decyzja {
             setKwestia("Rzym zostaje najechany przez dzikie plemiona barbarzyńców z północy. Razem ze swoim ostatnim generałem zostajesz otoczony i zamordowany. Twoje ciało spoczywa w kałuży krwi.");
             setKwe1("...");
             setKwe2("...");
+            game.death = 0;
             lub();
             changeDeath_screen();
         }
@@ -1684,6 +1687,7 @@ public class Decyzja {
             setKwestia("Naczelny generał, wykorzystując potęgę armii rzymskiej, otacza Twój pałac i domaga się natychmiastowej kapitulacji. Po złożeniu broni, zostajesz publicznie stracony.");
             setKwe1("...");
             setKwe2("...");
+            game.death = 0;
             lub();
             changeDeath_screen();
         }
@@ -1691,6 +1695,7 @@ public class Decyzja {
             setKwestia("Oddział niezadowolonych z Twoich rządów rebeliantów wdziera się do pałacu i przegania Cię po ulicach miasta. Zostajesz znieważony i rzucony lwom na pożarcie.");
             setKwe1("...");
             setKwe2("...");
+            game.death = 0;
             lub();
             changeDeath_screen();
         }
@@ -1698,6 +1703,7 @@ public class Decyzja {
             setKwestia("");
             setKwe1("...");
             setKwe2("...");
+            game.death = 0;
             lub();
             changeDeath_screen();
         }
@@ -1705,6 +1711,7 @@ public class Decyzja {
             setKwestia("W czasie kryzysu wiary lud podważa Twoje prawo do władzy i zwraca się przeciwko Tobie i kapłanom. Giniesz stratowany przez wściekłą tłuszczę.");
             setKwe1("...");
             setKwe2("...");
+            game.death = 0;
             lub();
             changeDeath_screen();
         }
@@ -1712,6 +1719,7 @@ public class Decyzja {
             setKwestia("Biorąc kąpiel zaczynasz tracić świadomość, umierasz w basenie z powodu udaru.");
             setKwe1("...");
             setKwe2("...");
+            game.death = 0;
             lub();
             changeDeath_screen();
         }
@@ -1719,6 +1727,7 @@ public class Decyzja {
             setKwestia("Siedząc na fotelu, zamykasz oczy. Nagle fryzjer przykłada Ci do ust kawałek szmatki, przez co nie możesz oddychać.. Umierasz przez uduszenie.");
             setKwe1("...");
             setKwe2("...");
+            game.death = 0;
             lub();
             changeDeath_screen();
         }
@@ -1726,6 +1735,7 @@ public class Decyzja {
             setKwestia("Pijąc wino, odczuwasz kręcenie w głowie. Chwilę później, leżysz martwy przed tronem.");
             setKwe1("...");
             setKwe2("...");
+            game.death = 0;
             lub();
             changeDeath_screen();
         }
@@ -1733,6 +1743,7 @@ public class Decyzja {
             setKwestia("Zapach olejków usypia Cię, twoja głowa robi się ciężka. Godzinę później służba znajduje Cię martwego z powodu odurzenia olejkami.");
             setKwe1("...");
             setKwe2("...");
+            game.death = 0;
             lub();
             changeDeath_screen();
         }
