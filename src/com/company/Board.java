@@ -1909,20 +1909,21 @@ public class Board extends JPanel implements MouseListener {
                 x = game.window.getMousePosition().x;
                 y = game.window.getMousePosition().y;
                 if(x > 410 && x < 810 && y > 667 && y < 754){
-                    game.zapisywanie = true;
-                    /*try {
-                        game.Zapis(game.aktualny_zapis,game.wybor.getTura(),decyzja.getJuz(),decyzja.getFinanse(),decyzja.getLegiony(),decyzja.getObywatele(),decyzja.getReligia(),decyzja.getQuest(), decyzja.getKontynuacja(),decyzja.qq16,decyzja.qq21,decyzja.getNr());
-                    } catch (IOException ioException) {
-                        ioException.printStackTrace();
-                    }*/
                     game.zapis_boll = false;
                     game.odczyt_boll = false;
                     game.wizualizacja = false;
-                    game.menu = true;
                     ustawienia_boll = false;
-                    game.grane2 = false;
-                    game.grane3 = false;
-                    //Decyzja.death_screen = 0;
+                    game.menu = true;
+                    Decyzja.death_screen = 0;
+                    int[] jj = new int[40];
+                    int[] q = new int[50];
+                    for(int i = 0; i < 40; i++){
+                        jj[i] = 0;
+                    }
+                    for(int i = 0; i < 50; i++){
+                        q[i] = 0;
+                    }
+                    game.zapisywanie = true;
                 }
 
                 if (e.getX() > 812 && e.getX() < 950 && e.getY() > 692 && e.getY() < 747) {
