@@ -4,7 +4,10 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Queue;
 import java.util.Scanner;
 
@@ -50,7 +53,6 @@ public class Decyzja {
     public String kwestia;
     public String kwe1;
     int difficulty = 0;
-
     public String getKwe2() {
         return kwe2;
     }
@@ -217,6 +219,9 @@ public class Decyzja {
         kontynuacja = 0;
         juzjest = new int[40];
         quest = new int[62];
+        File plik11 = new File("src/com/company/Pliki/postep");
+        Scanner innn = new Scanner(plik11);
+        quest[61] = innn.nextInt();
         aktualny_numer = 0;
 
     }
@@ -336,7 +341,13 @@ public class Decyzja {
             nr = aktualny_numer;
             aktualny_numer = 0;
         }
+        game.fabuła61 = quest[61];
+        FileWriter f = new FileWriter("src/com/company/Pliki/postep");
+        PrintWriter out1 = new PrintWriter(f);
+        out1.println(game.fabuła61);
+        out1.close();
         Board.nr = nr;
+        nr = 61;
         if (game.death==0) {
             switch (nr) {
 
@@ -1884,7 +1895,7 @@ public class Decyzja {
 
 
                 case 100058:
-                    setKwestia("Po pozbyciu się nawozu, zwierzęta wyzdrowiały. Hodowcy są wdzięczni za Twoją pomoc");
+                    setKwestia("Po pozbyciu się nawozu, zwierzęta wyzdrowiały. Hodowcy są wdzięczni za Twoją pomoc.");
                     setKwe1("...");
                     setKwe2("...");
                     setStats(10, 0, 10, 0);

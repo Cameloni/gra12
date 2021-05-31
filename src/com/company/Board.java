@@ -10,6 +10,7 @@ import java.awt.event.MouseListener;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Board extends JPanel implements MouseListener {
     Game game;
@@ -451,11 +452,13 @@ public class Board extends JPanel implements MouseListener {
                         green_leg1 = true;
                         green_oby1 = false;
                         green_rel1 = false;
+                        break;
                     case 100015:
                         green_fin1 = false;
                         green_leg1 = false;
                         green_oby1 = true;
                         green_rel1 = false;
+                        break;
                     case 110015:
                         green_fin1 = false;
                         green_leg1 = true;
@@ -914,6 +917,7 @@ public class Board extends JPanel implements MouseListener {
                         green_leg2 = true;
                         green_oby2 = false;
                         green_rel2 = false;
+                        break;
                     case 110015:
                         green_fin2 = false;
                         green_leg2 = false;
@@ -1929,14 +1933,14 @@ public class Board extends JPanel implements MouseListener {
                     ustawienia_boll = false;
                     game.menu = true;
                     Decyzja.death_screen = 0;
-                    int[] jj = new int[40];
-                    int[] q = new int[50];
+                    /*int[] jj = new int[40];
+                    int[] q = new int[62];
                     for(int i = 0; i < 40; i++){
                         jj[i] = 0;
                     }
-                    for(int i = 0; i < 50; i++){
+                    for(int i = 0; i < 62; i++){
                         q[i] = 0;
-                    }
+                    }*/
                     game.zapisywanie = true;
                 }
 
@@ -1988,13 +1992,22 @@ public class Board extends JPanel implements MouseListener {
                 game.grane2 = true;
                 Decyzja.death_screen = 0;
                 int[] jj = new int[40];
-                int[] q = new int[50];
+                int[] q = new int[62];
                 for(int i = 0; i < 40; i++){
                     jj[i] = 0;
                 }
-                for(int i = 0; i < 50; i++){
+                for(int i = 0; i < 61; i++){
                     q[i] = 0;
                 }
+                //q[61] = game.fabuła61;
+                File plik = new File("src/com/company/Pliki/postep");
+                Scanner in1 = null;
+                try {
+                    in1 = new Scanner(plik);
+                } catch (FileNotFoundException fileNotFoundException) {
+                    fileNotFoundException.printStackTrace();
+                }
+                q[61] = in1.nextInt();
                 try {
                     game.Zapis(game.aktualny_zapis,1, jj,50,50,50,50, q,0,0,0,-1,0);
                 } catch (IOException ioException) {
@@ -2011,13 +2024,22 @@ public class Board extends JPanel implements MouseListener {
                 game.menu = true;
                 Decyzja.death_screen = 0;
                 int[] jj = new int[40];
-                int[] q = new int[50];
+                int[] q = new int[62];
                 for(int i = 0; i < 40; i++){
                     jj[i] = 0;
                 }
-                for(int i = 0; i < 50; i++){
+                for(int i = 0; i < 61; i++){
                     q[i] = 0;
                 }
+                //q[61] = game.fabuła61;
+                File plik = new File("src/com/company/Pliki/postep");
+                Scanner in1 = null;
+                try {
+                    in1 = new Scanner(plik);
+                } catch (FileNotFoundException fileNotFoundException) {
+                    fileNotFoundException.printStackTrace();
+                }
+                q[61] = in1.nextInt();
                 try {
                     game.Zapis(game.aktualny_zapis,1, jj,50,50,50,50, q,0,0,0,-1,0);
                 } catch (IOException ioException) {

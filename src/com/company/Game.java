@@ -24,6 +24,10 @@ public class Game {
     public static boolean grane3 = true;
     public static boolean zapisywanie = false;
     public static boolean odczytywanie = false;
+    File plik11 = new File("src/com/company/Pliki/postep");
+    Scanner innn = new Scanner(plik11);
+    public int fabuła61 = innn.nextInt();
+
 
     File muzyka = new File("src/com/company/audio/gra_java_soundtrack(wav).wav");
     File najechanie_audio = new File("src/com/company/audio/przycisk_najechany_audio.wav");
@@ -57,7 +61,7 @@ public class Game {
        out.println(leg);
        out.println(oby);
        out.println(rel);
-       for(int i = 0; i < 50; i++){
+       for(int i = 0; i < 62; i++){
            out.println(que[i]);
        }
        out.println(kon);

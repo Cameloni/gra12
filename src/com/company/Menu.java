@@ -9,9 +9,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Menu extends JPanel implements MouseListener {
     ImageIcon tlo;
@@ -241,13 +243,22 @@ public class Menu extends JPanel implements MouseListener {
                 game.grane3 = true;
                 game.wizualizacja = true;
                 int[] jj = new int[40];
-                int[] q = new int[50];
+                int[] q = new int[62];
                 for(int i = 0; i < 40; i++){
                     jj[i] = 0;
                 }
-                for(int i = 0; i < 50; i++){
+                for(int i = 0; i < 61; i++){
                     q[i] = 0;
                 }
+                //q[61] = game.fabuła61;
+                File plik = new File("src/com/company/Pliki/postep");
+                Scanner in1 = null;
+                try {
+                    in1 = new Scanner(plik);
+                } catch (FileNotFoundException fileNotFoundException) {
+                    fileNotFoundException.printStackTrace();
+                }
+                q[61] = in1.nextInt();
                 try {
                     game.Zapis(1,1, jj,50,50,50,50, q,0,0,0,-1, 0);
                 } catch (IOException ioException) {
@@ -298,13 +309,22 @@ public class Menu extends JPanel implements MouseListener {
                 game.grane2 = true;
                 game.grane3 = true;
                 int[] jj = new int[40];
-                int[] q = new int[50];
+                int[] q = new int[62];
                 for(int i = 0; i < 40; i++){
                     jj[i] = 0;
                 }
-                for(int i = 0; i < 50; i++){
+                for(int i = 0; i < 61; i++){
                     q[i] = 0;
                 }
+                //q[61] = game.fabuła61;
+                File plik = new File("src/com/company/Pliki/postep");
+                Scanner in1 = null;
+                try {
+                    in1 = new Scanner(plik);
+                } catch (FileNotFoundException fileNotFoundException) {
+                    fileNotFoundException.printStackTrace();
+                }
+                q[61] = in1.nextInt();
                 try {
                     game.Zapis(2,1, jj,50,50,50,50, q,0,0,0,-1,0);
                 } catch (IOException ioException) {
@@ -354,13 +374,22 @@ public class Menu extends JPanel implements MouseListener {
                 game.grane2 = true;
                 game.grane3 = true;
                 int[] jj = new int[40];
-                int[] q = new int[50];
+                int[] q = new int[62];
                 for(int i = 0; i < 40; i++){
                     jj[i] = 0;
                 }
-                for(int i = 0; i < 50; i++){
+                for(int i = 0; i < 61; i++){
                     q[i] = 0;
                 }
+                //q[61] = game.fabuła61;
+                File plik = new File("src/com/company/Pliki/postep");
+                Scanner in1 = null;
+                try {
+                    in1 = new Scanner(plik);
+                } catch (FileNotFoundException fileNotFoundException) {
+                    fileNotFoundException.printStackTrace();
+                }
+                q[61] = in1.nextInt();
                 try {
                     game.Zapis(3,1, jj,50,50,50,50, q,0,0,0,-1,0);
                 } catch (IOException ioException) {
