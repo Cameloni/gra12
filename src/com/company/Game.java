@@ -23,6 +23,7 @@ public class Game {
     public static boolean grane2 = true;
     public static boolean grane3 = true;
     public static boolean zapisywanie = false;
+    public static boolean odczytywanie = false;
 
     File muzyka = new File("src/com/company/audio/gra_java_soundtrack(wav).wav");
     File najechanie_audio = new File("src/com/company/audio/przycisk_najechany_audio.wav");
@@ -44,7 +45,7 @@ public class Game {
     //public int coins;
     //int[] lines = new int[4];
     //double[] price = new double[4];
-   public static void Zapis(int x, int tura, int[] juz, int fin, int leg, int oby, int rel,  int[] que, int kon, int q16, int q21, int nr) throws IOException {
+   public static void Zapis(int x, int tura, int[] juz, int fin, int leg, int oby, int rel,  int[] que, int kon, int q16, int q21, int nr, int aktual) throws IOException {
        FileWriter za = new FileWriter("src/com/company/Pliki/Zapis_gry_"+ x);
        aktualny_zapis = x;
        PrintWriter out = new PrintWriter(za);
@@ -63,6 +64,7 @@ public class Game {
        out.println(q16);
        out.println(q21);
        out.println(nr);
+       out.println(aktual);
        out.close();
    }
 
@@ -90,6 +92,7 @@ public class Game {
         W.qq16 = in.nextInt();
         W.qq21 = in.nextInt();
         W.setNr(in.nextInt());
+        W.aktualny_numer = (in.nextInt());
 
         //W.setStats(s1, s2, s3,s4);
     }
