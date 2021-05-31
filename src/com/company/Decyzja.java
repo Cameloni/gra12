@@ -347,7 +347,7 @@ public class Decyzja {
         out1.println(game.fabuła61);
         out1.close();
         Board.nr = nr;
-        nr = 61;
+        //nr = 61;
         if (game.death==0) {
             switch (nr) {
 
