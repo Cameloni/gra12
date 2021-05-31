@@ -26,6 +26,7 @@ public class Board extends JPanel implements MouseListener {
     boolean wczytaj_najechany = false;
     boolean nowa_gra_najechany = false;
     boolean wyjscie_najechany = false;
+    boolean return_najechany = false;
     public static boolean death2;
 
     boolean dc = false;
@@ -1004,6 +1005,13 @@ public class Board extends JPanel implements MouseListener {
         else{
             menu_najechany = false;
         }
+
+        if(x > 240 && x < 347 && y > 50 && y < 103){
+            return_najechany = true;
+        }
+        else{
+            return_najechany = false;
+        }
     }
     //public JLabel tekst = new JLabel();
     public JTextArea jTextArea = new JTextArea();
@@ -1129,7 +1137,7 @@ public class Board extends JPanel implements MouseListener {
         ImageIcon zapis2_icon = new ImageIcon("src/com/company/buttons/roman_button (6).png");
         ImageIcon zapis3_icon = new ImageIcon("src/com/company/buttons/roman_button (7).png");
         ImageIcon wczytaj = new ImageIcon("src/com/company/buttons/roman_button (2).png");
-        ImageIcon wroc = new ImageIcon("src/com/company/buttons/return_button.png");
+        ImageIcon wroc = new ImageIcon("src/com/company/buttons/return_button2.png");
         ImageIcon DC = new ImageIcon("src/com/company/pixelpictures/tytuł.dc.png");
         ImageIcon DC2 = new ImageIcon("src/com/company/pixelpictures/pixil-frame-0 (20).png");
 
@@ -1476,19 +1484,19 @@ public class Board extends JPanel implements MouseListener {
                 } else if (Decyzja.legiony == 35) {
                     g.drawImage(staty[1].getImage(), 170 + 260, 38, 322 + 230, 160, 370, 350, 540, 520, null);
                 } else if (Decyzja.legiony == 30) {
-                    g.drawImage(staty[1].getImage(), 169 + 260, 38, 322 + 230, 160, 543, 350, 713, 520, null);
+                    g.drawImage(staty[1].getImage(), 169 + 260+3, 38, 322 + 230+3, 160, 543, 350, 713, 520, null);
                 } else if (Decyzja.legiony == 25) {
-                    g.drawImage(staty[1].getImage(), 169 + 260, 38, 322 + 230, 160, 715, 350, 883, 520, null);
+                    g.drawImage(staty[1].getImage(), 169 + 260+3, 38, 322 + 230+3, 160, 715, 350, 883, 520, null);
                 } else if (Decyzja.legiony == 20) {
-                    g.drawImage(staty[1].getImage(), 169 + 241, 37, 322 + 234, 159, 3, 520, 208, 690, null);
+                    g.drawImage(staty[1].getImage(), 169+3 + 241, 37, 322 + 234+3, 159, 3, 520, 208, 690, null);
                 } else if (Decyzja.legiony == 15) {
-                    g.drawImage(staty[1].getImage(), 169 + 265, 37, 323 + 229, 159, 208, 520, 373, 690, null);
+                    g.drawImage(staty[1].getImage(), 169 + 268, 37, 326 + 229, 159, 208, 520, 373, 690, null);
                 } else if (Decyzja.legiony == 10) {
-                    g.drawImage(staty[1].getImage(), 165 + 265, 37, 323 + 229, 159, 373, 520, 543, 690, null);
+                    g.drawImage(staty[1].getImage(), 165 + 268, 37, 326 + 229, 159, 373, 520, 543, 690, null);
                 } else if (Decyzja.legiony == 5) {
-                    g.drawImage(staty[1].getImage(), 164 + 265, 37, 323 + 229, 159, 543, 520, 713, 690, null);
+                    g.drawImage(staty[1].getImage(), 167 + 265, 37, 326 + 229, 159, 543, 520, 713, 690, null);
                 } else if (Decyzja.legiony <= 0) {
-                    g.drawImage(staty[1].getImage(), 166 + 267, 37, 326 + 227, 159, 716, 520, 885, 690, null);
+                    g.drawImage(staty[1].getImage(), 169 + 267, 37, 329 + 227, 159, 716, 520, 885, 690, null);
                 }
 
 
@@ -1569,11 +1577,16 @@ public class Board extends JPanel implements MouseListener {
                 g.drawImage(zapis3_icon.getImage(), 424, 568, 764, 663, 0, 0, 1416, 325, null);
             }*/
             if (menu_najechany == false) {
-                g.drawImage(icons[27].getImage(), 337, 600, 867, 750, 0, 0, 1400, 350, null);
+                g.drawImage(icons[27].getImage(), 137, 600, 867, 750, 0, 0, 1400, 350, null);
             } else {
                 g.drawImage(icons[27].getImage(), 337, 631, 867, 769, 0, 350, 1400, 670, null);
             }
-            g.drawImage(wroc.getImage(),500,450,158*5,92*6,null);
+            if(return_najechany == false) {
+                g.drawImage(wroc.getImage(), 160, 20, 400, 80, 0, 0, 1400, 340, null);
+            }
+            else{
+                g.drawImage(wroc.getImage(), 160, 22, 400, 77, 0, 350, 1400, 670, null);
+            }
         }
     }
 
@@ -1925,7 +1938,7 @@ public class Board extends JPanel implements MouseListener {
                     //Decyzja.death_screen = 0;
                 }
 
-                if (e.getX() > 812 && e.getX() < 950 && e.getY() > 692 && e.getY() < 747) {
+                if (e.getX() > 240 && e.getX() < 347 && e.getY() > 50 && e.getY() < 103) {
                     //game.menu = true;
                     ustawienia_boll = false;
                     try {
