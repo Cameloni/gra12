@@ -1699,7 +1699,7 @@ public class Decyzja {
         }
         else if(game.death==3){
             game.death = 0;
-            setKwestia("Rzym zostaje najechany przez dzikie plemiona barbarzyńców z północy. Razem ze swoim ostatnim generałem zostajesz otoczony i zamordowany. Twoje ciało spoczywa w kałuży krwi.");
+            setKwestia("Rzym zostaje najechany przez dzikie plemiona barbarzyńców z północy. Razem ze swoim ostatnim generałem zostajesz otoczony w swoim pałacu i zamordowany. Twoje ciało spoczywa w kałuży krwi.");
             setKwe1("...");
             setKwe2("...");
             game.death = 0;
