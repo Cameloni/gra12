@@ -253,12 +253,14 @@ public class Menu extends JPanel implements MouseListener {
                 } catch (IOException ioException) {
                     ioException.printStackTrace();
                 }
+
                 game.death = 0;
                 try {
                     game.Odczyt(1, decyzja);
                 } catch (FileNotFoundException fileNotFoundException) {
                     fileNotFoundException.printStackTrace();
                 }
+                ((Board) game.window.getContentPane().getComponent(0)).jlicznik.setText(("Tura : " + decyzja.getTura()));
                 board.repaint();
                 try {
                     try {
@@ -316,6 +318,7 @@ public class Menu extends JPanel implements MouseListener {
                 } catch (FileNotFoundException fileNotFoundException) {
                     fileNotFoundException.printStackTrace();
                 }
+                ((Board) game.window.getContentPane().getComponent(0)).jlicznik.setText(("Tura : " + decyzja.getTura()));
                 board.repaint();
                 try {
                     try {
@@ -369,6 +372,7 @@ public class Menu extends JPanel implements MouseListener {
                 } catch (FileNotFoundException fileNotFoundException) {
                     fileNotFoundException.printStackTrace();
                 }
+                ((Board) game.window.getContentPane().getComponent(0)).jlicznik.setText(("Tura : " + decyzja.getTura()));
                 board.repaint();
                 try {
                     try {
@@ -439,6 +443,7 @@ public class Menu extends JPanel implements MouseListener {
                 } catch (FileNotFoundException fileNotFoundException) {
                     fileNotFoundException.printStackTrace();
                 }
+                ((Board) game.window.getContentPane().getComponent(0)).jlicznik.setText(("Tura : " + decyzja.getTura()));
                 board.repaint();
                 try {
                     try {
@@ -481,6 +486,7 @@ public class Menu extends JPanel implements MouseListener {
                 } catch (FileNotFoundException fileNotFoundException) {
                     fileNotFoundException.printStackTrace();
                 }
+                ((Board) game.window.getContentPane().getComponent(0)).jlicznik.setText(("Tura : " + decyzja.getTura()));
                 board.repaint();
                 try {
                     try {
@@ -516,6 +522,7 @@ public class Menu extends JPanel implements MouseListener {
                 } catch (FileNotFoundException fileNotFoundException) {
                     fileNotFoundException.printStackTrace();
                 }
+                ((Board) game.window.getContentPane().getComponent(0)).jlicznik.setText(("Tura : " + decyzja.getTura()));
                 board.repaint();
                 game.menu = false;
                 game.wizualizacja = true;

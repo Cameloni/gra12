@@ -1198,7 +1198,7 @@ public class Board extends JPanel implements MouseListener {
         add(this.jTextArea);
         this.jlicznik = new JTextArea("");
         this.jlicznik.setVisible(true);
-        this.jlicznik.setBounds(20, 20, 140, 50);
+        this.jlicznik.setBounds(30, 20, 140, 50);
         this.jlicznik.setBackground(new Color(104, 79, 26, 111));
         this.jlicznik.setOpaque(false);
         //jTextArea.setForeground(Color.red);
@@ -1571,29 +1571,14 @@ public class Board extends JPanel implements MouseListener {
             } else {
                 g.drawImage(nazwa2.getImage(), 350, 20, 500, 300, null);
             }
-            if (nowa_gra_najechany == true) {
-                g.drawImage(icons[28].getImage(), 425-8, 347, 765-8, 442, 0, 0, 1416, 329, null);
-            } else {
-                g.drawImage(icons[28].getImage(), 427-10, 345+8, 767-10, 442+8, 0, 336, 1416, 672, null);
-            }
-            if (wczytaj_najechany == false) {
-                //g.drawImage(icons[28].getImage(), 425, 457, 765, 552, 0, 0, 1416, 327, null);
-                g.drawImage(wczytaj.getImage(), 425, 457, 765, 552, 0, 0, 1416, 327, null);
-                //g.drawImage(zapis2_icon.getImage(), 425, 457, 765, 552, 0, 0, 1416, 327, null);
-            } else {
-                g.drawImage(wczytaj.getImage(), 426, 461, 766, 561, 0, 330, 1416, 672, null);
-                //g.drawImage(icons[28].getImage(), 426, 461+1, 766, 561+1, 0, 330, 1416, 672, null);
-                //g.drawImage(zapis2_icon.getImage(), 426, 461+1, 766, 561+1, 0, 330, 1416, 672, null);
 
-
-            }
             /*if (wyjscie_najechany == true) {
                 g.drawImage(zapis3_icon.getImage(), 425-3, 570+2, 765-3, 670+2, 0, 330, 1416, 672, null);
             } else {
                 g.drawImage(zapis3_icon.getImage(), 424, 568, 764, 663, 0, 0, 1416, 325, null);
             }*/
             if (menu_najechany == false) {
-                g.drawImage(icons[27].getImage(), 137, 600, 867, 750, 0, 0, 1400, 350, null);
+                g.drawImage(icons[27].getImage(), 337, 600, 867, 750, 0, 0, 1400, 350, null);
             } else {
                 g.drawImage(icons[27].getImage(), 337, 631, 867, 769, 0, 350, 1400, 670, null);
             }
