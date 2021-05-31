@@ -216,7 +216,7 @@ public class Decyzja {
         qq21 = 0;
         kontynuacja = 0;
         juzjest = new int[40];
-        quest = new int[50];
+        quest = new int[62];
         aktualny_numer = 0;
 
     }
@@ -310,6 +310,7 @@ public class Decyzja {
         //nr = 1;
         //quest[15] = 1;
         //finanse=0;
+       // nr=61;
         if(nr == 16 && getQuest()[16] == 3){
             nr = (int)(Math.random()*15);
         }
@@ -1241,34 +1242,292 @@ public class Decyzja {
                     break;
                 case 61:
                     if(quest[61]==0){
-
+                        //legiony = 5;
+                        if(legiony > 5){
+                            setKwestia("Jesteśmy wystarczająco silni, by zaatakować i podbić ziemie barbarzyńskiego plemiona Alamanów. Wielu naszych żołnierzy polegnie w boju, ale to niska cena w zamian za poszerzenie terytorium Cesarstwa Rzymskiego.");
+                            setKwe1("Do boju!");
+                            setKwe2("Nie możemy ryzykować życia legionistów.");
+                            lub();
+                            switch (dec) {
+                                case 1:
+                                    setStats(0, -5, 0, 0);
+                                    quest[61]++;
+                                    break;
+                                case 2:
+                                    break;
+                            }
+                            break;
+                        }
+                        else{
+                            setKwestia("Twój syn pyta, czy nie zechciałbyś wybrać się z nim do Cyrku.");
+                            setKwe1("Może innym razem.");
+                            setKwe2("Z przyjemnością.");
+                            lub();
+                            switch (dec) {
+                                case 1:
+                                    break;
+                                case 2:
+                                    setKontynuacja(200061);
+                                    break;
+                            }
+                            break;
+                        }
                     }
                     else if(quest[61]==1){
-
+                        if(legiony > 10){
+                            setKwestia("Jesteśmy wystarczająco silni, by zaatakować i podbić ziemie barbarzyńskiego plemiona Swebów. Wielu naszych żołnierzy polegnie w boju, ale to niska cena w zamian za poszerzenie terytorium Cesarstwa Rzymskiego.");
+                            setKwe1("Do boju!");
+                            setKwe2("Nie możemy ryzykować życia legionistów.");
+                            lub();
+                            switch (dec) {
+                                case 1:
+                                    setStats(0, -10, 0, 0);
+                                    quest[61]++;
+                                    break;
+                                case 2:
+                                    break;
+                            }
+                            break;
+                        }
+                        else{
+                            setKwestia("Twój syn pyta, czy nie zechciałbyś wybrać się z nim do Cyrku.");
+                            setKwe1("Może innym razem.");
+                            setKwe2("Z przyjemnością.");
+                            lub();
+                            switch (dec) {
+                                case 1:
+                                    break;
+                                case 2:
+                                    setKontynuacja(200061);
+                                    break;
+                            }
+                            break;
+                        }
                     }
                     else if(quest[61]==2){
-
+                        if(legiony > 15){
+                            setKwestia("Jesteśmy wystarczająco silni, by zaatakować i podbić ziemie barbarzyńskiego plemiona Kwadów. Wielu naszych żołnierzy polegnie w boju, ale to niska cena w zamian za poszerzenie terytorium Cesarstwa Rzymskiego.");
+                            setKwe1("Do boju!");
+                            setKwe2("Nie możemy ryzykować życia legionistów.");
+                            lub();
+                            switch (dec) {
+                                case 1:
+                                    setStats(0, -15, 0, 0);
+                                    quest[61]++;
+                                    break;
+                                case 2:
+                                    break;
+                            }
+                            break;
+                        }
+                        else{
+                            setKwestia("Twój syn pyta, czy nie zechciałbyś wybrać się z nim do Cyrku.");
+                            setKwe1("Może innym razem.");
+                            setKwe2("Z przyjemnością.");
+                            lub();
+                            switch (dec) {
+                                case 1:
+                                    break;
+                                case 2:
+                                    setKontynuacja(200061);
+                                    break;
+                            }
+                            break;
+                        }
                     }
                     else if(quest[61]==3){
-
+                        if(legiony > 20){
+                            setKwestia("Jesteśmy wystarczająco silni, by zaatakować i podbić ziemie barbarzyńskiego plemiona Burgundów. Wielu naszych żołnierzy polegnie w boju, ale to niska cena w zamian za poszerzenie terytorium Cesarstwa Rzymskiego.");
+                            setKwe1("Do boju!");
+                            setKwe2("Nie możemy ryzykować życia legionistów.");
+                            lub();
+                            switch (dec) {
+                                case 1:
+                                    setStats(0, -20, 0, 0);
+                                    quest[61]++;
+                                    break;
+                                case 2:
+                                    break;
+                            }
+                            break;
+                        }
+                        else{
+                            setKwestia("Twój syn pyta, czy nie zechciałbyś wybrać się z nim do Cyrku.");
+                            setKwe1("Może innym razem.");
+                            setKwe2("Z przyjemnością.");
+                            lub();
+                            switch (dec) {
+                                case 1:
+                                    break;
+                                case 2:
+                                    setKontynuacja(200061);
+                                    break;
+                            }
+                            break;
+                        }
                     }
                     else if(quest[61]==4){
-
+                        if(legiony > 30){
+                            setKwestia("Jesteśmy wystarczająco silni, by zaatakować i podbić ziemie barbarzyńskiego plemiona Wandalów. Wielu naszych żołnierzy polegnie w boju, ale to niska cena w zamian za poszerzenie terytorium Cesarstwa Rzymskiego.");
+                            setKwe1("Do boju!");
+                            setKwe2("Nie możemy ryzykować życia legionistów.");
+                            lub();
+                            switch (dec) {
+                                case 1:
+                                    setStats(0, -30, 0, 0);
+                                    quest[61]++;
+                                    break;
+                                case 2:
+                                    break;
+                            }
+                            break;
+                        }
+                        else{
+                            setKwestia("Twój syn pyta, czy nie zechciałbyś wybrać się z nim do Cyrku.");
+                            setKwe1("Może innym razem.");
+                            setKwe2("Z przyjemnością.");
+                            lub();
+                            switch (dec) {
+                                case 1:
+                                    break;
+                                case 2:
+                                    setKontynuacja(200061);
+                                    break;
+                            }
+                            break;
+                        }
                     }
                     else if(quest[61]==5){
-
+                        if(legiony > 50){
+                            setKwestia("Jesteśmy wystarczająco silni, by zaatakować i podbić ziemie barbarzyńskiego plemiona Anglów. Wielu naszych żołnierzy polegnie w boju, ale to niska cena w zamian za poszerzenie terytorium Cesarstwa Rzymskiego.");
+                            setKwe1("Do boju!");
+                            setKwe2("Nie możemy ryzykować życia legionistów.");
+                            lub();
+                            switch (dec) {
+                                case 1:
+                                    setStats(0, -50, 0, 0);
+                                    quest[61]++;
+                                    break;
+                                case 2:
+                                    break;
+                            }
+                            break;
+                        }
+                        else{
+                            setKwestia("Twój syn pyta, czy nie zechciałbyś wybrać się z nim do Cyrku.");
+                            setKwe1("Może innym razem.");
+                            setKwe2("Z przyjemnością.");
+                            lub();
+                            switch (dec) {
+                                case 1:
+                                    break;
+                                case 2:
+                                    setKontynuacja(200061);
+                                    break;
+                            }
+                            break;
+                        }
                     }
                     else if(quest[61]==6){
-
+                        if(legiony > 60){
+                            setKwestia("Jesteśmy wystarczająco silni, by zaatakować i podbić ziemie barbarzyńskiego plemiona Jutów. Wielu naszych żołnierzy polegnie w boju, ale to niska cena w zamian za poszerzenie terytorium Cesarstwa Rzymskiego.");
+                            setKwe1("Do boju!");
+                            setKwe2("Nie możemy ryzykować życia legionistów.");
+                            lub();
+                            switch (dec) {
+                                case 1:
+                                    setStats(0, -60, 0, 0);
+                                    quest[61]++;
+                                    break;
+                                case 2:
+                                    break;
+                            }
+                            break;
+                        }
+                        else{
+                            setKwestia("Twój syn pyta, czy nie zechciałbyś wybrać się z nim do Cyrku.");
+                            setKwe1("Może innym razem.");
+                            setKwe2("Z przyjemnością.");
+                            lub();
+                            switch (dec) {
+                                case 1:
+                                    break;
+                                case 2:
+                                    setKontynuacja(200061);
+                                    break;
+                            }
+                            break;
+                        }
                     }
                     else if(quest[61]==7){
-
+                        if(legiony > 75){
+                            setKwestia("Jesteśmy wystarczająco silni, by zaatakować i podbić ziemie barbarzyńskiego plemiona Wizygotów. Wielu naszych żołnierzy polegnie w boju, ale to niska cena w zamian za poszerzenie terytorium Cesarstwa Rzymskiego.");
+                            setKwe1("Do boju!");
+                            setKwe2("Nie możemy ryzykować życia legionistów.");
+                            lub();
+                            switch (dec) {
+                                case 1:
+                                    setStats(0, -75, 0, 0);
+                                    quest[61]++;
+                                    break;
+                                case 2:
+                                    break;
+                            }
+                            break;
+                        }
+                        else{
+                            setKwestia("Twój syn pyta, czy nie zechciałbyś wybrać się z nim do Cyrku.");
+                            setKwe1("Może innym razem.");
+                            setKwe2("Z przyjemnością.");
+                            lub();
+                            switch (dec) {
+                                case 1:
+                                    break;
+                                case 2:
+                                    setKontynuacja(200061);
+                                    break;
+                            }
+                            break;
+                        }
                     }
                     else if(quest[61]==8){
-
+                        if(legiony > 90){
+                            setKwestia("Jesteśmy wystarczająco silni, by zaatakować i podbić ziemie barbarzyńskiego plemiona Hunów. Wielu naszych żołnierzy polegnie w boju, ale to niska cena w zamian za poszerzenie terytorium Cesarstwa Rzymskiego.");
+                            setKwe1("Do boju!");
+                            setKwe2("Nie możemy ryzykować życia legionistów.");
+                            lub();
+                            switch (dec) {
+                                case 1:
+                                    setStats(0, -90, 0, 0);
+                                    quest[61]++;
+                                    break;
+                                case 2:
+                                    break;
+                            }
+                            break;
+                        }
+                        else{
+                            setKwestia("Twój syn pyta, czy nie zechciałbyś wybrać się z nim do Cyrku.");
+                            setKwe1("Może innym razem.");
+                            setKwe2("Z przyjemnością.");
+                            lub();
+                            switch (dec) {
+                                case 1:
+                                    break;
+                                case 2:
+                                    setKontynuacja(200061);
+                                    break;
+                            }
+                            break;
+                        }
                     }
                     else if(quest[61]==9){
-
+                        setKwestia("Twoje Imperium stało się prawdziwą potęgą. Jesteś najlepszym Władcą, jakiego kiedukolwiek miało Cesarstwo Rzymskie.");
+                        setKwe1("...");
+                        setKwe2("...");
+                        lub();
+                        setStats(15, 15, 15, 15);
+                        break;
                     }
                     break;
 
@@ -1669,6 +1928,15 @@ public class Decyzja {
                     lub();
                     break;
 
+
+                case 200061:
+                    setKwestia("Wyjście do Cyrku z Twoim Synem okazało się być bardzo przyjemne. Powracasz do pałacu w wyjątkowo dobrym humorze.");
+                    setKwe1("...");
+                    setKwe2("...");
+                    setTura(getTura() - 1);
+                    setKontynuacja(0);
+                    lub();
+                    break;
             }
             setTura(getTura() + 1);
             if(getTura() % 10 == 0){
@@ -1829,7 +2097,7 @@ public class Decyzja {
 
             //if(death_screen == 0) {
                 while (nr < 0) {
-                    nr = (int) (Math.random() * 61);
+                    nr = (int) (Math.random() * 62);
 
                     for (int j = 0; j < 40; j++) {
                         if (getJuzjest(j) == -1) {
