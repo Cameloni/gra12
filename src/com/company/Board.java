@@ -1939,7 +1939,7 @@ public class Board extends JPanel implements MouseListener {
                     game.zapisywanie = true;
                 }
 
-                if (e.getX() > 240 && e.getX() < 347 && e.getY() > 50 && e.getY() < 103) {
+                if (e.getX() > 235 && e.getX() < 342 && e.getY() > 20 && e.getY() < 75) {
                     //game.menu = true;
                     ustawienia_boll = false;
                     try {

@@ -396,7 +396,7 @@ public class Menu extends JPanel implements MouseListener {
                 game.klik.close();
                 repaint();
             }
-            if (e.getX() > 240 && e.getX() < 347 && e.getY() > 50 && e.getY() < 103) {
+            if (e.getX() > 235 && e.getX() < 342 && e.getY() > 20 && e.getY() < 75) {
                 //game.menu = true;
                 game.zapis_boll = false;
                 try {
@@ -547,7 +547,7 @@ public class Menu extends JPanel implements MouseListener {
                 }
                 repaint();
             }
-            if (e.getX() > 240 && e.getX() < 347 && e.getY() > 50 && e.getY() < 103) {
+            if (e.getX() > 235 && e.getX() < 342 && e.getY() > 20 && e.getY() < 75) {
                 //game.menu = true;
                 game.odczyt_boll = false;
                 System.out.println("kanapa");
