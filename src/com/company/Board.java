@@ -444,7 +444,7 @@ public class Board extends JPanel implements MouseListener {
                         green_fin1 = false;
                         green_leg1 = true;
                         green_oby1 = false;
-                        green_rel1 = true;
+                        green_rel1 = false;
                         break;
                     case 100002:
                         green_fin1 = true;
@@ -1470,7 +1470,7 @@ public class Board extends JPanel implements MouseListener {
                 }
 
 
-//Decyzja.legiony = 0;
+//Decyzja.legiony = 5;
                 if (Decyzja.legiony >= 100) {
                     g.drawImage(staty[1].getImage(), 180 + 230, 32, 321 + 231, 162, 0, 0, 200, 180, null);
                 } else if (Decyzja.legiony == 95) {
