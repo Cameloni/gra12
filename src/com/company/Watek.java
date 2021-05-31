@@ -274,6 +274,7 @@ public class Watek extends Thread {
                 mruganie();
                 try {
                     zapis_panel.Zapisywanie_funkcja();
+                    zapis_panel.Odczytywanie_funkcja();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

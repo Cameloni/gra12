@@ -1964,7 +1964,29 @@ public class Board extends JPanel implements MouseListener {
             x = game.window.getMousePosition().x;
             y = game.window.getMousePosition().y;
             if(x > 399 && x < 810 && y > 424 && y < 611){
-
+                game.zapis_boll = false;
+                game.odczyt_boll = false;
+                game.wizualizacja = true;
+                ustawienia_boll = false;
+                game.menu = false;
+                game.grane = true;
+                game.grane2 = true;
+                Decyzja.death_screen = 0;
+                int[] jj = new int[40];
+                int[] q = new int[50];
+                for(int i = 0; i < 40; i++){
+                    jj[i] = 0;
+                }
+                for(int i = 0; i < 50; i++){
+                    q[i] = 0;
+                }
+                try {
+                    game.Zapis(game.aktualny_zapis,1, jj,50,50,50,50, q,0,0,0,-1,0);
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                }
+                game.odczytywanie = true;
+                //game.Odczyt(game.aktualny_zapis, );
             }
             if(x > 410 && x < 810 && y > 667 && y < 754){
                 game.zapis_boll = false;
@@ -1982,7 +2004,7 @@ public class Board extends JPanel implements MouseListener {
                     q[i] = 0;
                 }
                 try {
-                    game.Zapis(game.aktualny_zapis,1, jj,50,50,50,50, q,0,0,0,-1);
+                    game.Zapis(game.aktualny_zapis,1, jj,50,50,50,50, q,0,0,0,-1,0);
                 } catch (IOException ioException) {
                     ioException.printStackTrace();
                 }

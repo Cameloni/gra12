@@ -30,6 +30,7 @@ public class Decyzja {
         this.quest[i] = quest;
     }
     public static int[] quest;
+    public int aktualny_numer;
     int[] juzjest;
     int tura;
     int nr;
@@ -216,6 +217,7 @@ public class Decyzja {
         kontynuacja = 0;
         juzjest = new int[40];
         quest = new int[50];
+        aktualny_numer = 0;
 
     }
 
@@ -232,6 +234,7 @@ public class Decyzja {
         return p;
     }
     public void lub() throws IOException {
+
         while (this.dec != 1 || this.dec != 2) {
             //String dec1 = "";
             //System.out.print("");
@@ -251,11 +254,14 @@ public class Decyzja {
                 //    sc.nextLine();
             }
             try {
-                Thread.sleep(1);
+                Thread.sleep(3);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
+            /*if(game.wizualizacja == false){
+                game.grane2 = false;
+                break;
+            }*/
             /*if (!dec1.equals("1") && !dec1.equals("2") ) {
                 //System.out.println("wybierz \"1\" lub \"2\"");
                 continue;
@@ -324,6 +330,10 @@ public class Decyzja {
         if (getKontynuacja() != 0) {
             nr = getKontynuacja();
             setKontynuacja(0);
+        }
+        if(aktualny_numer != 0){
+            nr = aktualny_numer;
+            aktualny_numer = 0;
         }
         Board.nr = nr;
         if (game.death==0) {
@@ -1795,13 +1805,17 @@ public class Decyzja {
 
 
     public void przebieg() throws IOException {
-        int nr = -1;
-
+        int nr;
+        if(aktualny_numer != 0){
+            nr = aktualny_numer;
+        }
+        else {
+            nr = -1;
+        }
         if(game.grane == false){
             game.grane = true;
 
         }
-
         //if()
         //int aktual_zapis = game.aktualny_zapis;
         for (int iiii = 0; iiii < juzjest.length; iiii++){

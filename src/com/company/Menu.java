@@ -237,7 +237,7 @@ public class Menu extends JPanel implements MouseListener {
                     q[i] = 0;
                 }
                 try {
-                    game.Zapis(1,1, jj,50,50,50,50, q,0,0,0,-1);
+                    game.Zapis(1,1, jj,50,50,50,50, q,0,0,0,-1, 0);
                 } catch (IOException ioException) {
                     ioException.printStackTrace();
                 }
@@ -292,7 +292,7 @@ public class Menu extends JPanel implements MouseListener {
                     q[i] = 0;
                 }
                 try {
-                    game.Zapis(2,1, jj,50,50,50,50, q,0,0,0,-1);
+                    game.Zapis(2,1, jj,50,50,50,50, q,0,0,0,-1,0);
                 } catch (IOException ioException) {
                     ioException.printStackTrace();
                 }
@@ -347,7 +347,7 @@ public class Menu extends JPanel implements MouseListener {
                     q[i] = 0;
                 }
                 try {
-                    game.Zapis(3,1, jj,50,50,50,50, q,0,0,0,-1);
+                    game.Zapis(3,1, jj,50,50,50,50, q,0,0,0,-1,0);
                 } catch (IOException ioException) {
                     ioException.printStackTrace();
                 }
