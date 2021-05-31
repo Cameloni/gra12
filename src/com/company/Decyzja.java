@@ -1787,13 +1787,17 @@ public class Decyzja {
 
     public void przebieg() throws IOException {
         int nr = -1;
-        //if()
+        if(game.grane == false){
+            game.grane = true;
+
+        }        //if()
         //int aktual_zapis = game.aktualny_zapis;
         for (int iiii = 0; iiii < juzjest.length; iiii++){
             setJuzjest(-1, iiii);
         }
 
         for (int i = 0; i < 999999999; i++) {
+
             //if(death_screen == 0) {
                 while (nr < 0) {
                     nr = (int) (Math.random() * 61);
@@ -1818,6 +1822,12 @@ public class Decyzja {
                 zbior();
                 setJuzjest(nr, i % 40);
                 nr = -1;
+                if(game.grane2 == false){
+                    return;
+                }
+                if(game.grane == false){
+                    game.grane2 = false;
+                }
             }
 
 

@@ -223,6 +223,7 @@ public class Menu extends JPanel implements MouseListener {
             if (e.getX() > 425 && e.getY() > 347 && e.getX() < 765 && e.getY() < 442) {
                 game.menu = false;
                 game.grane = true;
+                game.grane2 = true;
                 game.wizualizacja = true;
                 int[] jj = new int[40];
                 int[] q = new int[50];
@@ -276,6 +277,7 @@ public class Menu extends JPanel implements MouseListener {
                 game.menu = false;
                 game.wizualizacja = true;
                 game.grane = true;
+                game.grane2 = true;
                 int[] jj = new int[40];
                 int[] q = new int[50];
                 for(int i = 0; i < 40; i++){
@@ -328,6 +330,7 @@ public class Menu extends JPanel implements MouseListener {
                 game.menu = false;
                 game.wizualizacja = true;
                 game.grane = true;
+                game.grane2 = true;
                 int[] jj = new int[40];
                 int[] q = new int[50];
                 for(int i = 0; i < 40; i++){
@@ -408,6 +411,7 @@ public class Menu extends JPanel implements MouseListener {
                 game.menu = false;
                 game.wizualizacja = true;
                 game.grane = true;
+                game.grane2 = true;
                 try {
                     game.Odczyt(1, decyzja);
                 } catch (FileNotFoundException fileNotFoundException) {
@@ -446,6 +450,7 @@ public class Menu extends JPanel implements MouseListener {
                 game.menu = false;
                 game.wizualizacja = true;
                 game.grane = true;
+                game.grane2 = true;
                 try {
                     game.Odczyt(2, decyzja);
                 } catch (FileNotFoundException fileNotFoundException) {
@@ -487,6 +492,7 @@ public class Menu extends JPanel implements MouseListener {
                 game.menu = false;
                 game.wizualizacja = true;
                 game.grane = true;
+                game.grane2 = true;
                 try {
                     try {
                         game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
