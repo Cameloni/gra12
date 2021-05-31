@@ -1,25 +1,18 @@
 package com.company;
-import com.sun.jdi.Value;
 
-import java.applet.Applet;
-import java.applet.AudioClip;
 import java.awt.*;
-import java.io.File;
 import java.io.IOException;
-import java.io.InterruptedIOException;
-import java.util.Locale;
 import javax.sound.sampled.*;
 import javax.swing.JTextArea;
 import javax.swing.*;
 
-import static javax.sound.sampled.FloatControl.Type.VOLUME;
-
 public class Watek extends Thread {
     public Game game;
+    public Zapis_panel zapis_panel;
     public Menu m;
     public Board board;
     public Decyzja decyzja;
-    public char[] character;
+    public char[] litera;
     boolean wglowne;
     boolean wdec;
     int sec;
@@ -40,10 +33,10 @@ public class Watek extends Thread {
     int i = 0;
     int ii = 0;
     String tmp4 = "";
-    String addedcharacter = "";
+    String zdanie = "";
     //Font defaultfont = new Font("Times New Roman", Font.PLAIN, 30);
 
-    public Watek(Game game, Menu menu, Decyzja d, Boolean wglowne, Boolean wdec, Boolean grane, Board board) throws IOException, FontFormatException, LineUnavailableException, UnsupportedAudioFileException {
+    public Watek(Game game, Menu menu, Decyzja d, Boolean wglowne, Boolean wdec, Boolean grane, Board board, Zapis_panel zapis_panel) throws IOException, FontFormatException, LineUnavailableException, UnsupportedAudioFileException {
         this.game = game;
         this.m = menu;
         this.decyzja = d;
@@ -51,6 +44,7 @@ public class Watek extends Thread {
         this.wdec = wdec;
         this.grane = grane;
         this.board = board;
+        this.zapis_panel = zapis_panel;
         sec = 0;
         sec1 = 0;
         mr = 0;
@@ -82,19 +76,20 @@ public class Watek extends Thread {
                     ((Board) game.window.getContentPane().getComponent(0)).jlicznik.setVisible(true);
                     ((Board) game.window.getContentPane().getComponent(0)).JJ[0].setVisible(true);
                     ((Board) game.window.getContentPane().getComponent(0)).JJ[1].setVisible(true);
+                    ((Board) game.window.getContentPane().getComponent(0)).jlicznik.setVisible(true);
                 }
-                this.character = "".toCharArray();
+                this.litera = "".toCharArray();
 
                 String tmp1;
 
                 String tmp2;
                 if (!decyzja.getKwestia().equals(tmp4)) {
-                    addedcharacter = "";
+                    zdanie = "";
                 }
 
-                this.character = decyzja.getKwestia().toCharArray();
+                this.litera = decyzja.getKwestia().toCharArray();
                 tmp4 = decyzja.getKwestia();
-                if (i < character.length) {
+                if (i < litera.length) {
                     //if (!addedcharacter.equals(tmp3)) {
                     if (game.wypisywanie == true && game.grane2 == true) {
                         board.mozna = false;
@@ -108,12 +103,12 @@ public class Watek extends Thread {
                         }
                         //JTextArea jTextArea = new JTextArea();
                         // String blank = blank + character[i];
-                        addedcharacter = addedcharacter + character[i];
+                        zdanie = zdanie + litera[i];
                         //jTextArea.setText(addedcharacter);
                         //int c = 3;
                         tmp1 = " ";
                         //tmp1 = "(...)";
-                        ((JTextArea) a.getComponent(0)).setText(addedcharacter);
+                        ((JTextArea) a.getComponent(0)).setText(zdanie);
                         ((Board) game.window.getContentPane().getComponent(0)).JJ[0].setText(tmp1);
                         ((Board) game.window.getContentPane().getComponent(0)).JJ[1].setText(tmp1);
                         ((Board) game.window.getContentPane().getComponent(0)).jlicznik.setText(String.valueOf("Tura : " + decyzja.getTura()));
@@ -253,7 +248,7 @@ public class Watek extends Thread {
         int secc = 0;
         tmp3 = "... ";
         tmp4 = " . . . . ";
-        addedcharacter = "";
+        zdanie = "";
 
 
         try {
@@ -277,7 +272,11 @@ public class Watek extends Thread {
             if (wglowne == true) {
 
                 mruganie();
-
+                try {
+                    zapis_panel.Zapisywanie_funkcja();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
 
                 if (game.menu == true) {
 

@@ -27,6 +27,7 @@ public class Menu extends JPanel implements MouseListener {
     ImageIcon zapis3_icon;
     ImageIcon wroc;
     Game game;
+    Board board;
     //ArrayList<Point> punkty = new ArrayList<Point>();
     static boolean newgame_boll = false;
     public Decyzja decyzja;
@@ -129,9 +130,10 @@ public class Menu extends JPanel implements MouseListener {
     //}
 
 
-    public Menu(Game game, Decyzja decyzja){
+    public Menu(Game game, Decyzja decyzja, Board board){
         this.decyzja = decyzja;
         this.game = game;
+        this.board = board;
         ImageIcon tlo = new ImageIcon("src/com/company/pixelpictures/tło2.png");
         ImageIcon nowa_gra = new ImageIcon("src/com/company/buttons/roman_button (1).png");
         ImageIcon newgame = new ImageIcon("src/com/company/buttons/newgame.png");
@@ -224,6 +226,7 @@ public class Menu extends JPanel implements MouseListener {
                 game.menu = false;
                 game.grane = true;
                 game.grane2 = true;
+                game.grane3 = true;
                 game.wizualizacja = true;
                 int[] jj = new int[40];
                 int[] q = new int[50];
@@ -244,6 +247,7 @@ public class Menu extends JPanel implements MouseListener {
                 } catch (FileNotFoundException fileNotFoundException) {
                     fileNotFoundException.printStackTrace();
                 }
+                board.repaint();
                 try {
                     try {
                         game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
@@ -278,6 +282,7 @@ public class Menu extends JPanel implements MouseListener {
                 game.wizualizacja = true;
                 game.grane = true;
                 game.grane2 = true;
+                game.grane3 = true;
                 int[] jj = new int[40];
                 int[] q = new int[50];
                 for(int i = 0; i < 40; i++){
@@ -299,6 +304,7 @@ public class Menu extends JPanel implements MouseListener {
                 } catch (FileNotFoundException fileNotFoundException) {
                     fileNotFoundException.printStackTrace();
                 }
+                board.repaint();
                 try {
                     try {
                         game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
@@ -331,6 +337,7 @@ public class Menu extends JPanel implements MouseListener {
                 game.wizualizacja = true;
                 game.grane = true;
                 game.grane2 = true;
+                game.grane3 = true;
                 int[] jj = new int[40];
                 int[] q = new int[50];
                 for(int i = 0; i < 40; i++){
@@ -340,16 +347,17 @@ public class Menu extends JPanel implements MouseListener {
                     q[i] = 0;
                 }
                 try {
-                    game.Zapis(2,1, jj,50,50,50,50, q,0,0,0,-1);
+                    game.Zapis(3,1, jj,50,50,50,50, q,0,0,0,-1);
                 } catch (IOException ioException) {
                     ioException.printStackTrace();
                 }
                 game.death = 0;
                 try {
-                    game.Odczyt(2, decyzja);
+                    game.Odczyt(3, decyzja);
                 } catch (FileNotFoundException fileNotFoundException) {
                     fileNotFoundException.printStackTrace();
                 }
+                board.repaint();
                 try {
                     try {
                         game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
@@ -412,11 +420,14 @@ public class Menu extends JPanel implements MouseListener {
                 game.wizualizacja = true;
                 game.grane = true;
                 game.grane2 = true;
+                game.grane3 = true;
+                game.aktualny_zapis = 1;
                 try {
                     game.Odczyt(1, decyzja);
                 } catch (FileNotFoundException fileNotFoundException) {
                     fileNotFoundException.printStackTrace();
                 }
+                board.repaint();
                 try {
                     try {
                         game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
@@ -451,11 +462,14 @@ public class Menu extends JPanel implements MouseListener {
                 game.wizualizacja = true;
                 game.grane = true;
                 game.grane2 = true;
+                game.grane3 = true;
+                game.aktualny_zapis = 2;
                 try {
                     game.Odczyt(2, decyzja);
                 } catch (FileNotFoundException fileNotFoundException) {
                     fileNotFoundException.printStackTrace();
                 }
+                board.repaint();
                 try {
                     try {
                         game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
@@ -484,15 +498,18 @@ public class Menu extends JPanel implements MouseListener {
                 System.out.println("---------------Nowa Gra--------------");
             }
             if (e.getX() > 438 && e.getX() < 744 && e.getY() > 570 && e.getY() < 640) {
+                game.aktualny_zapis = 3;
                 try {
                     game.Odczyt(3, decyzja);
                 } catch (FileNotFoundException fileNotFoundException) {
                     fileNotFoundException.printStackTrace();
                 }
+                board.repaint();
                 game.menu = false;
                 game.wizualizacja = true;
                 game.grane = true;
                 game.grane2 = true;
+                game.grane3 = true;
                 try {
                     try {
                         game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));

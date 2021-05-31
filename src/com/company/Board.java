@@ -1909,11 +1909,19 @@ public class Board extends JPanel implements MouseListener {
                 x = game.window.getMousePosition().x;
                 y = game.window.getMousePosition().y;
                 if(x > 410 && x < 810 && y > 667 && y < 754){
+                    game.zapisywanie = true;
+                    /*try {
+                        game.Zapis(game.aktualny_zapis,game.wybor.getTura(),decyzja.getJuz(),decyzja.getFinanse(),decyzja.getLegiony(),decyzja.getObywatele(),decyzja.getReligia(),decyzja.getQuest(), decyzja.getKontynuacja(),decyzja.qq16,decyzja.qq21,decyzja.getNr());
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    }*/
                     game.zapis_boll = false;
                     game.odczyt_boll = false;
                     game.wizualizacja = false;
                     game.menu = true;
                     ustawienia_boll = false;
+                    game.grane2 = false;
+                    game.grane3 = false;
                     //Decyzja.death_screen = 0;
                 }
 
@@ -1947,7 +1955,7 @@ public class Board extends JPanel implements MouseListener {
                 }
             }
 
-            if(e.getX() > 1125 && e.getX() < 1180 && e.getY() > 20 && e.getY() < 75){
+            if(e.getX() > 1125 && e.getX() < 1180 && e.getY() > 20 && e.getY() < 75 && game.death == 0){
                 ustawienia_boll = true;
             }
         }
@@ -1965,6 +1973,19 @@ public class Board extends JPanel implements MouseListener {
                 ustawienia_boll = false;
                 game.menu = true;
                 Decyzja.death_screen = 0;
+                int[] jj = new int[40];
+                int[] q = new int[50];
+                for(int i = 0; i < 40; i++){
+                    jj[i] = 0;
+                }
+                for(int i = 0; i < 50; i++){
+                    q[i] = 0;
+                }
+                try {
+                    game.Zapis(game.aktualny_zapis,1, jj,50,50,50,50, q,0,0,0,-1);
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                }
             }
         }
         /*if (e.getX() > 170 && e.getX() < 370 && e.getY() > 260 && e.getY() < 530) {

@@ -21,6 +21,8 @@ public class Game {
     public FloatControl fc;
     public static boolean grane = true;
     public static boolean grane2 = true;
+    public static boolean grane3 = true;
+    public static boolean zapisywanie = false;
 
     File muzyka = new File("src/com/company/audio/gra_java_soundtrack(wav).wav");
     File najechanie_audio = new File("src/com/company/audio/przycisk_najechany_audio.wav");
@@ -97,19 +99,19 @@ public class Game {
         //coins = 1;
         window = new JFrame("Deus Consilium");
         window.setIconImage(new ImageIcon("src/com/company/unused/PNG/background/45.png").getImage());
-
         per.open(AudioSystem.getAudioInputStream(pergamin_audio));
         naj.open(AudioSystem.getAudioInputStream(najechanie_audio));
         naj2.open(AudioSystem.getAudioInputStream(najechanie_audio));
         naj3.open(AudioSystem.getAudioInputStream(najechanie_audio));
-        Board wizualizacja = new Board(this);
-        Decyzja wybor = new Decyzja(-1, wizualizacja, this);
-        Menu menu2 = new Menu(this, wybor);
+        Board board = new Board(this);
+        Decyzja wybor = new Decyzja(-1, board, this);
+        Menu menu2 = new Menu(this, wybor, board);
+        Zapis_panel zapis_panel = new Zapis_panel(this, wybor);
 
         //Decyzja wybor = new Decyzja(nr);
         //this.tekst = "ctccoś";
         menu2.setPreferredSize(new Dimension(1200, 780));
-        window.add(wizualizacja);
+        window.add(board);
         window.add(menu2);
         window.getContentPane().getComponent(0).setVisible(false);
         window.getContentPane().getComponent(1).setVisible(true);
@@ -122,14 +124,14 @@ public class Game {
 
         wypisywanie = true;
         this.menu = true;
-        //this.wizualizacja == false;
+        //this.board == false;
        // Menu.repaint();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
-        Watek watek = new Watek(this, menu2, wybor, true, false,false, wizualizacja);
-        Watek watek_dec = new Watek(this, menu2, wybor, false, true,false, wizualizacja);
-        Watek watek_muzyka = new Watek(this, menu2, wybor, false, false, true, wizualizacja);
+        Watek watek = new Watek(this, menu2, wybor, true, false,false, board, zapis_panel);
+        Watek watek_dec = new Watek(this, menu2, wybor, false, true,false, board, zapis_panel);
+        Watek watek_muzyka = new Watek(this, menu2, wybor, false, false, true, board, zapis_panel);
         watek.start();
         watek_muzyka.start();
         watek_dec.start();

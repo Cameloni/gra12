@@ -235,6 +235,9 @@ public class Decyzja {
         while (this.dec != 1 || this.dec != 2) {
             //String dec1 = "";
             //System.out.print("");
+            if(game.grane3 == false){
+                return;
+            }
             if(Board.opcja1 == true) {
                 this.dec = 1;
                 Board.opcja1 = false;
@@ -285,6 +288,9 @@ public class Decyzja {
     //Main st = new Main();
     public void zbior() throws IOException {
 //
+        //if(game.grane3 == false){
+        //    return;
+        //}
         //kwestia = "Coś";
         this.dec = 0;
         int los;
@@ -1778,6 +1784,9 @@ public class Decyzja {
 
             changeDeath_screen();
         }
+        if(game.grane3 == false){
+            return;
+        }
     }
 
 
@@ -1787,16 +1796,22 @@ public class Decyzja {
 
     public void przebieg() throws IOException {
         int nr = -1;
+
         if(game.grane == false){
             game.grane = true;
 
-        }        //if()
+        }
+
+        //if()
         //int aktual_zapis = game.aktualny_zapis;
         for (int iiii = 0; iiii < juzjest.length; iiii++){
             setJuzjest(-1, iiii);
         }
 
         for (int i = 0; i < 999999999; i++) {
+            if(game.grane3 == false){
+                return;
+            }
 
             //if(death_screen == 0) {
                 while (nr < 0) {
@@ -1815,12 +1830,15 @@ public class Decyzja {
                         }
                     }
                 }
-                System.out.println("--|" + getTura() + " tura |--");
+
+            System.out.println("--|" + getTura() + " tura |--");
                 statystyki();
                 setNr(nr);
                 game.wypisywanie = true;
                 zbior();
-                setJuzjest(nr, i % 40);
+
+
+            setJuzjest(nr, i % 40);
                 nr = -1;
                 if(game.grane2 == false){
                     return;
@@ -1828,6 +1846,8 @@ public class Decyzja {
                 if(game.grane == false){
                     game.grane2 = false;
                 }
+
+
             }
 
 
