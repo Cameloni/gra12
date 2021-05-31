@@ -37,6 +37,7 @@ public class Menu extends JPanel implements MouseListener {
     boolean zapis1_najechany = false;
     boolean zapis2_najechany = false;
     boolean zapis3_najechany = false;
+    boolean return_najechany = false;
     boolean dc = false;
     boolean newgame_flipper = false, wczytaj_flipper = false, exitflipper = false;
 
@@ -116,6 +117,12 @@ public class Menu extends JPanel implements MouseListener {
         if(exitflipper == false){
             game.naj3.close();
         }
+        if(x > 240 && x < 347 && y > 50 && y < 103){
+            return_najechany = true;
+        }
+        else{
+            return_najechany = false;
+        }
 
 
         /*if(wczytaj_flipper== false){
@@ -145,7 +152,7 @@ public class Menu extends JPanel implements MouseListener {
         ImageIcon zapis1_icon = new ImageIcon("src/com/company/buttons/roman_button (5).png");
         ImageIcon zapis2_icon = new ImageIcon("src/com/company/buttons/roman_button (6).png");
         ImageIcon zapis3_icon = new ImageIcon("src/com/company/buttons/roman_button (7).png");
-        ImageIcon wroc = new ImageIcon("src/com/company/buttons/return_button.png");
+        ImageIcon wroc = new ImageIcon("src/com/company/buttons/return_button2.png");
         this.nowa_gra = nowa_gra;
         this.wczytaj = wczytaj;
         this.wyjscie = wyjscie;
@@ -214,7 +221,12 @@ public class Menu extends JPanel implements MouseListener {
             } else {
                 g.drawImage(zapis3_icon.getImage(), 424, 568, 764, 663, 0, 0, 1416, 325, null);
             }
-            g.drawImage(wroc.getImage(),500,450,158*5,92*6,null);
+            if(return_najechany == false) {
+                g.drawImage(wroc.getImage(), 160, 20, 400, 80, 0, 0, 1400, 340, null);
+            }
+            else{
+                g.drawImage(wroc.getImage(), 160, 22, 400, 77, 0, 350, 1400, 670, null);
+            }
         }
     }
 
@@ -384,7 +396,7 @@ public class Menu extends JPanel implements MouseListener {
                 game.klik.close();
                 repaint();
             }
-            if (e.getX() > 812 && e.getX() < 950 && e.getY() > 692 && e.getY() < 747) {
+            if (e.getX() > 240 && e.getX() < 347 && e.getY() > 50 && e.getY() < 103) {
                 //game.menu = true;
                 game.zapis_boll = false;
                 try {
@@ -535,9 +547,10 @@ public class Menu extends JPanel implements MouseListener {
                 }
                 repaint();
             }
-            if (e.getX() > 812 && e.getX() < 950 && e.getY() > 692 && e.getY() < 747) {
+            if (e.getX() > 240 && e.getX() < 347 && e.getY() > 50 && e.getY() < 103) {
                 //game.menu = true;
                 game.odczyt_boll = false;
+                System.out.println("kanapa");
                 try {
                     try {
                         game.klik.open(AudioSystem.getAudioInputStream(game.klikniecie_audio));
